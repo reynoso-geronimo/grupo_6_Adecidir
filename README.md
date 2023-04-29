@@ -18,3 +18,13 @@ Valentin Marquez
 Jennifer Lichtensztejn
 
 Luciano Lambardi
+
+Sitios de Referencia : 
+https://www.tuareq.com/
+https://undefinedba.com/
+https://elclubdelsweater.com/
+https://www.grid.com.ar/
+https://www.moov.com.ar/
+
+Elegimos estos sitios ya que tienen un estilo elegante y legible para el usuario
+
