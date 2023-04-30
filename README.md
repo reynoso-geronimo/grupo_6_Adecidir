@@ -3,21 +3,25 @@ Repositorio del grupo 6
 Descripcion del proyecto
 Un sitio de venta de buzos al por menor apuntado al publico entre 15 y 40 años
 
-Integrantes del equipo
+Integrantes del equipo:
 
-Geronimo Reynoso
+  - Geronimo Reynoso
 
-Emiliano Apostolo
+  - Emiliano Apostolo
 
-Franco Llanes
+  - Franco Llanes
 
-Furfaro Ignacio
+  - Furfaro Ignacio
 
-Valentin Marquez
+  - Valentin Marquez
 
-Jennifer Lichtensztejn
+  - Jennifer Lichtensztejn:
+    Tengo 23 años, vivo con mi pareja y mi hermoso hijo perruno en CABA y estoy a pocos días de ser Licenciada en diseño multimedia y de interacción.  
+    Soy una persona organizada, perseverante, creativa y apasionada. Además, tengo buena iniciativa para que todo se desarrollen los proyectos de la 
+    mejor manera, por lo que cuento con una buena actitud a la hora de realizar una tarea y me adapto fácilmente a tareas individuales o grupales. 
+    Por otro lado, también me gusta trabajar con niños y ayudar en todo lo que pueda, por lo que desde muy chica me gusta hacer voluntariados de cualquier tipo.
 
-Luciano Lambardi
+  - Luciano Lambardi
 
 Sitios de Referencia : 
 https://www.tuareq.com/
