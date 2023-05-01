@@ -5,13 +5,14 @@ body{
   margin: auto;
   display: flex;
   flex-direction: column;
-
+  height: 100%; 
+  background: linear-gradient(to right, black 160px,gray, white);
 }
 .main-header{
- 
+  background-color: white;
   display: flex;
   width: 100vw;
- 
+  height: 4rem;
 }
 .main-header-left-bar{
   
@@ -23,7 +24,7 @@ body{
   
 }
 .copy-header{
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-left: 10px;
 }
 .main-header-right-bar{
@@ -35,6 +36,17 @@ body{
   justify-content: flex-end;
   margin-left: auto;
 }
+.login{
+  color: black;
+  font-weight: bold;
+  width: 35px;
+  text-decoration:none;
+  text-align: end;
+  font-size: 15px;
+  padding: 0px;
+  margin-left: 10px;
+}
+
 i{
   font-size: 20px;
   padding: 5px;
@@ -43,12 +55,12 @@ i{
 
 .featured{
   display: flex;
-  background: linear-gradient(to right, black 200px,gray, white);
   color: white;
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 1.5rem;
-  height: 100vh;
+ 
+ 
 }
 .featured-text{
   margin-left: 20px;
@@ -71,6 +83,9 @@ i{
 }
 footer {
   background-color: #f2f2f2;
-  padding: 0px 0;
+
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
