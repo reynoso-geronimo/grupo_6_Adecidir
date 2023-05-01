@@ -7,7 +7,7 @@ Un sitio de venta de buzos al por menor apuntado al publico entre 15 y 40 años
 
 *   Geronimo Reynoso : Tengo 31 años, vivo en la ciudad de San Pedro Buenos Aires, trabajo en una pyme de comercio exterior y despachos aduaneros en el sector de documentacion y tambien soy el encargado de sistemas por defecto. Me encanta resolver problemas y la creacion de herramientas que permitan facilitar tareas repetitivas o automatizarlas lo mayor posible.
 
-*   Emiliano Apostolo
+*   Emiliano Apostolo : tengo 20 años, vivo en olivos buenos aires , por ahora solo estudio aca en DH , soy alguien que le gusta trabajar en equipo , siempre me gusta aprender , ayudar y escuchar a los demas , me gusta mucho todo lo relazionado al mundo de la computacion.
 
 *   Franco Llanes
 
