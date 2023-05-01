@@ -5,7 +5,7 @@ Un sitio de venta de buzos al por menor apuntado al publico entre 15 y 40 años
 
 ## Integrantes del equipo:
 
-*   Geronimo Reynoso
+*   Geronimo Reynoso : Tengo 31 años, vivo en la ciudad de San Pedro Buenos Aires, trabajo en una pyme de comercio exterior y despachos aduaneros en el sector de documentacion y tambien soy el encargado de sistemas por defecto. Me encanta resolver problemas y la creacion de herramientas que permitan facilitar tareas repetitivas o automatizarlas lo mayor posible.
 
 *   Emiliano Apostolo
 
