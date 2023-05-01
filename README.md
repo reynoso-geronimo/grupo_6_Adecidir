@@ -1,21 +1,21 @@
-Repositorio del grupo 6
+# Repositorio del grupo 6
 
 Descripcion del proyecto
 Un sitio de venta de buzos al por menor apuntado al publico entre 15 y 40 años
 
 Integrantes del equipo:
 
-  - Geronimo Reynoso
+*   Geronimo Reynoso
 
-  - Emiliano Apostolo
+*   Emiliano Apostolo
 
-  - Franco Llanes
+*   Franco Llanes
 
-  - Furfaro Ignacio
+*   Furfaro Ignacio
 
-  - Valentin Marquez
+*   Valentin Marquez
 
-  - Jennifer Lichtensztejn:
+*  Jennifer Lichtensztejn:
     Tengo 23 años, vivo con mi pareja y mi hermoso hijo perruno en CABA y estoy a pocos días de convertirme en licenciada en diseño multimedia y de interacción.  
     Soy una persona organizada, perseverante, creativa y apasionada. Además, tengo buena iniciativa para que todos los proyectos se desarrollen de la 
     mejor manera, por lo que cuento con una buena actitud a la hora de realizar una tarea y me adapto fácilmente a las necesidades del proyecto y del equipo. 
