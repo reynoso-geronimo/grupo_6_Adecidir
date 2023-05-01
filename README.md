@@ -10,7 +10,7 @@ Un sitio de venta de buzos al por menor apuntado al publico entre 15 y 40 años
 *   Emiliano Apostolo : tengo 20 años, vivo en olivos buenos aires , por ahora solo estudio aca en DH , soy alguien que le gusta trabajar en equipo , siempre me gusta aprender , ayudar y escuchar a los demas , me gusta mucho todo lo relazionado al mundo de la computacion.
 
 *   Franco Llanes:
-*   Tengo 28 años vivo en la ciudad de Rosario provincia de Santa Fe trabajo para una empresa publica distribuidora de energia electrica , me adapto bien al grupo de trabajo que sea , aprendo mucho de los demas y si puedo dar una mano con lo que sea voy a estar siempre dispuesto 
+  Tengo 28 años vivo en la ciudad de Rosario provincia de Santa Fe trabajo para una empresa publica distribuidora de energia electrica , me adapto bien al grupo de trabajo que sea , aprendo mucho de los demas y si puedo dar una mano con lo que sea voy a estar siempre dispuesto 
 
 *   Furfaro Ignacio
 
