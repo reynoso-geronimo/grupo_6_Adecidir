@@ -22,7 +22,9 @@ Un sitio de venta de buzos al por menor apuntado al publico entre 15 y 40 años
     mejor manera, por lo que cuento con una buena actitud a la hora de realizar una tarea y me adapto fácilmente a las necesidades del proyecto y del equipo. 
     Por otro lado, también me gusta trabajar con niños y ayudar en todo lo que pueda, por lo que desde muy chica me gusta hacer voluntariados de cualquier índole.
 
-  - Luciano Lambardi
+  - Lucio Lambardi:
+  Tengo 19 años, soy de Buenos Aires, trabajo de Comunnity Manager en varias institcuiones deportivas. Me gusta mucho trabajar en equipo y estoy para dar una mano en lo que sea, soy una persona dispuesta a ayudar y hacer lo que sea necesario.
+  
 
 ## Sitios de Referencia : 
 * https://www.tuareq.com/
