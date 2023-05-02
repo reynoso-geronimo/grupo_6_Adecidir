@@ -12,7 +12,7 @@ Un sitio de venta de buzos al por menor apuntado al publico entre 15 y 40 años
 *   Franco Llanes:
   Tengo 28 años vivo en la ciudad de Rosario provincia de Santa Fe trabajo para una empresa publica distribuidora de energia electrica , me adapto bien al grupo de trabajo que sea , aprendo mucho de los demas y si puedo dar una mano con lo que sea voy a estar siempre dispuesto 
 
-*   Furfaro Ignacio
+*   Furfaro Ignacio : Tengo 18 años, vivo en floresta, estoy haciendo este curso y luego pienso estudiar algo relacionado. Me gusta mucho la informatica e ir aprendiendo nuevas tecnologias.
 
 *   Valentin Marquez
 
