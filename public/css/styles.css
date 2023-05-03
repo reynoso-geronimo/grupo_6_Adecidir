@@ -158,6 +158,9 @@ Pagina detalle producto
   background-position:right;
   background-repeat: no-repeat;
   height: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 0px 10px 10px 10px;
+
+}
+.share{
+  text-align: center;
 }

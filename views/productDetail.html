@@ -14,7 +14,6 @@
     <title>THEME</title>
   </head>
   <body>
-    <div class="container">
     <header class="main-header">
       <div class="main-header-left-bar">
         <i class="fa-solid fa-bars"></i>
@@ -33,8 +32,9 @@
         <a href="a">
           <i class="fa-regular fa-star"></i>
         </a>
-        <span class="favorites">Guardar en favoritos</span>
+        <!-- <span class="favorites">Guardar en favoritos</span> -->
       </h2>
+        <a href="a" class="share"><i class="fa-solid fa-share-nodes"></i></a>
       <p class="description">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit earum id
         ratione harum perferendis vitae voluptate assumenda libero expedita ut
@@ -44,21 +44,23 @@
         officia ex facilis, vel aspernatur, nemo nostrum deleniti dolore
         reprehenderit iure perferendis!
       </p>
-      <select name="talle" id="talle" class="talle">
-        <option value="" disabled selected>Seleeciona el Talle</option>
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-      </select>
+      <form action="/order" method="post" class="talle">
+        <label>Seleccione un talle</label>
+        <select name="talle">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </form>
       <p class="price">$60000</p>
 
       <button class="pre-order">Pre Ordenar</button>
     </div>
-    
+
     <footer>
       <div class="bottom">
-        <p>&copy; 2023 THEME - Break The Scene  </p>
+        <p>&copy; 2023 THEME - Break The Scene</p>
         <i class="fa-brands fa-whatsapp"></i>
       </div>
     </footer>
