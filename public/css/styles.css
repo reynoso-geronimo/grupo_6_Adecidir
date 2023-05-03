@@ -83,7 +83,7 @@ i{
   
 }
 footer {
-  text-align: center;
+  
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -91,11 +91,17 @@ footer {
 
 
 }
-footer p{
+.bottom{
+  display: flex;
+  flex-direction: row;
   background-color: gray;
-  height: 20px;
-  margin-bottom: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 30px;
 }
+
 
 /* 
 Pagina detalle producto
