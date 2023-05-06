@@ -25,17 +25,20 @@
         <a class="login" href="/login">Iniciar Sesion</a>
       </div>
     </header>
-    <main>
-      <section class="featured">
-        <div class="featured-text">
-          <p>THEME 1ST</p>
-          <p>DROP</p>
-          <p>WINTER</p>
-          <p>SEASON 2023</p>
-        </div>
-        <img class="featured-img" src="/images/logo.png" alt="logo" />
-      </section>
+    <main class="register">
+     
+      <h1>Crear Cuenta</h1>
+      <form action="post">
+        <input type="text" name="name" placeholder="Nombre Completo">
+        <input type="email" name="email" placeholder="Email">
+        <input type="email" name="repeat-email" placeholder="Repite tu Email">
+        <input type="password" name="password" placeholder="Contraseña">
+        <input type="submit" value="Registrarme" class="boton-negro boton-registrar">
+      </form>
+      <p>Ya tienes cuenta? <a href="login">Iniciar Sesion</a></p>
+   
     </main>
+     
     <footer>
       <div class="bottom">
         <p>&copy; 2023 THEME - Break The Scene</p>

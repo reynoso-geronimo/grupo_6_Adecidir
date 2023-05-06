@@ -27,6 +27,11 @@ html, body{
 .copy-header{
   font-size: 2.3rem;
   margin-left: 10px;
+ 
+}
+.copy-header a{
+  text-decoration: none;
+  color: black;
 }
 .main-header-right-bar{
 
@@ -101,6 +106,9 @@ footer {
   padding-right: 20px;
   height: 30px;
 }
+.bottom a{
+  color: black;
+}
 
 
 /* 
@@ -149,7 +157,7 @@ Pagina detalle producto
   margin: 10px 10px;
   text-align: center;
 }
-.pre-order {
+.boton-negro {
   background-color: #000000;
   border: none;
   color: #fff;
@@ -163,4 +171,30 @@ Pagina detalle producto
 }
 .share{
   text-align: center;
+}
+/* Formulario de registro */
+
+.register{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+}
+.register form {
+  display: flex;
+  flex-direction: column;
+}
+.register input{
+  margin-top: 15px;
+}
+.register p a{
+  color: white;
+ 
+}
+.boton-registrar{
+  
+  border: solid 1px white;
+  
+  
 }
