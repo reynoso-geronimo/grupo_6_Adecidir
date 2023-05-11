@@ -14,7 +14,7 @@ Un sitio de venta de buzos al por menor apuntado al publico entre 15 y 40 años 
 
 *   Furfaro Ignacio : Tengo 18 años, vivo en floresta, estoy haciendo este curso y luego pienso estudiar algo relacionado. Me gusta mucho la informatica e ir aprendiendo nuevas tecnologias.
 
-*   Valentin Marquez
+*   Valentin Marquez : Tengo 20 años, vivo en San Isidro Buenos aires, actualmente estoy en un equipo de IT para un Callcenter para USA, me encuentro interesado en la programación ya que toda mi vida me dedique a hardware y queria investigar otro rubro, cuento con un curso anterior de Ingles lo cual me abrio puerta a tener el trabajo con el que cuento actualmente.
 
 *  Jennifer Lichtensztejn:
     Tengo 23 años, vivo con mi pareja y mi hermoso hijo perruno en CABA. Soy recien graduada de la carrera diseño multimedia y de interacción.  
