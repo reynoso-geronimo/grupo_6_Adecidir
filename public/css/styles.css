@@ -167,6 +167,13 @@ Pagina detalle producto
   background-repeat: no-repeat;
   height: 40px;
   margin: 0px 10px 10px 10px;
+  transition:  background-size 300ms , font-size 300ms ;
+
+}
+.boton-negro:hover{
+  background-size: 300%;
+  font-size: 1rem;
+  
 
 }
 .share{
