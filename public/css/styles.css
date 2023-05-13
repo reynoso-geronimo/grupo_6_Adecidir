@@ -7,7 +7,7 @@ html, body{
   display: flex;
   flex-direction: column;
   height: 100vh; 
-  background: linear-gradient(to right, black 160px,gray, white);
+  /* background: linear-gradient(to right, black 160px,gray, white); */
 }
 .main-header{
   background-color: white;
@@ -65,7 +65,7 @@ i{
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 1.5rem;
- 
+  background: linear-gradient(to right, black 160px,gray, white);
  
 }
 .featured-text{
@@ -93,22 +93,22 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     flex-grow: 1;
+    background-color: #D9D9D9;
+    text-align: center;
+    padding-top: 20px;
+    max-height: 100px;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
 
 
-}
-.bottom{
-  display: flex;
-  flex-direction: row;
-  background-color: gray;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
-  height: 30px;
-}
-.bottom a{
+
+footer a {
+  margin-top: 20px;
   color: black;
 }
+
 
 
 /* 
@@ -165,14 +165,14 @@ Pagina detalle producto
   background-size: 30px;
   background-position:right;
   background-repeat: no-repeat;
-  height: 40px;
-  margin: 0px 10px 10px 10px;
+  height: 50px;
+
   transition:  background-size 300ms , font-size 300ms ;
 
 }
 .boton-negro:hover{
   background-size: 300%;
-  font-size: 1rem;
+  font-size: 1.8rem;
   
 
 }
@@ -182,10 +182,11 @@ Pagina detalle producto
 /* Formulario de registro */
 
 .register{
-  margin-top: 100px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
-  color: white;
+  /* color: white; */
   align-items: center;
 }
 .register form {
@@ -194,14 +195,12 @@ Pagina detalle producto
 }
 .register input{
   margin-top: 15px;
+  font-size: 1.5rem;
+  padding: 10px;
 }
-.register p a{
-  color: white;
- 
-}
-.boton-registrar{
-  
-  border: solid 1px white;
-  
-  
+
+
+
+.producto-home img{
+  width: 5rem;
 }
