@@ -35,3 +35,6 @@ Un sitio de venta de buzos al por menor apuntado al publico entre 15 y 40 años 
 
 Elegimos estos sitios ya que tienen un estilo elegante y legible para el usuario
 
+## Tablero de trabajo
+
+* https://trello.com/w/grupo6dh4
