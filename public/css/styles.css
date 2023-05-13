@@ -1,39 +1,47 @@
 * {
   box-sizing: border-box;
 }
-html, body{
- 
+
+
+body {
+
   margin: auto;
   display: flex;
   flex-direction: column;
-  height: 100vh; 
+  height: 100vh;
+  justify-content: space-between;
   /* background: linear-gradient(to right, black 160px,gray, white); */
 }
-.main-header{
+
+.main-header {
   background-color: white;
   display: flex;
   width: 100vw;
   height: 4rem;
 }
-.main-header-left-bar{
-  
+
+.main-header-left-bar {
+
   display: flex;
   flex-direction: row;
   align-items: center;
-  
+
   margin-left: 0;
-  
+
 }
-.copy-header{
+
+.copy-header {
   font-size: 2.3rem;
   margin-left: 10px;
- 
+
 }
-.copy-header a{
+
+.copy-header a {
   text-decoration: none;
   color: black;
 }
-.main-header-right-bar{
+
+.main-header-right-bar {
 
   display: flex;
   flex-direction: row;
@@ -42,64 +50,67 @@ html, body{
   justify-content: flex-end;
   margin-left: auto;
 }
-.login{
+
+.login {
   color: black;
   font-weight: bold;
   width: 35px;
-  text-decoration:none;
+  text-decoration: none;
   text-align: end;
   font-size: 15px;
   padding: 0px;
   margin-left: 10px;
 }
 
-i{
+i {
   font-size: 20px;
   padding: 5px;
   margin-left: 10px;
 }
 
-.featured{
+.featured {
   display: flex;
   color: white;
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 1.5rem;
-  background: linear-gradient(to right, black 160px,gray, white);
- 
+  background: linear-gradient(to right, black 160px, gray, white);
+
 }
-.featured-text{
+
+.featured-text {
   margin-left: 20px;
 }
-.featured p{
-  margin:5px
+
+.featured p {
+  margin: 5px
 }
-.featured p:last-child{
+
+.featured p:last-child {
   text-decoration: underline;
   text-underline-offset: 16px;
- 
+
 }
+
 .featured-img {
   margin-top: 1rem;
   margin-left: auto;
   margin-right: 20px;
   width: 150px;
   height: 150px;
-  
+
 }
+
 footer {
-  
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex-grow: 1;
-    background-color: #D9D9D9;
-    text-align: center;
-    padding-top: 20px;
-    max-height: 100px;
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  background-color: #D9D9D9;
+  text-align: center;
+  padding-top: 20px;
+  max-height: 100px;
+  width: 100vw;
+
 }
 
 
@@ -115,73 +126,85 @@ footer a {
 Pagina detalle producto
 */
 
-.product-container{
+.product-container {
   background-color: white;
-  margin-top:0;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
-  
+
 }
-.product-container img{
+
+.product-container img {
   width: 100vw;
 }
-.product-container h2{
-  
+
+.product-container h2 {
+
   color: black;
   font-size: 20px;
   margin-top: 0;
   text-align: center;
 }
-.product-container i{
+
+.product-container i {
   color: black;
 }
-.product-container a{
-  
+
+.product-container a {
+
   text-decoration: none;
 }
-.favorites{
+
+.favorites {
   font-size: 15px;
   color: grey;
   text-decoration: none;
 }
-.price{
+
+.price {
   text-align: left;
   margin-left: 10px;
   margin-top: 0;
   font-weight: bold;
 }
-.description{
-  margin:10px;
+
+.description {
+  margin: 10px;
 }
-.talle{
+
+.talle {
   margin: 10px 10px;
   text-align: center;
 }
+
 .boton-negro {
   background-color: #000000;
   border: none;
   color: #fff;
-  background-image: linear-gradient(-45deg,rgb(59, 59, 59) 40%, transparent 0);
+  background-image: linear-gradient(-45deg, rgb(59, 59, 59) 40%, transparent 0);
   background-size: 30px;
-  background-position:right;
+  background-position: right;
   background-repeat: no-repeat;
   height: 50px;
 
-  transition:  background-size 300ms , font-size 300ms ;
+  transition: background-size 300ms, font-size 300ms;
 
 }
-.boton-negro:hover{
+
+.boton-negro:hover {
   background-size: 300%;
   font-size: 1.8rem;
-  
+
 
 }
-.share{
+
+.share {
   text-align: center;
 }
+
 /* Formulario de registro */
 
-.register{
+.register {
   margin-top: 3rem;
   margin-bottom: 3rem;
   display: flex;
@@ -189,11 +212,13 @@ Pagina detalle producto
   /* color: white; */
   align-items: center;
 }
+
 .register form {
   display: flex;
   flex-direction: column;
 }
-.register input{
+
+.register input {
   margin-top: 15px;
   font-size: 1.5rem;
   padding: 10px;
@@ -201,6 +226,6 @@ Pagina detalle producto
 
 
 
-.producto-home img{
+.producto-home img {
   width: 5rem;
 }
