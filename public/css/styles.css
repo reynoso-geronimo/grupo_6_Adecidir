@@ -12,12 +12,15 @@ body {
   justify-content: space-between;
   /* background: linear-gradient(to right, black 160px,gray, white); */
 }
-
+main{
+  margin-top: 4rem;
+}
 .main-header {
   background-color: white;
   display: flex;
   width: 100vw;
   height: 4rem;
+  position: fixed;
 }
 
 .main-header-left-bar {
