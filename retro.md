@@ -24,3 +24,4 @@
     4. Hacer menos: idealmente, este e-commerce es para unos amigos (de un integrante del equipo de desarrollo) que quieren comenzar con su emprendimiento de buzos. Al inicio, y en cierto punto en el desarrollo del primer sprint, nos enfocamos mucho en que a ellos les guste, sin embargo, nos dimos cuenta que eso nos estancaba o nos demoraba en la producción, por lo que decidimos enfocarnos en el proyecto, si no tenemos algún elemento ofrecido por su parte, definirlo y, de última, luego cambiarlo.
    
     5. Dejar de hacer: decidimos poner fechas límites para mostrar, entre nosotros, avances del proyecto (que sería en cada reunión de equipo) y, además, en el caso de que algún compañero no puede llevar a cabo o no responda a nuestros llamados de atención, seguiremos adelante con el desarrollo para no atrasarnos y, en este caso, cuando aparezca, nos organizaremos para que todos tengamos algo que hacer y todos seamos partícipes de este desarrollo.
+ 
