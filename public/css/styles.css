@@ -232,3 +232,25 @@ Pagina detalle producto
 .producto-home img {
   width: 5rem;
 }
+
+
+
+.sign-in{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-in form {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in input {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+
