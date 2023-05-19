@@ -248,14 +248,36 @@ Pagina detalle producto
 }
 
 /* Carrito de compras */
-.buzo2{
-  text-align: center;
+
+.carrito p{
+font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold;
 }
 
-.buzo4{
-  text-align: center;
+.carrito button {
+  background-color: #000000;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(-45deg, rgb(59, 59, 59) 40%, transparent 0);
+  background-size: 30px;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 50px;
+
+  transition: background-size 300ms, font-size 300ms;
 }
 
-.buzo3{
+div img{
+  width: 150px;
+  border: solid 2px black;
+}
+
+.carrito {
+  width: 500px;
+  margin: 10px;
+  border: solid 1px black;
+  padding: 12px;
+  box-shadow: 10px -4px 5px 0px rgba(0,0,0,0.75);
   text-align: center;
+ 
 }
