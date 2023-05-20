@@ -187,7 +187,7 @@ Pagina detalle producto
   background-position: right;
   background-repeat: no-repeat;
   height: 50px;
-
+  font-weight: 900;
   transition: background-size 300ms, font-size 300ms;
 }
 
@@ -318,4 +318,9 @@ Pagina detalle producto
 .checkout button{
   width: 47%;
   margin-bottom: 10px;
+}
+.invertido{
+  background-color: white;
+  border: none;
+  color: black;
 }
