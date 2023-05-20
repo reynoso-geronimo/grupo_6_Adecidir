@@ -296,7 +296,8 @@ Pagina detalle producto
 .checkout{
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   position: sticky;
   background-color:rgba(165,165,165, 80%);
@@ -304,6 +305,7 @@ Pagina detalle producto
   bottom: 0;
   border-top: solid 1px gray;
   border-bottom: solid 1px gray;
+  justify-content: space-around;
 }
 .checkout p{
   padding:10px;
@@ -311,9 +313,9 @@ Pagina detalle producto
   width: 80vw;
   font-weight: 900;
   border-radius: 2%;
-  margin:10px 0 10px 0
+  margin:10px 0 15px 0
 }
 .checkout button{
-  width: 70vw;
+  width: 47%;
   margin-bottom: 10px;
 }
