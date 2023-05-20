@@ -267,7 +267,7 @@ font-family: Arial, Helvetica, sans-serif;
   transition: background-size 300ms, font-size 300ms;
 }
 
-div img{
+.buzo{
   width: 150px;
   border: solid 2px black;
 }
