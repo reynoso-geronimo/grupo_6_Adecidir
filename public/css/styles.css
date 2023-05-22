@@ -324,3 +324,16 @@ Pagina detalle producto
   border: none;
   color: black;
 }
+
+/*Home*/
+.contain-2{
+  text-align: center;
+}
+.contain-3{
+  text-align: center;
+  background-color:#B5B2B2;
+}
+.div-imagenes{
+  text-align: center;
+}
+
