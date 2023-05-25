@@ -28,7 +28,24 @@
     </header>
     <main>
       <section class="product-container">
-        <img src="images/Buzo2.jpg" alt="producto" />
+        <div class="galeria">
+          <div class="imagenes-producto">
+            <img src="images/Buzo.jpg" alt="producto" class="m1" />
+            <img src="images/Buzo2.jpg" alt="producto" class="m2" />
+            <img src="images/Buzo3.jpg" alt="producto" class="m3" />
+            <img src="images/Buzo4.jpg" alt="producto" class="m4" />
+          </div>
+          <div class="radio-selector">
+            <input type="radio" id="selector1" name="radios" checked />
+            <label for="selector1"></label>
+            <input type="radio" id="selector2" name="radios" />
+            <label for="selector2"></label>
+            <input type="radio" id="selector3" name="radios" />
+            <label for="selector3"></label>
+            <input type="radio" id="selector4" name="radios" />
+            <label for="selector4"></label>
+          </div>
+        </div>
         <div>
           <h2>
             Nombre del Item
@@ -47,8 +64,7 @@
             expedita ut corporis natus, aliquam impedit cumque hic quae aliquid
             ullam. Cum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Consectetur quia laudantium consequatur veniam harum amet debitis
-            provident earum officia ex facilis, vel aspernatur, nemo nostrum
-            deleniti dolore reprehenderit iure perferendis!
+            provident earum officia ex facilis
           </p>
           <div class="talle">
             <p class="price">$60000</p>
@@ -56,7 +72,7 @@
             <form action="/productcart" method="get">
               <div class="form-container">
                 <div class="radio-button">
-                  <input type="radio" id="radio1" name="radios" vale="s" />
+                  <input type="radio" id="radio1" name="radios" value="s" />
                   <label for="radio1">S</label>
                   <input type="radio" id="radio2" name="radios" value="m" />
                   <label for="radio2">M</label>
@@ -89,5 +105,32 @@
         <p>&copy; 2023 THEME - Break The Scene</p>
       </div>
     </footer>
+
+    <script>
+      //dios como sufri buscando esto no recomiendo pasar el feriado haciendo esto
+
+      const radios = document.querySelectorAll('input[name="radios"]');
+      const images = {
+        selector1: document.querySelector(".m1"),
+        selector2: document.querySelector(".m2"),
+        selector3: document.querySelector(".m3"),
+        selector4: document.querySelector(".m4"),
+      };
+
+      radios.forEach(function (radio) {
+        radio.addEventListener("change", function () {
+          const selectedRadio = document.querySelector(
+            'input[name="radios"]:checked'
+          );
+          for (const key in images) {
+            if (selectedRadio && selectedRadio.id === key) {
+              images[key].style.display = "block";
+            } else {
+              images[key].style.display = "none";
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
