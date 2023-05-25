@@ -255,9 +255,7 @@ Pagina detalle producto
   padding: 10px;
 }
 
-.producto-home img {
-  width: 5rem;
-}
+
 
 .sign-in {
   margin-top: 3rem;
@@ -366,7 +364,9 @@ Pagina detalle producto
   text-align: center;
   background-color:#B5B2B2;
 }
-.div-imagenes{
+.productos-home{
   text-align: center;
 }
-
+.productos-home img {
+  width: 200px;
+}
