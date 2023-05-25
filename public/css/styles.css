@@ -411,3 +411,26 @@ Pagina detalle producto
   
  
 }
+
+@media(min-width:481px) {
+  .productos-home{
+ 
+    flex-direction: row;
+   
+    background-color: #B3B3B3;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .productos-home article{
+   
+    width: 45%;
+    height: 340px;
+    
+    
+  }
+  .productos-home a{
+    justify-content:flex-end;
+    height: 100%;
+  }
+ 
+}
