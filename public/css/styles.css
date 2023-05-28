@@ -150,6 +150,7 @@ Pagina detalle producto
   width: 15px;
   font-weight: 900;
   margin: 5px;
+  transform: translateY(-45px)
 }
 .radio-selector input[type="radio"]:checked + label {
   background-color:#FFF500;
