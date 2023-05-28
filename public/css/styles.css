@@ -27,6 +27,7 @@ main {
   width: 100vw;
   height: 4rem;
   position: fixed;
+  z-index: 1;
 }
 
 .main-header-left-bar {
@@ -105,9 +106,14 @@ footer {
   width: 100vw;
 }
 
-footer a {
-  margin-top: 20px;
-  color: black;
+
+footer a i{
+  color: white;
+  border: solid 1px black;
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  background-color: #000000;
 }
 
 /* 
