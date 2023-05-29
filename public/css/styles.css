@@ -407,7 +407,7 @@ Pagina detalle producto
   background-color: #FFF500;
 }
 .productos-home img {
-  width: 200px;
+  width: 100%;
 }
 .productos-home a{
   width: 100%;
@@ -436,7 +436,7 @@ Pagina detalle producto
   }
   .productos-home article{ 
     width: 50%;
-    height: 340px;
+    /* height: 340px; */
   }
   .productos-home a{
     justify-content:flex-end;
