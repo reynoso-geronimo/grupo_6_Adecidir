@@ -106,7 +106,7 @@ i {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: #d9d9d9;
+ /* background-color: #d9d9d9; */
   text-align: center;
   padding-top: 20px;
   max-height: 100px;
@@ -122,6 +122,84 @@ footer a i{
   width: 32px;
   background-color: #000000;
 }
+
+/* .containerFooter {
+  display: flex;
+  flex-direction: row;
+} */
+
+.cajabuscar {
+    font-size: 100%;
+    font: inherit;
+    text-align: right;
+    float: none;
+    width: 50%;
+    max-width: 453px;
+    padding: 5px;
+    margin-bottom: 25px;
+    margin-top: 29px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    text-align: left;
+ }
+
+ #buscarform {
+     padding: 0;
+     float: left;
+     clear: both;
+     width: 100%;
+     position: relative;
+ }
+
+ #buscarform i {
+     font-size: 20px;
+     top: 0px;
+     /* color: #666; */
+     position: absolute;
+     right: 5%;
+     top: 0;
+     padding: 9px;
+     height: 24px;
+     width: 24px;
+     text-align: center;
+ }
+
+ #s {
+     width: 100%;
+     /* background-color: #fff; */
+     float: left;
+     padding: 8px 0;
+     text-indent: 10px;
+     /* color: #666; */
+     border: 1px solid #000; 
+     box-sizing: border-box;
+     height: 42px;
+ }
+
+ .paper-plane {
+    width: 7%; 
+ }
+
+ .search-button{
+     right: 0;
+     top: 0;
+     padding: 9px 0;
+     float: right;
+     border: 0;
+     width: 42px;
+     height: 42px;
+     cursor: pointer;
+     text-align: center;
+     padding-top: 10px;
+     /* color: #666; */
+     transition: all 0.25s linear;
+     background: transparent;
+     z-index: 10;
+     position: absolute;
+     border: 0;
+     vertical-align: top;
+ }
 
 /* 
 Pagina detalle producto
