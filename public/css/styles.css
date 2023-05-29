@@ -71,6 +71,7 @@ i {
 }
 
 
+/*  EN DESUSO
 
 .featured {
   display: flex;
@@ -100,7 +101,7 @@ i {
   margin-right: 20px;
   width: 150px;
   height: 150px;
-}
+} */
 
 footer {
   display: flex;
