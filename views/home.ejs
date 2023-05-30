@@ -1,79 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head') %>
+<%- include('./partials/head') %>
 
   <body>
     <%- include('./partials/header') %>
 
-    <main class="home">
-      <div class="contain-1">
-        <nav class="busqueda"></nav>
-      </div>
+      <main class="home">
+        <div class="contain-1">
+          <nav class="busqueda"></nav>
+        </div>
 
-       <div class="contain-2">
-        <!-- <i class="fa-solid fa-caret-left"></i>
+        <div class="contain-2">
+          <!-- <i class="fa-solid fa-caret-left"></i>
         <img src="imagen-de-ejemplo" alt="Destacados/Ofertas" />
         <i class="fa-solid fa-caret-right"></i>   -->
-        <img class="banner-home" src="/images/Slide-16_9-3.jpg" alt="graffiti">
-      </div>
+          <img class="banner-home" src="/images/Slide-16_9-3.jpg" alt="graffiti">
+        </div>
 
         <!-- <div class="contain-3">
         <h3>CATEGORIAS</h3>
       </div> -->
 
-      <section class="productos-home">
-        <article>
-          <a href="/product">
-            <img src="/images/mockups-productos/Mockup_Bolsa_Algodon_mockupgratis.com.jpg" alt="home-1" />
-            <p>TOTE BAG</p>
-          </a>
-      </article>
-      <article>
-        <a href="/product">
-          <img src="/images/mockups-productos/Mockup_Camiseta_Doblada_mockupgratis.com.jpg" alt="home-2" />
-          <p>THEME REMERA</p>
-        </a>
-      </article>
-      <article>
-        <a href="/product">
-          <img src="/images/mockups-productos/Mockup_Estuche_Gafas_Sol_mockupgratis.com.jpg" alt="home-3" />
-          <p>ANTEOJOS DE SOL</p>
-        </a>
-      </article>
-      <article>
-        <a href="/product">
-          <img src="/images/mockups-productos/Mockup_Gorro_Lana_mockupgratis.com.jpg" alt="home-4" />
-          <p>GORRO DE LANA</p>
-        </a>
-      </article>
-      <article>
-        <a href="/product">
-          <img src="/images/mockups-productos/Mockup_Hoodie_Sudadera_mockupgratis.com.jpg" alt="home-5" />
-          <p>BUZO</p>
-        </a>
-      </article>
-      <article>
-        <a href="/product">
-          <img src="/images/mockups-productos/Mockup_mascarilla_logo_mockupgratis.com.jpg" alt="home-6" />
-          <p>BARBIJO</p>
-        </a>
-      </article>
-      <!--
-        <article>
-          <a href="/product">
-            <img src="/public/images/mockups-productos/Mockup_Bolsa_Algodon_mockupgratis.com.jpg" alt="home-7" />
-            <p>Nombre del producto</p>
-          </a>
-        </article>
-        <article>
-          <a href="/product">
-            <img src="images/Buzo4.jpg" alt="home-8" />
-            <p>Nombre del producto</p>
-          </a>
-        </article>
-      -->
-      </section>
-    </main>
-    <%- include('./partials/footer.ejs') %>
+        <section class="productos-home">
+
+          <% for(let producto of productos) { %>
+            <article>
+              <a href="/product">
+                <img src=<%=producto.imagen %> alt="home-1" />
+                <p>
+                  <%= producto.nombre %>
+                </p>
+              </a>
+            </article>
+            <% } %>
+
+        </section>
+      </main>
+      <%- include('./partials/footer.ejs') %>
   </body>
+
 </html>

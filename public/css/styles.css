@@ -14,7 +14,7 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: space-between;
   /* background: linear-gradient(to right, black 160px,gray, white); */
 }
@@ -152,18 +152,7 @@ footer a i{
      position: relative;
  }
 
- #buscarform i {
-     font-size: 20px;
-     top: 0px;
-     /* color: #666; */
-     position: absolute;
-     right: 5%;
-     top: 0;
-     padding: 9px;
-     height: 24px;
-     width: 24px;
-     text-align: center;
- }
+ 
 
  #s {
      width: 100%;
@@ -177,28 +166,24 @@ footer a i{
      height: 42px;
  }
 
- .paper-plane {
-    width: 7%; 
- }
+ 
 
  .search-button{
-     right: 0;
-     top: 0;
-     padding: 9px 0;
-     float: right;
+     
      border: 0;
      width: 42px;
      height: 42px;
      cursor: pointer;
-     text-align: center;
+     
      padding-top: 10px;
      /* color: #666; */
      transition: all 0.25s linear;
      background: transparent;
      z-index: 10;
      position: absolute;
-     border: 0;
-     vertical-align: top;
+      top: 45px;
+      right:-30px;
+     
  }
 
 /* 
