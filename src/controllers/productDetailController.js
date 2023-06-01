@@ -4,7 +4,7 @@ const path = require('path');
 const productDetailController = {
     detail:function(req,res) {
 
-        return res.sendFile(path.resolve(__dirname, '../views/productDetail.html'))
+        return res.sendFile(path.resolve(__dirname, './views/productDetail.html'))
 
     }
 
