@@ -8,9 +8,9 @@ const productos = JSON.parse(fs.readFileSync('./productos.json')
 )
 
 const homeController = {
-    list: function (req, res) {
+    index: function (req, res) {
 
-        return res.render(path.resolve(__dirname, '../../views/home') , {productos:productos})
+        return res.render(path.resolve('./views/home') , {productos:productos})
 
     }
 
