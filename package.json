@@ -1,10 +1,10 @@
 {
-  "name": "modulo4",
+  "name": "theme",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "nodemon src/app.js"
+    "test": "nodemon ./src/app.js"
   },
   "keywords": [],
   "author": "",
