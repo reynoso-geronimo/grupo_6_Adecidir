@@ -21,17 +21,22 @@ body {
   /* background: linear-gradient(to right, black 160px,gray, white); */
 }
 main {
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 .main-header {
   background-color: white;
   display: flex;
   width: 100vw;
   max-width: 1500px;
-  height: 4rem;
+  height: 5rem;
   position: fixed;
   z-index: 1;
-}
+  border-bottom: 4px solid;
+  border-image: linear-gradient(to right, rgba(255, 245, 0), rgb(0, 0, 0));
+ border-image-slice: 1;
+} 
+
+
 
 .main-header-left-bar {
   display: flex;
@@ -519,7 +524,7 @@ Pagina detalle producto
 }
 @media (min-width:1200px) {
   .home{
-    max-width: 1200px;
+    max-width: 1500px;
     display: flex;
     flex-direction: column;
     align-items: center;
