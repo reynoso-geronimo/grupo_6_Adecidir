@@ -27,7 +27,8 @@ main {
   background-color: white;
   display: flex;
   width: 100vw;
-  max-width: 1500px;
+  justify-content: space-between;
+  
   height: 5rem;
   position: fixed;
   z-index: 1;
@@ -43,7 +44,7 @@ main {
   flex-direction: row;
   align-items: center;
 
-  margin-left: 0;
+  
 }
 
 .copy-header {
@@ -62,7 +63,7 @@ main {
   align-items: center;
   padding: 0px 15px;
 
-  margin-left: auto;
+  
 }
 .main-header-right-bar i {
   color: #000000;
@@ -523,6 +524,7 @@ Pagina detalle producto
  
 }
 @media (min-width:1200px) {
+  
   .home{
     max-width: 1500px;
     display: flex;
@@ -550,5 +552,11 @@ Pagina detalle producto
   .productos-home article{ 
     width: 33.3333333333333333333333333333%;
     /* height: 340px; */
+  }
+}
+@media (min-width:1500px){
+  .main-header{
+    justify-content: space-around;
+    gap: 1200px;
   }
 }
