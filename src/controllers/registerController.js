@@ -4,7 +4,7 @@ const path = require('path');
 const productDetail = {
     registerForm:function(req,res) {
 
-        return res.sendFile(path.resolve('./views/register.html'))
+        return res.render(path.resolve('./views/user/register'))
 
     }
 

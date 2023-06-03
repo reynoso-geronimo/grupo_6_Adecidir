@@ -4,7 +4,7 @@ const path = require('path');
 const productCartController = {
     productCart:function(req,res) {
 
-        return res.sendFile(path.resolve('./views/productCart.html'))
+        return res.render(path.resolve('./views/productCart'))
 
     }
 
