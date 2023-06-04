@@ -521,6 +521,10 @@ Pagina detalle producto
     justify-content:flex-end;
     height: 100%;
   }
+  .description {
+   padding-left: 7%;
+   padding-right: 5%;
+  }
  
 }
 @media (min-width:1200px) {
