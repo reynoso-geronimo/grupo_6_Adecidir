@@ -330,7 +330,7 @@ Pagina detalle producto
 /* Formulario de registro */
 
 .register {
-  margin-top: 3rem;
+  
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -345,14 +345,15 @@ Pagina detalle producto
 
 .register input {
   margin-top: 15px;
-  font-size: 1.5rem;
+  font-size: 16px;
+  width: 18rem;
   padding: 10px;
 }
 
 
 
 .sign-in {
-  margin-top: 3rem;
+
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
@@ -366,7 +367,8 @@ Pagina detalle producto
 
 .sign-in input {
   margin-top: 15px;
-  font-size: 1.5rem;
+  font-size: 16px;
+  width: 18rem;
   padding: 10px;
 }
 
