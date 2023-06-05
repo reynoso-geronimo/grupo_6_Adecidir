@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+  <style>
+    .edit-form{
+      display: flex;
+      flex-direction: column;
+    }
+  </style>
+  <body>
+    
+    <%- include('../partials/header') %>
+
+    <main>
+      <form action="/product/edit/:id"  class="edit-form">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre">
+        <label for="nombre">Descripcion</label>
+        <input type="text" name="descripcion" id="descripcion">
+
+        <label for="talle-s">Talle S</label>
+        <input type="number" name="s" id="talle-s">
+
+        <label for="talle-m">Talle M</label>
+        <input type="number" name="m" id="talle-m">
+
+        <label for="talle-l">Talle L</label>
+        <input type="number" name="l" id="talle-l">
+        
+        <label for="talle-xl">Talle XL</label>
+        <input type="number" name="xl" id="talle-xl">
+        
+        <label for="talle-xxl">Talle XXL</label>
+        <input type="number" name="xxl" id="talle-xxl">
+        <label for="precio">Precio</label>
+        <input type="text" name="precio" id="precio">
+        <input type="file" name="imagenes" id="imagen">
+        <button type="submit">Actualizar</button>
+      </form>
+      <!-- TODO ELIMINAR PRODUCTO -->
+      <button type="submit">Eliminar</button>
+    </main>
+    
+    <%- include('../partials/footer.ejs') %>
+    
+  </body>
+
+  </html>

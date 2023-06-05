@@ -328,14 +328,22 @@ Pagina detalle producto
 }
 
 /* Formulario de registro */
-
+.body-register{
+  background: linear-gradient(to right, black 160px,gray, white);
+}
 .register {
-  
+  margin-top: 7rem;
   margin-bottom: 3rem;
+  padding: 5%;
   display: flex;
   flex-direction: column;
   /* color: white; */
   align-items: center;
+  background-color:rgba(255,255,255, 0.7);
+  border: 4px solid;
+  border-image: linear-gradient(to right, rgba(255, 245, 0), rgb(0, 0, 0));
+ border-image-slice: 1;
+
 }
 
 .register form {
