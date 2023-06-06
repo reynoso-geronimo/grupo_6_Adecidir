@@ -380,6 +380,65 @@ Pagina detalle producto
   padding: 10px;
 }
 
+/*Form crear producto*/
+.tituloAdd{
+  text-align: center;
+}
+
+.formAdd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formIzquierda, .formDerecha {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.formIzquierda label, .formDerecha label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formIzquierda input[type="text"],
+.formIzquierda input[type="number"],
+.formIzquierda select,
+.formDerecha textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type="file"] {
+  display: none;
+}
+.subirImagen {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.botonAdd{
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.botonAdd:hover {
+  background-color: #45a049;
+}
+
 /* Carrito de compras */
 
 
@@ -510,6 +569,26 @@ Pagina detalle producto
   font-weight: 900;
   margin-top: 16px;
   margin-bottom: 16px;
+}
+@media (max-width: 768px) {
+  /*añadir producto*/
+  .formAdd {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formIzquierda, .formDerecha {
+    margin-right: 0;
+  }
+
+  .formIzquierda input[type="text"],
+  .formIzquierda input[type="number"],
+  .formIzquierda select,
+  .formDerecha textarea,
+  .formDerecha input[type="file"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 @media(min-width:481px) {
