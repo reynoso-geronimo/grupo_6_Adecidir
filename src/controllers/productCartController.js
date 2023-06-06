@@ -1,6 +1,3 @@
-const path = require('path');
-
-
 const productCartController = {
     productCart:function(req,res) {
 

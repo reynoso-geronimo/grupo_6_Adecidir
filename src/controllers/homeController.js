@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 
 const productos = JSON.parse(fs.readFileSync('./productos.json')
 
