@@ -10,7 +10,7 @@ const productos = JSON.parse(fs.readFileSync('./productos.json')
 const homeController = {
     index: function (req, res) {
 
-        return res.render(path.resolve('./views/home') , {productos:productos})
+        return res.render('home' , {productos:productos})
 
     }
 

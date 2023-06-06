@@ -4,11 +4,11 @@ const path = require('path');
 const productDetailController = {
     detail:function(req,res) {
 
-        return res.render(path.resolve('./views/products/productDetail'))
+        return res.render('products/productDetail')
 
     },
     editform:function(req,res){
-        return res.render(path.resolve('./views/products/productEdit'))
+        return res.render('/products/productEdit')
     }
 }
 
