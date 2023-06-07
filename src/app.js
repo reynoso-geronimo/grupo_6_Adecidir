@@ -20,12 +20,15 @@ app.use(express.static(path.resolve(__dirname, "./../public")));
 app.listen(3000, () => {
   console.log("Servidor Arriba");
 });
-app.use('/', home)
+
+app.use(home)
 app.use('/product', product)
 app.use('/login', login )
 app.use('/register', register)
 app.use('/productcart', productCart)
 
-
+app.use((req,res, next)=>{
+  res.status(404).send('CUMBIA 404')
+})
 
 
