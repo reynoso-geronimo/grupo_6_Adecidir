@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+
+<body>
+    <%- include('./partials/header') %>
+<main>
+    <h1 class="tituloAdd">Crear producto</h1>
+
+
+<form class="formAdd" action="" method="post">
+    <div class="formIzquierda">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre">
+    
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio">
+    
+        <label for="categorias">Categorías:</label>
+        <select id="categorias" name="categorias">
+          <option value="opcion1">Seleccionar categoria</option>
+          <option value="opcion2">Buzos</option>
+          <option value="opcion3">Tote bag</option>
+          <option value="opcion3">Gorros de lana</option>
+          <option value="opcion3">Barbijos</option>
+          <option value="opcion3">Anteojos de sol</option>
+          <option value="opcion1">Remeras</option>
+        </select>
+    </div>
+    <div class="formDerecha">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion"></textarea>
+  
+        <label class="subirImagen">
+            <input type="file"/>
+            Subir imagen <i class="fa-solid fa-images"></i>
+        </label>
+        <button class="botonAdd" type="submit">Añadir</button>
+    </div>
+    
+</form>
+    
+
+
+        
+</main>
+<%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

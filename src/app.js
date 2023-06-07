@@ -6,6 +6,7 @@ const product = require('./routes/product.js');
 const productCart = require('./routes/productCart.js');
 const login = require('./routes/login.js');
 const register = require('./routes/register.js');
+const crearProducto = require('./routes/crearProducto.js');
 
 const app = express();
 
@@ -26,6 +27,8 @@ app.use('/product', product)
 app.use('/login', login )
 app.use('/register', register)
 app.use('/productcart', productCart)
+app.use('/crearProducto', crearProducto)
+
 
 app.use((req,res, next)=>{
   res.status(404).send('CUMBIA 404')
