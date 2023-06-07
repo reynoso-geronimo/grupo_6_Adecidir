@@ -441,11 +441,32 @@ input[type="file"] {
 .botonAdd:hover {
   background-color: #45a049;
 }
+.selectorTalle {
+  display: flex;
+  align-items: center;
+}
+
+.selectorTalle label {
+  margin-right: 10px;
+}
+
+.selectorTalle input[type="checkbox"] {
+  display: none;
+}
+
+.selectorTalle label {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.selectorTalle input[type="checkbox"]:checked + label {
+  background-color: #333;
+  color: #fff;
+}
 
 /* Carrito de compras */
-
-
-
 
 .buzo{
 

@@ -35,14 +35,27 @@
             <input type="file"/>
             Subir imagen <i class="fa-solid fa-images"></i>
         </label>
+        <label>Talles disponibles :</label>
+        <div class="selectorTalle">
+            
+            <input type="checkbox" id="talle-s" name="size" value="S">
+            <label for="talle-s">S</label>
+        
+            <input type="checkbox" id="talle-m" name="size" value="M">
+            <label for="talle-m">M</label>
+        
+            <input type="checkbox" id="talle-l" name="size" value="L">
+            <label for="talle-l">L</label>
+        
+            <input type="checkbox" id="talle-xl" name="size" value="XL">
+            <label for="talle-xl">XL</label>
+          </div>
+        
         <button class="botonAdd" type="submit">Añadir</button>
     </div>
     
-</form>
-    
+</form> 
 
-
-        
 </main>
 <%- include('./partials/footer.ejs') %>
 
