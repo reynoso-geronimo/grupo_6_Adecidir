@@ -7,6 +7,8 @@ const cart = require('./routes/cart.js');
 const login = require('./routes/login.js');
 const register = require('./routes/register.js');
 const crearProducto = require('./routes/crearProducto.js');
+const port = 3006
+
 
 const app = express();
 
@@ -18,8 +20,8 @@ app.set("view engine", "ejs")
 app.set('views', path.resolve(__dirname,'../views'))
 app.use(express.static(path.resolve(__dirname, "./../public")));
 
-app.listen(3000, () => {
-  console.log("Servidor Arriba");
+app.listen(port, () => {
+  console.log(`Servidor corriendo en el puerto ${port}`);
 });
 
 app.use(home)
