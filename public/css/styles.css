@@ -74,6 +74,46 @@ i {
   padding: 5px;
   margin-left: 10px;
 }
+
+#login-register{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -200rem;
+  top: 5rem;
+  padding: 10px;
+  border:solid 1px yellow;
+  background-color: grey;
+  gap: 0.5rem;
+  transition: all 500ms;
+}
+#login-register button{
+  width: 100%;
+}
+#login-register:target{
+  right:0;
+  z-index: 1;
+}
+#search-bar-header{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -200rem;
+  top: 5rem;
+  padding: 10px;
+  border:solid 1px yellow;
+  background-color: grey;
+  gap: 0.5rem;
+  transition: all 500ms;
+}
+#lsearch-bar-header input{
+  width: 100%;
+}
+#search-bar-header:target{
+  right:0;
+  z-index: 1;
+}
+
 /*  EN DESUSO
 
 .featured {
