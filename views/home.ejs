@@ -21,12 +21,12 @@
 
         <section class="productos-home">
 
-          <% for(let producto of productos) { %>
+          <% for(let categoria of categorias) { %>
             <article>
-              <a href="/product">
-                <img src=<%=producto.imagen %> alt="home-1" />
+              <a href="/product/list">
+                <img src=<%=categoria.imagen %> alt="home-1" />
                 <label>
-                  <%= producto.nombre %>
+                  <%= categoria.nombre %>
                 </label>
               </a>
             </article>

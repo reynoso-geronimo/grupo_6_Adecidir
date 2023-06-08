@@ -1,6 +1,7 @@
 {
     "nombre":"nombre",
     "descripcion":"descripcion",
+    "categoria":"Buzos",
     "talle-s":1,
     "talle-m":1,
     "talle-l":1,
