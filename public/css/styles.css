@@ -109,10 +109,10 @@ i {
 footer {
   display: flex;
   flex-direction: column;
- /* background-color: #d9d9d9; */
+  background-color: #d9d9d9; 
   text-align: center;
   padding-top: 20px;
-  max-height: 100px;
+  /* max-height: 100px; */
   width: 100vw;
 }
 
