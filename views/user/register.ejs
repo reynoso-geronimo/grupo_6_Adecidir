@@ -1,31 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <script
-      src="https://kit.fontawesome.com/5e79f3a610.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
-    <title>THEME</title>
-  </head>
+<%- include('../partials/head') %>
 
   <body class="body-register">
-    <header class="main-header">
-      <div class="main-header-left-bar">
-        <i class="fa-solid fa-bars"></i>
-        <h1 class="copy-header"><a href="/">THEME</a></h1>
-      </div>
-      <div class="main-header-right-bar">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-        <a href="/login"><i class="fa-solid fa-user"></i></a>
-      </div>
-    </header>
+    <%- include('../partials/header') %>
+
     <main class="register">
       <h1>Creá tu cuenta</h1>
       <form action="/newuser" method="post">
@@ -38,17 +17,6 @@
       <p>Ya tienes cuenta? <a href="login">Iniciar Sesion</a></p>
     </main>
 
-    <footer>
-      <div>
-        <div>
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://wa.me/+549xxxxxxx"
-            ><i class="fa-brands fa-whatsapp"></i
-          ></a>
-        </div>
-        <p>&copy; 2023 THEME - Break The Scene</p>
-      </div>
-    </footer>
+    <%- include('../partials/footer.ejs') %>
   </body>
 </html>
