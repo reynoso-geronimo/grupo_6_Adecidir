@@ -33,7 +33,7 @@ app.use('/crearProducto', crearProducto)
 
 
 app.use((req,res, next)=>{
-  res.status(404).send('CUMBIA 404')
+  res.status(404).sendFile(path.resolve(__dirname,'../public/images/cumbia-404.jpg'))
 })
 
 
