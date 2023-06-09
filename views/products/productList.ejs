@@ -5,24 +5,25 @@
   <body>
     <%- include('../partials/header') %>
 
-      <main class=>
+      <main class="product-list">
         
 
 
-        <section >
+  
 
           <% productos.forEach(producto => { %>
-            <article>
-                <a href="/product">
+            <article class="article-card">
+                <a href="/product/<%=producto.id%>">
                   <img src=<%=producto.imagenes[0] %>  />
-                  <label>
+                  <h4>
                     <%= producto.nombre %>
-                  </label>
+                  </h4>
+                  <h5> $ <%= producto.precio %></h3>
                 </a>
               </article>
           <% }) %>
 
-        </section>
+       
       </main>
       <%- include('../partials/footer.ejs') %>
   </body>

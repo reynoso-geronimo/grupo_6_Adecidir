@@ -1,35 +1,6 @@
-let productos = [
-    {
-        nombre: "Buzo1",
-        imagenes: ["/images/Buzo.jpg"]
-    },
-    {
-        nombre: "Buzo2",
-        imagenes: ["/images/Buzo2.jpg"]
-    },
-    {
-        nombre: "Buzo3",
-        imagenes: ["/images/Buzo3.jpg"]
-    },
-    {
-        nombre: "Buzo4",
-        imagenes: ["/images/Buzo4.jpg"]
-    },
-    {
-        nombre: "Buzo5",
-        imagenes: ["/images/Buzo.jpg"]
-    },
-    {
-        nombre: "Buzo6",
-        imagenes: ["/images/Buzo2.jpg"]
-    }
+const fs = require('fs');
 
-
-
-
-
-
-]
+const productos = JSON.parse(fs.readFileSync('./productos.json'))
 
 const productDetailController = {
 
@@ -43,8 +14,9 @@ const productDetailController = {
     },
 
     detail: function (req, res) {
-
-        return res.render('products/productDetail')
+        const producto = productos.find(row=>row.id==req.params.id)
+        console.log(producto)
+        return res.render('products/productDetail',{producto:producto})
 
     },
     editform: function (req, res) {

@@ -5,14 +5,14 @@
   <body>
     <%- include('../partials/header') %>
 
-    <main>
+    <main >
       <section class="product-container">
         <div class="galeria">
           <div class="imagenes-producto">
-            <img src="images/Buzo.jpg" alt="producto" class="m1" />
-            <img src="images/Buzo2.jpg" alt="producto" class="m2" />
-            <img src="images/Buzo3.jpg" alt="producto" class="m3" />
-            <img src="images/Buzo4.jpg" alt="producto" class="m4" />
+            <img src="../<%= producto.imagenes[0]%>" alt="producto" class="m1" />
+            <img src="../images/Buzo2.jpg" alt="producto" class="m2" />
+            <img src="../images/Buzo3.jpg" alt="producto" class="m3" />
+            <img src="../images/Buzo4.jpg" alt="producto" class="m4" />
           </div>
           <div class="radio-selector">
             <input type="radio" id="selector1" name="radios" checked />
@@ -27,26 +27,21 @@
         </div>
         <div class="info-product">
           <h2>
-            Nombre del Item
+           <%= producto.nombre %>
             <a href="a">
               <i class="fa-regular fa-star"></i>
             </a>
             <a href="a" class="share"
               ><i class="fa-solid fa-share-nodes"></i
             ></a>
-            <!-- <span class="favorites">Guardar en favoritos</span> -->
+           
           </h2>
 
           <p class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit earum
-            id ratione harum perferendis vitae voluptate assumenda libero
-            expedita ut corporis natus, aliquam impedit cumque hic quae aliquid
-            ullam. Cum. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur quia laudantium consequatur veniam harum amet debitis
-            provident earum officia ex facilis
+            <%= producto.descripcion %>
           </p>
           <div class="talle">
-            <p class="price">$60000</p>
+            <p class="price">$<%= producto.precio %></p>
             <h3>Seleccione un talle</h3>
             <form action="/cart" method="get">
               <div class="form-container">
