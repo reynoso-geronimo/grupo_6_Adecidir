@@ -26,9 +26,9 @@
 # RETRO SPRINT 2
     ## Conclusiones
         Luego de haber terminado con dos sprints, y estar comenzando el tercero, empezamos a reconocer ciertas tendencias en el equipo. Empezamos a conocernos más, entender las diferentes capacidades que podíamos ofrecer al equipo cada uno de nosotros y pudimos analizar los aspectos del trabajo que fluyen mejor y en cuáles no. En conclusión nos dimos cuenta que:
-            1. Geronimo Reynoso es más hábil para el código.
-            2. Jennifer Lichtensztejn es la más hábil para el diseño del sitio.
-            3. Furfaro ignacio y Emiliano Apostolo son los más hábiles para la parte organizativa.
+            * Geronimo Reynoso es más hábil para el código.
+            * Jennifer Lichtensztejn es la más hábil para el diseño del sitio.
+            * Furfaro ignacio y Emiliano Apostolo son los más hábiles para la parte organizativa.
 
         Además, un compañero se dió de baja, sin embargo, eso no nos limitó a la hora de trabajar sino que nos motivó a trabajar más, organizarnos mejor y seguir para delante.
 
@@ -39,4 +39,3 @@
         3. Continuar haciendo: la organización de tareas por trello y actualizar los avances del proyecto en dicha plataforma. Comentar las secciones de código que corresponden a cada vista.
         4. Hacer menos: vamos a hacer más justo el hecho de compartir pantalla en las reuniones de equipo para que la responsabilidad no caiga en uno, es decir, que llamada a llamada va a compartir otra persona para que todos veamos lo que sabe cada uno y cómo nos podemos ayudar a mejorar.
         5. Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).
-o
