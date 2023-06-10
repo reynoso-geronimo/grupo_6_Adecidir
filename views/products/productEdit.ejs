@@ -14,26 +14,26 @@
     <main>
       <form action="/product/edit/:id"  class="edit-form">
         <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre">
+        <input type="text" name="nombre" id="nombre" value="<%= producto.nombre %>">
         <label for="nombre">Descripcion</label>
-        <input type="text" name="descripcion" id="descripcion">
+        <textarea name="descripcion" id="descripcion" placeholder="<%= producto.descripcion %>" cols="30" rows="10"></textarea>
 
         <label for="talle-s">Talle S</label>
-        <input type="number" name="s" id="talle-s">
+        <input type="number" name="s" id="talle-s" value="<%= producto.talles %>">
 
         <label for="talle-m">Talle M</label>
-        <input type="number" name="m" id="talle-m">
+        <input type="number" name="m" id="talle-m" value="<%= producto.tallem %>">
 
         <label for="talle-l">Talle L</label>
-        <input type="number" name="l" id="talle-l">
+        <input type="number" name="l" id="talle-l" value="<%= producto.tallel %>">
         
         <label for="talle-xl">Talle XL</label>
-        <input type="number" name="xl" id="talle-xl">
+        <input type="number" name="xl" id="talle-xl" value="<%= producto.tallexl %>">
         
         <label for="talle-xxl">Talle XXL</label>
-        <input type="number" name="xxl" id="talle-xxl">
+        <input type="number" name="xxl" id="talle-xxl" value="<%= producto.tallexxl %>">
         <label for="precio">Precio</label>
-        <input type="text" name="precio" id="precio">
+        <input type="text" name="precio" id="precio" value="<%= producto.precio %>">
         <input type="file" name="imagenes" id="imagen">
         <button type="submit">Actualizar</button>
       </form>

@@ -20,7 +20,8 @@ const productDetailController = {
 
     },
     editform: function (req, res) {
-        return res.render('/products/productEdit')
+        const producto = productos.find(row=>row.id==req.params.id)
+        return res.render('products/productEdit',{producto:producto})
     }
 }
 

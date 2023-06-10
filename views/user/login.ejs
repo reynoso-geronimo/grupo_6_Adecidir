@@ -2,15 +2,16 @@
 <html lang="en">
 <%- include('../partials/head') %>
 
-  <body>
+  <body class="body-register">
     <%- include('../partials/header') %>
 
     <main class="sign-in">
-      <h1>Iniciar sesión</h1>
+      <h1>Bienvenido de vuelta</h1>
       <form action="#" method="post">
         <input type="email" name="email" placeholder="Email" />
         <input type="password" name="password" placeholder="Contraseña" />
         <input type="submit" value="Iniciar sesión" class="boton-negro" />
+        <div> <input type="checkbox" name="keepalive" id="keepalive"><label for="keepalive">Mantener sesion Abierta</label></div>
       </form>
       <p>¿No tienes una cuenta? <a href="register">Regístrate</a></p>
     </main>
