@@ -2,10 +2,10 @@
     "nombre":"nombre",
     "descripcion":"descripcion",
     "categoria":"Buzos",
-    "talle-s":1,
-    "talle-m":1,
-    "talle-l":1,
-    "talle-xl":1,
-    "talle-xxl":1,
+    "talles":1,
+    "tallem":1,
+    "tallel":1,
+    "tallexl":1,
+    "tallexxl":1,
     "imagenes":[]
   }
