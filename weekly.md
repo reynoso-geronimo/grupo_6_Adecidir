@@ -68,3 +68,4 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
 
 * ENTRE TODOS:
     - Agregar estilos a las nuevas vistas
+
