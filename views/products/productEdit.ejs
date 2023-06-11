@@ -48,18 +48,25 @@
                 Subir imagen <i class="fa-solid fa-images"></i>
               </label>
               <label>Talles disponibles :</label>
-              <div class="selectorTalle">
-                <input type="checkbox" id="talles" name="size" value="S" />
-                <label for="talles">S</label>
+              <div class="editar-talle">
+                
+                <label for="talles">S <input type="number" id="talles" name="size" value="<%=producto.talles%>"/></label>
+               
 
-                <input type="checkbox" id="tallem" name="size" value="M" />
-                <label for="tallem">M</label>
+                
+                <label for="tallem">M<input type="number" id="tallem" name="size" value="<%=producto.tallem%>"/></label>
+                
 
-                <input type="checkbox" id="tallel" name="size" value="L" />
-                <label for="tallel">L</label>
-
-                <input type="checkbox" id="tallexl" name="size" value="XL" />
-                <label for="tallexl">XL</label>
+                
+                <label for="tallel">L<input type="number" id="tallel" name="size" value="<%= producto.tallel %>"/>
+                </label>
+                
+                
+                <label for="tallexl">XL<input type="number" id="tallexl" name="size"value="<%= producto.tallexl %>" /></label>
+                
+                
+                <label for="tallexxl">XXL<input type="number" id="tallexxl" name="size" value="<%= producto.tallexxl %>"/></label>
+                
               </div>
             </div>
           </div>
