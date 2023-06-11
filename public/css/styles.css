@@ -34,7 +34,7 @@ main {
   height: 5rem;
   position: fixed;
   z-index: 1;
-  border-bottom: 4px solid;
+  /* border-bottom: 4px solid; */
   /* border-image: linear-gradient(to right, rgba(255, 245, 0), rgb(0, 0, 0)); */
  border-image-slice: 1;
 } 
