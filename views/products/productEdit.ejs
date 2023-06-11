@@ -5,7 +5,7 @@
   <body>
     <%- include('../partials/header') %>
       <main>
-        <h1 class="tituloAdd">Crear producto</h1>
+        <h1 class="tituloAdd">Editar Producto: <%= producto.nombre %></h1>
 
         <form class="formEdit" action="" method="put">
           <div class="edit-box">
@@ -73,11 +73,11 @@
               </div>
               <% }) %>
           </div>
-          <button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
+          <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button> <button class="botonEliminar"type="submit">ELIMINAR</button></span>
         </form>
 
         <!-- TODO ELIMINAR PRODUCTO -->
-        <button type="submit">ELIMINAR PRODUCTO</button>
+       
       </main>
       <%- include('../partials/footer.ejs') %>
   </body>
