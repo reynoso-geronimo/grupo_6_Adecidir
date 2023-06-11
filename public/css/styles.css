@@ -64,7 +64,7 @@ main {
   background-color:black;
   color: white;
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: space-between;
   
   height: 5rem;
@@ -103,7 +103,7 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px 15px;
+  /*padding: 0px 15px;*/
 
   
 }
@@ -195,7 +195,7 @@ footer {
   text-align: center;
 
   /* max-height: 100px; */
-  width: 100vw;
+  width: 100%;
 }
 
 
@@ -732,23 +732,23 @@ input[type="file"] {
 
 #banner {
   width: 100%;
+  height: 87vh;
   padding: 0;
   margin: 0;
-}
+  background-image: url("../images/banner\ sin\ plaquita.jpg");
+  background-repeat: no-repeat;
 
-.banner-home {
-  width: 97.6vw;
-  max-height: 40vw;
 }
 
 .placa-banner {
+  margin-top: 10%;
   width: 32%;
   height: 8vw;
   border: 1px solid #fff;
   background-color: #fff; 
-  position: absolute;
+  /*position: absolute;
   z-index: 1;
-  bottom: 250px;
+  bottom: 250px;*/
   text-align: center;
   align-items: center;
 }
@@ -881,7 +881,7 @@ input[type="file"] {
 
   
   .home{
-    max-width: 1500px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -930,6 +930,6 @@ input[type="file"] {
 @media (min-width:1500px){
   .main-header{
     justify-content: space-around;
-    gap: 1200px;
+    gap: 70%;
   }
 }
