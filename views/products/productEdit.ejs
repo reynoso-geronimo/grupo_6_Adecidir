@@ -1,54 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head') %>
-  <style>
-    .edit-form{
-      display: flex;
-      flex-direction: column;
-    }
-  </style>
+
   <body>
-    
     <%- include('../partials/header') %>
+      <main>
+        <h1 class="tituloAdd">Crear producto</h1>
 
-    <main>
-      <form action="/product/edit/:id"  class="edit-form">
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" value="<%= producto.nombre %>">
-        <label for="nombre">Descripcion</label>
-        <textarea name="descripcion" id="descripcion" placeholder="<%= producto.descripcion %>" cols="30" rows="10"></textarea>
+        <form class="formEdit" action="" method="put">
+          <div class="edit-box">
+            <div class="formIzquierda">
+              <label for="nombre">Nombre:</label>
+              <input type="text" name="nombre" id="nombre" value="<%= producto.nombre %>" />
 
-        <label for="talles">Talle S</label>
-        <input type="number" name="s" id="talles" value="<%= producto.talles %>">
+              <label for="precio">Precio:</label>
+              <input type="text" name="precio" id="precio" value="<%= producto.precio %>" />
 
-        <label for="tallem">Talle M</label>
-        <input type="number" name="m" id="tallem" value="<%= producto.tallem %>">
+              <label for="categorias">Categorías:</label>
+              <select id="categorias" name="categorias">
+                <option value="opcion1" disabled>Seleccionar categoria</option>
+                <option  value="opcion2" <% if (producto.categoria=="Buzos") { %>
+                  selected
+                <% } %>>Buzos</option>
+                <option value="opcion3" <% if (producto.categoria=="Tote bag") { %>
+                  selected
+                <% } %>>Tote bag</option>
+                <option value="opcion3" <% if (producto.categoria==="Gorros de lana") { %>
+                  selected
+                <% } %>>Gorros de lana</option>
+                <option value="opcion3" <% if (producto.categoria==="Barbijos") { %>
+                  selected
+                <% } %>>Barbijos</option>
+                <option value="opcion3" <% if (producto.categoria==="Anteojos de sol") { %>
+                  selected
+                <% } %>>Anteojos de sol</option>
+                <option value="opcion1" <% if (producto.categoria==="Remeras") { %>
+                  selected
+                <% } %>>Remeras</option>
+              </select>
+            </div>
+            <div class="formDerecha">
+              <label for="descripcion">Descripción:</label>
+              <textarea name="descripcion" id="descripcion" placeholder="<%= producto.descripcion %>"></textarea>
 
-        <label for="tallel">Talle L</label>
-        <input type="number" name="l" id="tallel" value="<%= producto.tallel %>">
-        
-        <label for="tallexl">Talle XL</label>
-        <input type="number" name="xl" id="tallexl" value="<%= producto.tallexl %>">
-        
-        <label for="tallexxl">Talle XXL</label>
-        <input type="number" name="xxl" id="tallexxl" value="<%= producto.tallexxl %>">
-        <label for="precio">Precio</label>
-        <input type="text" name="precio" id="precio" value="<%= producto.precio %>">
-        <input type="file" name="imagenes" id="imagen">
-        
+              <label class="subirImagen">
+                <input type="file" />
+                Subir imagen <i class="fa-solid fa-images"></i>
+              </label>
+              <label>Talles disponibles :</label>
+              <div class="selectorTalle">
+                <input type="checkbox" id="talles" name="size" value="S" />
+                <label for="talles">S</label>
 
-        <% producto.imagenes.forEach(element => { %>
-              <img src="<%=element %>" >
-        <% }) %>
-        <button type="submit">Actualizar</button>
-      </form>
-      
-      <!-- TODO ELIMINAR PRODUCTO -->
-      <button type="submit">ELIMINAR PRODUCTO</button>
-    </main>
-    
-    <%- include('../partials/footer.ejs') %>
-    
+                <input type="checkbox" id="tallem" name="size" value="M" />
+                <label for="tallem">M</label>
+
+                <input type="checkbox" id="tallel" name="size" value="L" />
+                <label for="tallel">L</label>
+
+                <input type="checkbox" id="tallexl" name="size" value="XL" />
+                <label for="tallexl">XL</label>
+              </div>
+            </div>
+          </div>
+          <div class="edit-images">
+            <% producto.imagenes.forEach(element=> { %>
+              <div class="edit-imagex-trash">
+                <img src="<%=element %>" />
+                <input type="checkbox" id="<%=element %>" name="<%=element %>" value="<%=element %>" />
+                <label for="<%=element %>"><i class="fa-solid fa-trash"></i></label>
+
+              </div>
+              <% }) %>
+          </div>
+          <button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
+        </form>
+
+        <!-- TODO ELIMINAR PRODUCTO -->
+        <button type="submit">ELIMINAR PRODUCTO</button>
+      </main>
+      <%- include('../partials/footer.ejs') %>
   </body>
 
-  </html>
+</html>

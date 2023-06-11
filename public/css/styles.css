@@ -517,6 +517,64 @@ input[type="file"] {
   color: #fff;
 }
 
+/* formulario edicion de producto */
+
+.formEdit {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 600px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.edit-box{
+  display: flex;
+  flex-direction: row;
+}
+.edit-images{
+  display: flex;
+  width: 600px;
+  justify-content: space-around;
+}
+.edit-imagex-trash{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.edit-images img{
+  width:100px;
+}
+.edit-images input[type="checkbox"] {
+  display: none;
+}
+
+.edit-images label {
+  display: inline-block;
+  background-color: #d1d1d1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100px;
+  font-weight: 900;
+  margin: 5px;
+  border: solid 1px #fff;
+  text-align: center;
+}
+.edit-images i{
+  margin: 0;
+}
+.edit-images input[type="checkbox"]:checked ~ label {
+  background-color:#ff0000;
+  color:#ffffff;
+  border: solid 1px #000000;
+}
+
+.talle button{
+  width: 20rem;
+}
+
 /* Carrito de compras */
 
 .buzo{
