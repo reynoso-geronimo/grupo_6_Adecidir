@@ -6,7 +6,8 @@ const product = require('./routes/product.js');
 const cart = require('./routes/cart.js');
 const login = require('./routes/login.js');
 const register = require('./routes/register.js');
-const crearProducto = require('./routes/crearProducto.js');
+
+
 const port = 3006
 
 
@@ -29,7 +30,6 @@ app.use('/product', product)
 app.use('/login', login )
 app.use('/register', register)
 app.use('/cart', cart)
-app.use('/crearProducto', crearProducto)
 
 
 app.use((req,res, next)=>{
