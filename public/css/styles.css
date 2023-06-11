@@ -5,6 +5,42 @@
 #FFFFFF blanco
 */
 
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 64/78pt;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40/48pt;
+  font-weight: 600;
+}
+
+h3, p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32/39pt;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20/24.4pt;
+  font-weight: 400;
+}
+
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16/19.5pt;
+  font-weight: 300;
+}
+
+h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14/17.1pt;
+  font-style: italic;
+  font-weight: 300;
+}
 
 * {
   box-sizing: border-box;
