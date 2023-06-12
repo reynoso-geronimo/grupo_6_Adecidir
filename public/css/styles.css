@@ -6,7 +6,7 @@
 */
 
 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 64/78pt;
   font-weight: 700;
 }
@@ -17,27 +17,27 @@ h2 {
   font-weight: 600;
 }
 
-h3, p {
+h3, label {
   font-family: 'Montserrat', sans-serif;
-  font-size: 32/39pt;
+  font-size: 90/109pt;
   font-weight: 500;
 }
 
-h4 {
+h4, p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20/24.4pt;
+  font-size: 20/24pt;
   font-weight: 400;
 }
 
 h5 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16/19.5pt;
+  font-size: 16/19pt;
   font-weight: 300;
 }
 
 h6 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 14/17.1pt;
+  font-size: 14/17pt;
   font-style: italic;
   font-weight: 300;
 }
@@ -45,6 +45,7 @@ h6 {
 * {
   box-sizing: border-box;
 }
+
 
 body {
   margin: auto;
@@ -64,7 +65,7 @@ main {
   background-color:black;
   color: white;
   display: flex;
-  width: 100%;
+  width: 99%;
   justify-content: space-between;
   
   height: 5rem;
@@ -195,7 +196,7 @@ footer {
   text-align: center;
 
   /* max-height: 100px; */
-  width: 100%;
+  width: 99%;
 }
 
 
@@ -753,9 +754,9 @@ input[type="file"] {
   align-items: center;
 }
 
-.placa-banner h3 {
+.placa-banner h1 {
   margin: 0;
-  padding: 8% 0 2% 0;
+  padding: 6% 0 2% 0;
 }
 
 .placa-banner h5 {
@@ -881,7 +882,7 @@ input[type="file"] {
 
   
   .home{
-    max-width: 100%;
+    max-width: 99%;
     display: flex;
     flex-direction: column;
     align-items: center;
