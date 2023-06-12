@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "nombre": "Buzo1",
+    "nombre": "Buzo 1",
     "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque, nulla et dictum lobortis, odio enim semper eros, ac mattis felis purus quis urna. Vivamus tempus sollicitudin lacus, ac pharetra arcu elementum a. Fusce quis pulvinar dui. Nunc faucibus, leo id elementum aliquam, erat erat molestie ligula, a mollis justo nisl non urna. Sed mi urna, semper eu eleifend et, lacinia et neque. Phasellus non ullamcorper nulla. Sed molestie lectus vulputate, lobortis metus sit amet, maximus odio" ,
     "categoria": "Buzos",
     "precio":30000,
@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "nombre": "nombre",
+    "nombre": "Buzo 2",
     "descripcion": "descripcion",
     "categoria": "buzo",
     "precio":30000,
@@ -23,11 +23,11 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/Buzo2.jpg"]
   },
   {
     "id": 3,
-    "nombre": "nombre",
+    "nombre": "Buzo 3",
     "descripcion": "descripcion",
     "categoria": "buzo",
     "precio":30000,
@@ -36,24 +36,11 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
-  },
-  {
-    "id": 1,
-    "nombre": "nombre",
-    "descripcion": "descripcion",
-    "categoria": "buzo",
-    "precio":30000,
-    "talles": 1,
-    "tallem": 1,
-    "tallel": 1,
-    "tallexl": 1,
-    "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/Buzo3.jpg"]
   },
   {
     "id": 4,
-    "nombre": "nombre",
+    "nombre": "Buzo 4",
     "descripcion": "descripcion",
     "categoria": "buzo",
     "precio":30000,
@@ -62,110 +49,162 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/Buzo4.jpg"]
   },
   {
     "id": 5,
-    "nombre": "nombre",
+    "nombre": "Barbijo 1",
     "descripcion": "descripcion",
-    "categoria": "buzo",
+    "categoria": "barbijos",
     "precio":30000,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/Barbijo.jpg"]
   },
   {
     "id": 6,
-    "nombre": "nombre",
+    "nombre": "Barbijo 2",
     "descripcion": "descripcion",
-    "categoria": "buzo",
+    "categoria": "barbijos",
     "precio":30000,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/Barbijo2.jpg"]
   },
   {
     "id": 7,
-    "nombre": "nombre",
+    "nombre": "Barbijo 3",
     "descripcion": "descripcion",
-    "categoria": "buzo",
+    "categoria": "barbijos",
     "precio":30000,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/Barbijo3.jpg"]
   },
   {
     "id": 8,
-    "nombre": "nombre",
+    "nombre": "barbijo 4",
     "descripcion": "descripcion",
-    "categoria": "buzo",
+    "categoria": "barbijos",
     "precio":30000,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/Barbijo4.jpg"]
   },
   {
     "id": 9,
-    "nombre": "nombre",
+    "nombre": "remera 1",
     "descripcion": "descripcion",
-    "categoria": "buzo",
+    "categoria": "remeras",
     "precio":30000,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/remera1.png"]
   },
   {
     "id": 10,
-    "nombre": "nombre",
+    "nombre": "remera 2",
     "descripcion": "descripcion",
-    "categoria": "buzo",
+    "categoria": "remeras",
     "precio":30000,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/remera2.png"]
   },
   {
     "id": 11,
-    "nombre": "nombre",
+    "nombre": "remera 3",
     "descripcion": "descripcion",
-    "categoria": "buzo",
+    "categoria": "remeras",
     "precio":30000,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/remera3.png"]
   },
   {
     "id": 12,
-    "nombre": "nombre",
+    "nombre": "remera 4",
     "descripcion": "descripcion",
-    "categoria": "buzo",
+    "categoria": "remeras",
     "precio":30000,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg"]
+    "imagenes": ["/images/remera4.png"]
+  },
+  {
+    "id": 13,
+    "nombre": "totebag",
+    "descripcion": "descripcion",
+    "categoria": "bolsas",
+    "precio":30000,
+    "talles": 1,
+    "tallem": 1,
+    "tallel": 1,
+    "tallexl": 1,
+    "tallexxl": 1,
+    "imagenes": ["/images/totebag1.png"]
+  },
+  {
+    "id": 14,
+    "nombre": "totebag",
+    "descripcion": "descripcion",
+    "categoria": "bolsas",
+    "precio":30000,
+    "talles": 1,
+    "tallem": 1,
+    "tallel": 1,
+    "tallexl": 1,
+    "tallexxl": 1,
+    "imagenes": ["/images/totebag2.png"]
+  },
+  {
+    "id": 15,
+    "nombre": "totebag",
+    "descripcion": "descripcion",
+    "categoria": "bolsas",
+    "precio":30000,
+    "talles": 1,
+    "tallem": 1,
+    "tallel": 1,
+    "tallexl": 1,
+    "tallexxl": 1,
+    "imagenes": ["/images/totebag3.png"]
+  },
+  {
+    "id": 16,
+    "nombre": "totebag",
+    "descripcion": "descripcion",
+    "categoria": "bolsas",
+    "precio":30000,
+    "talles": 1,
+    "tallem": 1,
+    "tallel": 1,
+    "tallexl": 1,
+    "tallexxl": 1,
+    "imagenes": ["/images/totebag4.png"]
   }
 ]
