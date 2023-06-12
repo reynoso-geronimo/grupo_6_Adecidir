@@ -9,7 +9,7 @@ const productDetailController = {
 
   detail: function (req, res) {
     const producto = productos.find((row) => row.id == req.params.id);
-    console.log(producto);
+    
     return res.render("products/productDetail", { producto: producto });
   },
   editform: function (req, res) {
