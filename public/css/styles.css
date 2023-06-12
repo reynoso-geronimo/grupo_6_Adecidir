@@ -345,11 +345,12 @@ Pagina detalle producto
   margin: 1.5rem;
 }
 
-.talle {
+.product-talle-select {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .radio-button input[type="radio"] {
@@ -371,7 +372,7 @@ Pagina detalle producto
   color: #000000;
   border: solid 1px #000000;
 }
-.talle button {
+.product-talle-select button {
   width: 20rem;
 }
 .boton-negro {

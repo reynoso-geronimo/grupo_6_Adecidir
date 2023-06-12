@@ -42,11 +42,11 @@
           <p class="description">
             <%= producto.descripcion %>
           </p>
-          <div class="talle">
+          <div class="product-talle-select">
             <p class="price">$<%= producto.precio %></p>
             <h3>Seleccione un talle</h3>
             <form action="/cart" method="get">
-              <div class="form-container">
+              <div >
                 <div class="radio-button">
                   <input type="radio" id="radio1" name="radios" value="s" />
                   <label for="radio1">S</label>
