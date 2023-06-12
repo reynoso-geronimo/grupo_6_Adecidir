@@ -753,8 +753,8 @@ input[type="file"] {
 
 .placa-banner {
   margin-top: 10%;
-  width: 32%;
-  height: 8vw;
+  width: 50vw;
+  height: 20vh;
   border: 1px solid #fff;
   background-color: #fff; 
   /*position: absolute;
@@ -879,11 +879,33 @@ input[type="file"] {
    padding-left: 7%;
    padding-right: 5%;
   }
- /* edicion de producto */
-.edit-box{
-  flex-direction: row;
+  /* edicion de producto */
+  .edit-box{
+    flex-direction: row;
+  }
+  #banner {
+    width: 100%;
+    height: 70vh;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    border: 1px solid #fff;
+    justify-content: center; 
+    height: 70vh 
+  }
+
+  .placa-banner {
+    margin-top: 0;
+    width: 100%;
+    height: 20vh;
+    border: 1px solid #fff;
+    background-color: #fff;
+    text-align: center;
+  }
 }
-}
+
+
+
 @media (min-width:1200px) {
    /* listado de productos */
    .article-card{
@@ -932,9 +954,7 @@ input[type="file"] {
   }
   .product-container div{
     width: 40vw;
-    
   }
- 
 }
 
 
