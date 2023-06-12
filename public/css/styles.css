@@ -417,7 +417,7 @@ Pagina detalle producto
 .body-register{
   background-image: url("../images/graffiti/Slide16_9-9.jpg");
   background-repeat: no-repeat;
-  background-size: 99%;
+  background-size: cover;
   background-position: top center;
 }
 
@@ -483,7 +483,7 @@ Pagina detalle producto
 .body-login{
   background-image: url("../images/graffiti/Slide16_9-8.jpg");
   background-repeat: no-repeat;
-  background-size: 99%;
+  background-size:cover;
   background-position: top center;
 }
 
