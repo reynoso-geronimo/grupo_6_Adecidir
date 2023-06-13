@@ -392,6 +392,7 @@ Pagina detalle producto
 .boton-negro:hover {
   background-size: 300%;
   font-size: 18px;
+  color: #fff;
   background-color: #FFF500;
 }
 
