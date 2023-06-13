@@ -1,16 +1,16 @@
 [
   {
     "id": 1,
-    "nombre": "Buzo 1",
-    "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque, nulla et dictum lobortis, odio enim semper eros, ac mattis felis purus quis urna. Vivamus tempus sollicitudin lacus, ac pharetra arcu elementum a. Fusce quis pulvinar dui. Nunc faucibus, leo id elementum aliquam, erat erat molestie ligula, a mollis justo nisl non urna. Sed mi urna, semper eu eleifend et, lacinia et neque. Phasellus non ullamcorper nulla. Sed molestie lectus vulputate, lobortis metus sit amet, maximus odio" ,
+    "nombre": "BUZO ESTAMPADOS GRÁFICOS",
+    "descripcion":"Sudadera con cuello redondo y manga larga. Estampación de gráficos combinados a contraste en toda la prenda. Acabados en rib." ,
     "categoria": "Buzos",
-    "precio":30000,
+    "precio":27.990,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/Buzo.jpg","/images/Buzo2.jpg","/images/Buzo3.jpg","/images/Buzo4.jpg"]
+    "imagenes": ["/images/ropa/buzo-1/buzo1a.jpg", "/images/ropa/buzo-1/buzo1b.jpg", "/images/ropa/buzo-1/buzo1c.jpg", "/images/ropa/buzo-1/buzo1d.jpg"]
   },
   {
     "id": 2,

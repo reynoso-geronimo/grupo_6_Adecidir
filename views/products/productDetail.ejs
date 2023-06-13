@@ -6,15 +6,15 @@
     <%- include('../partials/header') %>
 
     <main >
-      <a href="/product/<%=producto.id%>/editform/"><button>EDITAR PRODUCTO</button></a>
+
 
       <section class="product-container">
         <div class="galeria">
           <div class="imagenes-producto">
             <img src="../<%= producto.imagenes[0]%>" alt="producto" class="m1" />
-            <img src="../images/Buzo2.jpg" alt="producto" class="m2" />
-            <img src="../images/Buzo3.jpg" alt="producto" class="m3" />
-            <img src="../images/Buzo4.jpg" alt="producto" class="m4" />
+            <img src="../<%= producto.imagenes[1]%>" alt="producto" class="m2" />
+            <img src="../<%= producto.imagenes[2]%>" alt="producto" class="m3" />
+            <img src="../<%= producto.imagenes[3]%>" alt="producto" class="m4" />
           </div>
           <div class="radio-selector">
             <input type="radio" id="selector1" name="radios" checked />
@@ -36,7 +36,6 @@
             <a href="a" class="share"
               ><i class="fa-solid fa-share-nodes"></i
             ></a>
-           
           </h2>
 
           <p class="description">
@@ -63,6 +62,7 @@
                 <button type="submit" class="boton-negro">
                   Agregar al Carrito
                 </button>
+                <a href="/product/<%=producto.id%>/editform/"><button>EDITAR PRODUCTO</button></a>
 
                
 
