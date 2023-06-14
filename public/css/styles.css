@@ -472,15 +472,14 @@ Pagina detalle producto
 }
 
 /*Form crear producto*/
-.tituloAdd {
+tituloAdd {
   text-align: center;
 }
 
 .formAdd {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 600px;
+  flex-direction: column;
+  width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -488,8 +487,7 @@ Pagina detalle producto
 
 .formIzquierda,
 .formDerecha {
-  flex: 1;
-  margin-right: 20px;
+  margin-right: 0;
 }
 
 .formIzquierda label,
@@ -509,9 +507,7 @@ Pagina detalle producto
   border: 1px solid #ccc;
   border-radius: 3px;
 }
-input[type="file"] {
-  display: none;
-}
+
 .subirImagen {
   border: 1px solid #ccc;
   display: inline-block;
@@ -531,6 +527,7 @@ input[type="file"] {
 .botonAdd:hover {
   background-color: #45a049;
 }
+
 .selectorTalle {
   display: flex;
   align-items: center;
@@ -836,28 +833,6 @@ input[type="file"] {
   justify-content: space-around;
 }
 
-@media (max-width: 768px) {
-  /*añadir producto*/
-  .formAdd {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .formIzquierda,
-  .formDerecha {
-    margin-right: 0;
-  }
-
-  .formIzquierda input[type="text"],
-  .formIzquierda input[type="number"],
-  .formIzquierda select,
-  .formDerecha textarea,
-  .formDerecha input[type="file"] {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
-
 @media (min-width: 481px) {
   /* listado de productos */
   .article-card {
@@ -903,6 +878,87 @@ input[type="file"] {
   .product-container div {
     width: 40vw;
   }
+  /*CREAR PRODUCTO*/
+  .formAdd {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .formIzquierda,
+  .formDerecha {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .formIzquierda label,
+  .formDerecha label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .formIzquierda input[type="text"],
+  .formIzquierda input[type="number"],
+  .formIzquierda select,
+  .formDerecha textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  input[type="file"] {
+    display: none;
+  }
+  .subirImagen {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .botonAdd {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .botonAdd:hover {
+    background-color: #45a049;
+  }
+  .selectorTalle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .selectorTalle label {
+    margin-right: 10px;
+  }
+  
+  .selectorTalle input[type="checkbox"] {
+    display: none;
+  }
+  
+  .selectorTalle label {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .selectorTalle input[type="checkbox"]:checked + label {
+    background-color: #333;
+    color: #fff;
+  }
+
 }
 @media (min-width: 1279px) {
   /* listado de productos */
