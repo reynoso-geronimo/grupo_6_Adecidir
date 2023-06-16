@@ -393,7 +393,7 @@ Pagina detalle producto
   background-size: 300%;
   font-size: 18px;
   color: #fff;
-  background-color: #FFF500;
+  
 }
 
 .share {
@@ -467,7 +467,7 @@ Pagina detalle producto
 .body-login {
   background-image: url("../images/graffiti/Slide16_9-8.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
   background-position: top center;
 }
 
@@ -776,7 +776,7 @@ Pagina detalle producto
   /* margin: 7px 7px; */
   display: flex;
   flex-direction: column;
-  width: 85vw;
+  width: 100vw;
   background-color: #fff;
   position: relative;
 }
