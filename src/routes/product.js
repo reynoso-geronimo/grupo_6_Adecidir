@@ -8,7 +8,8 @@ router.get("/crearProducto", product.crearProductoForm);
 router.get("/:id?", product.detail);
 
 
-router.get('/:id/editform/', product.editform)
+router.get('/:id/editform/', product.editForm)
+router.put('/:id/', product.editItem)
 // router.patch('/:id/edit', product.edit)
 // router.delete('/:id/delete',product.delete)
 

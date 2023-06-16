@@ -472,7 +472,7 @@ Pagina detalle producto
 }
 
 /*Form crear producto*/
-tituloAdd {
+.tituloAdd {
   text-align: center;
 }
 
@@ -561,18 +561,19 @@ tituloAdd {
   justify-content: space-between;
   align-items: center;
 
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 .edit-box {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
 .edit-box div {
-  width: 250px;
+  width: 230px;
 }
 .editar-talle {
   display: flex;
@@ -584,7 +585,7 @@ tituloAdd {
   text-align: center;
 }
 .editar-talle input {
-  width: 50px;
+  width: 100%;
   font-size: 16px;
   text-align: center;
   border: none;
