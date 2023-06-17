@@ -11,10 +11,13 @@
       <section class="product-container">
         <div class="galeria">
           <div class="imagenes-producto">
-            <img src="../<%= producto.imagenes[0]%>" alt="producto" class="m1" />
+            <% for( let index = 0; index < producto.imagenes.length; index++ ) { %>
+              <img src="../<%= producto.imagenes[index]%>" alt="producto" class="m<%= index +1%>" />
+            <% } %>
+            <!-- <img src="../<%= producto.imagenes[0]%>" alt="producto" class="m1" />
             <img src="../<%= producto.imagenes[1]%>" alt="producto" class="m2" />
             <img src="../<%= producto.imagenes[2]%>" alt="producto" class="m3" />
-            <img src="../<%= producto.imagenes[3]%>" alt="producto" class="m4" />
+            <img src="../<%= producto.imagenes[3]%>" alt="producto" class="m4" /> -->
           </div>
           <div class="radio-selector">
             <input type="radio" id="selector1" name="radios" checked />

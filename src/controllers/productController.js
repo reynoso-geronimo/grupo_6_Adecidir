@@ -1,7 +1,8 @@
 const fs = require("fs");
+const path = require("path");
 
 
-const productos = JSON.parse(fs.readFileSync("./productos.json","utf-8")); //esto puede traer problemas posible solucion transformarlo en una funcion y que cada funcion la invoque para siempre estar actualizada
+const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname,"../database/productos.json"),"utf-8")); //esto puede traer problemas posible solucion transformarlo en una funcion y que cada funcion la invoque para siempre estar actualizada
 
 const productDetailController = {
   list: function (req, res) {
@@ -46,7 +47,7 @@ const productDetailController = {
       producto.imagenes = producto.imagenes.filter(row => row != req.body.imgDelete)
     }
     
-    fs.writeFileSync("./productos.json",JSON.stringify(productos ,null,2))
+    fs.writeFileSync(path.resolve(__dirname,"../database/productos.json"),JSON.stringify(productos ,null,2))
 
 
     return res.redirect("/product/" + req.params.id +"/editform")
@@ -56,7 +57,7 @@ const productDetailController = {
       const producto = productos.find((row) => row.id == req.params.id);
       producto.imagenes = [...producto.imagenes,"/images/productos/"+req.file.filename]
 
-      fs.writeFileSync("./productos.json",JSON.stringify(productos ,null,2))
+      fs.writeFileSync(path.resolve(__dirname,"../database/productos.json"),JSON.stringify(productos ,null,2))
 
       return res.redirect("/product/" + req.params.id +"/editform")
    },

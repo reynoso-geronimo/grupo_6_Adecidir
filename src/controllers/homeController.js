@@ -1,6 +1,7 @@
 const fs = require('fs');
+const path = require('path');
 
-const categorias = JSON.parse(fs.readFileSync('./categorias.json')
+const categorias = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../database/categorias.json'))
 
 
 
