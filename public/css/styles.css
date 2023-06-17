@@ -302,15 +302,11 @@ Pagina detalle producto
   color: #000000;
   border: solid 2px #000000;
 }
-.m2 {
+.img-detalle {
   display: none;
 }
-.m3 {
-  display: none;
-}
-.m4 {
-  display: none;
-}
+
+
 
 .product-container h2 {
   color: black;

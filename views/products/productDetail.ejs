@@ -12,22 +12,18 @@
         <div class="galeria">
           <div class="imagenes-producto">
             <% for( let index = 0; index < producto.imagenes.length; index++ ) { %>
-              <img src="../<%= producto.imagenes[index]%>" alt="producto" class="m<%= index +1%>" />
+              <img src="../<%= producto.imagenes[index]%>" alt="producto" class="img-detalle"  />
             <% } %>
-            <!-- <img src="../<%= producto.imagenes[0]%>" alt="producto" class="m1" />
-            <img src="../<%= producto.imagenes[1]%>" alt="producto" class="m2" />
-            <img src="../<%= producto.imagenes[2]%>" alt="producto" class="m3" />
-            <img src="../<%= producto.imagenes[3]%>" alt="producto" class="m4" /> -->
+           
           </div>
           <div class="radio-selector">
-            <input type="radio" id="selector1" name="radios" checked />
-            <label for="selector1"></label>
-            <input type="radio" id="selector2" name="radios" />
-            <label for="selector2"></label>
-            <input type="radio" id="selector3" name="radios" />
-            <label for="selector3"></label>
-            <input type="radio" id="selector4" name="radios" />
-            <label for="selector4"></label>
+            <% for( let index = 0; index < producto.imagenes.length; index++ ) { %>
+              <input type="radio" id="selector<%= index %>" name="radios" <% if (index==0) { %>
+               checked
+              <% } %> />
+            <label for="selector<%= index %>"></label>
+            <% } %>
+           
           </div>
         </div>
         <div class="info-product">
@@ -65,10 +61,6 @@
                 <button type="submit" class="boton-negro">
                   Agregar al Carrito
                 </button>
-                
-
-               
-
               </div>
             </form>
             <a href="/product/<%=producto.id%>/editform/"><button>EDITAR PRODUCTO</button></a>
@@ -81,27 +73,23 @@
     <script>
       //entiendo que asi como no se debe poner css en el html tampoco js pero es una solucion pasajera para lograr el selector de imagenes
       //dios como sufri buscando esto no recomiendo pasar el feriado haciendo esto
+      //otro finde semana mejorando esto ahora que tengo una mejor comprension ya no utilizando codigo robado, esta salsa es casera
 
       const radios = document.querySelectorAll('input[name="radios"]');
-      const images = {
-        selector1: document.querySelector(".m1"),
-        selector2: document.querySelector(".m2"),
-        selector3: document.querySelector(".m3"),
-        selector4: document.querySelector(".m4"),
-      };
+      const imagesSelect = document.querySelectorAll('.img-detalle');
+      
+      
+      imagesSelect[0].style.display = "block"
+      
+      
 
       radios.forEach(function (radio) {
         radio.addEventListener("change", function () {
-          const selectedRadio = document.querySelector(
-            'input[name="radios"]:checked'
-          );
-          for (const key in images) {
-            if (selectedRadio && selectedRadio.id === key) {
-              images[key].style.display = "block";
-            } else {
-              images[key].style.display = "none";
-            }
-          }
+          const selectedRadio = document.querySelector('input[name="radios"]:checked');
+            for (let index = 0; index < imagesSelect.length; index++) {
+              if (selectedRadio.id === "selector"+index) {imagesSelect[index].style.display = "block"
+              } else {imagesSelect[index].style.display = "none"} 
+            };
         });
       });
     </script>
