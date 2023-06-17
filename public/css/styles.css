@@ -657,7 +657,8 @@ Pagina detalle producto
   border:solid 1px black;
   margin-bottom: 10px;
   padding: 10px 15px;
- 
+  font-weight: bold;
+  font-size: 14px;
   transition: .5s;
   display: block;
   width: 100%;
@@ -665,7 +666,8 @@ Pagina detalle producto
 }
 
 input[type=file]::file-selector-button:hover {
-  background-color: #eee;
+  background-color:black;
+  color: white;
  
 }
 /* Carrito de compras */
