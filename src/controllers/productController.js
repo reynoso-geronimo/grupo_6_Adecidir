@@ -21,8 +21,7 @@ const productDetailController = {
 
   editItem: function (req, res) {
     const producto = productos.find((row) => row.id == req.params.id);
-    console.log(req.body)
-
+    
     producto.nombre = req.body.name
     producto.precio - req.body.price
     producto.categoria = req.body.category
@@ -57,6 +56,10 @@ const productDetailController = {
   },
   editImages:(req,res) => { 
       console.log(req.file);
+      const producto = productos.find((row) => row.id == req.params.id);
+      producto.imagenes = [...producto.imagenes,"/images/productos/"+req.file.filename]
+
+      return res.redirect("/product/" + req.params.id +"/editform")
    },
 
   crearProductoForm: function (req, res) {
