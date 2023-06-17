@@ -548,7 +548,9 @@ Pagina detalle producto
   background-color: #333;
   color: #fff;
 }
-
+.input-img-crear {
+  display: none;
+}
 /* formulario edicion de producto */
 
 .formEdit {
@@ -636,6 +638,35 @@ Pagina detalle producto
   border: none;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.edit-nuevas-images{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-nuevas-images input[type=file]{
+  margin-bottom: 2rem;
+}
+
+
+.edit-nuevas-images input[type=file]::file-selector-button {
+  background-color: #d1d1d1;
+  color: #000;
+  border:solid 1px black;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+ 
+  transition: .5s;
+  display: block;
+  width: 100%;
+  
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #eee;
+ 
 }
 /* Carrito de compras */
 
@@ -909,9 +940,7 @@ Pagina detalle producto
     border: 1px solid #ccc;
     border-radius: 3px;
   }
-  input[type="file"] {
-    display: none;
-  }
+
   .subirImagen {
     border: 1px solid #ccc;
     display: inline-block;

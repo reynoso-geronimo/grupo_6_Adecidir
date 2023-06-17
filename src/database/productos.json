@@ -2,210 +2,287 @@
   {
     "id": 1,
     "nombre": "Buzo gráfico",
-    "descripcion":"Sudadera con cuello redondo y manga larga. Estampación de gráficos combinados a contraste en toda la prenda. Acabados en rib." ,
-    "categoria": "Buzos",
-    "precio":27.990,
-    "talles": 1,
-    "tallem": 1,
-    "tallel": 1,
-    "tallexl": 1,
-    "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa1a.jpg", "/images/productos/ropa1b.jpg", "/images/productos/ropa1c.jpg", "/images/productos/ropa1d.jpg"]
+    "descripcion": "Sudadera con cuello redondo y manga larga. Estampación de gráficos combinados a contraste en toda la prenda. Acabados en rib.",
+    "categoria": "opcion2",
+    "precio": 27.99,
+    "talles": "1",
+    "tallem": "1",
+    "tallel": "1",
+    "tallexl": "1",
+    "tallexxl": "1",
+    "imagenes": [
+      "/images/productos/ropa1a.jpg",
+      "/images/productos/ropa1b.jpg",
+      "/images/productos/ropa1c.jpg",
+      "/images/productos/ropa1d.jpg"
+    ]
   },
   {
     "id": 2,
     "nombre": "Swetter cuello alto",
     "descripcion": "Jersey tejido en hilatura con mezcla de lana. Cuello alto y manga larga. Acabados en rib.",
     "categoria": "buzo",
-    "precio":41.990,
+    "precio": 41.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa2a.jpg", "/images/productos/ropa2b.jpg", "/images/productos/ropa2c.jpg", "/images/productos/ropa2d.jpg"]
+    "imagenes": [
+      "/images/productos/ropa2a.jpg",
+      "/images/productos/ropa2b.jpg",
+      "/images/productos/ropa2c.jpg",
+      "/images/productos/ropa2d.jpg"
+    ]
   },
   {
     "id": 3,
     "nombre": "Chaleco acolchado",
     "descripcion": "Chaleco de cuello subido y manga sisa. Bolsillos de vivo en cadera. Cierre frontal con botones a presión.",
     "categoria": "buzo",
-    "precio":35.900,
+    "precio": 35.9,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa3a.jpg", "/images/productos/ropa3b.jpg", "/images/productos/ropa3c.jpg", "/images/productos/ropa3d.jpg"]
+    "imagenes": [
+      "/images/productos/ropa3a.jpg",
+      "/images/productos/ropa3b.jpg",
+      "/images/productos/ropa3c.jpg",
+      "/images/productos/ropa3d.jpg"
+    ]
   },
   {
     "id": 4,
     "nombre": "Blue spirit",
     "descripcion": "Eau de toilette dúo set. La pirámide olfativa incluye notas de limón, jazmín y patchouli (I) + mandarina, ylang y ámbar (II).",
     "categoria": "buzo",
-    "precio":6.990,
+    "precio": 6.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/perfume1a.jpg", "/images/productos/perfume1b.jpg", "/images/productos/perfume1c.jpg"]
+    "imagenes": [
+      "/images/productos/perfume1a.jpg",
+      "/images/productos/perfume1b.jpg",
+      "/images/productos/perfume1c.jpg"
+    ]
   },
   {
     "id": 5,
     "nombre": "Pantalón jogger técnico",
     "descripcion": "Pantalón confeccionado en tejido técnico con acabado aterciopelado. Cintura elástica ajustable con cordón. Bolsillos delanteros y detalle de bolsillos de vivo en espalda. Bajo acabado en puño con elástico.",
     "categoria": "barbijos",
-    "precio":30.990,
+    "precio": 30.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa4a.jpg", "/images/productos/ropa4b.jpg", "/images/productos/ropa4c.jpg", "/images/productos/ropa4d.jpg"]
+    "imagenes": [
+      "/images/productos/ropa4a.jpg",
+      "/images/productos/ropa4b.jpg",
+      "/images/productos/ropa4c.jpg",
+      "/images/productos/ropa4d.jpg"
+    ]
   },
   {
     "id": 6,
     "nombre": "Vibrant leather",
     "descripcion": "Vibrant Leather es el equilibro entre el lado pacífico y romántico de las notas amaderadas y la vitalidad e intensidad del cuero. Jérôme Epinette, perfumista de Vibrant Leather. Eau de parfum amaderada. La pirámide olfativa revela notas cítricas de bergamota y limón, bambú, acordes cuero, pachuli y papiro.",
     "categoria": "barbijos",
-    "precio":12.990,
+    "precio": 12.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/perfume2a.jpg", "/images/productos/perfume2b.jpg", "/images/productos/perfume1c.jpg", "/images/productos/perfume1d.jpg"]
+    "imagenes": [
+      "/images/productos/perfume2a.jpg",
+      "/images/productos/perfume2b.jpg",
+      "/images/productos/perfume1c.jpg",
+      "/images/productos/perfume1d.jpg"
+    ]
   },
   {
     "id": 7,
     "nombre": "Cazadora bomber",
     "descripcion": "Cazadora de cuello acabado en rib. Manga larga. Bolsillos de vivo en cadera. Detalle de bolsillo interior. Bajo acabado con elástico. Cierre frontal con cremallera.",
     "categoria": "barbijos",
-    "precio":27.990,
+    "precio": 27.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa5a.jpg", "/images/productos/ropa5b.jpg", "/images/productos/ropa5c.jpg", "/images/productos/ropa5d.jpg"]
+    "imagenes": [
+      "/images/productos/ropa5a.jpg",
+      "/images/productos/ropa5b.jpg",
+      "/images/productos/ropa5c.jpg",
+      "/images/productos/ropa5d.jpg"
+    ]
   },
   {
     "id": 8,
     "nombre": "Medias botonato",
     "descripcion": "Calcetines tejidos en hilatura con mezcla de algodón. Detalle de banda combinada a contraste. Acabados en rib.Crudo",
     "categoria": "barbijos",
-    "precio":5.590,
+    "precio": 5.59,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/medias1a.jpg", "/images/productos/medias1b.jpg", "/images/productos/medias1c.jpg", "/images/productos/medias1d.jpg"]
+    "imagenes": [
+      "/images/productos/medias1a.jpg",
+      "/images/productos/medias1b.jpg",
+      "/images/productos/medias1c.jpg",
+      "/images/productos/medias1d.jpg"
+    ]
   },
   {
     "id": 9,
     "nombre": "Buzo gráfico",
-    "descripcion":"Sudadera con cuello redondo y manga larga. Estampación de gráficos combinados a contraste en toda la prenda. Acabados en rib." ,
+    "descripcion": "Sudadera con cuello redondo y manga larga. Estampación de gráficos combinados a contraste en toda la prenda. Acabados en rib.",
     "categoria": "Buzos",
-    "precio":27.990,
+    "precio": 27.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa1a.jpg", "/images/productos/ropa1b.jpg", "/images/productos/ropa1c.jpg", "/images/productos/ropa1d.jpg"]
+    "imagenes": [
+      "/images/productos/ropa1a.jpg",
+      "/images/productos/ropa1b.jpg",
+      "/images/productos/ropa1c.jpg",
+      "/images/productos/ropa1d.jpg"
+    ]
   },
   {
     "id": 10,
     "nombre": "Swetter cuello alto",
     "descripcion": "Jersey tejido en hilatura con mezcla de lana. Cuello alto y manga larga. Acabados en rib.",
     "categoria": "buzo",
-    "precio":41.990,
+    "precio": 41.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa2a.jpg", "/images/productos/ropa2b.jpg", "/images/productos/ropa2c.jpg", "/images/productos/ropa2d.jpg"]
+    "imagenes": [
+      "/images/productos/ropa2a.jpg",
+      "/images/productos/ropa2b.jpg",
+      "/images/productos/ropa2c.jpg",
+      "/images/productos/ropa2d.jpg"
+    ]
   },
   {
     "id": 11,
     "nombre": "Chaleco acolchado",
     "descripcion": "Chaleco de cuello subido y manga sisa. Bolsillos de vivo en cadera. Cierre frontal con botones a presión.",
     "categoria": "buzo",
-    "precio":35.900,
+    "precio": 35.9,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa3a.jpg", "/images/productos/ropa3b.jpg", "/images/productos/ropa3c.jpg", "/images/productos/ropa3d.jpg"]
+    "imagenes": [
+      "/images/productos/ropa3a.jpg",
+      "/images/productos/ropa3b.jpg",
+      "/images/productos/ropa3c.jpg",
+      "/images/productos/ropa3d.jpg"
+    ]
   },
   {
     "id": 12,
     "nombre": "Blue spirit",
     "descripcion": "Eau de toilette dúo set. La pirámide olfativa incluye notas de limón, jazmín y patchouli (I) + mandarina, ylang y ámbar (II).",
     "categoria": "buzo",
-    "precio":6.990,
+    "precio": 6.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/perfume1a.jpg", "/images/productos/perfume1b.jpg", "/images/productos/perfume1c.jpg"]
+    "imagenes": [
+      "/images/productos/perfume1a.jpg",
+      "/images/productos/perfume1b.jpg",
+      "/images/productos/perfume1c.jpg"
+    ]
   },
   {
     "id": 13,
     "nombre": "Pantalón jogger técnico",
     "descripcion": "Pantalón confeccionado en tejido técnico con acabado aterciopelado. Cintura elástica ajustable con cordón. Bolsillos delanteros y detalle de bolsillos de vivo en espalda. Bajo acabado en puño con elástico.",
     "categoria": "barbijos",
-    "precio":30.990,
+    "precio": 30.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa4a.jpg", "/images/productos/ropa4b.jpg", "/images/productos/ropa4c.jpg", "/images/productos/ropa4d.jpg"]
+    "imagenes": [
+      "/images/productos/ropa4a.jpg",
+      "/images/productos/ropa4b.jpg",
+      "/images/productos/ropa4c.jpg",
+      "/images/productos/ropa4d.jpg"
+    ]
   },
   {
     "id": 14,
     "nombre": "Vibrant leather",
     "descripcion": "Vibrant Leather es el equilibro entre el lado pacífico y romántico de las notas amaderadas y la vitalidad e intensidad del cuero. Jérôme Epinette, perfumista de Vibrant Leather. Eau de parfum amaderada. La pirámide olfativa revela notas cítricas de bergamota y limón, bambú, acordes cuero, pachuli y papiro.",
     "categoria": "barbijos",
-    "precio":12.990,
+    "precio": 12.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/perfume2a.jpg", "/images/productos/perfume2b.jpg", "/images/productos/perfume1c.jpg", "/images/productos/perfume1d.jpg"]
+    "imagenes": [
+      "/images/productos/perfume2a.jpg",
+      "/images/productos/perfume2b.jpg",
+      "/images/productos/perfume1c.jpg",
+      "/images/productos/perfume1d.jpg"
+    ]
   },
   {
     "id": 15,
     "nombre": "Cazadora bomber",
     "descripcion": "Cazadora de cuello acabado en rib. Manga larga. Bolsillos de vivo en cadera. Detalle de bolsillo interior. Bajo acabado con elástico. Cierre frontal con cremallera.",
     "categoria": "barbijos",
-    "precio":27.990,
+    "precio": 27.99,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/ropa5a.jpg", "/images/productos/ropa5b.jpg", "/images/productos/ropa5c.jpg", "/images/productos/ropa5d.jpg"]
+    "imagenes": [
+      "/images/productos/ropa5a.jpg",
+      "/images/productos/ropa5b.jpg",
+      "/images/productos/ropa5c.jpg",
+      "/images/productos/ropa5d.jpg"
+    ]
   },
   {
     "id": 16,
     "nombre": "Medias botonato",
     "descripcion": "Calcetines tejidos en hilatura con mezcla de algodón. Detalle de banda combinada a contraste. Acabados en rib.Crudo",
     "categoria": "barbijos",
-    "precio":5.590,
+    "precio": 5.59,
     "talles": 1,
     "tallem": 1,
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "imagenes": ["/images/productos/medias1a.jpg", "/images/productos/medias1b.jpg", "/images/productos/medias1c.jpg", "/images/productos/medias1d.jpg"]
+    "imagenes": [
+      "/images/productos/medias1a.jpg",
+      "/images/productos/medias1b.jpg",
+      "/images/productos/medias1c.jpg",
+      "/images/productos/medias1d.jpg"
+    ]
   }
-
 ]

@@ -81,13 +81,12 @@
           <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button> <button class="botonEliminar"type="submit">ELIMINAR</button></span>
         </form>
 
-        <h1 class="tituloAdd">Cargar Nuevas Imagenes</h1>
-        <form action="/product/<%=producto.id%>/upimages?_method=put" method="post" enctype="multipart/form-data">
-          <label>
-            <input type="file" name="images" multiple />
-            </i>
-          </label>
-          <button type="submit">SUBIR NUEVAS IMAGENES</button>
+        <h1 class="tituloAdd">Cargar Nueva Imagen</h1>
+        <form class="edit-nuevas-images" action="/product/<%=producto.id%>/upimages?_method=put" method="post" enctype="multipart/form-data">
+         
+            <input type="file" name="images" />
+         
+          <button class="boton-negro"type="submit">SUBIR NUEVA IMAGEN</button>
         </form>
         
        
