@@ -7,7 +7,6 @@ const productDetailController = {
   list: function (req, res) {
     return res.render("products/productList", { productos: productos });
   },
-
   detail: function (req, res) {
     const producto = productos.find((row) => row.id == req.params.id);
 
@@ -17,8 +16,6 @@ const productDetailController = {
     const producto = productos.find((row) => row.id == req.params.id);
     return res.render("products/productEdit", { producto: producto });
   },
-
-
   editItem: function (req, res) {
     const producto = productos.find((row) => row.id == req.params.id);
     
@@ -58,12 +55,11 @@ const productDetailController = {
       console.log(req.file);
       const producto = productos.find((row) => row.id == req.params.id);
       producto.imagenes = [...producto.imagenes,"/images/productos/"+req.file.filename]
-      
+
       fs.writeFileSync("./productos.json",JSON.stringify(productos ,null,2))
 
       return res.redirect("/product/" + req.params.id +"/editform")
    },
-
   crearProductoForm: function (req, res) {
     return res.render("products/crearProducto");
   },
