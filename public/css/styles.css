@@ -683,13 +683,18 @@ Pagina detalle producto
   color: #000;
   border:solid 1px black;
   margin-bottom: 10px;
-  padding: 5px ;
+  padding: 5px 10px 5px 10px ;
   font-weight: bold;
   font-size: 14px;
   transition: .5s;
   margin-top: 70px;
-  
-  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.volver-producto i {
+  padding-left: 0;
+  margin-left: 0;
 }
 /* Carrito de compras */
 
