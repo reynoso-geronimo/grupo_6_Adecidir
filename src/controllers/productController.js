@@ -1,6 +1,7 @@
 const fs = require("fs");
 
-const productos = JSON.parse(fs.readFileSync("./productos.json")); //esto puede traer problemas posible solucion transformarlo en una funcion y que cada funcion la invoque para siempre estar actualizada
+
+const productos = JSON.parse(fs.readFileSync("./productos.json","utf-8")); //esto puede traer problemas posible solucion transformarlo en una funcion y que cada funcion la invoque para siempre estar actualizada
 
 const productDetailController = {
   list: function (req, res) {
@@ -30,9 +31,14 @@ const productDetailController = {
     producto.tallel = req.body.size[2]
     producto.tallexl = req.body.size[3]
     producto.tallexxl = req.body.size[4]
+
+    // al no poder por ahora pasar a la vista por ahora al menos el value al text area, chequeo que esta no venga vacia
     if (req.body.desc != "") {
       producto.descripcion = req.body.desc
     }
+
+    // chequeo en que forma llega la informacion de los checkboxes, quizas un switch seria mejor
+
     if (req.body.imgDelete&& typeof req.body.imgDelete =="object") {
      
      for (const img of req.body.imgDelete) {
@@ -44,11 +50,14 @@ const productDetailController = {
       producto.imagenes = producto.imagenes.filter(row => row != req.body.imgDelete)
     }
     
-    //TODO AQUI VA EL WRITEFYLESYNC
+    fs.writeFileSync("./productos.json",JSON.stringify(productos ,null,2))
 
 
-    return res.redirect("/product/" + req.params.id)
+    return res.redirect("/product/" + req.params.id +"/editform")
   },
+  editImages:(req,res) => { 
+      console.log(req.file);
+   },
 
   crearProductoForm: function (req, res) {
     return res.render("products/crearProducto");

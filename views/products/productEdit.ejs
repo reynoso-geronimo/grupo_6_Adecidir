@@ -77,18 +77,19 @@
               </div>
               <% }) %>
           </div>
+          <!-- TODO ELIMINAR PRODUCTO -->
           <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button> <button class="botonEliminar"type="submit">ELIMINAR</button></span>
         </form>
 
         <h1 class="tituloAdd">Cargar Nuevas Imagenes</h1>
-        <form action="" method="post" enctype="multipart/form-data">
+        <form action="/product/<%=producto.id%>/upimages?_method=put" method="post" enctype="multipart/form-data">
           <label>
-            <input type="file" multiple />
+            <input type="file" name="images" multiple />
             </i>
           </label>
           <button type="submit">SUBIR NUEVAS IMAGENES</button>
         </form>
-        <!-- TODO ELIMINAR PRODUCTO -->
+        
        
       </main>
       <%- include('../partials/footer.ejs') %>
