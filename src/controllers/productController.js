@@ -58,6 +58,8 @@ const productDetailController = {
       console.log(req.file);
       const producto = productos.find((row) => row.id == req.params.id);
       producto.imagenes = [...producto.imagenes,"/images/productos/"+req.file.filename]
+      
+      fs.writeFileSync("./productos.json",JSON.stringify(productos ,null,2))
 
       return res.redirect("/product/" + req.params.id +"/editform")
    },
