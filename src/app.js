@@ -4,9 +4,7 @@ const methodOverride = require('method-override');
 const home = require('./routes/home.js');
 const product = require('./routes/product.js');
 const cart = require('./routes/cart.js');
-const login = require('./routes/login.js');
-const register = require('./routes/register.js');
-
+const user = require('./routes/user.js');
 
 const port = 3006
 
@@ -27,9 +25,8 @@ app.listen(port, () => {
 
 app.use(home)
 app.use('/product', product)
-app.use('/login', login )
-app.use('/register', register)
 app.use('/cart', cart)
+app.use('/user', user)
 
 
 app.use((req,res, next)=>{
