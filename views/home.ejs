@@ -24,19 +24,19 @@
         <!-- <div class="contain-3">
         <h3>CATEGORIAS</h3>
       </div> -->
-
+      <!-- Cambio para cuando tengamos mas categorias poder controlar cuantas queremos que se vean -->
         <section class="productos-home">
-
-          <% for(let categoria of categorias) { %>
+          <% for( let index = 0; index < 6; index++ ) { %>
             <article>
               <a href="/product/list">
-                <img src=<%=categoria.imagen %> alt="img-prod" />
+                <img src=<%=categorias[index].imagen %> alt="img-prod" />
                 <label>
-                  <%= categoria.nombre %>
+                  <%= categorias[index].nombre %>
                 </label>
               </a>
             </article>
-            <% } %>
+          <% } %>
+          
 
         </section>
       </main>
