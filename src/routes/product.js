@@ -22,12 +22,12 @@ const storage = multer.diskStorage({
 router.get('/list', product.list)
 router.get("/crearProducto", product.crearProductoForm);
 
-router.get("/:id?", product.detail);
+router.get("/:id", product.detail);
 
 
 router.get('/:id/editform/', product.editForm)
 router.put('/:id/', product.editItem)
-router.put('/:id/upimages', upload.single("images"),product.editImages)
+router.put('/:id/upimages', upload.any("images"),product.editImages)
 // router.delete('/:id/delete',product.delete)
 
 

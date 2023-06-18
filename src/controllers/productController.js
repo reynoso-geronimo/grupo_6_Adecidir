@@ -53,9 +53,11 @@ const productDetailController = {
     return res.redirect("/product/" + req.params.id +"/editform")
   },
   editImages:(req,res) => { 
-      console.log(req.file);
+      console.log(req.files);
       const producto = productos.find((row) => row.id == req.params.id);
-      producto.imagenes = [...producto.imagenes,"/images/productos/"+req.file.filename]
+      req.files.forEach((file) => {
+        producto.imagenes.push("/images/productos/" + file.filename);
+      });
 
       fs.writeFileSync(path.resolve(__dirname,"../database/productos.json"),JSON.stringify(productos ,null,2))
 

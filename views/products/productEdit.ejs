@@ -85,9 +85,9 @@
         <h1 class="tituloAdd">Cargar Nueva Imagen</h1>
         <form class="edit-nuevas-images" action="/product/<%=producto.id%>/upimages?_method=put" method="post" enctype="multipart/form-data">
          
-          <label for="new-images"><i class="fa-solid fa-cloud-arrow-up"></i>Selecciona una imagen</label>
-            <input type="file" name="images" id="new-images"/>
-          <button class="boton-negro"type="submit">SUBIR NUEVA IMAGEN</button>
+          <label for="new-images"><i class="fa-solid fa-cloud-arrow-up"></i>Selecciona imagenes</label>
+            <input multiple type="file" name="images" id="new-images"/>
+          <button class="boton-negro"type="submit">SUBIR IMAGENES</button>
 
           <a class="volver-producto" href="/product/<%=producto.id%>"><i class="fa-solid fa-arrow-left"></i>Volver a la pagina del producto</a>
         </form>
