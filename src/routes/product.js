@@ -8,14 +8,14 @@ const multer = require('multer');
 
 const validarEdit=[
   body('name').notEmpty().withMessage('Debes completar el campo de nombre'),
-  body('price').notEmpty().withMessage('Debes completar el campo de precio'),
+  body('price').notEmpty().withMessage('Debes completar el campo de precio').bail().isNumeric().withMessage('Debes ingresar un valor valido'),
   body('category').notEmpty().withMessage('Debes completar el campo de categoria'),
   // body('descripcion').notEmpty().withMessage('Debes completar el campo de descripcion'),
-  body('size[0]').notEmpty().withMessage('Debes completar el campo de talle S'),
-  body('size[1]').notEmpty().withMessage('Debes completar el campo de talle M'),
-  body('size[2]').notEmpty().withMessage('Debes completar el campo de talle L'),
-  body('size[3]').notEmpty().withMessage('Debes completar el campo de talle XL'),
-  body('size[4]').notEmpty().withMessage('Debes completar el campo de talle XXL'),
+  body('size[0]').notEmpty().withMessage('Debes completar el campo de talle S').bail().isInt().withMessage('Debes ingresar un valor valido'),
+  body('size[1]').notEmpty().withMessage('Debes completar el campo de talle M').bail().isInt().withMessage('Debes ingresar un valor valido'),
+  body('size[2]').notEmpty().withMessage('Debes completar el campo de talle L').bail().isInt().withMessage('Debes ingresar un valor valido'),
+  body('size[3]').notEmpty().withMessage('Debes completar el campo de talle XL').bail().isInt().withMessage('Debes ingresar un valor valido'),
+  body('size[4]').notEmpty().withMessage('Debes completar el campo de talle XXL').bail().isInt().withMessage('Debes ingresar un valor valido'),
 ]
 
 

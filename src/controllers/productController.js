@@ -56,15 +56,16 @@ const productDetailController = {
     } 
       else //si hay errores de express validator devuelvo como se completaron los campos a la vista
     {
-      producto.nombre = req.body.name
-      producto.precio = req.body.price
-      producto.categoria = req.body.category
-      producto.talles = req.body.size[0]
-      producto.tallem = req.body.size[1]
-      producto.tallel = req.body.size[2]
-      producto.tallexl = req.body.size[3]
-      producto.tallexxl = req.body.size[4]
-      return res.render("products/productEdit", { producto: producto, errors:errors.array()})
+      const old = {...producto}
+      old.nombre = req.body.name
+      old.precio = req.body.price
+      old.categoria = req.body.category
+      old.talles = req.body.size[0]
+      old.tallem = req.body.size[1]
+      old.tallel = req.body.size[2]
+      old.tallexl = req.body.size[3]
+      old.tallexxl = req.body.size[4]
+      return res.render("products/productEdit", { producto: old, errors:errors.array()})
     }
 },
   editImages: (req, res) => {
