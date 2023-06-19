@@ -552,7 +552,16 @@ Pagina detalle producto
   display: none;
 }
 /* formulario edicion de producto */
-
+.errores{
+  background-color: #ff5151;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.errores p{
+  margin: 0;
+  padding:5px 0 5px 0 
+}
 .formEdit {
   display: flex;
   flex-direction: column;
