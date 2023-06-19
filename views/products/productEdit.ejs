@@ -5,7 +5,13 @@
   <body>
     <%- include('../partials/header') %>
       <main>
-       
+        <% if (locals.errors) { %>
+          <div class="errores">
+           <% errors.forEach(error => { %>
+             <p> <%= error.msg %></p>
+           <% }) %>
+          </div>
+         <% } %>
         <h1 class="tituloAdd">Editar Producto: <%= producto.nombre %></h1>
 
         <form class="formEdit" action="/product/<%=producto.id%>?_method=put" method="post" >

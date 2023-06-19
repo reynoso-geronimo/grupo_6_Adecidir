@@ -1,9 +1,22 @@
 const express = require('express');
 const router = express.Router()
 const product = require('../controllers/productController.js');
+const {body}= require('express-validator')
 const logDB = require('../middlewares/logDBMiddleware.js')
 const path = require('path');
 const multer = require('multer');
+
+const validarEdit=[
+  body('name').notEmpty().withMessage('Debes completar el campo de nombre'),
+  body('price').notEmpty().withMessage('Debes completar el campo de precio'),
+  body('category').notEmpty().withMessage('Debes completar el campo de categoria'),
+  // body('descripcion').notEmpty().withMessage('Debes completar el campo de descripcion'),
+  body('size[0]').notEmpty().withMessage('Debes completar el campo de talle S'),
+  body('size[1]').notEmpty().withMessage('Debes completar el campo de talle M'),
+  body('size[2]').notEmpty().withMessage('Debes completar el campo de talle L'),
+  body('size[3]').notEmpty().withMessage('Debes completar el campo de talle XL'),
+  body('size[4]').notEmpty().withMessage('Debes completar el campo de talle XXL'),
+]
 
 
 const storage = multer.diskStorage({
@@ -27,7 +40,7 @@ router.get("/:id", product.detail);
 
 
 router.get('/:id/editform/', product.editForm)
-router.put('/:id/', logDB.logEdit ,product.editItem)
+router.put('/:id/',validarEdit ,logDB.logEdit ,product.editItem)
 router.put('/:id/upimages', upload.any("images"),product.editImages)
 // router.delete('/:id/delete',product.delete)
 
