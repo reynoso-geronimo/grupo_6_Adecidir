@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router()
 const product = require('../controllers/productController.js');
+const logDB = require('../middlewares/logDBMiddleware.js')
 const path = require('path');
 const multer = require('multer');
 
@@ -26,7 +27,7 @@ router.get("/:id", product.detail);
 
 
 router.get('/:id/editform/', product.editForm)
-router.put('/:id/', product.editItem)
+router.put('/:id/', logDB.logEdit ,product.editItem)
 router.put('/:id/upimages', upload.any("images"),product.editImages)
 // router.delete('/:id/delete',product.delete)
 
