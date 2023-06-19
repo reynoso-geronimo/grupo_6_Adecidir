@@ -22,9 +22,7 @@ const productDetailController = {
 
     let errors = validationResult(req)
     const producto = productos.find((row) => row.id == req.params.id);
-    let old = req.body
-    if (errors.isEmpty()) {
-      
+    if (errors.isEmpty()) {// no hay errores de express-validator
       producto.nombre = req.body.name
       producto.precio = req.body.price
       producto.categoria = req.body.category
@@ -34,7 +32,7 @@ const productDetailController = {
       producto.tallexl = req.body.size[3]
       producto.tallexxl = req.body.size[4]
 
-      // al no poder por ahora pasar a la vista por ahora al menos el value al text area, chequeo que esta no venga vacia
+      // al no poder por ahora pasar a la vista por ahora al menos el value al text area, chequeo que si esta viene vacia no la cambie en el json
       if (req.body.desc != "") {
         producto.descripcion = req.body.desc
       }
@@ -53,10 +51,11 @@ const productDetailController = {
       }
 
       fs.writeFileSync(path.resolve(__dirname, "../database/productos.json"), JSON.stringify(productos, null, 2))
-
-
+      
       return res.redirect("/product/" + req.params.id + "/editform")
-    } else{
+    } 
+      else //si hay errores de express validator devuelvo como se completaron los campos a la vista
+    {
       producto.nombre = req.body.name
       producto.precio = req.body.price
       producto.categoria = req.body.category
@@ -67,11 +66,7 @@ const productDetailController = {
       producto.tallexxl = req.body.size[4]
       return res.render("products/productEdit", { producto: producto, errors:errors.array()})
     }
-
-
-
-
-  },
+},
   editImages: (req, res) => {
     console.log(req.files);
     const producto = productos.find((row) => row.id == req.params.id);
