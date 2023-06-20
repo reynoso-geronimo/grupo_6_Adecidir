@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
 const product = require('../controllers/productController.js');
-const {body, check}= require('express-validator')
+const {body}= require('express-validator')
 const logDB = require('../middlewares/logDBMiddleware.js')
 const path = require('path');
 const multer = require('multer');
