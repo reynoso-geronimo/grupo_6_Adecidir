@@ -22,7 +22,7 @@
     "nombre": "Swetter cuello alto",
     "descripcion": "Jersey tejido en hilatura con mezcla de lana. Cuello alto y manga larga. Acabados en rib.",
     "categoria": "Buzos",
-    "precio": 41.99,
+    "precio": "41.99",
     "talles": "12",
     "tallem": "10",
     "tallel": "8",

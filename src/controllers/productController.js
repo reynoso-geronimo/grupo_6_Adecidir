@@ -19,7 +19,7 @@ const productDetailController = {
     return res.render("products/productEdit", { producto: producto });
   },
   editItem: function (req, res) {
-
+    
     let errors = validationResult(req)
     const producto = productos.find((row) => row.id == req.params.id);
     if (errors.isEmpty()) {// no hay errores de express-validator

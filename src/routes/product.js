@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
 const product = require('../controllers/productController.js');
-const {body}= require('express-validator')
+const {body, check}= require('express-validator')
 const logDB = require('../middlewares/logDBMiddleware.js')
 const path = require('path');
 const multer = require('multer');
@@ -16,6 +16,7 @@ const validarEdit=[
   body('size[2]').notEmpty().withMessage('Debes completar el campo de talle L').bail().isInt().withMessage('Debes ingresar un valor valido en el campo de talle'),
   body('size[3]').notEmpty().withMessage('Debes completar el campo de talle XL').bail().isInt().withMessage('Debes ingresar un valor valido en el campo de talle'),
   body('size[4]').notEmpty().withMessage('Debes completar el campo de talle XXL').bail().isInt().withMessage('Debes ingresar un valor valido en el campo de talle'),
+  
 ]
 
 
@@ -29,7 +30,18 @@ const storage = multer.diskStorage({
     }
   })
   
-  const upload = multer({ storage: storage })
+  const upload = multer({ 
+    storage: storage,
+    fileFilter: (req, file, cb) => {
+      if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
+        cb(null, true);
+      } else {
+        
+      cb(null, false);
+        
+      }
+    }
+  })
 
 
 
