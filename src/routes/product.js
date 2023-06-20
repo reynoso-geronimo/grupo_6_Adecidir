@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router()
 const product = require('../controllers/productController.js');
-const {body}= require('express-validator')
+const {body, check}= require('express-validator')
 const logDB = require('../middlewares/logDBMiddleware.js')
 const path = require('path');
 const multer = require('multer');
@@ -10,7 +10,7 @@ const validarEdit=[
   body('name').notEmpty().withMessage('Debes completar el campo de nombre'),
   body('price').notEmpty().withMessage('Debes completar el campo de precio').bail().isNumeric().withMessage('Debes ingresar un valor valido'),
   body('category').notEmpty().withMessage('Debes completar el campo de categoria'),
-  body('descripcion').notEmpty().withMessage('Debes completar el campo de descripcion'),
+  body('desc').notEmpty().withMessage('Debes completar el campo de descripcion'),
   body('size[0]').notEmpty().withMessage('Debes completar el campo de talle S').bail().isInt().withMessage('Debes ingresar un valor valido'),
   body('size[1]').notEmpty().withMessage('Debes completar el campo de talle M').bail().isInt().withMessage('Debes ingresar un valor valido'),
   body('size[2]').notEmpty().withMessage('Debes completar el campo de talle L').bail().isInt().withMessage('Debes ingresar un valor valido'),
@@ -40,8 +40,8 @@ router.get("/:id", product.detail);
 
 
 router.get('/:id/editform/', product.editForm)
-router.put('/:id/',validarEdit ,logDB.logEdit ,product.editItem)
-router.put('/:id/upimages', upload.any("images"),product.editImages)
+router.put('/:id/' ,upload.any("images"), validarEdit   ,product.editItem)
+
 // router.delete('/:id/delete',product.delete)
 
 

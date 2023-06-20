@@ -14,7 +14,7 @@
          <% } %>
         <h1 class="tituloAdd">Editar Producto: <%= producto.nombre %></h1>
 
-        <form class="formEdit" action="/product/<%=producto.id%>?_method=put" method="post" >
+        <form class="formEdit" action="/product/<%=producto.id%>?_method=put" method="post" enctype="multipart/form-data">
           <div class="edit-box">
             <div class="formIzquierda">
               <label for="nombre">Nombre:</label>
@@ -84,19 +84,18 @@
               </div>
               <% }) %>
           </div>
+          <div class="edit-nuevas-images">
+          <label for="new-images"><i class="fa-solid fa-cloud-arrow-up"></i>Subir nuevas imagenes</label>
+            <input multiple type="file" name="images" id="new-images"/>
+          </div>
           <!-- TODO ELIMINAR PRODUCTO -->
           <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button> <button class="botonEliminar"type="submit">ELIMINAR</button></span>
+       
         </form>
-
-        <h1 class="tituloAdd">Cargar Nueva Imagen</h1>
-        <form class="edit-nuevas-images" action="/product/<%=producto.id%>/upimages?_method=put" method="post" enctype="multipart/form-data">
-         
-          <label for="new-images"><i class="fa-solid fa-cloud-arrow-up"></i>Selecciona imagenes</label>
-            <input multiple type="file" name="images" id="new-images"/>
-          <button class="boton-negro"type="submit">SUBIR IMAGENES</button>
+    
 
           <a class="volver-producto" href="/product/<%=producto.id%>"><i class="fa-solid fa-arrow-left"></i>Volver a la pagina del producto</a>
-        </form>
+      
         
         
       
