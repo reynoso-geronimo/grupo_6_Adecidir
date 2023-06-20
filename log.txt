@@ -44,3 +44,5 @@ Tue Jun 20 2023 15:34:30 GMT-0300 (hora estándar de Argentina) Se edito el resg
 Tue Jun 20 2023 15:34:47 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 2
 Tue Jun 20 2023 15:34:59 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 2
 Tue Jun 20 2023 15:35:33 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 2
+Tue Jun 20 2023 16:32:51 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 1
+Tue Jun 20 2023 16:32:55 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 1
