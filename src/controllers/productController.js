@@ -19,7 +19,7 @@ const productDetailController = {
     return res.render("products/productEdit", { producto: producto });
   },
   editItem: function (req, res) {
-    
+
     let errors = validationResult(req)
     const producto = productos.find((row) => row.id == req.params.id);
     if (errors.isEmpty()) {// no hay errores de express-validator
@@ -42,8 +42,7 @@ const productDetailController = {
           fs.unlinkSync(path.resolve(__dirname, '../../public/' + img))
           producto.imagenes = producto.imagenes.filter(row => row != img)
 
-        }
-        ;
+        };
       } else if (req.body.imgDelete && typeof req.body.imgDelete == "string") {
         producto.imagenes = producto.imagenes.filter(row => row != req.body.imgDelete)
         fs.unlinkSync(path.resolve(__dirname, '../../public/' + req.body.imgDelete))
@@ -78,7 +77,7 @@ const productDetailController = {
         });
       }
 
-      
+
 
       return res.render("products/productEdit", { producto: old, errors: errors.array() })
     }
