@@ -25,6 +25,7 @@ const productDetailController = {
     if (errors.isEmpty()) {// no hay errores de express-validator
       producto.nombre = req.body.name
       producto.precio = req.body.price
+      producto.descripcion = req.body.desc
       producto.categoria = req.body.category
       producto.talles = req.body.size[0]
       producto.tallem = req.body.size[1]
@@ -32,11 +33,7 @@ const productDetailController = {
       producto.tallexl = req.body.size[3]
       producto.tallexxl = req.body.size[4]
 
-      // al no poder por ahora pasar a la vista por ahora al menos el value al text area, chequeo que si esta viene vacia no la cambie en el json
-      if (req.body.desc != "") {
-        producto.descripcion = req.body.desc
-      }
-
+      
       // chequeo en que forma llega la informacion de los checkboxes, quizas un switch seria mejor
 
       if (req.body.imgDelete && typeof req.body.imgDelete == "object") {
@@ -59,6 +56,7 @@ const productDetailController = {
       const old = {...producto}
       old.nombre = req.body.name
       old.precio = req.body.price
+      old.descripcion = req.body.desc
       old.categoria = req.body.category
       old.talles = req.body.size[0]
       old.tallem = req.body.size[1]

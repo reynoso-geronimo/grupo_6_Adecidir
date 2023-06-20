@@ -10,7 +10,7 @@ const validarEdit=[
   body('name').notEmpty().withMessage('Debes completar el campo de nombre'),
   body('price').notEmpty().withMessage('Debes completar el campo de precio').bail().isNumeric().withMessage('Debes ingresar un valor valido'),
   body('category').notEmpty().withMessage('Debes completar el campo de categoria'),
-  // body('descripcion').notEmpty().withMessage('Debes completar el campo de descripcion'),
+  body('descripcion').notEmpty().withMessage('Debes completar el campo de descripcion'),
   body('size[0]').notEmpty().withMessage('Debes completar el campo de talle S').bail().isInt().withMessage('Debes ingresar un valor valido'),
   body('size[1]').notEmpty().withMessage('Debes completar el campo de talle M').bail().isInt().withMessage('Debes ingresar un valor valido'),
   body('size[2]').notEmpty().withMessage('Debes completar el campo de talle L').bail().isInt().withMessage('Debes ingresar un valor valido'),
