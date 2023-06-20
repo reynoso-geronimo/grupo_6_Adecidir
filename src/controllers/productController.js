@@ -35,16 +35,18 @@ const productDetailController = {
 
       
       // chequeo en que forma llega la informacion de los checkboxes, quizas un switch seria mejor
-
+      
       if (req.body.imgDelete && typeof req.body.imgDelete == "object") {
 
         for (const img of req.body.imgDelete) {
-
+          fs.unlinkSync(path.resolve(__dirname,'../../public/'+img))
           producto.imagenes = producto.imagenes.filter(row => row != img)
+         
         }
         ;
       } else if (req.body.imgDelete && typeof req.body.imgDelete == "string") {
         producto.imagenes = producto.imagenes.filter(row => row != req.body.imgDelete)
+        fs.unlinkSync(path.resolve(__dirname,'../../public/'+req.body.imgDelete))
       }
 
       if(req.files.length>0){
