@@ -22,30 +22,29 @@ const validarEdit = [
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    
+
     cb(null, path.resolve(__dirname, '../../public/images/productos'))
   },
   filename: function (req, file, cb) {
     const uniqueSuffix = Date.now() + Math.round(Math.random() * 1E9)
-   
+
     cb(null, uniqueSuffix + path.extname(file.originalname))
   }
 })
 
 const upload = multer({
-  storage: storage
-  // ,
-  // fileFilter: (req, file, cb) => {
-  //   if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
-  //     cb(null, true);
-  //   } else {
-      
-  //     const error = new Error('solo .png, .jpg, and .jpeg esta permitido!');
-  //     error.status = 400; 
-  //     cb(error, false);
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
+      cb(null, true);
+    } else {
 
-  //   }
-  // }
+      const error = new Error('solo .png, .jpg, and .jpeg esta permitido!');
+      error.status = 400;
+      cb(error, false);
+
+    }
+  }
 })
 
 
