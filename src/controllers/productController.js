@@ -87,7 +87,7 @@ const productDetailController = {
 
 
 
-      return res.render("products/productEdit", { producto: old, errors: errors.array() })
+      return res.render("products/productEdit", { producto: old, errors: errors.array() , categorias: categorias })
     }
   },
 

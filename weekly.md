@@ -42,27 +42,66 @@ Empezamos a ver cómo organizarnos para llevar a cabo este sprint, para eso, nos
 
 
 # 10 de junio del 2023
+los que no estan nos lucho y franco y valentin y falta que valen pusheé su parte
 * Emiliano Apostolo:
     - Qué hizo en estos días:
     - Si se encontró con algún impedimento:
     - Qué va a hacer los próximos días:
 
 * Furfaro ignacio:
-    - Qué hizo en estos días:
-    - Si se encontró con algún impedimento:
+    - Qué hizo en estos días: creó la vista de crear productos y creó las ramas del login
+    - Si se encontró con algún impedimento: no
+    - Qué va a hacer los próximos días: ya terminó todas sus tareas, agregar un vinculo para la creación de contenido
+
+* Geronimo Reynoso
+    - Qué hizo en estos días: modificó los login, creó los partials faltantes, hizo la lista de productos dinámica, hizo dinámica la vista de detalle de productos y creó la vista de edición de productos ycreo una pseudo base de datos y 
+    - Si se encontró con algún impedimento: valentín lo dejó plantado, el se encargó de la tarea mutua.
+    - Qué va a hacer los próximos días: falta darle estilos a la vista de edición de producto, encontrar un lugar para el boton de creación de productos, completar la base de datos de productos y categorías y falta que la vista de lista de productos sea dinámico.
+    - Qué va a hacer los próximos días: falta darle estilos a la vista de edición de producto, encontrar un lugar para el boton de creación de productos, completar la base de datos de productos y categorías y falta que la vista de lista de productos sea dinámico. Además, va a agregarle estilos al formulario de edición de productos.
+
+* Valentin Marquez
+    - Qué hizo en estos días: nada
+    - Si se encontró con algún impedimento: no se sabe
+    - Qué va a hacer los próximos días: nada
+
+* Jennifer Lichtensztejn
+    - Qué hizo en estos días: completé la retro y el archivo weekly. 
+    - Si se encontró con algún impedimento: no
+    - Qué va a hacer los próximos días: implementar la tipografía en la hoja de estilos, agregar media queries, completar con diferentes mockups de un mismo producto (categoría) el archivo productos.json y modificar el banner del home.
+
+* ENTRE TODOS:
+    - Agregar estilos a las nuevas vistas
+
+
+# 16 de junio del 2023 (comienzo del cuarto sprint)
+* Emiliano Apostolo:
+    - Que hizo en estos días: en estos días se enfocó en incorporar conocimientos nuevos para aplicar en un futuro en el proyecto.
+    - Si se encontró con algún impedimento: no
+    - Qué va a hacer los próximos días: va a modificar el css del desplegable para registrarse, iniciar sesión y la lupa de search.
+
+* Furfaro ignacio:
+    - Que hizo en estos días: arrgló en media querie del form de crear producto.
+    - Si se encontró con algún impedimento: no
     - Qué va a hacer los próximos días:
 
 * Geronimo Reynoso
-    - Qué hizo en estos días:
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días:
+    - Que hizo en estos días: hizo funcional la edición de producto.
+    - Si se encontró con algún impedimento: tuvo que dividir la funcionalidad de la edición en dos vistas: uno para editar las propiedades del producto y otra para cargar imágenes nuevas. En el formulario se le dificultó la implementación de de validación de los checkboxes.
+    - Qué va a hacer los próximos días: agregar imagenes nuevas en la edición de producto. Implementar el archivo JSON.
 
 * Valentin Marquez
-    - Qué hizo en estos días:
+    - Que hizo en estos días:
     - Si se encontró con algún impedimento:
     - Qué va a hacer los próximos días:
 
 * Jennifer Lichtensztejn
-    - Qué hizo en estos días:
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días:
+    - Que hizo en estos días: estuve haciendo el css del carrito compras y aplicando a la práctica la nueva teoría vista.
+    - Si se encontró con algún impedimento: se me dificultó la implementación de flexbox en el banner del home.
+    - Qué va a hacer los próximos días: replantear el tamaño de la caja de los ptos de la lista de ptos.
+
+* Todos:
+    - Comentar el código sobre el estado, avances, modificación y/o dificultad de la realización del código.
+    - Leer los avances del código del resto de los compañeros para aprender diferentes maneras de resolver un problema.  
+
+* Posible para todos:
+    - Hacer un media querie para mobile que saque el logo del header. 
