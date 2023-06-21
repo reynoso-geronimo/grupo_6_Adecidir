@@ -477,6 +477,7 @@ Pagina detalle producto
   flex-direction: column;
   width: 100%;
   padding: 20px;
+  gap:10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -570,7 +571,7 @@ Pagina detalle producto
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
+ 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -581,9 +582,10 @@ Pagina detalle producto
   flex-direction: column;
   align-items: center;
   width: 100%;
+  gap:10px;
 }
 .edit-box div {
-  width: 230px;
+  width: 90vw;
 }
 .editar-talle {
   display: flex;
@@ -596,15 +598,17 @@ Pagina detalle producto
 }
 .editar-talle input {
   width: 100%;
-  font-size: 16px;
-  text-align: center;
+  font-size: 14px;
+  
   border: none;
+  margin: 0;
+  padding: 0;
 }
 .edit-images {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -931,10 +935,7 @@ Pagina detalle producto
     padding-left: 7%;
     padding-right: 5%;
   }
-  /* edicion de producto */
-  .edit-box {
-    flex-direction: row;
-  }
+  
 }
 
 @media (min-width: 769px) {
@@ -962,7 +963,7 @@ Pagina detalle producto
   .formIzquierda,
   .formDerecha {
     flex: 1;
-    margin-right: 20px;
+    
   }
   
   .formIzquierda label,
@@ -1025,6 +1026,18 @@ Pagina detalle producto
   .selectorTalle input[type="checkbox"]:checked + label {
     background-color: #333;
     color: #fff;
+  }
+  /* edicion de producto */
+
+  .edit-box {
+    flex-direction: row;
+  }
+  .edit-box div {
+  width: 40vw;
+  max-width: 400px;
+}
+  .edit-images{
+    gap:30px
   }
 
 }
