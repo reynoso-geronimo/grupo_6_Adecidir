@@ -4,10 +4,18 @@ const { validationResult } = require('express-validator')
 
 
 const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/productos.json"), "utf-8")); //esto puede traer problemas posible solucion transformarlo en una funcion y que cada funcion la invoque para siempre estar actualizada
+const categorias = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/categorias.json"), "utf-8")); //esto puede traer problemas posible solucion transformarlo en una funcion y que cada funcion la invoque para siempre estar actualizada
 
 const productDetailController = {
   list: function (req, res) {
-    return res.render("products/productList", { productos: productos });
+    if (req.params.categoria) {
+      let prodCategorias = productos.filter(row => row.categoria == req.params.categoria)
+      return res.render("products/productList", { productos: prodCategorias });
+
+    } else {
+      return res.render("products/productList", { productos: productos });
+    }
+
   },
   detail: function (req, res) {
     const producto = productos.find((row) => row.id == req.params.id);
@@ -16,7 +24,7 @@ const productDetailController = {
   },
   editForm: function (req, res) {
     const producto = productos.find((row) => row.id == req.params.id);
-    return res.render("products/productEdit", { producto: producto });
+    return res.render("products/productEdit", { producto: producto, categorias: categorias });
   },
   editItem: function (req, res) {
 
@@ -84,7 +92,7 @@ const productDetailController = {
   },
 
   crearProductoForm: function (req, res) {
-    return res.render("products/crearProducto");
+    return res.render("products/crearProducto", { categorias: categorias });
   },
 };
 

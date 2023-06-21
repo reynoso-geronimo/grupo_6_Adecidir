@@ -49,7 +49,7 @@ const upload = multer({
 
 
 
-router.get('/list', product.list)
+router.get('/list/:categoria?', product.list)
 router.get("/crearProducto", product.crearProductoForm);
 
 router.get("/:id", product.detail);

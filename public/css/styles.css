@@ -486,6 +486,9 @@ Pagina detalle producto
   margin-right: 0;
 }
 
+#descripcion{
+  height: 230px;
+}
 .formIzquierda label,
 .formDerecha label {
   display: block;

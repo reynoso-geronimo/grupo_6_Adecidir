@@ -1,33 +1,26 @@
 [
     {
       "nombre": "REMERAS",
-      "imagen": "/images/mockups-productos/Mockup_Camiseta_Doblada_mockupgratis.com.jpg",
-      "categoria":"Remeras"
+      "imagen": "/images/mockups-productos/Mockup_Camiseta_Doblada_mockupgratis.com.jpg"
     },
     {
       "nombre": "ABRIGOS",
-      "imagen": "/images/mockups-productos/Mockup_Hoodie_Sudadera_mockupgratis.com.jpg",
-      "categoria":"Abrigos"
+      "imagen": "/images/mockups-productos/Mockup_Hoodie_Sudadera_mockupgratis.com.jpg"
     },
     {
       "nombre": "PANTALONES",
-      "imagen": "/images/mockups-productos/65768.jpg",
-      "categoria":"Pantalones"
+      "imagen": "/images/mockups-productos/65768.jpg"
+     
     },
     {
       "nombre": "COMPLEMENTOS",
-      "imagen": "/images/mockups-productos/Mockup_Bolsa_Tela_Chica_mockupgratis.com.jpg",
-      "categoria":"Complementos"
+      "imagen": "/images/mockups-productos/Mockup_Bolsa_Tela_Chica_mockupgratis.com.jpg"
+   
     },
     {
       "nombre": "GIFT CARD",
-      "imagen": "/images/mockups-productos/Tarjeta_Presentacion_mockupgratis.com.jpg",
-      "categoria":"Gift card"
-    },
-    {
-      "nombre": "+",
-      "imagen": "/images/ver-todo.jpg",
-      "categoria":"Ver todo"
+      "imagen": "/images/mockups-productos/Tarjeta_Presentacion_mockupgratis.com.jpg"
+    
     }
   ]
   

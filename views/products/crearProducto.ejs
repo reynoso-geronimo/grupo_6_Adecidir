@@ -18,13 +18,10 @@
     
         <label for="categorias">Categorías:</label>
         <select id="categorias" name="categorias">
-          <option value="opcion1"><h4>Seleccionar categoría</h4></option>
-          <option value="opcion2">Buzos</option>
-          <option value="opcion3">Tote bag</option>
-          <option value="opcion3">Gorros de lana</option>
-          <option value="opcion3">Barbijos</option>
-          <option value="opcion3">Anteojos de sol</option>
-          <option value="opcion1">Remeras</option>
+          <option disabled selected><h4>Seleccionar categoría</h4></option>
+          <% categorias.forEach(categoria => { %>
+            <option value="<%= categoria.nombre %>"><%= categoria.nombre %></option>
+          <% }) %>
         </select>
     </div>
     <div class="formDerecha">
