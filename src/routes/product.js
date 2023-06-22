@@ -28,9 +28,8 @@ const upload = multer({
       cb(null, true);
     } else {
 
-      const error = new Error('solo .png, .jpg, and .jpeg esta permitido!');
-      error.status = 400;
-      cb(error, false);
+      req.fileValidationError = "Solo formato png, jpg o jpeg estan permitidos";
+      return cb(null, false, req.fileValidationError);
 
     }
   }

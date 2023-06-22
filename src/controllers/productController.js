@@ -27,8 +27,10 @@ const productDetailController = {
     return res.render("products/productEdit", { producto: producto, categorias: categorias });
   },
   editItem: function (req, res) {
-
+    
+    let multerExtensionError = req.fileValidationError? {type:"file",msg:req.fileValidationError}:null
     let errors = validationResult(req)
+    multerExtensionError?errors.errors.push(multerExtensionError):""
     const producto = productos.find((row) => row.id == req.params.id);
     if (errors.isEmpty()) {// no hay errores de express-validator
       producto.nombre = req.body.name
