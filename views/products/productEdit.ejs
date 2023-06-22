@@ -7,11 +7,14 @@
       <main>
         <% if (locals.errors) { %>
           <div class="errores">
-            <% errors.forEach(error=> { %>
+
+            <% for(error in errors) { %>
               <p>
-                <%= error.msg %>
+                <%= errors[error].msg %>
               </p>
-              <% }) %>
+              
+            <% } %>
+            
           </div>
           <% } %>
             <h1 class="tituloAdd">Editar Producto: <%= producto.nombre %>
