@@ -78,6 +78,13 @@ const productDetailController = {
       old.tallel = req.body.size[2]
       old.tallexl = req.body.size[3]
       old.tallexxl = req.body.size[4]
+      if (req.files.length > 0) {
+        req.files.forEach((file) => {
+          producto.imagenes.push("/images/productos/" + file.filename);
+          fs.writeFileSync(path.resolve(__dirname, "../database/productos.json"), JSON.stringify(productos, null, 2))
+        });
+      }
+
       
       return res.render("products/productEdit", { producto: old, errors: errors.mapped() , categorias: categorias })
     }
