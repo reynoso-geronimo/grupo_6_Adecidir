@@ -539,6 +539,9 @@ Pagina detalle producto
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+#editDescripcion{
+  height: 230px;
+}
 .edit-box {
   display: flex;
   justify-content: space-evenly;
@@ -548,6 +551,7 @@ Pagina detalle producto
   
   gap:10px;
 }
+
 .edit-box div {
   width: 90vw;
   max-width: 450px;
@@ -617,8 +621,9 @@ Pagina detalle producto
   width: 100%;
   justify-content: space-evenly;
 }
-.formEdit span button{
+.formEdit span button,label{
   width: 35%;
+  text-align: center;
 }
 
 
@@ -630,9 +635,8 @@ Pagina detalle producto
   border-radius: 3px;
   cursor: pointer;
   text-decoration: none;
-  padding: 10;
-  width: 35%;
-  text-align: center;
+
+  
  
 }
 
