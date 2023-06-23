@@ -1040,7 +1040,10 @@ Pagina detalle producto
   max-width: 400px;
 }
   .edit-images{
-    gap:30px
+    justify-content: space-around;
+  }
+  .edit-images img {
+    width: 150px;
   }
 
 }
