@@ -95,6 +95,43 @@ const productDetailController = {
   crearProductoForm: function (req, res) {
     return res.render("products/crearProducto", { categorias: categorias });
   },
+  save : function (req, res){
+    
+    let productosdbs = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/productos.json"), "utf-8")); 
+    let ultimoProducto = productosdbs.pop()
+    productosdbs.push(ultimoProducto)
+    let nuevoProducto = {
+      id : ultimoProducto.id +1,
+      nombre : req.body.nombre,
+      descripcion : req.body.descripcion,
+      categoria : req.body.categorias,
+      precio : req.body.precio,
+      talles : req.body.size[0],
+      tallem : req.body.size[1],
+      tallel : req.body.size[2],
+      tallexl : req.body.size[3],
+      tallexxl : req.body.size[4],
+      borrado : false,
+      imagenes : []
+      
+      
+    }
+    
+    // Con esto verifico si subio imagenes y cambio la ruta para que se vean (sin la ruta de '/images/productos' no me mostraba la imagen)
+    if (req.files && req.files.length > 0) {
+      req.files.forEach(file => {
+        const rutaImagen = `/images/productos/${file.filename}`;
+        nuevoProducto.imagenes.push(rutaImagen);
+      });
+    }
+    
+    productosdbs.push(nuevoProducto)
+    let nuevoProductoGuardar = JSON.stringify(productosdbs, null, 2)
+    fs.writeFileSync(path.resolve(__dirname, '../database/productos.json'),nuevoProductoGuardar)
+    return res.redirect('/')
+
+  
+  },
 
   deleteProduct : function (req,res) {
     const productoEncontrado = productos.find((row) => row.id == req.params.id);

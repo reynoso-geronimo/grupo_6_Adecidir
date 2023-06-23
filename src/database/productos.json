@@ -10,7 +10,7 @@
     "tallel": "21",
     "tallexl": "19",
     "tallexxl": "29",
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa1a.jpg",
       "/images/productos/ropa1b.jpg",
@@ -29,7 +29,7 @@
     "tallel": "8",
     "tallexl": "3",
     "tallexxl": "4",
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa2a.jpg",
       "/images/productos/ropa2b.jpg",
@@ -48,7 +48,7 @@
     "tallel": "17",
     "tallexl": "9",
     "tallexxl": "12",
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa3a.jpg",
       "/images/productos/ropa3b.jpg",
@@ -67,7 +67,7 @@
     "tallel": "1",
     "tallexl": "1",
     "tallexxl": "1",
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/perfume1a.jpg",
       "/images/productos/perfume1b.jpg",
@@ -85,7 +85,7 @@
     "tallel": "1",
     "tallexl": "1",
     "tallexxl": "1",
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa4a.jpg",
       "/images/productos/ropa4b.jpg",
@@ -104,7 +104,7 @@
     "tallel": "1",
     "tallexl": "1",
     "tallexxl": "1",
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/perfume2a.jpg",
       "/images/productos/perfume2b.jpg",
@@ -123,7 +123,7 @@
     "tallel": "1",
     "tallexl": "1",
     "tallexxl": "1",
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa5a.jpg",
       "/images/productos/ropa5b.jpg",
@@ -142,7 +142,7 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/medias1a.jpg",
       "/images/productos/medias1b.jpg",
@@ -160,7 +160,7 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa1a.jpg",
       "/images/productos/ropa1b.jpg",
@@ -179,7 +179,7 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa2a.jpg",
       "/images/productos/ropa2b.jpg",
@@ -198,7 +198,7 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa3a.jpg",
       "/images/productos/ropa3b.jpg",
@@ -217,7 +217,7 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/perfume1a.jpg",
       "/images/productos/perfume1b.jpg",
@@ -235,7 +235,7 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa4a.jpg",
       "/images/productos/ropa4b.jpg",
@@ -254,7 +254,7 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/perfume2a.jpg",
       "/images/productos/perfume2b.jpg",
@@ -273,7 +273,7 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/ropa5a.jpg",
       "/images/productos/ropa5b.jpg",
@@ -292,7 +292,7 @@
     "tallel": 1,
     "tallexl": 1,
     "tallexxl": 1,
-    "borrado":false,
+    "borrado": false,
     "imagenes": [
       "/images/productos/medias1a.jpg",
       "/images/productos/medias1b.jpg",

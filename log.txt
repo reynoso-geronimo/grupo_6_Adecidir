@@ -101,3 +101,5 @@ Tue Jun 20 2023 21:15:08 GMT-0300 (hora estándar de Argentina) Se edito el resg
 Tue Jun 20 2023 21:15:28 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 6
 Tue Jun 20 2023 21:15:40 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 7
 Wed Jun 21 2023 12:27:27 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 3
+Fri Jun 23 2023 14:59:52 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 17
+Fri Jun 23 2023 14:59:59 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 17

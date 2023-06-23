@@ -450,7 +450,8 @@ Pagina detalle producto
 }
 
 #descripcion{
-  height: 230px;
+  width: 300px; 
+  height: 45%; 
 }
 .formIzquierda label,
 .formDerecha label {

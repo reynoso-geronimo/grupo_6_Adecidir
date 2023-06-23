@@ -38,7 +38,11 @@ const upload = multer({
 
 
 router.get('/list/:categoria?', product.list)
+
+//Creacion de Producto
 router.get("/crearProducto", product.crearProductoForm);
+router.post("/crearproducto",upload.array("imagenes"), product.save)
+
 
 router.get("/:id", product.detail);
 
