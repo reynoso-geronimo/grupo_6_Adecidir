@@ -107,8 +107,11 @@ main {
 i {
   font-size: 20px;
   padding: 5px;
+}
+header i{
   margin-left: 10px;
 }
+
 
 #login-register {
   display: flex;
@@ -158,7 +161,10 @@ footer {
   text-align: center;
   width: 100vw;
 }
-
+footer i{
+  margin-left:5px;
+  margin-right:5px
+}
 footer a i {
   color: white;
   border: solid 1px black;
@@ -170,7 +176,7 @@ footer a i {
 
 
 
-.cajabuscar {
+.cajaSuscribe {
   font-size: 100%;
   font: inherit;
   text-align: right;
@@ -186,7 +192,7 @@ footer a i {
   text-align: left;
 }
 
-#buscarform {
+#suscribeForm {
   padding: 0;
   float: left;
   clear: both;
@@ -206,7 +212,7 @@ footer a i {
   text-overflow: ellipsis;
 }
 
-.search-button {
+.suscribe-button {
   border: 0;
   width: 42px;
   height: 42px;
