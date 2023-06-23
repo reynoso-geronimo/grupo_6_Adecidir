@@ -99,7 +99,9 @@ const productDetailController = {
   deleteProduct : function (req,res) {
     const productoEncontrado = productos.find((row) => row.id == req.params.id);
     productoEncontrado.borrado = true
+    fs.writeFileSync(path.resolve(__dirname, "../database/productos.json"), JSON.stringify(productos, null, 2))
     return res.redirect("/")
+  
   }
 
 };
