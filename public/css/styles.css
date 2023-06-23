@@ -613,6 +613,7 @@ Pagina detalle producto
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  max-width: 1000px;
 }
 .edit-imagex-trash {
   display: flex;
