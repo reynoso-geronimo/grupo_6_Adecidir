@@ -92,12 +92,13 @@
               </div>
               <!-- TODO ELIMINAR PRODUCTO -->
               <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
-                <form method="POST" action="/product/<%=producto.id%>/delete/?_method=DELETE">
-                  <button class="botonEliminar"  type="submit">ELIMINAR ITEM</button> 
-                  </form> </span>
+                <label class="botonEliminar" for="eliminarItem">ELIMINAR ITEM</label>
+              </span>
 
             </form>
-
+            <form method="POST" action="/product/<%=producto.id%>/delete/?_method=DELETE">
+              <button hidden  id="eliminarItem"  type="submit">ELIMINAR ITEM</button> 
+              </form>
           
 
 

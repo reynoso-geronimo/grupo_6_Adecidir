@@ -9,11 +9,12 @@ const categorias = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../databa
 const productDetailController = {
   list: function (req, res) {
     if (req.params.categoria) {
-      let prodCategorias = productos.filter(row => row.categoria == req.params.categoria)
+      let prodCategorias = productos.filter(row => row.categoria == req.params.categoria && row.borrado == false)
       return res.render("products/productList", { productos: prodCategorias });
 
     } else {
-      return res.render("products/productList", { productos: productos });
+      const prodDisponibles = productos.filter(row => row.borrado == false);
+      return res.render("products/productList", { productos: prodDisponibles });
     }
 
   },

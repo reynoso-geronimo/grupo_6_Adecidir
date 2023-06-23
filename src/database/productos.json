@@ -10,7 +10,7 @@
     "tallel": "21",
     "tallexl": "19",
     "tallexxl": "29",
-    "borrado": false,
+    "borrado": true,
     "imagenes": [
       "/images/productos/ropa1a.jpg",
       "/images/productos/ropa1b.jpg",
@@ -29,7 +29,7 @@
     "tallel": "8",
     "tallexl": "3",
     "tallexxl": "4",
-    "borrado": false,
+    "borrado": true,
     "imagenes": [
       "/images/productos/ropa2a.jpg",
       "/images/productos/ropa2b.jpg",
