@@ -648,6 +648,15 @@ Pagina detalle producto
   color: #ffffff;
   border: solid 1px #000000;
 }
+.formEdit span{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.formEdit span button{
+  width: 35%;
+}
+
 
 .botonEliminar {
   padding: 10px 20px;
@@ -656,6 +665,11 @@ Pagina detalle producto
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  text-decoration: none;
+  padding: 10;
+  width: 35%;
+  text-align: center;
+ 
 }
 
 .edit-nuevas-images{
@@ -953,13 +967,10 @@ Pagina detalle producto
   }
   /*CREAR PRODUCTO*/
   .formAdd {
-    display: flex;
+    
     flex-direction: row;
     justify-content: space-between;
     width: 600px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
   }
   
   .formIzquierda,
@@ -993,18 +1004,7 @@ Pagina detalle producto
     cursor: pointer;
   }
   
-  .botonAdd {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
   
-  .botonAdd:hover {
-    background-color: #45a049;
-  }
   .selectorTalle {
     display: flex;
     align-items: center;
