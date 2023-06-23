@@ -883,7 +883,14 @@ Pagina detalle producto
   
   font-weight: bold;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: flex-end;
+ 
+}
+
+.precio-lista{
+  white-space: nowrap;
+  margin-left:20px
 }
 
 @media (min-width: 481px) {
