@@ -582,10 +582,12 @@ Pagina detalle producto
   flex-direction: column;
   align-items: center;
   width: 100%;
+  
   gap:10px;
 }
 .edit-box div {
   width: 90vw;
+  max-width: 450px;
 }
 .editar-talle {
   display: flex;
