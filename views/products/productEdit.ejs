@@ -91,10 +91,14 @@
                 <input multiple type="file" name="images" id="new-images" />
               </div>
               <!-- TODO ELIMINAR PRODUCTO -->
-              <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button> <a
-                  class="botonEliminar" href="#">ELIMINAR ITEM</a></span>
+              <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
+                <form method="POST" action="/product/<%=producto.id%>/delete/?_method=DELETE">
+                  <button type="submit">ELIMINAR ITEM</button> </span>
+                  </form>
 
             </form>
+
+          
 
 
             <a class="volver-producto" href="/product/<%=producto.id%>"><i class="fa-solid fa-arrow-left"></i>Volver a

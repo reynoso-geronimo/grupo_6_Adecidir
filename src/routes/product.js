@@ -46,7 +46,7 @@ router.get("/:id", product.detail);
 router.get('/:id/editform/', product.editForm)
 router.put('/:id/', upload.array("images"), validarEdit, logDB.logEdit, product.editItem)
 
-// router.delete('/:id/delete',product.delete)
+router.delete('/:id/delete',product.deleteProduct)
 
 
 module.exports = router;

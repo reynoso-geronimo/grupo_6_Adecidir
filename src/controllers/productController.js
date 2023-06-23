@@ -95,6 +95,13 @@ const productDetailController = {
   crearProductoForm: function (req, res) {
     return res.render("products/crearProducto", { categorias: categorias });
   },
+
+  deleteProduct : function (req,res) {
+    const productoEncontrado = productos.find((row) => row.id == req.params.id);
+    productoEncontrado.borrado = true
+    return res.redirect("/")
+  }
+
 };
 
 module.exports = productDetailController;
