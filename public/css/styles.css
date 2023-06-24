@@ -621,7 +621,7 @@ Pagina detalle producto
   width: 100%;
   justify-content: space-evenly;
 }
-.formEdit span button,label{
+.formEdit span button,.formEdit span label{
   width: 35%;
   text-align: center;
 }
