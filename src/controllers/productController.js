@@ -57,7 +57,7 @@ const productDetailController = {
       if (req.body.imgDelete && typeof req.body.imgDelete == "object") {
 
         for (const img of req.body.imgDelete) {
-          fs.unlinkSync(path.resolve(__dirname, '../../public/' + img))
+          fs.unlinkSync(path.resolve(__dirname, '../../public/images/productos/' + img))
           producto.imagenes = producto.imagenes.filter(row => row != img)
 
         };
