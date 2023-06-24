@@ -81,14 +81,10 @@
                   <div class="edit-imagex-trash">
                     <img src="/images/productos/<%=element %>" />
                     <input type="checkbox" id="<%=element %>" name="imgDelete" value="<%=element %>" 
-                    <% if (producto.imgDelete&&producto.imgDelete.includes(element)) { %>
-                      checked
-                    <% } %>
-                    />
+                    <%= producto.imgDelete&&producto.imgDelete.includes(element)? "checked" : '' %> />
                     <label for="<%=element %>"><i class="fa-solid fa-trash"></i></label>
-
                   </div>
-                  <% }) %>
+                <% }) %>
               </div>
               <div class="edit-nuevas-images">
                 <label for="new-images"><i class="fa-solid fa-cloud-arrow-up"></i>Subir nuevas imagenes</label>
