@@ -39,3 +39,17 @@
         3. Continuar haciendo: la organización de tareas por trello y actualizar los avances del proyecto en dicha plataforma. Comentar las secciones de código que corresponden a cada vista.
         4. Hacer menos: vamos a hacer más justo el hecho de compartir pantalla en las reuniones de equipo para que la responsabilidad no caiga en uno, es decir, que llamada a llamada va a compartir otra persona para que todos veamos lo que sabe cada uno y cómo nos podemos ayudar a mejorar.
         5. Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).
+
+# RETRO SPRINT 3
+    ## Conclusiones
+        A lo largo del cuarto sprint nos dividimos tareas y a medida que ibamos necesitando ayuda nos la íbamos brindando y corrigiéndo a nosotros y al código para obtener un mejor proyecto final (a nivel código y nivel diseño).
+
+        Comunicación. no terminar algo sobre la hora, organizarse para terminar todo con más tiempo
+
+
+    ## Dinámica de la estrella de mar
+        1. Comenzar a hacer: 
+        2. Hacer más: 
+        3. Continuar haciendo: 
+        4. Hacer menos: 
+        5. Dejar de hacer: 
