@@ -63,12 +63,12 @@ const productDetailController = {
         };
       } else if (req.body.imgDelete && typeof req.body.imgDelete == "string") {
         producto.imagenes = producto.imagenes.filter(row => row != req.body.imgDelete)
-        fs.unlinkSync(path.resolve(__dirname, '../../public/' + req.body.imgDelete))
+        fs.unlinkSync(path.resolve(__dirname, '../../public/images/productos/' + req.body.imgDelete))
       }
 
       if (req.files.length > 0) {
         req.files.forEach((file) => {
-          producto.imagenes.push("/images/productos/" + file.filename);
+          producto.imagenes.push(file.filename);
         });
       }
 
@@ -90,7 +90,7 @@ const productDetailController = {
       old.tallexxl = req.body.size[4]
       if (req.files.length > 0) {
         req.files.forEach((file) => {
-          producto.imagenes.push("/images/productos/" + file.filename);
+          producto.imagenes.push(file.filename);
           fs.writeFileSync(path.resolve(__dirname, "../database/productos.json"), JSON.stringify(productos, null, 2))
         });
       }
@@ -128,7 +128,7 @@ const productDetailController = {
     // Con esto verifico si subio imagenes y cambio la ruta para que se vean (sin la ruta de '/images/productos' no me mostraba la imagen)
     if (req.files && req.files.length > 0) {
       req.files.forEach(file => {
-        const rutaImagen = `/images/productos/${file.filename}`;
+        const rutaImagen = file.filename;
         nuevoProducto.imagenes.push(rutaImagen);
       });
     }

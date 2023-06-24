@@ -1,25 +1,25 @@
 [
     {
       "nombre": "REMERAS",
-      "imagen": "/images/mockups-productos/Mockup_Camiseta_Doblada_mockupgratis.com.jpg"
+      "imagen": "Mockup_Camiseta_Doblada_mockupgratis.com.jpg"
     },
     {
       "nombre": "ABRIGOS",
-      "imagen": "/images/mockups-productos/Mockup_Hoodie_Sudadera_mockupgratis.com.jpg"
+      "imagen": "Mockup_Hoodie_Sudadera_mockupgratis.com.jpg"
     },
     {
       "nombre": "PANTALONES",
-      "imagen": "/images/mockups-productos/65768.jpg"
+      "imagen": "65768.jpg"
      
     },
     {
       "nombre": "COMPLEMENTOS",
-      "imagen": "/images/mockups-productos/Mockup_Bolsa_Tela_Chica_mockupgratis.com.jpg"
+      "imagen": "Mockup_Bolsa_Tela_Chica_mockupgratis.com.jpg"
    
     },
     {
       "nombre": "GIFT CARD",
-      "imagen": "/images/mockups-productos/Tarjeta_Presentacion_mockupgratis.com.jpg"
+      "imagen": "Tarjeta_Presentacion_mockupgratis.com.jpg"
     
     }
   ]
