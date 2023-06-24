@@ -80,7 +80,11 @@
                 <% producto.imagenes.forEach(element=> { %>
                   <div class="edit-imagex-trash">
                     <img src="/images/productos/<%=element %>" />
-                    <input type="checkbox" id="<%=element %>" name="imgDelete" value="<%=element %>" />
+                    <input type="checkbox" id="<%=element %>" name="imgDelete" value="<%=element %>" 
+                    <% if (producto.imgDelete&&producto.imgDelete.includes(element)) { %>
+                      checked
+                    <% } %>
+                    />
                     <label for="<%=element %>"><i class="fa-solid fa-trash"></i></label>
 
                   </div>
@@ -90,7 +94,7 @@
                 <label for="new-images"><i class="fa-solid fa-cloud-arrow-up"></i>Subir nuevas imagenes</label>
                 <input multiple type="file" name="images" id="new-images" />
               </div>
-              <!-- TODO ELIMINAR PRODUCTO -->
+
               <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
                 <% if (producto.borrado == false) { %>
                   <label class="botonEliminar" for="eliminarItem">ELIMINAR ITEM</label>

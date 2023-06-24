@@ -88,6 +88,8 @@ const productDetailController = {
       old.tallel = req.body.size[2]
       old.tallexl = req.body.size[3]
       old.tallexxl = req.body.size[4]
+      old.imgDelete = req.body.imgDelete
+      console.log(old.imgDelete);
       if (req.files.length > 0) {
         req.files.forEach((file) => {
           producto.imagenes.push(file.filename);
