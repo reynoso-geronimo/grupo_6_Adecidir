@@ -4,7 +4,7 @@ const product = require('../controllers/productController.js');
 const logDB = require('../middlewares/logDBMiddleware.js')
 const path = require('path');
 const multer = require('multer');
-const { validarEdit } = require('../middlewares/valdaciones.js');
+const { validarEdit } = require('../middlewares/validaciones.js');
 
 
 
