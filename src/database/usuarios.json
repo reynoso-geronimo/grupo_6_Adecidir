@@ -4,7 +4,7 @@
     "nombre": "Vega",
     "apellido": "Calleja",
     "email": "bandreacci0@topsy.com",
-    "contraseña": "oE7)D%C5XsVSXJ",
+    "clave": "giTDJzifd1",
     "categoría": "Customer",
     "avatar": "images/avatar/image 3.png"
   }, {
@@ -12,7 +12,7 @@
     "nombre": "Fernando",
     "apellido": "Maza",
     "email": "hdickey1@flickr.com",
-    "contraseña": "fD5!Rp'!US1",
+    "clave": "ypYqqGUBYS",
     "categoría": "Admin",
     "avatar": "images/avatar/image 4.png"
   }, {
@@ -20,7 +20,7 @@
     "nombre": "Ascension",
     "apellido": "Gamez",
     "email": "afullagar2@yahoo.com",
-    "contraseña": "xI4*v~OPo`eX",
+    "clave": "InopeJIzPl",
     "categoría": "Admin",
     "avatar": "images/avatar/image 5.png"
   }, {
@@ -28,7 +28,7 @@
     "nombre": "Anton",
     "apellido": "Castro",
     "email": "lkopacek3@over-blog.com",
-    "contraseña": "eE1@uKViy\"b",
+    "clave": "KpMziS7cCW",
     "categoría": "Admin",
     "avatar": "images/avatar/image 6.png"
   }, {
@@ -36,7 +36,7 @@
     "nombre": "Younes",
     "apellido": "Tejera",
     "email": "ssambell4@cbc.ca",
-    "contraseña": "sJ2$24_D",
+    "clave": "QZaL1XyXZM",    
     "categoría": "Admin",
     "avatar": "images/avatar/image 7.png"
   }, {
@@ -44,7 +44,7 @@
     "nombre": "Letícia",
     "apellido": "Amores",
     "email": "rriggs5@csmonitor.com",
-    "contraseña": "kW9#Mh/B|V\"`u(2+",
+    "clave": "TWEaja9996",
     "categoría": "Admin",
     "avatar": "images/avatar/image 8.png"
   }, {
@@ -52,7 +52,7 @@
     "nombre": "Natalia",
     "apellido": "Barcelo",
     "email": "qkorpolak6@vimeo.com",
-    "contraseña": "yU9\"0gau6",
+    "clave": "wMP489ILhp",
     "categoría": "Customer",
     "avatar": "images/avatar/image 9.png"
   }, {
@@ -60,7 +60,7 @@
     "nombre": "Maria-Fernanda",
     "apellido": "Cabello",
     "email": "aschankelborg7@sciencedaily.com",
-    "contraseña": "aG8<ovt8F!!KW)Y(",
+    "clave": "sblePDcM7x",
     "categoría": "Admin",
     "avatar": "images/avatar/image 10.png"
   }, {
@@ -68,7 +68,7 @@
     "nombre": "Uxue",
     "apellido": "Caceres",
     "email": "edunning8@webs.com",
-    "contraseña": "yJ3_9(f0VO'>\"4",
+    "clave": "t5WLdwvQSo",
     "categoría": "Customer",
     "avatar": "images/avatar/image 11.png"
   }, {
@@ -76,15 +76,15 @@
     "nombre": "Aaron",
     "apellido": "Encinas",
     "email": "nperroni9@posterous.com",
-    "contraseña": "bE5.(4XPmjAr",
+    "clave": "ezeAlaicbO",
     "categoría": "Admin",
     "avatar": "images/avatar/image 12.png"
   }, {
     "id": 11,
     "nombre": "Simon",
-    "apellido": "Viñas",
+    "apellido": "Vinas",
     "email": "tjindricha@eepurl.com",
-    "contraseña": "fH8|%?Qy+",
+    "clave": "vuaTrrqqBr",
     "categoría": "Admin",
     "avatar": "images/avatar/image 13.png"
   }, {
@@ -92,7 +92,7 @@
     "nombre": "Diego",
     "apellido": "Llamas",
     "email": "rcrowcheb@tiny.cc",
-    "contraseña": "eR0`vs{!A)(sh",
+    "clave": "iImx1jkDJO",
     "categoría": "Customer",
     "avatar": "images/avatar/image 14.png"
   }, {
@@ -100,7 +100,7 @@
     "nombre": "Maria-Paz",
     "apellido": "Valera",
     "email": "aalexanderssonc@skyrock.com",
-    "contraseña": "zG1!p6'sjhmkC1B|",
+    "clave": "QYDSlnojsL",
     "categoría": "Admin",
     "avatar": "images/avatar/image 15.png"
   }, {
@@ -108,7 +108,7 @@
     "nombre": "Salah",
     "apellido": "Montoro",
     "email": "lduffreed@acquirethisname.com",
-    "contraseña": "dT2%LAk?8q",
+    "clave": "jS5PljRv1B",
     "categoría": "Admin",
     "avatar": "images/avatar/image 16.png"
   }, {
@@ -116,7 +116,7 @@
     "nombre": "Lídia",
     "apellido": "Rivera",
     "email": "gmittene@wiley.com",
-    "contraseña": "vI2{)3h|",
+    "clave": "UtJTn798eq",
     "categoría": "Admin",
     "avatar": "images/avatar/image 17.png"
   }, {
@@ -124,7 +124,7 @@
     "nombre": "est",
     "apellido": "orci pede",
     "email": "hcartwrightf@privacy.gov.au",
-    "contraseña": "mH9)*vv.wfh9q",
+    "clave": "qe7ZoxZm5B",
     "categoría": "Admin",
     "avatar": "images/avatar/image 18.png"
   }, {
@@ -132,15 +132,15 @@
     "nombre": "Moussa",
     "apellido": "Giraldo",
     "email": "dhogbourneg@time.com",
-    "contraseña": "jB0)vfrecqSp~aw6",
+    "clave": "TGnS8yb68e",
     "categoría": "Admin",
     "avatar": "images/avatar/image 19.png"
   }, {
     "id": 18,
     "nombre": "Alexandru",
-    "apellido": "Ibañez",
+    "apellido": "Ibanez",
     "email": "nblucherh@domainmarket.com",
-    "contraseña": "eY9'<\\#l",
+    "clave": "b5Rv7aBQPP",
     "categoría": "Admin",
     "avatar": "images/avatar/image 20.png"
   }, {
@@ -148,7 +148,7 @@
     "nombre": "Yeray",
     "apellido": "De la Torre",
     "email": "adouli@who.int",
-    "contraseña": "yI5#%H7BPM`$",
+    "clave": "LXmnvCIa07",
     "categoría": "Customer",
     "avatar": "images/avatar/image 21.png"
   }, {
@@ -156,7 +156,7 @@
     "nombre": "Iciar",
     "apellido": "Baeza",
     "email": "lhackworthyj@nationalgeographic.com",
-    "contraseña": "pJ4_%P*VSF&",
+    "clave": "IO25AJsGNc",
     "categoría": "Admin",
     "avatar": "images/avatar/image 22.png"
   }, {
@@ -164,7 +164,7 @@
     "nombre": "Mariano",
     "apellido": "Miralles",
     "email": "jkliemchenk@topsy.com",
-    "contraseña": "uW3{GUV<",
+    "clave": "BYcqCelCKk",
     "categoría": "Admin",
     "avatar": "images/avatar/image 23.png"
   }, {
@@ -172,7 +172,7 @@
     "nombre": "Lucas",
     "apellido": "Torrejon",
     "email": "akestianl@google.ru",
-    "contraseña": "yO4/?2hBXk",
+    "clave": "7MeVXrUFB0",
     "categoría": "Admin",
     "avatar": "images/avatar/image 23.png"
   }, {
@@ -180,7 +180,7 @@
     "nombre": "Cecilia",
     "apellido": "Mendez",
     "email": "jwilsherem@redcross.org",
-    "contraseña": "yQ6?vsvVh1",
+    "clave": "ZII4qMK9yR",
     "categoría": "Customer",
     "avatar": "images/avatar/image 24.png"
   }, {
@@ -188,7 +188,7 @@
     "nombre": "Jose-Andres",
     "apellido": "Murcia",
     "email": "sgairdnern@bandcamp.com",
-    "contraseña": "yD7(DG0q",
+    "clave": "064I03ZXiZ",
     "categoría": "Admin",
     "avatar": "images/avatar/image 25.png"
   }, {
@@ -196,15 +196,15 @@
     "nombre": "Anabel",
     "apellido": "Martín",
     "email": "cstollmeiero@baidu.com",
-    "contraseña": "cD3+#FlrL",
+    "clave": "9GTiIRVxap",
     "categoría": "Admin",
     "avatar": "images/avatar/image 26.png"
   }, {
     "id": 26,
     "nombre": "Micaela",
-    "apellido": "Ortuño",
+    "apellido": "Ortuno",
     "email": "hlantryp@furl.net",
-    "contraseña": "qJ3!@|.DU5q5a",
+    "clave": "ZDwhksUNBB",
     "categoría": "Admin",
     "avatar": "images/avatar/image 26.png"
   }
