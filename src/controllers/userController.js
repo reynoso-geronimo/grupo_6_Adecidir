@@ -2,6 +2,22 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require('express-validator')
 
+module.exports = {
+    loginForm: function (req, res) {
+
+        return res.render('user/login')
+
+    },
+    registerForm:function(req,res) {
+
+        return res.render('user/register')
+
+    }
+
+}
+
+/* VER SI EN UN FUTURO SE LE PUEDE DAR FUNCIONALIDAD PARA ALGO
+
 const usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/usuarios.json"), "utf-8"));
 
 const userDetail = {
@@ -16,4 +32,4 @@ const userDetail = {
     }
 }
 
-  module.exports = userDetail;
+  module.exports = userDetail; */
