@@ -105,3 +105,66 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
 
 * Posible para todos:
     - Hacer un media querie para mobile que saque el logo del header. 
+
+
+# 24 de junio del 2023
+* Emiliano Apostolo:
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
+* Furfaro ignacio:
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
+* Geronimo Reynoso
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
+* Valentin Marquez
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
+* Jennifer Lichtensztejn
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
+
+
+
+
+
+
+
+
+
+# x de junio del 2023
+* Emiliano Apostolo:
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
+* Furfaro ignacio:
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
+* Geronimo Reynoso
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
+* Valentin Marquez
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
+* Jennifer Lichtensztejn
+    - Que hizo en estos días: 
+    - Si se encontró con algún impedimento:
+    - Qué va a hacer los próximos días: 
+
