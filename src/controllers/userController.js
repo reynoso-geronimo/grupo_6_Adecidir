@@ -1,19 +1,48 @@
-const fs = require("fs");
-const path = require("path");
-const { validationResult } = require('express-validator')
+const bcrypt = require("bcrypt");
+const User = require("../models/User");
+const session = require("express-session");
 
-const usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/usuarios.json"), "utf-8"));
+module.exports = {
+  loginForm: function (req, res) {
 
-const userDetail = {
-    loginForm: function (req, res) {
-        const usuarios = usuarios.find((row) => row.id == req.params.id);
-        return res.render('user/login', { usuarios: usuarios, categorias: categorias });
-    },
-    registerForm:function(req,res) {
-        const usuarios = usuarios.find((row) => row.id == req.params.id);
-        return res.render('user/register', { usuarios: usuarios, categorias: categorias });
+    return res.render("user/login");
+  },
+  processLogin: function (req, res) {
+    const usuario = User.findByField("email", req.body.email);
 
+    if (usuario && bcrypt.compareSync(req.body.password, usuario.password)) {
+      //login exitoso
+      req.session.usuarioLogeado = { id: usuario.id, nombre: usuario.nombre }
+      if (req.body.keepalive)
+        res.cookie("recordame", usuario.email, { maxAge: 600000 });
+      return res.redirect("/");
     }
-}
+    //login fallido
+    return res.redirect("/user/login");
+  },
+  registerForm: function (req, res) {
 
-  module.exports = userDetail;
+    return res.render("user/register");
+  },
+  processRegister: (req, res) => {
+    const userInDb = User.findByField("email", req.body.email);
+
+    if (userInDb) return res.send("Email ya en uso");
+
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(12));
+    const nuevoUsuario = {
+      nombre: req.body.name,
+      email: req.body.email,
+      password: req.body.password,
+    };
+    User.createUsers(nuevoUsuario);
+    return res.redirect("/user/login");
+  },
+  logout: function (req,res) {
+    console.log(session.session)
+    req.session.destroy()
+
+    res.cookie("recordame", null);
+    res.redirect('/')
+  }
+};
