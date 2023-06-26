@@ -326,7 +326,12 @@ Pagina detalle producto
   align-items: center;
   margin-bottom: 50px;
 }
-
+.radio-button{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
 .radio-button input[type="radio"] {
   display: none;
 }
@@ -338,8 +343,8 @@ Pagina detalle producto
   padding-bottom: 20px;
   width: 60px;
   font-weight: 900;
-  margin: 5px;
-  border: solid 1px #fff;
+  margin: 0;
+
 }
 .radio-button input[type="radio"]:checked + label {
   background-color: #fff500;
