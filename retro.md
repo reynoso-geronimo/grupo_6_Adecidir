@@ -44,12 +44,9 @@
     ## Conclusiones
         A lo largo del cuarto sprint nos dividimos tareas y a medida que ibamos necesitando ayuda nos la íbamos brindando y corrigiéndo a nosotros y al código para obtener un mejor proyecto final (a nivel código y nivel diseño).
 
-        Comunicación. no terminar algo sobre la hora, organizarse para terminar todo con más tiempo
-
-
     ## Dinámica de la estrella de mar
-        1. Comenzar a hacer: 
-        2. Hacer más: 
-        3. Continuar haciendo: 
-        4. Hacer menos: 
-        5. Dejar de hacer: 
+        1. Comenzar a hacer: para este sprint no consideramos que tenemos que empezar a hacer nada nuevo, con los avances y charlas para mejorar el desarrollo del equipo en relación al proyecto estamos conformes.
+        2. Hacer más: tenemos que mejorar la comunicación ya que esto nos hace que subamos el proyecto al repositorio muy tarde o sobre la hora de la entrega.
+        3. Continuar haciendo: tenemos que mantener la organización que tenemos para terminar todo con más tiempo. También continuamos haciendo encuentros virtuales semanales para saber los avances de cada uno del equipo y cómo va progresando el proyecto en relación a las pautas del sprint.
+        4. Hacer menos: no encontramos conductas del equipo para hacer menos.
+        5. Dejar de hacer: terminar algo sobre la fecha de entrega. 
