@@ -243,10 +243,22 @@ Pagina detalle producto
   align-items: center;
   justify-content: center;
 }
-.galeria img {
-  height: 380px;
-  padding: 5px;
+.galeria{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+.img-detalle {
+  max-height: 380px;
+  max-width: 300px;
+  padding: 5px;
+  display: none;
+  object-fit: contain;
+}
+ 
+ 
+
 .radio-selector input[type="radio"] {
   display: none;
 }
@@ -270,9 +282,7 @@ Pagina detalle producto
   color: #000000;
   border: solid 2px #000000;
 }
-.img-detalle {
-  display: none;
-}
+
 
 
 
