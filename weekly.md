@@ -65,7 +65,7 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
     - Qué va a hacer los próximos días: nada
 
 * Jennifer Lichtensztejn
-    - Qué hizo en estos días: completé la retro y el archivo weekly. 
+    - Qué hizo en estos días: completó la retro y el archivo weekly. 
     - Si se encontró con algún impedimento: no
     - Qué va a hacer los próximos días: implementar la tipografía en la hoja de estilos, agregar media queries, completar con diferentes mockups de un mismo producto (categoría) el archivo productos.json y modificar el banner del home.
 
@@ -75,7 +75,7 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
 
 # 16 de junio del 2023 (comienzo del cuarto sprint)
 * Emiliano Apostolo:
-    - Que hizo en estos días: en estos días se enfocó en incorporar conocimientos nuevos para aplicar en un futuro en el proyecto.
+    - Que hizo en estos días: incorporó conocimientos nuevos para aplicar en un futuro en el proyecto.
     - Si se encontró con algún impedimento: no
     - Qué va a hacer los próximos días: va a modificar el css del desplegable para registrarse, iniciar sesión y la lupa de search.
 
@@ -95,7 +95,7 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
     - Qué va a hacer los próximos días:
 
 * Jennifer Lichtensztejn
-    - Que hizo en estos días: estuve haciendo el css del carrito compras y aplicando a la práctica la nueva teoría vista.
+    - Que hizo en estos días: estuvo haciendo el css del carrito compras y aplicando a la práctica la nueva teoría vista.
     - Si se encontró con algún impedimento: se me dificultó la implementación de flexbox en el banner del home.
     - Qué va a hacer los próximos días: replantear el tamaño de la caja de los ptos de la lista de ptos.
 
@@ -107,31 +107,31 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
     - Hacer un media querie para mobile que saque el logo del header. 
 
 
-# 24 de junio del 2023
+# 24 de junio del 2023 
 * Emiliano Apostolo:
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
+    - Que hizo en estos días: estuvo haciendo el DELETE del crud en el proyecto y, junto a Geronimo, se encargó de dar de alta un producto. 
+    - Si se encontró con algún impedimento: al momento de hacer el controlador del DELETE no le salía.
+    - Qué va a hacer los próximos días: va a continuar repasando conceptos del playground.
 
 * Furfaro ignacio:
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
+    - Que hizo en estos días: hizo la ruta por post y arregló la vista para crear producto.
+    - Si se encontró con algún impedimento: se le complicó una cosa en el action del form, pero lo pudo solucionar con ayuda del profesor.
+    - Qué va a hacer los próximos días: va a estar con las clases de login.
 
 * Geronimo Reynoso
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
+    - Que hizo en estos días: se encargó de la edición de productos, generó algunos cambios a nivel general (como que la página levante las categorías del json de categorías, que el listado de productos pueda mostrar productos por categoría y que cambie para que en los archivos json solo se guarde el nombre de la imagen y que las vistas sean responsables de completar el resto de la ruta).
+    - Si se encontró con algún impedimento: no sabía como pasarle errores de validación de multer, pero lo pudo resolver leyendo stack overflow. Aunque funciona aún no sabe si es la manera correcta de resolverlo.
+    - Qué va a hacer los próximos días: estudiar y practicar login sesión y cookies.
 
 * Valentin Marquez
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
+    - Que hizo en estos días: no responde.
+    - Si se encontró con algún impedimento: no responde.
+    - Qué va a hacer los próximos días: no responde.
 
 * Jennifer Lichtensztejn
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
+    - Que hizo en estos días: se encargó de hacer el JSON de usuarios y de terminar el css del carrito de compras.
+    - Si se encontró con algún impedimento: no.
+    - Qué va a hacer los próximos días: estudiar y practicar login sesión y cookies.
 
 
 
