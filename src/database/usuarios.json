@@ -5,7 +5,7 @@
     "apellido": "Calleja",
     "email": "bandreacci0@topsy.com",
     "clave": "giTDJzifd1",
-    "categoría": "Customer",
+    "categoria": "Customer",
     "avatar": "image 3.png"
   }, {
     "id": 2,
@@ -13,7 +13,7 @@
     "apellido": "Maza",
     "email": "hdickey1@flickr.com",
     "clave": "ypYqqGUBYS",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 4.png"
   }, {
     "id": 3,
@@ -21,7 +21,7 @@
     "apellido": "Gamez",
     "email": "afullagar2@yahoo.com",
     "clave": "InopeJIzPl",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 5.png"
   }, {
     "id": 4,
@@ -29,7 +29,7 @@
     "apellido": "Castro",
     "email": "lkopacek3@over-blog.com",
     "clave": "KpMziS7cCW",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 6.png"
   }, {
     "id": 5,
@@ -37,7 +37,7 @@
     "apellido": "Tejera",
     "email": "ssambell4@cbc.ca",
     "clave": "QZaL1XyXZM",    
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 7.png"
   }, {
     "id": 6,
@@ -45,7 +45,7 @@
     "apellido": "Amores",
     "email": "rriggs5@csmonitor.com",
     "clave": "TWEaja9996",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 8.png"
   }, {
     "id": 7,
@@ -53,7 +53,7 @@
     "apellido": "Barcelo",
     "email": "qkorpolak6@vimeo.com",
     "clave": "wMP489ILhp",
-    "categoría": "Customer",
+    "categoria": "Customer",
     "avatar": "image 9.png"
   }, {
     "id": 8,
@@ -61,7 +61,7 @@
     "apellido": "Cabello",
     "email": "aschankelborg7@sciencedaily.com",
     "clave": "sblePDcM7x",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 10.png"
   }, {
     "id": 9,
@@ -69,7 +69,7 @@
     "apellido": "Caceres",
     "email": "edunning8@webs.com",
     "clave": "t5WLdwvQSo",
-    "categoría": "Customer",
+    "categoria": "Customer",
     "avatar": "image 11.png"
   }, {
     "id": 10,
@@ -77,7 +77,7 @@
     "apellido": "Encinas",
     "email": "nperroni9@posterous.com",
     "clave": "ezeAlaicbO",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 12.png"
   }, {
     "id": 11,
@@ -85,7 +85,7 @@
     "apellido": "Vinas",
     "email": "tjindricha@eepurl.com",
     "clave": "vuaTrrqqBr",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 13.png"
   }, {
     "id": 12,
@@ -93,7 +93,7 @@
     "apellido": "Llamas",
     "email": "rcrowcheb@tiny.cc",
     "clave": "iImx1jkDJO",
-    "categoría": "Customer",
+    "categoria": "Customer",
     "avatar": "image 14.png"
   }, {
     "id": 13,
@@ -101,7 +101,7 @@
     "apellido": "Valera",
     "email": "aalexanderssonc@skyrock.com",
     "clave": "QYDSlnojsL",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 15.png"
   }, {
     "id": 14,
@@ -109,7 +109,7 @@
     "apellido": "Montoro",
     "email": "lduffreed@acquirethisname.com",
     "clave": "jS5PljRv1B",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 16.png"
   }, {
     "id": 15,
@@ -117,7 +117,7 @@
     "apellido": "Rivera",
     "email": "gmittene@wiley.com",
     "clave": "UtJTn798eq",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 17.png"
   }, {
     "id": 16,
@@ -125,7 +125,7 @@
     "apellido": "orci pede",
     "email": "hcartwrightf@privacy.gov.au",
     "clave": "qe7ZoxZm5B",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 18.png"
   }, {
     "id": 17,
@@ -133,7 +133,7 @@
     "apellido": "Giraldo",
     "email": "dhogbourneg@time.com",
     "clave": "TGnS8yb68e",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 19.png"
   }, {
     "id": 18,
@@ -141,7 +141,7 @@
     "apellido": "Ibanez",
     "email": "nblucherh@domainmarket.com",
     "clave": "b5Rv7aBQPP",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 20.png"
   }, {
     "id": 19,
@@ -149,7 +149,7 @@
     "apellido": "De la Torre",
     "email": "adouli@who.int",
     "clave": "LXmnvCIa07",
-    "categoría": "Customer",
+    "categoria": "Customer",
     "avatar": "image 21.png"
   }, {
     "id": 20,
@@ -157,7 +157,7 @@
     "apellido": "Baeza",
     "email": "lhackworthyj@nationalgeographic.com",
     "clave": "IO25AJsGNc",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 22.png"
   }, {
     "id": 21,
@@ -165,7 +165,7 @@
     "apellido": "Miralles",
     "email": "jkliemchenk@topsy.com",
     "clave": "BYcqCelCKk",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 23.png"
   }, {
     "id": 22,
@@ -173,7 +173,7 @@
     "apellido": "Torrejon",
     "email": "akestianl@google.ru",
     "clave": "7MeVXrUFB0",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 24.png"
   }, {
     "id": 23,
@@ -181,7 +181,7 @@
     "apellido": "Mendez",
     "email": "jwilsherem@redcross.org",
     "clave": "ZII4qMK9yR",
-    "categoría": "Customer",
+    "categoria": "Customer",
     "avatar": "image 25.png"
   }, {
     "id": 24,
@@ -189,7 +189,7 @@
     "apellido": "Murcia",
     "email": "sgairdnern@bandcamp.com",
     "clave": "064I03ZXiZ",
-    "categoría": "Admin",
+    "categoria": "Admin",
     "avatar": "image 26.png"
   }
 ]
