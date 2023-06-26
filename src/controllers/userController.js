@@ -42,7 +42,7 @@ module.exports = {
     console.log(session.session)
     req.session.destroy()
 
-    res.cookie("recordame", null);
+    res.clearCookie("recordame");
     res.redirect('/')
   }
 };
