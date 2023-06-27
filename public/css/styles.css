@@ -276,6 +276,7 @@ Pagina detalle producto
   font-weight: 900;
   margin: 5px;
   transform: translateY(-45px);
+  
 }
 .radio-selector input[type="radio"]:checked + label {
   background-color: #fff500;
@@ -344,6 +345,7 @@ Pagina detalle producto
   width: 60px;
   font-weight: 900;
   margin: 0;
+  border: solid 2px #ffffff;
 
 }
 .radio-button input[type="radio"]:checked + label {
