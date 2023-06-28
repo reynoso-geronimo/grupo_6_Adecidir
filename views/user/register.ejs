@@ -8,12 +8,14 @@
     <main class="register">
       <h1>Creá tu cuenta</h1>
       <form action="/newuser" method="post">
-        <input type="text" name="name" placeholder="Nombre Completo" />
+        <input type="text" name="name" placeholder="Nombre" />
+        <input type="text" name="lastname" placeholder="Apellido" />
         <input type="email" name="email" placeholder="Email" />
-        <input type="email" name="repeat-email" placeholder="Repite tu Email" />
+        <!-- <input type="email" name="repeat-email" placeholder="Repite tu Email" /> -->
         <input type="password" name="password" placeholder="Contraseña" />
         <input type="password" name="password-repeat" placeholder="Repite tu contraseña" />
         <input type="submit" value="Registrate" class="boton-negro" />
+        <!--  limitamos la cantidad de campos que el usuario requiere para registrarse para que sea lo mas ameno posible, despues de logearse por primera vez lo podemos invitar a que termine de completar su perfil con por ej direccion de envio informacion de facturacion avatar etc -->
       </form>
       <p>Ya tienes cuenta? <a href="/user/login">Iniciar Sesión</a></p>
     </main>
