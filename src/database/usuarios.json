@@ -1,196 +1,218 @@
 [
-    {
-    "id": 1,
-    "nombre": "Vega",
-    "apellido": "Calleja",
-    "email": "bandreacci0@topsy.com",
-    "clave": "giTDJzifd1",
-    "categoria": "Customer",
-    "avatar": "image 3.png"
-  }, {
-    "id": 2,
-    "nombre": "Fernando",
-    "apellido": "Maza",
-    "email": "hdickey1@flickr.com",
-    "clave": "ypYqqGUBYS",
-    "categoria": "Admin",
-    "avatar": "image 4.png"
-  }, {
-    "id": 3,
-    "nombre": "Ascension",
-    "apellido": "Gamez",
-    "email": "afullagar2@yahoo.com",
-    "clave": "InopeJIzPl",
-    "categoria": "Admin",
-    "avatar": "image 5.png"
-  }, {
-    "id": 4,
-    "nombre": "Anton",
-    "apellido": "Castro",
-    "email": "lkopacek3@over-blog.com",
-    "clave": "KpMziS7cCW",
-    "categoria": "Admin",
-    "avatar": "image 6.png"
-  }, {
-    "id": 5,
-    "nombre": "Younes",
-    "apellido": "Tejera",
-    "email": "ssambell4@cbc.ca",
-    "clave": "QZaL1XyXZM",    
-    "categoria": "Admin",
-    "avatar": "image 7.png"
-  }, {
-    "id": 6,
-    "nombre": "Letícia",
-    "apellido": "Amores",
-    "email": "rriggs5@csmonitor.com",
-    "clave": "TWEaja9996",
-    "categoria": "Admin",
-    "avatar": "image 8.png"
-  }, {
-    "id": 7,
-    "nombre": "Natalia",
-    "apellido": "Barcelo",
-    "email": "qkorpolak6@vimeo.com",
-    "clave": "wMP489ILhp",
-    "categoria": "Customer",
-    "avatar": "image 9.png"
-  }, {
-    "id": 8,
-    "nombre": "Maria-Fernanda",
-    "apellido": "Cabello",
-    "email": "aschankelborg7@sciencedaily.com",
-    "clave": "sblePDcM7x",
-    "categoria": "Admin",
-    "avatar": "image 10.png"
-  }, {
-    "id": 9,
-    "nombre": "Uxue",
-    "apellido": "Caceres",
-    "email": "edunning8@webs.com",
-    "clave": "t5WLdwvQSo",
-    "categoria": "Customer",
-    "avatar": "image 11.png"
-  }, {
-    "id": 10,
-    "nombre": "Aaron",
-    "apellido": "Encinas",
-    "email": "nperroni9@posterous.com",
-    "clave": "ezeAlaicbO",
-    "categoria": "Admin",
-    "avatar": "image 12.png"
-  }, {
-    "id": 11,
-    "nombre": "Simon",
-    "apellido": "Vinas",
-    "email": "tjindricha@eepurl.com",
-    "clave": "vuaTrrqqBr",
-    "categoria": "Admin",
-    "avatar": "image 13.png"
-  }, {
-    "id": 12,
-    "nombre": "Diego",
-    "apellido": "Llamas",
-    "email": "rcrowcheb@tiny.cc",
-    "clave": "iImx1jkDJO",
-    "categoria": "Customer",
-    "avatar": "image 14.png"
-  }, {
-    "id": 13,
-    "nombre": "Maria-Paz",
-    "apellido": "Valera",
-    "email": "aalexanderssonc@skyrock.com",
-    "clave": "QYDSlnojsL",
-    "categoria": "Admin",
-    "avatar": "image 15.png"
-  }, {
-    "id": 14,
-    "nombre": "Salah",
-    "apellido": "Montoro",
-    "email": "lduffreed@acquirethisname.com",
-    "clave": "jS5PljRv1B",
-    "categoria": "Admin",
-    "avatar": "image 16.png"
-  }, {
-    "id": 15,
-    "nombre": "Lídia",
-    "apellido": "Rivera",
-    "email": "gmittene@wiley.com",
-    "clave": "UtJTn798eq",
-    "categoria": "Admin",
-    "avatar": "image 17.png"
-  }, {
-    "id": 16,
-    "nombre": "est",
-    "apellido": "orci pede",
-    "email": "hcartwrightf@privacy.gov.au",
-    "clave": "qe7ZoxZm5B",
-    "categoria": "Admin",
-    "avatar": "image 18.png"
-  }, {
-    "id": 17,
-    "nombre": "Moussa",
-    "apellido": "Giraldo",
-    "email": "dhogbourneg@time.com",
-    "clave": "TGnS8yb68e",
-    "categoria": "Admin",
-    "avatar": "image 19.png"
-  }, {
-    "id": 18,
-    "nombre": "Alexandru",
-    "apellido": "Ibanez",
-    "email": "nblucherh@domainmarket.com",
-    "clave": "b5Rv7aBQPP",
-    "categoria": "Admin",
-    "avatar": "image 20.png"
-  }, {
-    "id": 19,
-    "nombre": "Yeray",
-    "apellido": "De la Torre",
-    "email": "adouli@who.int",
-    "clave": "LXmnvCIa07",
-    "categoria": "Customer",
-    "avatar": "image 21.png"
-  }, {
-    "id": 20,
-    "nombre": "Iciar",
-    "apellido": "Baeza",
-    "email": "lhackworthyj@nationalgeographic.com",
-    "clave": "IO25AJsGNc",
-    "categoria": "Admin",
-    "avatar": "image 22.png"
-  }, {
-    "id": 21,
-    "nombre": "Mariano",
-    "apellido": "Miralles",
-    "email": "jkliemchenk@topsy.com",
-    "clave": "BYcqCelCKk",
-    "categoria": "Admin",
-    "avatar": "image 23.png"
-  }, {
-    "id": 22,
-    "nombre": "Lucas",
-    "apellido": "Torrejon",
-    "email": "akestianl@google.ru",
-    "clave": "7MeVXrUFB0",
-    "categoria": "Admin",
-    "avatar": "image 24.png"
-  }, {
-    "id": 23,
-    "nombre": "Cecilia",
-    "apellido": "Mendez",
-    "email": "jwilsherem@redcross.org",
-    "clave": "ZII4qMK9yR",
-    "categoria": "Customer",
-    "avatar": "image 25.png"
-  }, {
-    "id": 24,
-    "nombre": "Jose-Andres",
-    "apellido": "Murcia",
-    "email": "sgairdnern@bandcamp.com",
-    "clave": "064I03ZXiZ",
-    "categoria": "Admin",
-    "avatar": "image 26.png"
-  }
+ {
+  "id": 1,
+  "nombre": "Vega",
+  "apellido": "Calleja",
+  "email": "bandreacci0@topsy.com",
+  "clave": "giTDJzifd1",
+  "categoria": "Customer",
+  "avatar": "image 3.png"
+ },
+ {
+  "id": 2,
+  "nombre": "Fernando",
+  "apellido": "Maza",
+  "email": "hdickey1@flickr.com",
+  "clave": "ypYqqGUBYS",
+  "categoria": "Admin",
+  "avatar": "image 4.png"
+ },
+ {
+  "id": 3,
+  "nombre": "Ascension",
+  "apellido": "Gamez",
+  "email": "afullagar2@yahoo.com",
+  "clave": "InopeJIzPl",
+  "categoria": "Admin",
+  "avatar": "image 5.png"
+ },
+ {
+  "id": 4,
+  "nombre": "Anton",
+  "apellido": "Castro",
+  "email": "lkopacek3@over-blog.com",
+  "clave": "KpMziS7cCW",
+  "categoria": "Admin",
+  "avatar": "image 6.png"
+ },
+ {
+  "id": 5,
+  "nombre": "Younes",
+  "apellido": "Tejera",
+  "email": "ssambell4@cbc.ca",
+  "clave": "QZaL1XyXZM",
+  "categoria": "Admin",
+  "avatar": "image 7.png"
+ },
+ {
+  "id": 6,
+  "nombre": "Letícia",
+  "apellido": "Amores",
+  "email": "rriggs5@csmonitor.com",
+  "clave": "TWEaja9996",
+  "categoria": "Admin",
+  "avatar": "image 8.png"
+ },
+ {
+  "id": 7,
+  "nombre": "Natalia",
+  "apellido": "Barcelo",
+  "email": "qkorpolak6@vimeo.com",
+  "clave": "wMP489ILhp",
+  "categoria": "Customer",
+  "avatar": "image 9.png"
+ },
+ {
+  "id": 8,
+  "nombre": "Maria-Fernanda",
+  "apellido": "Cabello",
+  "email": "aschankelborg7@sciencedaily.com",
+  "clave": "sblePDcM7x",
+  "categoria": "Admin",
+  "avatar": "image 10.png"
+ },
+ {
+  "id": 9,
+  "nombre": "Uxue",
+  "apellido": "Caceres",
+  "email": "edunning8@webs.com",
+  "clave": "t5WLdwvQSo",
+  "categoria": "Customer",
+  "avatar": "image 11.png"
+ },
+ {
+  "id": 10,
+  "nombre": "Aaron",
+  "apellido": "Encinas",
+  "email": "nperroni9@posterous.com",
+  "clave": "ezeAlaicbO",
+  "categoria": "Admin",
+  "avatar": "image 12.png"
+ },
+ {
+  "id": 11,
+  "nombre": "Simon",
+  "apellido": "Vinas",
+  "email": "tjindricha@eepurl.com",
+  "clave": "vuaTrrqqBr",
+  "categoria": "Admin",
+  "avatar": "image 13.png"
+ },
+ {
+  "id": 12,
+  "nombre": "Diego",
+  "apellido": "Llamas",
+  "email": "rcrowcheb@tiny.cc",
+  "clave": "iImx1jkDJO",
+  "categoria": "Customer",
+  "avatar": "image 14.png"
+ },
+ {
+  "id": 13,
+  "nombre": "Maria-Paz",
+  "apellido": "Valera",
+  "email": "aalexanderssonc@skyrock.com",
+  "clave": "QYDSlnojsL",
+  "categoria": "Admin",
+  "avatar": "image 15.png"
+ },
+ {
+  "id": 14,
+  "nombre": "Salah",
+  "apellido": "Montoro",
+  "email": "lduffreed@acquirethisname.com",
+  "clave": "jS5PljRv1B",
+  "categoria": "Admin",
+  "avatar": "image 16.png"
+ },
+ {
+  "id": 15,
+  "nombre": "Lídia",
+  "apellido": "Rivera",
+  "email": "gmittene@wiley.com",
+  "clave": "UtJTn798eq",
+  "categoria": "Admin",
+  "avatar": "image 17.png"
+ },
+ {
+  "id": 16,
+  "nombre": "est",
+  "apellido": "orci pede",
+  "email": "hcartwrightf@privacy.gov.au",
+  "clave": "qe7ZoxZm5B",
+  "categoria": "Admin",
+  "avatar": "image 18.png"
+ },
+ {
+  "id": 17,
+  "nombre": "Moussa",
+  "apellido": "Giraldo",
+  "email": "dhogbourneg@time.com",
+  "clave": "TGnS8yb68e",
+  "categoria": "Admin",
+  "avatar": "image 19.png"
+ },
+ {
+  "id": 18,
+  "nombre": "Alexandru",
+  "apellido": "Ibanez",
+  "email": "nblucherh@domainmarket.com",
+  "clave": "b5Rv7aBQPP",
+  "categoria": "Admin",
+  "avatar": "image 20.png"
+ },
+ {
+  "id": 19,
+  "nombre": "Yeray",
+  "apellido": "De la Torre",
+  "email": "adouli@who.int",
+  "clave": "LXmnvCIa07",
+  "categoria": "Customer",
+  "avatar": "image 21.png"
+ },
+ {
+  "id": 20,
+  "nombre": "Iciar",
+  "apellido": "Baeza",
+  "email": "lhackworthyj@nationalgeographic.com",
+  "clave": "IO25AJsGNc",
+  "categoria": "Admin",
+  "avatar": "image 22.png"
+ },
+ {
+  "id": 21,
+  "nombre": "Mariano",
+  "apellido": "Miralles",
+  "email": "jkliemchenk@topsy.com",
+  "clave": "BYcqCelCKk",
+  "categoria": "Admin",
+  "avatar": "image 23.png"
+ },
+ {
+  "id": 22,
+  "nombre": "Lucas",
+  "apellido": "Torrejon",
+  "email": "akestianl@google.ru",
+  "clave": "7MeVXrUFB0",
+  "categoria": "Admin",
+  "avatar": "image 24.png"
+ },
+ {
+  "id": 23,
+  "nombre": "Cecilia",
+  "apellido": "Mendez",
+  "email": "jwilsherem@redcross.org",
+  "clave": "ZII4qMK9yR",
+  "categoria": "Customer",
+  "avatar": "image 25.png"
+ },
+ {
+  "id": 24,
+  "nombre": "Jose-Andres",
+  "apellido": "Murcia",
+  "email": "sgairdnern@bandcamp.com",
+  "clave": "064I03ZXiZ",
+  "categoria": "Admin",
+  "avatar": "image 26.png"
+ }
 ]
-  
