@@ -3,6 +3,8 @@ const router = express.Router()
 const userController = require('../controllers/userController.js');
 const path = require('path');
 const multer = require('multer')
+validateAvatar = require('../middlewares/avatarMiddleware.js')
+
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -34,6 +36,6 @@ router.get("/login", userController.loginForm);
 
 // register
 router.get("/register", userController.registerForm);
-router.post("/register", upload.single('avatar'),userController.processRegister);
+router.post("/register", upload.single('avatar'),validateAvatar,userController.processRegister);
 
 module.exports = router
