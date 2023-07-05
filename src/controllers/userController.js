@@ -44,24 +44,12 @@ module.exports = {
         let userCreated = User.create(userToCreate)
 
         return res.redirect('login')
-    }
-
-}
-
-/* VER SI EN UN FUTURO SE LE PUEDE DAR FUNCIONALIDAD PARA ALGO
-
-const usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/usuarios.json"), "utf-8"));
-
-const userDetail = {
-    loginForm: function (req, res) {
-        const usuarios = usuarios.find((row) => row.id == req.params.id);
-        return res.render('user/login', { usuarios: usuarios, categorias: categorias });
     },
-    registerForm:function(req,res) {
-        const usuarios = usuarios.find((row) => row.id == req.params.id);
-        return res.render('user/register', { usuarios: usuarios, categorias: categorias });
-
+    adminPanel: function (req,res){
+        const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/productos.json"), "utf-8"))
+            return res.render('user/admin',{productos:productos})
+    
     }
+
 }
 
-  module.exports = userDetail; */
