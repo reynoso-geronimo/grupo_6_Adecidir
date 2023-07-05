@@ -4,6 +4,9 @@ const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
 const User = require('../models/User.js')
 
+const usuarios = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/usuarios.json"), "utf-8"));
+
+
 
 module.exports = {
     loginForm: function (req, res) {
@@ -11,6 +14,39 @@ module.exports = {
         return res.render('user/login')
 
     },
+
+    loginProcess: function(req, res) {
+       const usuario = usuarios.find((row) => row.email == req.body.email)
+       if (usuario) {
+          if (usuario.password == req.body.password){
+            delete usuario.password
+            req.session.usuarioLogeado = usuario
+            if (req.body.cookie){
+                res.cookie("recordarUsuario", req.body.email, {maxAge: 1000*60*60})
+            }
+            return res.redirect("/home")
+          } else {
+            return res.render("login", {
+                error: {
+                    datosIncorrectos : {
+                        msg: "Datos Incorrectos :("
+                    }
+                }
+            })
+          }
+       }else {
+        return res.render("login", {
+            error: {
+                datosIncorrectos : {
+                    msg: "Datos Incorrectos :("
+                }
+            }
+        })
+      }
+    },
+
+
+
     registerForm:function(req,res) {
 
         return res.render('user/register')

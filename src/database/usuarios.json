@@ -214,5 +214,14 @@
   "clave": "064I03ZXiZ",
   "categoria": "Admin",
   "avatar": "image 26.png"
+ },
+ {
+  "id": 25,
+  "nombre": "emiliano",
+  "apellido": "apostolo",
+  "email": "emiapostolo27@gmail.com",
+  "clave": "$2a$10$Quxx.GzaViAH8ozhtkQXo.8Ue.KD6KKA6Uo/8yF6T/qCRtMlrqD7m",
+  "categoria": "customer",
+  "avatar": "defaultAvatar.png"
  }
 ]

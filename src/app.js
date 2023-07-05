@@ -5,6 +5,14 @@ const home = require('./routes/home.js');
 const product = require('./routes/product.js');
 const cart = require('./routes/cart.js');
 const user = require('./routes/user.js');
+const session = require("express-session");
+const cookie = require("cookie-parser");
+const cookieUsuario = require("./middlewares/cookieMiddleware.js");
+
+
+
+
+
 
 const port = 3006
 
@@ -33,4 +41,11 @@ app.use((req,res, next)=>{
   res.status(404).sendFile(path.resolve(__dirname,'../public/images/cumbia-404.jpg'))
 })
 
+app.use(session({
+  secret: "nuestro secreto",
+  resave: false,
+  saveUninitialized: false
+}))
 
+app.use(cookie());
+app.use(cookieUsuario);

@@ -10,8 +10,11 @@
       <form action="#" method="post">
         <input type="email" name="email" placeholder="Email" />
         <input type="password" name="password" placeholder="Contraseña" />
+        <%if (locals.error && error.datosIncorrectos) { %>
+          <p> <% error.usuario.msg %></p>
+        <% } %>
         <input type="submit" value="Iniciar sesión" class="boton-negro" />
-        <div> <input type="checkbox" name="keepalive" id="keepalive"><label for="keepalive">Mantener la sesión abierta</label></div>
+        <div> <input type="checkbox" name="cookie" id="cookie"><label for="cookie">Mantener la sesión abierta</label></div>
       </form>
       <p>¿No tienes una cuenta? <a href="/user/register">Regístrate</a></p>
     </main>
