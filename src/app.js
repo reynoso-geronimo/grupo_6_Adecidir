@@ -27,6 +27,15 @@ app.set("view engine", "ejs")
 app.set('views', path.resolve(__dirname,'../views'))
 app.use(express.static(path.resolve(__dirname, "./../public")));
 
+app.use(session({
+  secret: "nuestro secreto",
+  resave: false,
+  saveUninitialized: false
+}))
+
+app.use(cookie());
+app.use(cookieUsuario);
+
 app.listen(port, () => {
   console.log(`Servidor corriendo en el puerto ${port}`);
 });
@@ -41,11 +50,3 @@ app.use((req,res, next)=>{
   res.status(404).sendFile(path.resolve(__dirname,'../public/images/cumbia-404.jpg'))
 })
 
-app.use(session({
-  secret: "nuestro secreto",
-  resave: false,
-  saveUninitialized: false
-}))
-
-app.use(cookie());
-app.use(cookieUsuario);
