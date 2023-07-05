@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header') %>
+
+    <main>
+      <table class="admin-prod-table">
+        <tr>
+            <th></th>
+          <th>PRODUCTO</th>
+          <th>PRECIO</th>
+          <th>CATEGORIA</th>
+          <th>ESTADO</th>
+          <TH>ACCIONES</TH>
+        </tr>
+        <% if (productos.length>0) { %> <% productos.forEach(producto=> { %>
+
+        <tr>
+          <td><img src="/images/productos/<%=producto.imagenes[0] %>"/></td>
+          <td><%= producto.nombre %></td>
+          <td><%= producto.precio %></td>
+          <td><%= producto.categoria %></td>
+          <td>ejs</td>
+          <td><button>VER</button><button>EDITAR</button></td>
+          <% }) %> <% } else {%>
+          <h1>No hay productos</h1>
+          <% } %>
+        </tr>
+      </table>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
