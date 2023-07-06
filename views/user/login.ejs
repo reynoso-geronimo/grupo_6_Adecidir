@@ -11,7 +11,7 @@
         <input type="email" name="email" placeholder="Email" />
         <input type="password" name="password" placeholder="Contraseña" />
         <%if (locals.error && error.datosIncorrectos) { %>
-          <p> <% error.usuario.msg %></p>
+          <p> <%= error.datosIncorrectos.msg  %></p>
         <% } %>
         <input type="submit" value="Iniciar sesión" class="boton-negro" />
         <div> <input type="checkbox" name="cookie" id="cookie"><label for="cookie">Mantener la sesión abierta</label></div>

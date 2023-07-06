@@ -24,9 +24,9 @@ module.exports = {
             if (req.body.cookie){
                 res.cookie("recordarUsuario", req.body.email, {maxAge: 1000*60*60})
             }
-            return res.redirect("/home")
+            return res.redirect("/")
           } else {
-            return res.render("login", {
+            return res.render("user/login", {
                 error: {
                     datosIncorrectos : {
                         msg: "Datos Incorrectos :("
@@ -35,7 +35,7 @@ module.exports = {
             })
           }
        }else {
-        return res.render("login", {
+        return res.render("user/login", {
             error: {
                 datosIncorrectos : {
                     msg: "Datos Incorrectos :("
