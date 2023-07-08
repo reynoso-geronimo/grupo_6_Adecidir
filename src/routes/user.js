@@ -39,4 +39,6 @@ router.post("/login", userController.loginProcess);
 router.get("/register", userController.registerForm);
 router.post("/register", upload.single('avatar'),validateAvatar,userController.processRegister);
 
+router.get("/admin", userController.adminPanel);
+
 module.exports = router

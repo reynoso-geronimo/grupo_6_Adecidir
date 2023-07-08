@@ -85,6 +85,11 @@ module.exports = {
         User.create(userToCreate)
 
         return res.redirect('login')
+    },
+    adminPanel: function (req,res){
+        const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/productos.json"), "utf-8"))
+            return res.render('user/admin',{productos:productos})
+    
     }
 
 }

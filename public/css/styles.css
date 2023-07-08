@@ -915,6 +915,35 @@ Pagina detalle producto
   margin-left:20px
 }
 
+/* admin */
+.admin-prod-table {
+  
+  border-collapse: collapse;
+  width: 90vw;
+  margin-top: 5rem;
+  
+}
+
+.admin-prod-table td, .admin-prod-table th {
+  border: 1px solid #ddd;
+  height: 60px;
+  text-align: center;
+}
+.admin-prod-table img{
+  height: 100%;
+}
+.admin-prod-table tr:nth-child(even){background-color: #f2f2f2;}
+
+.admin-prod-table tr:hover {background-color: #ddd;}
+
+.admin-prod-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  background-color: #FFF500;
+  color:#000;
+}
+
 @media (min-width: 481px) {
   /* listado de productos */
   .article-card {
