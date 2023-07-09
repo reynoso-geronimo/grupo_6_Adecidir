@@ -42,5 +42,6 @@ router.post("/register", upload.single('avatar'),validateAvatar,userController.p
 
 router.get("/profile", userController.perfil);
 router.get("/admin", userController.adminPanel);
+router.get("/cart", userController.cart);
 
 module.exports = router

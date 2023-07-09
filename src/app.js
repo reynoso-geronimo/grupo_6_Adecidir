@@ -3,7 +3,6 @@ const path = require("path");
 const methodOverride = require('method-override');
 const home = require('./routes/home.js');
 const product = require('./routes/product.js');
-const cart = require('./routes/cart.js');
 const user = require('./routes/user.js');
 const session = require("express-session");
 const cookie = require("cookie-parser");
@@ -42,7 +41,6 @@ app.listen(port, () => {
 
 app.use(home)
 app.use('/product', product)
-app.use('/cart', cart)
 app.use('/user', user)
 
 

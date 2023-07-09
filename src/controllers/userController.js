@@ -97,6 +97,11 @@ module.exports = {
         
             return res.render('user/profile',{usuario:req.session.usuarioLogeado})
     
+    },
+    cart:function(req,res) {
+
+        return res.render('user/cart')
+
     }
 }
 
