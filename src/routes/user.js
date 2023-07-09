@@ -33,6 +33,7 @@ const upload = multer({
 
 // login
 router.get("/login", userController.loginForm);
+router.get("/logout", userController.logout);
 router.post("/login", userController.loginProcess);
 
 // register

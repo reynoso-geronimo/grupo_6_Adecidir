@@ -19,8 +19,8 @@ const productDetailController = {
 
     
   },
-
-  listBorrados: function (req, res) {
+//candidato a ser elminado
+  listBorrados: function (req, res) { 
     const prodBorrados = productos.filter(row => row.borrado == true);
     return res.render("products/productList", { productos: prodBorrados });
   },
@@ -147,7 +147,7 @@ const productDetailController = {
     const productoEncontrado = productos.find((row) => row.id == req.params.id);
     productoEncontrado.borrado = true
     fs.writeFileSync(path.resolve(__dirname, "../database/productos.json"), JSON.stringify(productos, null, 2))
-    return res.redirect("/")
+    return res.redirect(req.get('referer'))
   
   },
 
@@ -155,7 +155,7 @@ const productDetailController = {
     const productoEncontrado = productos.find((row) => row.id == req.params.id);
     productoEncontrado.borrado = false
     fs.writeFileSync(path.resolve(__dirname, "../database/productos.json"), JSON.stringify(productos, null, 2))
-    return res.redirect("/") },
+    return res.redirect(req.get('referer')) },
 
 };
 
