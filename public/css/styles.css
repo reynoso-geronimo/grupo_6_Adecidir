@@ -916,21 +916,36 @@ Pagina detalle producto
 }
 
 /* admin */
+.admin-actions{
+  display: flex;
+  justify-content: center;
+}
+.admin-actions a button{
+  font-size: 12px;
+}
 .admin-prod-table {
   
   border-collapse: collapse;
   width: 90vw;
-  margin-top: 5rem;
+
+  font-size: 12PX;
+  margin: auto;
+  margin: 20px;
+  
   
 }
 
 .admin-prod-table td, .admin-prod-table th {
   border: 1px solid #ddd;
-  height: 60px;
+  height: 50px;
+  width: 50px;
   text-align: center;
+  
+ 
 }
 .admin-prod-table img{
   height: 100%;
+  max-width: 50px;
 }
 .admin-prod-table tr:nth-child(even){background-color: #f2f2f2;}
 
