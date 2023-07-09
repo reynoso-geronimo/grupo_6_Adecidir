@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header') %>
+
+    <main>
+      <h1>HOLA <%= usuario.nombre %> <%= usuario.apellido %> </h1>
+      <img src="../images/avatar/<%= usuario.avatar %>" alt="">
+      <h3><%= usuario.email %></h3>
+      <a href="">EDITAR MI INFORMACION</a>
+      <a href="">CAMBIAR CONTRASEÑA</a>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

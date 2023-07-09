@@ -223,5 +223,14 @@
   "clave": "$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua",
   "categoria": "customer",
   "avatar": "defaultAvatar.png"
+ },
+ {
+  "id": 26,
+  "nombre": "geronimo",
+  "apellido": "reynoso",
+  "email": "correo@correo.com",
+  "clave": "$2a$10$qp.HFxNhY2xg54i3Z1MHveLTeagXlsTGmMdT4XCAyS4UTTN.LZmh.",
+  "categoria": "customer",
+  "avatar": "defaultAvatar.png"
  }
 ]

@@ -6,35 +6,55 @@
     <%- include('../partials/header') %>
 
     <main>
-      <div class="admin-actions"><a href="/product/crearproducto"><button>NUEVO PRODUCTO <i  class="fa-solid fa-plus"></i> </button></a> <a href=""><button>ADMINISTRAR USUARIOS <i class="fa-solid fa-users"></i></button></a></div>
+      <div class="admin-actions">
+        <a href="/product/crearproducto"
+          ><button>NUEVO PRODUCTO <i class="fa-solid fa-plus"></i></button
+        ></a>
+        <a href=""
+          ><button>
+            ADMINISTRAR USUARIOS <i class="fa-solid fa-users"></i></button
+        ></a>
+        <a href=""
+          ><button>
+            ADMINISTRAR PERFIL <i class="fa-solid fa-user-tie"></i></button
+        ></a>
+      </div>
 
-      <table class="admin-prod-table">
-        <tr>
-            <th></th>
-          <th>PRODUCTO</th>
-          <th>PRECIO</th>
-          <th>CATEGORIA</th>
-          <th>ESTADO</th>
-          <TH>ACCIONES</TH>
-        </tr>
-        <% if (productos.length>0) { %> <% productos.forEach(producto=> { %>
+      <section class="admin-items-table">
+        <div class="header-tabla-admin">
+          <h4></h4>
+          <h4>PRODUCTO</h4>
+          <h4>PRECIO</h4>
+          <h4>CATEGORIA</h4>
+          <h4>ESTADO</h4>
+          <h4>ACCIONES</h4>
+        </div>
+        <% if (productos.length>0) { %>
+        <div class="row-tabla-admin">
+          %> <% productos.forEach(producto=> { %>
 
-        <tr>
-          <td><img src="/images/productos/<%=producto.imagenes[0] %>"/></td>
-          <td><%= producto.nombre %></td>
-          <td><%= producto.precio %></td>
-          <td><%= producto.categoria %></td>
-          <td><% if (producto.borrado) { %>
-           BAJA
-           <% } else { %>
-            ACTIVO
-          <% } %></td>
-          <td><a href="/product/<%= producto.id %>"><button>VER</button></a><a href="/product/<%= producto.id %>/editform"><button>EDITAR</button></a></td>
-          <% }) %> <% } else {%>
-          <h1>No hay productos</h1>
-          <% } %>
-        </tr>
-      </table>
+          <article>
+           <div class="row-img-item">
+              <img src="/images/productos/<%=producto.imagenes[0] %>" />
+            </div>
+            <p><%= producto.nombre %></p>
+            <p>$<%= producto.precio %></p>
+            <p><%= producto.categoria %></p>
+            <p>
+              <% if (producto.borrado) { %> BAJA <% } else { %> ACTIVO <% } %>
+            </p>
+            <div class="row-acciones-items">
+              <a href="/product/<%= producto.id %>">VER</a>
+              <a href="/product/<%= producto.id %>/editform">EDITAR</a>
+            </div>
+          </article>
+          <% }) %>
+        </div>
+
+        <% } else {%>
+        <h1>No hay productos</h1>
+        <% } %>
+      </section>
     </main>
     <%- include('../partials/footer.ejs') %>
   </body>

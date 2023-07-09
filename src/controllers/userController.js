@@ -92,7 +92,11 @@ module.exports = {
         const productos = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../database/productos.json"), "utf-8"))
             return res.render('user/admin',{productos:productos})
     
+    },
+    perfil: function (req,res){
+        
+            return res.render('user/profile',{usuario:req.session.usuarioLogeado})
+    
     }
-
 }
 
