@@ -19,11 +19,12 @@ const productDetailController = {
 
     
   },
-//candidato a ser elminado
-  listBorrados: function (req, res) { 
+//! candidato a ser elminado
+/*  listBorrados: function (req, res) { 
     const prodBorrados = productos.filter(row => row.borrado == true);
     return res.render("products/productList", { productos: prodBorrados });
   },
+*/
 
   detail: function (req, res) {
     const producto = productos.find((row) => row.id == req.params.id);

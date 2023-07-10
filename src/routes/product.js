@@ -51,7 +51,7 @@ router.get('/:id/editform/', product.editForm)
 router.put('/:id/', upload.array("images"), validarEdit, logDB.logEdit, product.editItem)
 
 router.delete('/:id/delete',product.deleteProduct)
-router.get('/ver/borrados', product.listBorrados)
+//router.get('/ver/borrados', product.listBorrados)
 router.put('/:id/alta',product.altaProduct)
 
 module.exports = router;
