@@ -5,12 +5,52 @@
   <body>
     <%- include('../partials/header') %>
 
-    <main>
-      <h1>HOLA <%= usuario.nombre %> <%= usuario.apellido %> </h1>
-      <img src="../images/avatar/<%= usuario.avatar %>" alt="">
-      <h3><%= usuario.email %></h3>
-      <a href="">EDITAR MI INFORMACION</a>
-      <a href="">CAMBIAR CONTRASEÑA</a>
+    <main class="user-profile">
+      <section>
+        <h1>
+          <img
+            src="../images/avatar/<%= usuario.avatar %>"
+            alt=""
+            width="60px"
+          />
+          <%= usuario.nombre %> <%= usuario.apellido %>
+        </h1>
+        <h2>Tu informacion</h2>
+        <div class="profile-info" >
+          <h3>
+            <i class="fa-solid fa-envelope"></i> Email: <%= usuario.email %>
+          </h3>
+
+          <% if (usuario.telefono) { %>
+          <h3>Telefono: <%= usuario.telefono %></h3>
+          <% } else { %>
+          <h3>
+            <i class="fa-solid fa-phone"></i>No tenemos tu telefono, completa tu
+            perfil
+          </h3>
+          <% } %> <% if (usuario.direccion) { %>
+          <h3>Direccion: <%= usuario.direccion %></h3>
+          <% } else { %>
+          <h3>
+            <i class="fa-solid fa-location-dot"></i>No tenemos tu direccion,
+            completa tu perfil
+          </h3>
+          <% } %>
+        </div>
+        <div class="profile-info profile-actions">
+          <a href=""><button>EDITAR MI INFORMACION</button></a>
+        <a href=""><button>CAMBIAR CONTRASEÑA</button></a>
+        </div>
+      </section>
+      <section>
+        <h2> TUS COMPRAS</h2>
+        <div class="profile-info">
+        </div>
+       
+          
+      
+        
+      </section>
     </main>
     <%- include('../partials/footer.ejs') %>
   </body>
