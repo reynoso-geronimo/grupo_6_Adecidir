@@ -72,16 +72,8 @@ module.exports = {
     const userInDb = User.findByField('email', req.body.email)
     // para no usar el mismo email, despues voy a hacer las validaciones asi sale el mensaje y todo
     if (userInDb) {
-      return res.render('user/register',
-        {
-          errors: {
-            email: {
-              msg: 'este email ya esta en uso'
-            },
-            oldData: req.body
-          }
-
-        });
+      console.log(req.body)
+      return res.render('user/register',{oldData:req.body, errors:{email: {msg: 'este email ya esta en uso'} }});
     }
 
     const userToCreate = {

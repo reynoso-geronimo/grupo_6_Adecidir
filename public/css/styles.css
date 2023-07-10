@@ -437,7 +437,39 @@ Pagina detalle producto
 #cookie {
   width: 20px;
 }
+.register-avatar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
+.register-avatar input[type=file]::file-selector-button {
+  display: none;
+  
+}
+.register-avatar label{
+  background-color: #d1d1d1;
+  color: #000;
+  border:solid 1px black;
+  padding: 5px ;
+  font-weight: bold;
+  font-size: 14px;
+  transition: .5s;
+  display: block;
+  margin-top: 15px;
+  width: 100%;
+  text-align: left;
+}
+
+.register-avatar label:hover {
+  background-color:black;
+  color: white;
+ 
+}
+.register-avatar button{
+  width: 60%;
+}
 /* Formulario de login */
 .body-login {
   background-image: url("../images/graffiti/Slide16_9-8.jpg");
