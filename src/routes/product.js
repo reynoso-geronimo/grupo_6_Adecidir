@@ -51,6 +51,7 @@ router.get('/:id/editform/', product.editForm)
 router.put('/:id/', upload.array("images"), validarEdit, logDB.logEdit, product.editItem)
 
 router.delete('/:id/delete',product.deleteProduct)
+//!candidato a ser eliminado
 //router.get('/ver/borrados', product.listBorrados)
 router.put('/:id/alta',product.altaProduct)
 
