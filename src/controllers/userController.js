@@ -24,7 +24,6 @@ module.exports = {
             }
             return res.redirect("/")
           } else {
-            console.log('hi');
             return res.render("user/login", {
               errors: {
                 datosIncorrectos: {
