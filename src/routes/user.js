@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router()
-const userController = require('../controllers/userController.js');
 const path = require('path');
 const multer = require('multer')
-validateAvatar = require('../middlewares/avatarMiddleware.js')
+const validateAvatar = require('../middlewares/avatarMiddleware.js')
+const {logged, userAcess,adminAcces} = require('../middlewares/authMiddleware.js');
+const userController = require('../controllers/userController.js');
 
 
 const storage = multer.diskStorage({
@@ -32,17 +33,17 @@ const upload = multer({
 
 
 // login
-router.get("/login", userController.loginForm);
-router.get("/logout", userController.logout);
-router.post("/login", userController.loginProcess);
+router.get("/login", logged,userController.loginForm);
+router.get("/logout", logged,userController.logout);
+router.post("/login", logged,userController.loginProcess);
 
 // register
-router.get("/register", userController.registerForm);
-router.post("/register", upload.single('avatar'),validateAvatar,userController.processRegister);
+router.get("/register", logged,userController.registerForm);
+router.post("/register", logged,upload.single('avatar'),validateAvatar,userController.processRegister);
 
 
-router.get("/profile", userController.perfil);
-router.get("/admin", userController.adminPanel);
-router.get("/cart", userController.cart);
+router.get("/profile", userAcess,userController.perfil);
+router.get("/admin",adminAcces, userController.adminPanel);
+router.get("/cart",userAcess ,userController.cart);
 
 module.exports = router
