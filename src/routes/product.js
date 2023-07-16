@@ -5,6 +5,7 @@ const logDB = require('../middlewares/logDBMiddleware.js')
 const path = require('path');
 const multer = require('multer');
 const { validarEdit } = require('../middlewares/validaciones.js');
+const {adminAcces} = require('../middlewares/authMiddleware.js');
 
 
 
@@ -40,19 +41,19 @@ const upload = multer({
 router.get('/list/:categoria?', product.list)
 
 //Creacion de Producto
-router.get("/crearProducto", product.crearProductoForm);
-router.post("/crearproducto",upload.array("imagenes"), product.save)
+router.get("/crearProducto",adminAcces ,product.crearProductoForm);
+router.post("/crearproducto",adminAcces,upload.array("imagenes"), product.save)
 
 
 router.get("/:id", product.detail);
 
 
-router.get('/:id/editform/', product.editForm)
-router.put('/:id/', upload.array("images"), validarEdit, logDB.logEdit, product.editItem)
+router.get('/:id/editform/', adminAcces,product.editForm)
+router.put('/:id/', adminAcces,upload.array("images"), validarEdit, logDB.logEdit, product.editItem)
 
-router.delete('/:id/delete',product.deleteProduct)
+router.delete('/:id/delete',adminAcces,product.deleteProduct)
 //!candidato a ser eliminado
 //router.get('/ver/borrados', product.listBorrados)
-router.put('/:id/alta',product.altaProduct)
+router.put('/:id/alta',adminAcces,product.altaProduct)
 
 module.exports = router;

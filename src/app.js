@@ -7,7 +7,7 @@ const user = require('./routes/user.js');
 const session = require("express-session");
 const cookie = require("cookie-parser");
 const cookieUsuario = require("./middlewares/cookieMiddleware.js");
-
+const {isLogged}= require ("./middlewares/authMiddleware.js")
 
 
 
@@ -34,7 +34,7 @@ app.use(session({
 
 app.use(cookie());
 app.use(cookieUsuario);
-
+app.use(isLogged)
 app.listen(port, () => {
   console.log(`Servidor corriendo en el puerto ${port}`);
 });

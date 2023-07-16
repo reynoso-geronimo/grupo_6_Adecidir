@@ -1,16 +1,35 @@
-
 <header class="main-header">
   <div class="main-header-left-bar">
     <i class="fa-solid fa-bars"></i>
     <h1 class="copy-header"><a href="/">THEME</a></h1>
   </div>
   <div class="main-header-right-bar">
-   
     <a href="#search-bar-header"><i class="fa-solid fa-magnifying-glass"></i></a>
-    <a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-    <a href="#login-register"><i class="fa-solid fa-user"></i></a>
+    <% if (locals.isLogged===true) { %><a href="/cart"><i class="fa-solid fa-cart-shopping"></i></a><% } %>
+    <a href="#login-register">
+      <% if (locals.admin===true) { %>
+        <i class="fa-solid fa-user-secret"></i>
+      <% } else { %>
+        <i class="fa-solid fa-user"></i>
+      <% } %>
+    </a>
   </div>
 
-  <div id='login-register' ><a href="/user/register"><button>REGISTRARME</button></a><a href="/user/login"><button>INICIAR SESIÓN</button></a></div>
-  <div id='search-bar-header'><form action="/" method="get"><input type="search" name="search-bar-header" id="search-bar-header-input"><button type="submit">Buscar</button></form></div>
+  <div id='login-register'>
+    <% if (locals.isLogged===false) { %>
+      <a href="/user/register"><button>REGISTRARME</button></a>
+      <a href="/user/login"><button>INICIAR SESIÓN</button></a>
+      <% } else if  (locals.isLogged===true) { %>
+        <a href="/user/profile"><button>VER MI PERFIL</button></a>
+        <% if (locals.admin===true) { %>
+          <a href="/user/admin"><button>ADMINISTRACION</button></a>
+        <% }  %>
+        <a href="/user/logout"><button>CERRAR SESION</button></a>
+    <% } %>
+      
+  </div>
+  <div id='search-bar-header'>
+    <form action="/" method="get"><input type="search" name="search-bar-header" id="search-bar-header-input"><button
+        type="submit">Buscar</button></form>
+  </div>
 </header>
