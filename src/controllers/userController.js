@@ -9,9 +9,9 @@ module.exports = {
   },
   processLogin: function (req, res) {
     const usuario = User.findByField("email", req.body.email);
-
     if (usuario && bcrypt.compareSync(req.body.password, usuario.password)) {
       //login exitoso
+      res.cookie("usuarioIniciado", usuario);
       req.session.usuarioLogeado = { id: usuario.id, nombre: usuario.nombre }
       if (req.body.keepalive)
         res.cookie("recordame", usuario.email, { maxAge: 600000 });
@@ -41,8 +41,9 @@ module.exports = {
   logout: function (req,res) {
     console.log(session.session)
     req.session.destroy()
-
+    
     res.clearCookie("recordame");
+    res.clearCookie("usuarioIniciado");
     res.redirect('/')
   }
 };
