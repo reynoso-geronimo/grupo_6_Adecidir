@@ -45,5 +45,7 @@ router.post("/register", logged,upload.single('avatar'),validateAvatar,userContr
 router.get("/profile", userAcess,userController.perfil);
 router.get("/admin",adminAcces, userController.adminPanel);
 router.get("/cart",userAcess ,userController.cart);
+//TODO ruta agregar al carrito
+//router.post("/cart",userAcess ,userController.subirProdCarrito);
 
 module.exports = router

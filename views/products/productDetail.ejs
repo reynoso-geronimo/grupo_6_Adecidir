@@ -45,7 +45,7 @@
           <div class="product-talle-select">
             <p class="price">$<%= producto.precio %></p>
             <h3>Seleccione un talle</h3>
-            <form action="/cart" method="get">
+            <form action="/user/cart" method="post">
               <div >
                 <div class="radio-button">
                   <input type="radio" id="radio1" name="talle" value="s" />
@@ -61,7 +61,11 @@
                 </div>
 
                 <button type="submit" class="boton-negro">
-                  Agregar al Carrito
+                  <% if (locals.isLogged) { %>
+                    Agregar al Carrito
+                    <% } else { %>
+                     Inicia Sesion Para agregar al carrito
+                  <% } %>
                 </button>
               </div>
             </form>
