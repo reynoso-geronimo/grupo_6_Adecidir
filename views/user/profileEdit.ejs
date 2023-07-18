@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+  <body class="body-register">
+    <%- include('../partials/header') %>
+
+    <main class="register">
+      <h1><img
+        src="/../images/avatar/<%= usuario.avatar %>"
+        alt=""
+        width="60px"
+      /> Edita tu informacion</h1>
+      <form action="/user/edit" method="post" enctype="multipart/form-data">
+        <input type="text" name="nombre" placeholder="Nombre" value="<%= usuario.nombre %>"/>
+        <input type="text" name="apellido" placeholder="Apellido" value="<%= usuario.apellido %>"/>
+        <input type="email" name="email" placeholder="Email" value="<%= usuario.email %>" />
+        <input type="text" name="direccion" placeholder="Direccion" <% if (usuario.direccion) { %>
+          value="<%= usuario.direccion %>"
+        <% } %> />
+        <div class="register-avatar">
+        <label for="new-avatar"><i class="fa-solid fa-cloud-arrow-up"></i>Nueva Imagen de perfil</label>
+        <input type="file" name="avatar" id="new-avatar" />
+        <input type="submit" value="Editar" class="boton-negro" />
+      </form>
+
+       
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

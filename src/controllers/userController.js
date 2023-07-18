@@ -73,6 +73,12 @@ module.exports = {
   perfil: function (req, res) {
     return res.render("user/profile", { usuario: req.session.usuarioLogeado });
   },
+  perfilEdit: function (req, res) {
+    return res.render("user/profileEdit", { usuario: req.session.usuarioLogeado });
+  },
+  perfilEditPassword: function (req, res) {
+    return res.render("user/profileEditPassword");
+  },
   cart: function (req, res) {
     return res.render("user/cart");
   },

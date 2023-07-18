@@ -43,6 +43,8 @@ router.post("/register", logged,upload.single('avatar'),validateAvatar,userContr
 
 
 router.get("/profile", userAcess,userController.perfil);
+router.get("/profile/edit", userAcess,userController.perfilEdit);
+router.get("/profile/edit/password", userAcess,userController.perfilEditPassword);
 router.get("/admin",adminAcces, userController.adminPanel);
 router.get("/cart",userAcess ,userController.cart);
 //TODO ruta agregar al carrito
