@@ -24,13 +24,14 @@ const storage = multer.diskStorage({
 
 const upload = multer({
   storage: storage,
+
   fileFilter: (req, file, cb) => {
-    if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
+    if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" && file.size<=1024 * 1024 * 10) {
       cb(null, true);
     } else {
 
-      req.fileValidationError = "Solo formato png, jpg o jpeg estan permitidos";
-      return cb(null, false, req.fileValidationError);
+      req.fileValidationError = "Solo formato png, jpg o jpeg estan permitidos hasta 10mb";
+      return cb(null, false);
 
     }
   }
