@@ -44,8 +44,8 @@
               <% if (producto.borrado) { %> BAJA <% } else { %> ACTIVO <% } %>
             </p>
             <div class="row-acciones-items">
-              <a href="/product/<%= producto.id %>">VER</a>
-              <a href="/product/<%= producto.id %>/editform">EDITAR</a>
+              <a href="/product/<%= producto.id %>"><i class="fa-solid fa-eye"></i>VER</a>
+              <a href="/product/<%= producto.id %>/editform"><i class="fa-solid fa-pen-to-square"></i>EDITAR</a>
             </div>
           </article>
           <% }) %>
