@@ -8,42 +8,9 @@ const sharp = require('sharp')
 const { validarEdit } = require('../middlewares/validaciones.js');
 const { adminAcces } = require('../middlewares/authMiddleware.js');
 
-
-
-
-// const storage = multer.diskStorage({
-//   destination: function (req, file, cb) {
-
-//     cb(null, path.resolve(__dirname, '../../public/images/productos'))
-//   },
-//   filename: function (req, file, cb) {
-//     const uniqueSuffix = Date.now() + Math.round(Math.random() * 1E9)
-
-//     cb(null, uniqueSuffix + path.extname(file.originalname))
-//   }
-// })
-
-// const upload = multer({
-//   storage: storage,
-//   limits:{fileSize:1024*1024*10},
-//   fileFilter: (req, file, cb) => {
-//     if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" ) {
-//       cb(null, true);
-//     } else {
-
-//       req.fileValidationError = "Solo formato png, jpg o jpeg estan permitidos";
-//       return cb(null, false);
-
-//     }
-//   }
-// })
-
-
-
-
-
 const upload = multer({
   storage: multer.memoryStorage(),
+  limits: { fileSize: 1024 * 1024 * 10 },
   fileFilter: (req, file, cb) => {
     if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg") {
       cb(null, true);
@@ -52,22 +19,21 @@ const upload = multer({
       return cb(null, false);
     }
   }
-  ,
-  limits: { fileSize: 1024 * 1024 * 10 }
+  
 });
 const procesarImagen = async (req, res, next) => {
   if (req.fileValidationError) { return next() }
 
   const ruta = path.resolve(__dirname, '../../public/images/productos') + "/"
-  await req.files.forEach(async (element) =>  {
+
+  for (const element of req.files) {
     const nombreImagen = Date.now() + Math.round(Math.random() * 1E9) + path.extname(element.originalname)
     element.filename = nombreImagen
     await sharp(element.buffer).resize({
       width: 300,
       withoutEnlargement: true
     }).toFile(ruta + nombreImagen);
-    
-  });
+  }
   next();
 }
 
