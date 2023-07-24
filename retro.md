@@ -79,3 +79,15 @@
         
         5. Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).
 
+RETRO SPRINT 5
+    ##Conclusiones
+        A medida que avanza el curso, el proyecto y los conocimientos técnicos a aplicar nos damos cuenta que debemos replantear ciertas conductas para seguir entregando en tiempo y forma y seguir mejorando como personas y como profesionales. Comunicación, organización y el establecimiento de reglas claras para la división de tareas son algunas de las cosas que tenemos que seguir mejorando como equipo. 
+
+
+    ## Dinámica de la estrella de mar
+        
+1.Comenzar a hacer: por el momento no tenemos que comenzar a hacer nada nuevo, sino mantener los cambios positivos que pudimos destacar en las restrospectivas anteriores.
+2.Hacer más: debemos comprometernos más entre nosotros, es decir, por ejemplo, si uno no puede asistir a la llamada semanal avisar de antemano para que el resto no se quede esperando y, si uno uno semana no pudo estar en la llamada, que se asegure de la siguiente.
+3.Continuar haciendo: mantener una comunicación sincera y a tiempo real
+4.Hacer menos: subir el proyecto a último momento al repositorio.
+5.Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).

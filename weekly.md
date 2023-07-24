@@ -132,39 +132,26 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
     - Que hizo en estos días: se encargó de hacer el JSON de usuarios y de terminar el css del carrito de compras.
     - Si se encontró con algún impedimento: no.
     - Qué va a hacer los próximos días: estudiar y practicar login sesión y cookies.
+    
 
+#18 de julio del 2023
+*Emiliano Apostolo:
+    -Que hizo en estos días: implementar la función de recordar al usuario y el login de usuarios 
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground
 
+*Furfaro ignacio:
+    -Que hizo en estos días: implementar el registro de usuarios
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground
 
+*Geronimo Reynoso
+    -Que hizo en estos días: implementar las rutas de huéspedes y de usuarios (fue una tarea compartida con Jennifer)
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground
 
-
-
-
-
-
-
-# x de junio del 2023
-* Emiliano Apostolo:
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
-
-* Furfaro ignacio:
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
-
-* Geronimo Reynoso
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
-
-* Valentin Marquez
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
-
-* Jennifer Lichtensztejn
-    - Que hizo en estos días: 
-    - Si se encontró con algún impedimento:
-    - Qué va a hacer los próximos días: 
+*Jennifer Lichtensztejn
+    -Que hizo en estos días: implementar las rutas de huéspedes y de usuarios (fue una tarea compartida con Geronimo)
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground
 
