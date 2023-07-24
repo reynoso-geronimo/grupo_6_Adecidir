@@ -26,11 +26,11 @@ const upload = multer({
   storage: storage,
   limits:{fileSize:1024*1024*10},
   fileFilter: (req, file, cb) => {
-    if (file.mimetype == "image/png" || file.mimetype == "image/jpg" || file.mimetype == "image/jpeg" ) {
+    if (file.mimetype.includes('image')) {
       cb(null, true);
     } else {
 
-      req.fileValidationError = "Solo formato png, jpg o jpeg estan permitidos";
+      req.fileValidationError = "Solo imagenes estan permitidas";
       return cb(null, false);
 
     }
@@ -50,7 +50,7 @@ router.get("/:id", product.detail);
 
 
 router.get('/:id/editform/', adminAcces,product.editForm)
-router.put('/:id/', adminAcces,upload.array("images"), validarEdit, logDB.logEdit, (err,req,res,next)=>{if(err.code== 'LIMIT_FILE_SIZE'){req.fileValidationError = "Limite 10 MB";}next()},product.editItem)
+router.put('/:id/', adminAcces,upload.array("images"),(err,req,res,next)=>{if(err.code== 'LIMIT_FILE_SIZE'){req.fileValidationError = "Limite 10 MB";}next()}, validarEdit, logDB.logEdit,product.editItem)
 
 router.delete('/:id/delete',adminAcces,product.deleteProduct)
 //!candidato a ser eliminado
