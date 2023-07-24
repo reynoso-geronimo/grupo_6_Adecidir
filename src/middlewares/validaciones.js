@@ -1,6 +1,7 @@
 const { check } = require('express-validator')
 
 module.exports ={
+    validarImagenSize:(err,req,res,next)=>{if(err.code== 'LIMIT_FILE_SIZE'){req.fileValidationError = "Limite 10 MB";}next()},
     validarEdit : [
         check('name').notEmpty().withMessage('Debes completar el campo de nombre').trim().escape(),
         check('price').notEmpty().withMessage('Debes completar el campo de precio con un valor valido').bail().isFloat({gt:0}).withMessage('Debes completar el campo de precio con un valor valido').trim().escape(),
@@ -17,5 +18,9 @@ module.exports ={
           }
           return true
         })
-      ]
+      ],
+      validarCrear:[],
+      validarRegistro:[],
+      validarLogin:[]
+
 }

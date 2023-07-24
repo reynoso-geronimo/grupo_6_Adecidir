@@ -4,7 +4,7 @@ const product = require('../controllers/productController.js');
 const logDB = require('../middlewares/logDBMiddleware.js')
 const path = require('path');
 const multer = require('multer');
-const { validarEdit } = require('../middlewares/validaciones.js');
+const { validarEdit,validarImagenSize } = require('../middlewares/validaciones.js');
 const {adminAcces} = require('../middlewares/authMiddleware.js');
 
 
@@ -50,11 +50,10 @@ router.get("/:id", product.detail);
 
 
 router.get('/:id/editform/', adminAcces,product.editForm)
-router.put('/:id/', adminAcces,upload.array("images"),(err,req,res,next)=>{if(err.code== 'LIMIT_FILE_SIZE'){req.fileValidationError = "Limite 10 MB";}next()}, validarEdit, logDB.logEdit,product.editItem)
+router.put('/:id/', adminAcces,upload.array("images"),validarImagenSize,validarEdit, logDB.logEdit,product.editItem)
 
 router.delete('/:id/delete',adminAcces,product.deleteProduct)
-//!candidato a ser eliminado
-//router.get('/ver/borrados', product.listBorrados)
+
 router.put('/:id/alta',adminAcces,product.altaProduct)
 
 module.exports = router;
