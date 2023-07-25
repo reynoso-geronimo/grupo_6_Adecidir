@@ -16,7 +16,7 @@ module.exports = {
       if (await bcryptjs.compare(req.body.password, usuario.clave)) {
         delete usuario.clave;
         req.session.usuarioLogeado = usuario;
-        if (req.body.cookie) res.cookie("recordarUsuario", req.body.email, { maxAge: 1000 * 60 * 60 });
+        if (req.body.cookie) res.cookie("recordarUsuario", req.body.email, { maxAge: 1000 * 60 * 60 *72});
 
         return res.redirect("/");
 
