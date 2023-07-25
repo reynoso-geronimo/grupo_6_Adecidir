@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router()
-const path = require('path');
-const multer = require('multer')
 const validateAvatar = require('../middlewares/avatarMiddleware.js')
 const {logged, userAcess,adminAcces} = require('../middlewares/authMiddleware.js');
 const {uploadImgAvatar} = require('../middlewares/fileUploadMiddleware.js')
