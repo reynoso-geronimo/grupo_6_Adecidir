@@ -232,5 +232,14 @@
   "clave": "$2a$10$qp.HFxNhY2xg54i3Z1MHveLTeagXlsTGmMdT4XCAyS4UTTN.LZmh.",
   "categoria": "admin",
   "avatar": "defaultAvatar.png"
+ },
+ {
+  "id": 27,
+  "nombre": "Super",
+  "apellido": "Admin",
+  "email": "admin@admin",
+  "clave": "$2a$10$rElMX/WkOfGYwfE3cjjJl.Tc.OhGsZEbMUiQQ/N68NWB6S7OFgNg2",
+  "categoria": "admin",
+  "avatar": "defaultAvatar.png"
  }
 ]
