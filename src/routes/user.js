@@ -4,7 +4,7 @@ const validateAvatar = require('../middlewares/avatarMiddleware.js')
 const {logged, userAcess,adminAcces} = require('../middlewares/authMiddleware.js');
 const {uploadImgAvatar} = require('../middlewares/fileUploadMiddleware.js')
 const userController = require('../controllers/userController.js');
-
+const emailController = require('../controllers/emailController.js')
 
 
 
@@ -12,6 +12,7 @@ const userController = require('../controllers/userController.js');
 
 // login
 router.get("/login", logged,userController.loginForm);
+router.get("/email", emailController.enviarEmail);
 router.get("/logout",userAcess,userController.logout);
 router.post("/login", logged,userController.loginProcess);
 
