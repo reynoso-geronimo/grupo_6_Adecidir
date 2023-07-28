@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
 const User = require("../models/User.js");
+const {enviarEmail} =  require('../js/email.js')
 
 module.exports = {
   loginForm: function (req, res) {
@@ -81,5 +82,13 @@ module.exports = {
   },
   cart: function (req, res) {
     return res.render("user/cart");
+  },
+  pwResetForm: function (req, res) {
+    return res.render("user/pwReset");
+  },
+  pwResetProcess: async function (req, res) {
+    //todo
+    enviarEmail()
+    res.redirect('/')
   },
 };
