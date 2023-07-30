@@ -88,7 +88,14 @@ module.exports = {
   },
   pwResetProcess: async function (req, res) {
     //todo
-    enviarEmail()
+    const mailOptions = {
+      from: 'themebrandarg@gmail.com',
+      to: req.body.email,
+      subject: 'Sending Email using Node.js',
+      text: 'Aca hiria la clave para recuperar el password'
+    };
+    
+    enviarEmail(mailOptions)
     res.redirect('/')
   },
 };

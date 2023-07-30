@@ -4,7 +4,7 @@ const validateAvatar = require('../middlewares/avatarMiddleware.js')
 const {logged, userAcess,adminAcces} = require('../middlewares/authMiddleware.js');
 const {uploadImgAvatar} = require('../middlewares/fileUploadMiddleware.js')
 const userController = require('../controllers/userController.js');
-const emailController = require('../controllers/emailController.js')
+
 
 
 

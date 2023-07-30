@@ -1,12 +1,12 @@
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-  host: "",
+  service:'gmail',
   port: 587,
   secure: true,
   auth: {
-    user: '',
-    pass: ''
+    user: 'themebrandarg@gmail.com',
+    pass: 'tdhqkpuutwcukutf'
   },
   /*tls: {
     secure: true,
@@ -16,14 +16,8 @@ const transporter = nodemailer.createTransport({
 }*/
 });
 
-const mailOptions = {
-  from: 'prueba@serviexportsp.com.ar',
-  to: 'geronimo.reynoso.3@gmail.com',
-  subject: 'Sending Email using Node.js',
-  text: 'Aca hiria la clave para recuperar el password'
-};
 
-module.exports ={ enviarEmail :() => { 
+module.exports ={ enviarEmail :(mailOptions) => { 
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
