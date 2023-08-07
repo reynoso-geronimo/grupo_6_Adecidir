@@ -14,7 +14,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         estado:{
         type: dataTypes.STRING
-        }
+        },
+        deletedAT:{
+            type: dataTypes.DATE
+           }
         
     };
     let config = {

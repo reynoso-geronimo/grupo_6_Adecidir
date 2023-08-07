@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
 const User = require("../models/User.js");
+const db = require('../database/models')
 
 module.exports = {
   loginForm: function (req, res) {

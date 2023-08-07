@@ -36,12 +36,13 @@ module.exports = (sequelize, dataTypes) => {
         talleXXL:{
          type: dataTypes.INTEGER
         },
-        borrado:{
-         type: dataTypes.STRING.BINARY
-        },
+       
         talleUnico:{
          type: dataTypes.INTEGER
-        }
+        },
+        deletedAT:{
+            type: dataTypes.DATE
+           },
     };
     let config = {
         tableName: "Productos",
