@@ -19,28 +19,28 @@ module.exports = (sequelize, dataTypes) => {
          type: dataTypes.FLOAT
         },
         talleXS:{
-         type: dataTypes.INT
+         type: dataTypes.INTEGER
         },
         talleS:{
-         type: dataTypes.INT
+         type: dataTypes.INTEGER
         },
         talleM:{
-         type: dataTypes.INT
+         type: dataTypes.INTEGER
         },
         talleL:{
-         type: dataTypes.INT
+         type: dataTypes.INTEGER
         },
         talleXL:{
-         type: dataTypes.INT
+         type: dataTypes.INTEGER
         },
         talleXXL:{
-         type: dataTypes.INT
+         type: dataTypes.INTEGER
         },
         borrado:{
          type: dataTypes.STRING.BINARY
         },
         talleUnico:{
-         type: dataTypes.INT
+         type: dataTypes.INTEGER
         }
     };
     let config = {
