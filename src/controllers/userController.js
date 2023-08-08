@@ -11,10 +11,10 @@ module.exports = {
   },
 
   loginProcess: async function (req, res) {
-    const usuario = User.findByField('email', req.body.email)
+    const usuario = await db.Usuarios.findOne({where:{email:req.body.email}})
     if (!usuario) return res.render("user/login", { errors: { datosIncorrectos: { msg: "Datos Incorrectos" } } });
     try {
-      if (await bcryptjs.compare(req.body.password, usuario.clave)) {
+      if (await bcryptjs.compare(req.body.password, usuario.password)) {
         delete usuario.clave;
         req.session.usuarioLogeado = usuario;
         if (req.body.cookie) res.cookie("recordarUsuario", req.body.email, { maxAge: 1000 * 60 * 60 *72});
@@ -44,24 +44,26 @@ module.exports = {
   },
   // Registro
   processRegister: async function (req, res) {
-    const userInDb = User.findByField("email", req.body.email);
-    // para no usar el mismo email, despues voy a hacer las validaciones asi sale el mensaje y todo
+    const userInDb = await db.Usuarios.findOne({where:{email:req.body.email}})
     if (userInDb) {
-      console.log(req.body);
+      
       return res.render("user/register", {
         oldData: req.body,
         errors: { email: { msg: "este email ya esta en uso" } },
       });
     }
-
     const userToCreate = {
-      ...req.body,
-      clave: await bcryptjs.hash(req.body.clave, 10),
+      email:req.body.email,
+      nombre:req.body.nombre,
+      apellido:req.body.apellido,
+      password: await bcryptjs.hash(req.body.clave, 10),
+      avatar : req.file.filename,
+      categoria : "customer"
     };
-    userToCreate.categoria = "customer";
-    userToCreate.avatar = req.file.filename;
-    delete userToCreate.passwordRepeat;
-    User.create(userToCreate);
+    
+    //userToCreate.avatar = req.file.filename;
+  
+    await db.Usuarios.create(userToCreate);
 
     return res.redirect("login");
   },
