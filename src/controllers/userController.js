@@ -4,6 +4,7 @@ const path = require("path");
 const bcryptjs = require("bcryptjs");
 const User = require("../models/User.js");
 const db = require('../database/models')
+const { sequelize } = require("../database/models");
 
 module.exports = {
   loginForm: function (req, res) {
@@ -11,13 +12,13 @@ module.exports = {
   },
 
   loginProcess: async function (req, res) {
-    const usuario = await db.Usuarios.findOne({where:{email:req.body.email}})
+    const usuario = await db.Usuarios.findOne({ where: { email: req.body.email } })
     if (!usuario) return res.render("user/login", { errors: { datosIncorrectos: { msg: "Datos Incorrectos" } } });
     try {
       if (await bcryptjs.compare(req.body.password, usuario.password)) {
         delete usuario.clave;
         req.session.usuarioLogeado = usuario;
-        if (req.body.cookie) res.cookie("recordarUsuario", req.body.email, { maxAge: 1000 * 60 * 60 *72});
+        if (req.body.cookie) res.cookie("recordarUsuario", usuario.id, { maxAge: 1000 * 60 * 60 * 72 });
 
         return res.redirect("/");
 
@@ -44,33 +45,42 @@ module.exports = {
   },
   // Registro
   processRegister: async function (req, res) {
-    const userInDb = await db.Usuarios.findOne({where:{email:req.body.email}})
+    const userInDb = await db.Usuarios.findOne({ where: { email: req.body.email } })
     if (userInDb) {
-      
+
       return res.render("user/register", {
         oldData: req.body,
         errors: { email: { msg: "este email ya esta en uso" } },
       });
     }
     const userToCreate = {
-      email:req.body.email,
-      nombre:req.body.nombre,
-      apellido:req.body.apellido,
+      email: req.body.email,
+      nombre: req.body.nombre,
+      apellido: req.body.apellido,
       password: await bcryptjs.hash(req.body.clave, 10),
-      avatar : req.file.filename,
-      categoria : "customer"
+      avatar: req.file.filename,
+      categoria: "customer"
     };
-    
-    //userToCreate.avatar = req.file.filename;
-  
-    await db.Usuarios.create(userToCreate);
+
+ 
+    const t = await sequelize.transaction()
+    try {
+      await db.Usuarios.create(userToCreate,{ transaction: t });
+      await t.commit();;
+    } catch (error) {
+      console.log(error);
+      console.log('ocurrio un error');
+      if (req.file)fs.unlinkSync(path.resolve(__dirname, '../../public/images/avatar/' + req.file.filename))
+      await t.rollback();
+    }
+   
 
     return res.redirect("login");
   },
   adminPanel: function (req, res) {
     const productos = JSON.parse(
       fs.readFileSync(
-        path.resolve(__dirname, "../database/productos.json"),"utf-8"));
+        path.resolve(__dirname, "../database/productos.json"), "utf-8"));
     return res.render("user/admin", { productos: productos });
   },
   perfil: function (req, res) {
@@ -79,6 +89,41 @@ module.exports = {
   perfilEdit: function (req, res) {
     return res.render("user/profileEdit", { usuario: req.session.usuarioLogeado });
   },
+  processEdit: async function (req, res) {
+    let avatar
+    if (req.file) {
+      avatar = req.file.filename
+    } else {
+      avatar = req.session.usuarioLogeado.avatar
+    }
+    const t = await sequelize.transaction()
+    try {
+      await db.Usuarios.update({
+        nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        direccion: req.body.direccion,
+        telefono: req.body.telefono,
+        avatar: avatar
+
+      }, 
+      { where: { id: req.session.usuarioLogeado.id } },
+      { transaction: t });
+      await t.commit();
+      if (req.file) fs.unlinkSync(path.resolve(__dirname, '../../public/images/avatar/' + req.session.usuarioLogeado.avatar))
+      req.session.usuarioLogeado.nombre = req.body.nombre
+      req.session.usuarioLogeado.apellido = req.body.apellido
+      req.session.usuarioLogeado.direccion = req.body.direccion
+      req.session.usuarioLogeado.avatar = avatar
+
+    } catch (error) {
+      console.log(error);
+      console.log('ocurrio un error');
+      if (req.file)fs.unlinkSync(path.resolve(__dirname, '../../public/images/avatar/' + req.file.filename))
+      await t.rollback();
+    }
+    res.redirect("/user/profile")
+  }
+  ,
   perfilEditPassword: function (req, res) {
     return res.render("user/profileEditPassword");
   },

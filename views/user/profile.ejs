@@ -22,14 +22,14 @@
           </h3>
 
           <% if (usuario.telefono) { %>
-          <h3>Telefono: <%= usuario.telefono %></h3>
+          <h3><i class="fa-solid fa-phone"></i>Telefono: <%= usuario.telefono %></h3>
           <% } else { %>
           <h3>
             <i class="fa-solid fa-phone"></i>No tenemos tu telefono, completa tu
             perfil
           </h3>
           <% } %> <% if (usuario.direccion) { %>
-          <h3>Direccion: <%= usuario.direccion %></h3>
+          <h3><i class="fa-solid fa-location-dot"></i>Direccion: <%= usuario.direccion %></h3>
           <% } else { %>
           <h3>
             <i class="fa-solid fa-location-dot"></i>No tenemos tu direccion,

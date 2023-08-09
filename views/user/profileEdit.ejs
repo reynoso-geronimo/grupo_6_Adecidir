@@ -11,17 +11,15 @@
         alt=""
         width="60px"
       /> Edita tu informacion</h1>
-      <form action="/user/edit" method="post" enctype="multipart/form-data">
+      <form action="/user/profile/edit" method="post" enctype="multipart/form-data">
         <input type="text" name="nombre" placeholder="Nombre" value="<%= usuario.nombre %>"/>
         <input type="text" name="apellido" placeholder="Apellido" value="<%= usuario.apellido %>"/>
-        <input type="email" name="email" placeholder="Email" value="<%= usuario.email %>" />
-        <input type="text" name="direccion" placeholder="Direccion" <% if (usuario.direccion) { %>
-          value="<%= usuario.direccion %>"
-        <% } %> />
+        <input type="text" name="direccion" placeholder="Direccion" <% if (usuario.direccion) { %> value="<%= usuario.direccion %>"<% } %> />
+        <input type="text" name="telefono" placeholder="Telefono" <% if (usuario.telefono) { %> value="<%= usuario.telefono %>"<% } %> />
         <div class="register-avatar">
         <label for="new-avatar"><i class="fa-solid fa-cloud-arrow-up"></i>Nueva Imagen de perfil</label>
         <input type="file" name="avatar" id="new-avatar" />
-        <input type="submit" value="Editar" class="boton-negro" />
+        <input type="submit"  class="boton-negro" value="Editar"/>
       </form>
 
        
