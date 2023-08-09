@@ -10,7 +10,7 @@ module.exports = {
         } else return res.redirect('/user/login')
     },
     adminAcces: function (req, res, next) {
-        if (req.session.usuarioLogeado && req.session.usuarioLogeado.categoria === "admin") {
+        if ((req.session.usuarioLogeado && req.session.usuarioLogeado.categoria === "admin")||(req.session.usuarioLogeado && req.session.usuarioLogeado.categoria === "superadmin")) {
             next()
         } else return res.redirect('/')
     },
@@ -18,7 +18,7 @@ module.exports = {
         res.locals.isLogged = false
         if (req.session.usuarioLogeado) {
             res.locals.isLogged = true
-            if(req.session.usuarioLogeado.categoria === "admin") res.locals.admin = true
+            if(req.session.usuarioLogeado.categoria === "admin"||req.session.usuarioLogeado.categoria === "superadmin") res.locals.admin = true
             next()
         } else {
             next()

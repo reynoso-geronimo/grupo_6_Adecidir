@@ -77,29 +77,6 @@
       </section>
     </main>
     <%- include('../partials/footer.ejs') %>
-      
-    <script>
-      //entiendo que asi como no se debe poner css en el html tampoco js pero es una solucion pasajera para lograr el selector de imagenes
-      //dios como sufri buscando esto no recomiendo pasar el feriado haciendo esto
-      //otro finde semana mejorando esto ahora que tengo una mejor comprension ya no utilizando codigo robado, esta salsa es casera
-
-      const radios = document.querySelectorAll('input[name="radios"]');
-      const imagesSelect = document.querySelectorAll('.img-detalle');
-      
-      
-      imagesSelect[0].style.display = "block"
-      
-      
-
-      radios.forEach(function (radio) {
-        radio.addEventListener("change", function () {
-          const selectedRadio = document.querySelector('input[name="radios"]:checked');
-            for (let index = 0; index < imagesSelect.length; index++) {
-              if (selectedRadio.id === "selector"+index) {imagesSelect[index].style.display = "block"
-              } else {imagesSelect[index].style.display = "none"} 
-            };
-        });
-      });
-    </script>
+    <script src="/js/productDetail.js"></script>
   </body>
 </html>
