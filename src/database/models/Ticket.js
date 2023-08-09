@@ -27,5 +27,19 @@ module.exports = (sequelize, dataTypes) => {
     
     const Ticket = sequelize.define(alias, cols, config);
 
+     ticket.associate = function(models){
+        ticket.belongsTo(models.Productos_tickets, {
+            as: "Productos_tickets",
+            foreignKey: "id_ticket"
+        })
+    }
+
+    ticket.associate = function(models){
+        ticket.belongsTo(models.Usuarios, {
+            as: "Usuarios",
+            foreignKey: "usuario_id"
+        })
+    }
+
     return Ticket;
 }
