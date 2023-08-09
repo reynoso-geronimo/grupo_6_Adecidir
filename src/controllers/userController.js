@@ -62,18 +62,18 @@ module.exports = {
       categoria: "customer"
     };
 
- 
+
     const t = await sequelize.transaction()
     try {
-      await db.Usuarios.create(userToCreate,{ transaction: t });
+      await db.Usuarios.create(userToCreate, { transaction: t });
       await t.commit();;
     } catch (error) {
       console.log(error);
       console.log('ocurrio un error');
-      if (req.file)fs.unlinkSync(path.resolve(__dirname, '../../public/images/avatar/' + req.file.filename))
+      if (req.file) fs.unlinkSync(path.resolve(__dirname, '../../public/images/avatar/' + req.file.filename))
       await t.rollback();
     }
-   
+
 
     return res.redirect("login");
   },
@@ -105,9 +105,9 @@ module.exports = {
         telefono: req.body.telefono,
         avatar: avatar
 
-      }, 
-      { where: { id: req.session.usuarioLogeado.id } },
-      { transaction: t });
+      },
+        { where: { id: req.session.usuarioLogeado.id } },
+        { transaction: t });
       await t.commit();
       if (req.file) fs.unlinkSync(path.resolve(__dirname, '../../public/images/avatar/' + req.session.usuarioLogeado.avatar))
       req.session.usuarioLogeado.nombre = req.body.nombre
@@ -119,7 +119,7 @@ module.exports = {
     } catch (error) {
       console.log(error);
       console.log('ocurrio un error');
-      if (req.file)fs.unlinkSync(path.resolve(__dirname, '../../public/images/avatar/' + req.file.filename))
+      if (req.file) fs.unlinkSync(path.resolve(__dirname, '../../public/images/avatar/' + req.file.filename))
       await t.rollback();
     }
     res.redirect("/user/profile")
@@ -127,6 +127,31 @@ module.exports = {
   ,
   perfilEditPassword: function (req, res) {
     return res.render("user/profileEditPassword");
+  },
+  processEditPassword: async function (req, res) {
+    const storedPassword = await db.Usuarios.findByPk(req.session.usuarioLogeado.id, { attributes: ['password'] })
+
+    if (await bcryptjs.compare(req.body.oldPassword, storedPassword.dataValues.password)) {
+      const t = await sequelize.transaction()
+      try {
+
+
+        await db.Usuarios.update({ password: await bcryptjs.hash(req.body.newPassword, 10) },
+          { where: { id: req.session.usuarioLogeado.id } },
+          { transaction: t });
+        await t.commit();
+        return res.redirect('/user/profile')
+
+
+      } catch (error) {
+        console.log(error);
+        console.log('ocurrio un error');
+        await t.rollback();
+      }
+     
+    }
+    console.log('hi');
+    return res.render("user/profileEditPassword", { errors: { datosIncorrectos: { msg: "Datos Incorrectos" } } });
   },
   cart: function (req, res) {
     return res.render("user/cart");
