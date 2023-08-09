@@ -113,6 +113,7 @@ module.exports = {
       req.session.usuarioLogeado.nombre = req.body.nombre
       req.session.usuarioLogeado.apellido = req.body.apellido
       req.session.usuarioLogeado.direccion = req.body.direccion
+      req.session.usuarioLogeado.telefono = req.body.telefono
       req.session.usuarioLogeado.avatar = avatar
 
     } catch (error) {
