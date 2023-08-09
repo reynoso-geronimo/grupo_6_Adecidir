@@ -7,39 +7,39 @@
 
 h1 {
   font-family: "Playfair Display", serif;
-  font-size: 64/78pt;
+
   font-weight: 700;
 }
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 40/48pt;
+
   font-weight: 600;
 }
 
 h3,
 label {
   font-family: "Montserrat", sans-serif;
-  font-size: 90/109pt;
+
   font-weight: 500;
 }
 
 h4,
 p {
   font-family: "Montserrat", sans-serif;
-  font-size: 20/24pt;
+
   font-weight: 400;
 }
 
 h5 {
   font-family: "Montserrat", sans-serif;
-  font-size: 16/19pt;
+
   font-weight: 300;
 }
 
 h6 {
   font-family: "Montserrat", sans-serif;
-  font-size: 14/17pt;
+
   font-style: italic;
   font-weight: 300;
 }
@@ -1053,7 +1053,20 @@ Pagina detalle producto
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  ;
+  
+}
+.user-profile section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.user-profile h2{
+  align-self:flex-start;
+}
+.profile-avatar{
+  width:60px;
+  border-radius: 100%;
 }
 .profile-info{
   padding: 20px;
