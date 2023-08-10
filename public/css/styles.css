@@ -113,7 +113,7 @@ header i{
 }
 
 
-#login-register {
+.login-register {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -125,14 +125,14 @@ header i{
   gap: 0.5rem;
   transition: all 500ms;
 }
-#login-register button {
+.login-register button {
   width: 100%;
 }
-#login-register:target {
+.login-register-open {
   right: 0;
   z-index: 1;
 }
-#search-bar-header {
+.search-bar-header {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -144,10 +144,8 @@ header i{
   gap: 0.5rem;
   transition: all 500ms;
 }
-#lsearch-bar-header input {
-  width: 100%;
-}
-#search-bar-header:target {
+
+.search-bar-header-open {
   right: 0;
   z-index: 1;
 }

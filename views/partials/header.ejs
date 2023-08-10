@@ -4,18 +4,18 @@
     <h1 class="copy-header"><a href="/">THEME</a></h1>
   </div>
   <div class="main-header-right-bar">
-    <a href="#search-bar-header"><i class="fa-solid fa-magnifying-glass"></i></a>
+    <i class="fa-solid fa-magnifying-glass"></i>
     <% if (locals.isLogged===true) { %><a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a><% } %>
-    <a href="#login-register">
+    
       <% if (locals.admin===true) { %>
-        <i class="fa-solid fa-user-secret"></i>
+        <i id="userIcon" class="fa-solid fa-user-secret"></i>
       <% } else { %>
-        <i class="fa-solid fa-user"></i>
+        <i id="userIcon" class="fa-solid fa-user"></i>
       <% } %>
-    </a>
+   
   </div>
 
-  <div id='login-register'>
+  <div class='login-register'>
     <% if (locals.isLogged===false) { %>
       <a href="/user/register"><button>REGISTRARME</button></a>
       <a href="/user/login"><button>INICIAR SESIÓN</button></a>
@@ -28,8 +28,9 @@
     <% } %>
       
   </div>
-  <div id='search-bar-header'>
+  <div class='search-bar-header'>
     <form action="/" method="get"><input type="search" name="search-bar-header" id="search-bar-header-input"><button
         type="submit">Buscar</button></form>
   </div>
+   <script src="/js/header.js"></script>
 </header>
