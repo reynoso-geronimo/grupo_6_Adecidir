@@ -4,6 +4,7 @@ const path = require("path");
 const bcryptjs = require("bcryptjs");
 const db = require('../database/models')
 const { sequelize } = require("../database/models");
+const {enviarEmail} =  require('../js/email.js')
 
 module.exports = {
   loginForm: function (req, res) {
@@ -142,5 +143,20 @@ module.exports = {
   },
   cart: function (req, res) {
     return res.render("user/cart");
+  },
+  pwResetForm: function (req, res) {
+    return res.render("user/pwReset");
+  },
+  pwResetProcess: async function (req, res) {
+    //todo
+    const mailOptions = {
+      from: 'themebrandarg@gmail.com',
+      to: req.body.email,
+      subject: 'Sending Email using Node.js',
+      text: 'Aca hiria la clave para recuperar el password'
+    };
+    
+    enviarEmail(mailOptions)
+    res.redirect('/')
   },
 };

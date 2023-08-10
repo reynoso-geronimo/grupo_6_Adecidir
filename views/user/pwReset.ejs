@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+  <body class="body-login">
+    <%- include('../partials/header') %>
+
+    <main class="sign-in">
+      <h1>Reiniciar Password</h1>
+      <form action="/user/passwordreset" method="post">
+        <input type="email" name="email" placeholder="Email" />
+        
+        <input type="submit" value="Reiniciar" class="boton-negro" />
+        
+      </form>
+      
+     
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>

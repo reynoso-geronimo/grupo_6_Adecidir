@@ -21,6 +21,7 @@
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.6.0",
     "node.js": "^0.0.1-security",
+    "nodemailer": "^6.9.4",
     "nodemon": "^2.0.22",
     "sequelize": "^6.32.1",
     "sequelize-cli": "^6.6.1"

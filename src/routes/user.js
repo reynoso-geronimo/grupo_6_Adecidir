@@ -14,6 +14,8 @@ const userController = require('../controllers/userController.js');
 router.get("/login", logged,userController.loginForm);
 router.get("/logout",userAcess,userController.logout);
 router.post("/login", logged,userController.loginProcess);
+router.get("/passwordreset", logged,userController.pwResetForm);
+router.post("/passwordreset", logged,userController.pwResetProcess);
 
 // register
 router.get("/register", logged,userController.registerForm);
