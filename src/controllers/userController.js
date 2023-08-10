@@ -57,7 +57,7 @@ module.exports = {
       email: req.body.email,
       nombre: req.body.nombre,
       apellido: req.body.apellido,
-      password: await bcryptjs.hash(req.body.clave, 10),
+      password:req.body.clave,
       avatar: req.file.filename,
       categoria: "customer"
     };
@@ -127,7 +127,7 @@ module.exports = {
     if (await bcryptjs.compare(req.body.oldPassword, storedPassword.password)) {
       const t = await sequelize.transaction()
       try {
-        await db.Usuarios.update({ password: await bcryptjs.hash(req.body.newPassword, 10) },
+        await db.Usuarios.update({ password: req.body.newPassword },
           { where: { id: req.session.usuarioLogeado.id } },
           { transaction: t });
         await t.commit();
