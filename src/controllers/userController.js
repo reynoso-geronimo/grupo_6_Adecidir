@@ -150,6 +150,7 @@ module.exports = {
   },
   pwResetCreateLink: async function (req, res) {
     
+   try {
     const userInDb = await db.Usuarios.findOne({ where: { email: req.body.email } })
     if (userInDb) {
       const payload = {email:userInDb.email}
@@ -167,6 +168,10 @@ ${link}`
       enviarEmail(mailOptions)
     
     }
+   } catch (error) {
+    console.log(error);
+    res.send('Ocurrio un error')
+   }
    
   },
   passwordResetForm:async function (req,res){
