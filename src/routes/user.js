@@ -14,9 +14,10 @@ const userController = require('../controllers/userController.js');
 router.get("/login", logged,userController.loginForm);
 router.get("/logout",userAcess,userController.logout);
 router.post("/login", logged,userController.loginProcess);
-router.get("/passwordreset", logged,userController.pwResetForm);
-router.post("/passwordreset", logged,userController.pwResetProcess);
-
+router.get("/passwordreset", logged,userController.pwReset);
+router.post("/passwordreset", logged,userController.pwResetCreateLink);
+router.get("/password-reset/:token", logged, userController.passwordResetForm);
+router.post("/password-reset/:token", logged, userController.passwordResetProcess);
 // register
 router.get("/register", logged,userController.registerForm);
 router.post("/register", logged,uploadImgAvatar.single('avatar'),validateAvatar,userController.processRegister);

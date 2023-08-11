@@ -4,7 +4,8 @@ const path = require("path");
 const bcryptjs = require("bcryptjs");
 const db = require('../database/models')
 const { sequelize } = require("../database/models");
-const {enviarEmail} =  require('../js/email.js')
+const { enviarEmail } = require('../helpers/email.js');
+const  jwt  = require("jsonwebtoken");
 
 module.exports = {
   loginForm: function (req, res) {
@@ -57,7 +58,7 @@ module.exports = {
       email: req.body.email,
       nombre: req.body.nombre,
       apellido: req.body.apellido,
-      password:req.body.clave,
+      password: req.body.clave,
       avatar: req.file.filename,
       categoria: "customer"
     };
@@ -144,19 +145,59 @@ module.exports = {
   cart: function (req, res) {
     return res.render("user/cart");
   },
-  pwResetForm: function (req, res) {
+  pwReset: function (req, res) {
     return res.render("user/pwReset");
   },
-  pwResetProcess: async function (req, res) {
-    //todo
-    const mailOptions = {
-      from: 'themebrandarg@gmail.com',
-      to: req.body.email,
-      subject: 'Sending Email using Node.js',
-      text: 'Aca hiria la clave para recuperar el password'
-    };
+  pwResetCreateLink: async function (req, res) {
     
-    enviarEmail(mailOptions)
-    res.redirect('/')
+    const userInDb = await db.Usuarios.findOne({ where: { email: req.body.email } })
+    if (userInDb) {
+      const payload = {email:userInDb.email}
+      const token =jwt.sign(payload,`${process.env.JWT_SECRET}${userInDb.password}`,{expiresIn:'15m'})
+      const link = `http://localhost:3006/user/password-reset/${token}`
+      //console.log(link)
+      const mailOptions = {
+        from: 'themebrandarg@gmail.com',
+        to: req.body.email,
+        subject: 'Recupera tu cuenta en Theme',
+        text: `Ingresa al siguiente enlace para generar una nueva contraseña, este solo tendra validez por 15 minutos
+${link}`
+      };
+      
+      enviarEmail(mailOptions)
+    
+    }
+   
   },
+  passwordResetForm:async function (req,res){
+    const token = req.params.token
+   try {
+    const userInDb = await db.Usuarios.findOne({ where: { email: jwt.decode(token).email } })
+    jwt.verify(token,`${process.env.JWT_SECRET}${userInDb.password}`)
+    
+    return res.render("user/pwResetform");
+   } catch (error) {
+    console.log(error);
+    res.send('Token invalido o expirado')
+   }
+      
+  
+  },
+  passwordResetProcess:async function (req,res){
+  
+    const t = await sequelize.transaction()
+    try {
+      await db.Usuarios.update({ password: req.body.newPassword },
+        { where: { email: jwt.decode(req.params.token).email } },
+        { transaction: t });
+      await t.commit();
+      return res.redirect('/user/login')
+    } catch (error) {
+      console.log(error);
+      console.log('ocurrio un error');
+      await t.rollback();
+      return res.redirect("/");
+    }
+  
+  }
 };
