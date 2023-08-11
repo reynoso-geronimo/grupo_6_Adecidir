@@ -192,6 +192,8 @@ ${link}`
   
     const t = await sequelize.transaction()
     try {
+      const userInDb = await db.Usuarios.findOne({ where: { email: jwt.decode(req.params.token).email } })
+    jwt.verify(token,`${process.env.JWT_SECRET}${userInDb.password}`)
       await db.Usuarios.update({ password: req.body.newPassword },
         { where: { email: jwt.decode(req.params.token).email } },
         { transaction: t });
