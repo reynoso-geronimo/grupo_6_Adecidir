@@ -203,7 +203,7 @@ ${link}`
     } catch (error) {
       console.log('ocurrio un error');
       await t.rollback();
-      return res.redirect("/");
+      res.send('Token invalido o expirado')
     }
   
   }
