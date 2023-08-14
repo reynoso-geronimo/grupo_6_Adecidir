@@ -134,13 +134,13 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
     - Qué va a hacer los próximos días: estudiar y practicar login sesión y cookies.
     
 
-#18 de julio del 2023
-*Emiliano Apostolo:
+# 18 de julio del 2023
+*Emiliano Apostolo
     -Que hizo en estos días: implementar la función de recordar al usuario y el login de usuarios 
     -Si se encontró con algún impedimento: no
     -Qué va a hacer los próximos días: va a continuar con el playground
 
-*Furfaro ignacio:
+*Furfaro ignacio
     -Que hizo en estos días: implementar el registro de usuarios
     -Si se encontró con algún impedimento: no
     -Qué va a hacer los próximos días: va a continuar con el playground
@@ -155,3 +155,27 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
     -Si se encontró con algún impedimento: no
     -Qué va a hacer los próximos días: va a continuar con el playground
 
+# 02 de agosto del 2023
+*Emiliano Apostolo
+    -Que hizo en estos días: creación de carpeta sequelize y archivos de modelos
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground
+
+
+*Furfaro ignacio
+    -Que hizo en estos días: CRUD (tarea compartida con Gernimo) y la validación de creación de productos
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground
+
+*Geronimo Reynoso
+    -Que hizo en estos días: script de estructura y CRUD (tarea compartida con Ignacio)
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground
+
+*Jennifer Lichtensztejn
+    -Que hizo en estos días: script de datos, completar el archivo retro.md y el archivo weekly.md. Y, además, se encargí de la validación del registro
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground
+
+*Entre todos:
+    -Que hizo en estos días: diagrama de base de datos
