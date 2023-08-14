@@ -1,7 +1,7 @@
 USE theme_db;
 
 INSERT INTO theme_db.Usuarios(email,nombre,apellido,password,categoria,avatar)
-VALUES('jenn@gmail.com','jennifer','lichtensztejn','123456','admin','image 5.png');
+VALUES('tjindricha@eepurl.com','Simon','Vinas','$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua','admin','image 13.png');
 INSERT INTO theme_db.Usuarios(email,nombre,apellido,password,categoria,avatar)
 VALUES('rriggs5@csmonitor.com','Letícia','Amores','$2a$10$UoO.a7.lHYedkOU9.nSjq.2b9.oBIzbI/qX9R6LsOh6X2tFFMJ2ua','admin','image 8.png');
 INSERT INTO theme_db.Usuarios(email,nombre,apellido,password,categoria,avatar)
