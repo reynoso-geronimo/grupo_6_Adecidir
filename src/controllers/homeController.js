@@ -1,16 +1,8 @@
-const fs = require('fs');
-const path = require('path');
 const db = require('../database/models')
 
-const categorias = JSON.parse(fs.readFileSync(path.resolve(__dirname,'../database/categorias.json'))
-
-
-
-)
-
 const homeController = {
-    index: function (req, res) {
-
+    index: async function (req, res) {
+        const categorias = await  db.Categorias.findAll()
         return res.render('home' , {categorias:categorias})
 
     }
