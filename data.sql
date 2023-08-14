@@ -16,10 +16,33 @@ VALUES
 ('COMPLEMENTOS','Mockup_Bolsa_Tela_Chica_mockupgratis.com.jpg'),
 ('GIFT CARD','Tarjeta_Presentacion_mockupgratis.com.jpg');
 
-
 INSERT INTO theme_db.Productos(nombre,descripcion,id_categoria,precio,talleXS,talleS,talleM,talleL,talleXL,talleXXL,talleUnico)
-VALUES('jeans','pantalon largo negro',1,400,3,4,5,6,7,3,5);
+VALUES
+('jeans','Pantalon largo negro',1,400,3,4,5,6,7,3,0),
+('Remera','Remera manga corta',2,400,3,4,5,6,7,3,0),
+('Chaleco','Un chaleco',3,400,3,4,5,6,7,3,0),
+('jeans','pantalon largo negro',1,400,3,4,5,6,7,3,0),
+('Perfume','Au de toilette',1,400,0,0,0,0,0,0,1),
+('Gift-Card','Gitf-Card $50000',1,400,0,0,0,0,0,0,1),
+
+INSERT INTO theme_db.Imagenes(id_producto,nombre)
+VALUES
+(1, "ropa4a.jpg"),
+(1, "ropa4b.jpg"),
+(1, "ropa4c.jpg"),
+(1, "ropa4d.jpg"),
+(2, "remera1.png"),
+(3, "ropa3a.jpg"),
+(3, "ropa3b.jpg"),
+(3, "ropa3c.jpg"),
+(6, "ropa4a.jpg"),
+(6, "ropa4b.jpg"),
+(6, "ropa4c.jpg"),
+(6, "ropa4d.jpg"),
+(8, "1687920937522.jpg")
 
 
 INSERT INTO theme_db.Tickets(fecha,usuario_id)VALUES('2023-08-02',1);
 INSERT INTO theme_db.Productos_tickets(id_producto,precioFechaCompra,id_ticket,cantidad)VALUES(2,'2023-08-02',2,1);
+
+
