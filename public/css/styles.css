@@ -753,7 +753,7 @@ Pagina detalle producto
 .carritoTop {
   display: flex;
   justify-content: space-around;
-  width: 100vw;
+  width: 100%;
 }
 .carritoTop button {
   height: 50px;
@@ -803,7 +803,7 @@ Pagina detalle producto
   align-items: center;
   position: sticky;
   background-color: rgba(165, 165, 165, 80%);
-  width: 100vw;
+  width: 100%;
   bottom: 0;
   border-top: solid 1px gray;
   border-bottom: solid 1px gray;
@@ -1209,6 +1209,19 @@ Pagina detalle producto
   .edit-images img {
     width: 150px;
   }
+
+/* Carrito */
+.main-carrito{
+display: flex;
+justify-content: space-evenly;
+width: 100vw;
+}
+.carrito-container{
+  width: 50%;
+}
+.carrito-otros{
+ width: 50%;
+}
 
 }
 @media (min-width: 1279px) {

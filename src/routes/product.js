@@ -3,7 +3,7 @@ const router = express.Router()
 const product = require('../controllers/productController.js');
 const logDB = require('../middlewares/logDBMiddleware.js')
 const {uploadImgProducto} = require('../middlewares/fileUploadMiddleware.js')
-const { validarEdit,validarImagenSize } = require('../middlewares/validaciones.js');
+const { validarEditProduct,validarImagenSize } = require('../middlewares/validaciones.js');
 const {adminAcces} = require('../middlewares/authMiddleware.js');
 
 
@@ -18,7 +18,7 @@ router.get("/:id", product.detail);
 
 
 router.get('/:id/editform/', adminAcces,product.editForm)
-router.put('/:id/', adminAcces,uploadImgProducto.array("images"),validarImagenSize,validarEdit, logDB.logEdit,product.editItem)
+router.put('/:id/', adminAcces,uploadImgProducto.array("images"),validarImagenSize,validarEditProduct, logDB.logEdit,product.editItem)
 
 router.delete('/:id/delete',adminAcces,product.deleteProduct)
 

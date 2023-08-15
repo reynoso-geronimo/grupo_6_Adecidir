@@ -5,11 +5,12 @@
   <body>
     <%- include('../partials/header') %>
 
-    <main>
+    <main class="main-carrito">
+      <section class="carrito-container">
       <div class="carritoTop">
         <button>Carrito(3)</button><button>Guardados(0)</button>
       </div>
-      <section class="carro">
+      <div class="carro">
         <article class="carrito">
           <div>
             <img src="../images/buzo2.jpg" alt="producto" class="img-prod-cart" />
@@ -76,7 +77,11 @@
           <button class="boton-negro invertido">Seguir Comprando</button>
           <button class="boton-negro">Comprar Carrito</button>
         </div>
-      </section>
+      </div>
+    </section>
+    <section class="carrito-otros">
+      <h2 >Tambien te puede interesar</h2>
+    </section>
     </main>
     <%- include('../partials/footer.ejs') %>
   </body>

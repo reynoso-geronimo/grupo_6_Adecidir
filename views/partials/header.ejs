@@ -5,14 +5,12 @@
   </div>
   <div class="main-header-right-bar">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <% if (locals.isLogged===true) { %><a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a><% } %>
-    
-      <% if (locals.admin===true) { %>
-        <i id="userIcon" class="fa-solid fa-user-secret"></i>
+    <a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a>
+    <% if (locals.admin===true) { %>
+      <i id="userIcon" class="fa-solid fa-user-secret"></i>
       <% } else { %>
         <i id="userIcon" class="fa-solid fa-user"></i>
-      <% } %>
-   
+    <% } %>
   </div>
 
   <div class='login-register'>
@@ -32,5 +30,7 @@
     <form action="/" method="get"><input type="search" name="search-bar-header" id="search-bar-header-input"><button
         type="submit">Buscar</button></form>
   </div>
-   <script src="/js/header.js"></script>
+ 
 </header>
+
+<script src="/js/header.js"></script>
