@@ -19,52 +19,51 @@
           <% } %>
             <h1 class="tituloAdd">Editar Producto: <%= producto.nombre %>
             </h1>
-
-            <form class="formEdit" action="/product/<%=producto.id%>?_method=put" method="post"
+            
+           <form class="formEdit" action="/product/<%=producto.id%>?_method=put" method="post"
               enctype="multipart/form-data">
               <div class="edit-box">
                 <div class="formIzquierda">
                   <label for="nombre">Nombre:</label>
-                  <input type="text" name="name" id="nombre" value="<%= producto.nombre %>" />
+                  <input type="text" name="nombre" id="nombre" value="<%= producto.nombre %>" />
 
                   <label for="precio">Precio:</label>
-                  <input type="number" name="price" id="precio" value="<%= producto.precio %>" />
+                  <input type="number" name="precio" id="precio" value="<%= producto.precio %>" />
 
                   <label for="categorias">Categorías:</label>
-                  <select id="categorias" name="category">
+                  <select id="categorias" name="id_categoria">
                     <option value="opcion1" disabled>Seleccionar categoria</option>
-
                     <% categorias.forEach(categoria => { %>
-                      <option value="<%= categoria.nombre %>" <% if (producto.categoria== categoria.nombre ) { %>
+                      <option value="<%= categoria.id %>" <% if (producto.id_categoria === categoria.id) { %>
                         selected
-                        <% } %>>
+                      <% } %>>
                         <%= categoria.nombre %>
+                      </option>
                     <% }) %>
-                    
                   </select>
                   <label>Talles disponibles :</label>
                   <div class="editar-talle">
 
-                    <label for="talles">S <input type="number" id="talles" name="size"
-                        value="<%=producto.talles%>" /></label>
+                    <label for="talles">S <input type="number" id="talles" name="talleS"
+                        value="<%=producto.talleS%>" /></label>
 
 
 
-                    <label for="tallem">M<input type="number" id="tallem" name="size"
-                        value="<%=producto.tallem%>" /></label>
+                    <label for="tallem">M<input type="number" id="tallem" name="talleM"
+                        value="<%=producto.talleM%>" /></label>
 
 
 
-                    <label for="tallel">L<input type="number" id="tallel" name="size" value="<%= producto.tallel %>" />
+                    <label for="tallel">L<input type="number" id="tallel" name="talleL" value="<%= producto.talleL %>" />
                     </label>
 
 
-                    <label for="tallexl">XL<input type="number" id="tallexl" name="size"
-                        value="<%= producto.tallexl %>" /></label>
+                    <label for="tallexl">XL<input type="number" id="tallexl" name="talleXL"
+                        value="<%= producto.talleXL %>" /></label>
 
 
-                    <label for="tallexxl">XXL<input type="number" id="tallexxl" name="size"
-                        value="<%= producto.tallexxl %>" /></label>
+                    <label for="tallexxl">XXL<input type="number" id="tallexxl" name="talleXXL"
+                        value="<%= producto.talleXXL %>" /></label>
 
                   </div>
                 </div>
@@ -76,29 +75,34 @@
 
                 </div>
               </div>
-              <div class="edit-images">
-                <% producto.imagenes.forEach(element=> { %>
-                  <div class="edit-imagex-trash">
-                    <img src="/images/productos/<%=element %>" />
-                    <input type="checkbox" id="<%=element %>" name="imgDelete" value="<%=element %>" 
-                    <%= producto.imgDelete&&producto.imgDelete.includes(element)? "checked" : '' %> />
-                    <label for="<%=element %>"><i class="fa-solid fa-trash"></i></label>
-                  </div>
-                <% }) %>
-              </div>
+              
+          
+              <% if (producto.imagenes) { %>
+                <div class="edit-images">
+                  <% producto.imagenes.forEach(element => { %>
+                    <div class="edit-imagex-trash">
+                      <img src="/images/productos/<%= element.nombre %>" />
+                      <input type="checkbox" id="delete-<%= element.id %>" name="imgDelete" value="<%= element.id %>" />
+                      <label for="delete-<%= element.id %>"><i class="fa-solid fa-trash"></i></label>
+                    </div>
+                  <% }) %>
+                </div>
+              <% } %>
+              
               <div class="edit-nuevas-images">
-                <label for="new-images"><i class="fa-solid fa-cloud-arrow-up"></i>Subir nuevas imagenes</label>
+                <label for="new-images"><i class="fa-solid fa-cloud-arrow-up"></i>Subir nuevas imágenes</label>
                 <input multiple type="file" name="images" id="new-images" />
               </div>
 
-              <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
-                <% if (producto.borrado == false) { %>
-                  <label class="botonEliminar" for="eliminarItem">ELIMINAR ITEM</label>
-                  <% } %>
-                  <% if (producto.borrado == true) { %>
-                    <label class="botonAdd" for="altaItem">DAR DE ALTA</label>
-                    <% } %>
+              <span>
+                <button type="submit" class="botonAdd">ACTUALIZAR</button>
+                <% if (!producto.borrado) { %>
+                  <a class="botonEliminar" href="/product/<%= producto.id %>/delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">ELIMINAR ITEM</a>
+                <% } else { %>
+                  <a class="botonAdd" href="/product/<%= producto.id %>/alta">DAR DE ALTA</a>
+                <% } %>
               </span>
+              
 
             </form>
             

@@ -6,21 +6,25 @@ const {uploadImgProducto} = require('../middlewares/fileUploadMiddleware.js')
 const { validarEditProduct,validarImagenSize } = require('../middlewares/validaciones.js');
 const {adminAcces} = require('../middlewares/authMiddleware.js');
 
-
+// List
 router.get('/list/:categoria?', product.list)
 
 //Creacion de Producto
-router.get("/crearProducto",adminAcces ,product.crearProductoForm);
-router.post("/crearproducto",adminAcces,uploadImgProducto.array("imagenes"), product.save)
 
+router.get("/crearProducto", adminAcces, product.crearProductoForm);
+router.post("/crearproducto", adminAcces, uploadImgProducto.array("imagenes", 5), product.save);
 
+//Detalle
 router.get("/:id", product.detail);
 
+//Edit 
 
 router.get('/:id/editform/', adminAcces,product.editForm)
-router.put('/:id/', adminAcces,uploadImgProducto.array("images"),validarImagenSize,validarEditProduct, logDB.logEdit,product.editItem)
+router.put('/:id/', adminAcces,uploadImgProducto.array('images', 5),validarImagenSize,validarEditProduct ,logDB.logEdit,product.editItem)
 
-router.delete('/:id/delete',adminAcces,product.deleteProduct)
+
+// Delete (no funca)
+router.delete('/product/:id/delete', product.delete);
 
 router.put('/:id/alta',adminAcces,product.altaProduct)
 

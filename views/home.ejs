@@ -28,7 +28,7 @@
         <section class="productos-home">
           <% for( let index = 0; index < 5; index++ ) { %>
             <article>
-              <a href="/product/list/<%= categorias[index].nombre %>">
+              <a href="/product/list/<%= categorias[index].id %>">
                 <img src="/images/categorias/<%=categorias[index].imagen %>" alt="img-prod" />
                 <label>
                   <%= categorias[index].nombre %>

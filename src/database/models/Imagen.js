@@ -6,7 +6,10 @@ module.exports = (sequelize, dataTypes) => {
         primaryKey: true,
         autoIncrement: true
         },
-        idProducto:{
+        nombre: {
+            type:dataTypes.STRING
+        },
+        id_producto:{
          type: dataTypes.BIGINT
         }
         
@@ -21,7 +24,7 @@ module.exports = (sequelize, dataTypes) => {
     Imagen.associate = function(models){
         Imagen.belongsTo(models.Productos, {
             as: "Productos",
-            foreignKey: "idProductos"
+            foreignKey: "id_producto"
         })
     }
 

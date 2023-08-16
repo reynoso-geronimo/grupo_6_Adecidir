@@ -8,8 +8,8 @@
     <h1 class="tituloAdd">Crear producto</h1>
 
 
-<form class="formAdd" action="/product/crearproducto" method="post" enctype="multipart/form-data">
-    <div class="formIzquierda">
+    <form class="formAdd" action="/product/crearproducto" method="post" enctype="multipart/form-data">
+      <div class="formIzquierda">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre">
     
@@ -17,40 +17,29 @@
         <input type="number" id="precio" name="precio">
     
         <label for="categorias">Categorías:</label>
-        <select id="categorias" name="categorias">
-          <option disabled selected><h4>Seleccionar categoría</h4></option>
-          <% categorias.forEach(categoria => { %>
-            <option value="<%= categoria.nombre %>"><%= categoria.nombre %></option>
-          <% }) %>
-        </select>
-        <label>Talles disponibles :</label>
-                  <div class="editar-talle">
-
-                    <label for="talles">S <input type="number" id="talles" name="size" value=0 /></label>
-
-
-
-                    <label for="tallem">M<input type="number" id="tallem" name="size"value=0 /></label>
-
-
-
-                    <label for="tallel">L<input type="number" id="tallel" name="size"value=0 /></label>
-
-
-                    <label for="tallexl">XL<input type="number" id="tallexl" name="size" value=0 /></label>
-
-
-                    <label for="tallexxl">XXL<input type="number" id="tallexxl" name="size"value=0 /></label>
-
-                  </div>
+        <select id="categorias" name="id_categoria">
+         <option disabled selected><h4>Seleccionar categoría</h4></option>
+         <% categorias.forEach(categoria => { %>
+           <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+           <% }) %>
+       </select>
+       <label>Talles disponibles :</label>
+       <div class="editar-talle">
+         <label for="talleS">S <input type="number" id="talleS" name="talles" value="0" /></label>
+         <label for="talleM">M <input type="number" id="talleM" name="tallem" value="0" /></label>
+         <label for="talleL">L <input type="number" id="talleL" name="tallel" value="0" /></label>
+         <label for="talleXL">XL <input type="number" id="talleXL" name="tallexl" value="0" /></label>
+         <label for="talleXXL">XXL <input type="number" id="talleXXL" name="tallexxl" value="0" /></label>
+       </div>
+       
     </div>
     <div class="formDerecha">
         <label for="descripcion">Descripción:</label>
         <textarea id="descripcion" name="descripcion"></textarea>
   
         <label class="subirImagen">
-            <input class="input-img-crear" name="imagenes"  type="file" multiple/>
-            Subir imagenes <i class="fa-solid fa-images"></i>
+          <input class="input-img-crear" name="imagenes" type="file" multiple/>
+          Subir imagenes <i class="fa-solid fa-images"></i>
         </label>
         
         <button class="botonAdd" type="submit">Crear producto</button>

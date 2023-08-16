@@ -2,42 +2,37 @@
 <html lang="en">
 <%- include('../partials/head') %>
 
-  <body>
-    <%- include('../partials/header') %>
+<body>
+  <%- include('../partials/header') %>
 
-    <main >
-
-     <% if (producto.borrado == true) { %>
-      <h1>PRODUCTO DADO DE BAJA</h1>
-     <% } %>
-      <section class="product-container">
-        <div class="galeria">
-          <div class="imagenes-producto">
-            <% for( let index = 0; index < producto.imagenes.length; index++ ) { %>
-              <img src="../images/productos/<%= producto.imagenes[index]%>" alt="producto" class="img-detalle"  />
-            <% } %>
-           
-          </div>
-          <div class="radio-selector">
-            <% for( let index = 0; index < producto.imagenes.length; index++ ) { %>
-              <input type="radio" id="selector<%= index %>" name="radios" <% if (index==0) { %>
-               checked
-              <% } %> />
-            <label for="selector<%= index %>"></label>
-            <% } %>
-           
-          </div>
+  <main>
+    <% if (producto.borrado == true) { %>
+    <h1>PRODUCTO DADO DE BAJA</h1>
+    <% } %>
+    <section class="product-container">
+      <div class="galeria">
+        <div class="imagenes-producto">
+          <% producto.Imagenes.forEach(imagen => { %>
+          <img src="/images/productos/<%= imagen.nombre %>" alt="producto" class="img-detalle" />
+          <% }) %>
         </div>
-        <div class="info-product">
-          <h2>
-           <%= producto.nombre %>
-            <a href="a">
-              <i class="fa-regular fa-star"></i>
-            </a>
-            <a href="a" class="share"
-              ><i class="fa-solid fa-share-nodes"></i
-            ></a>
-          </h2>
+        <div class="radio-selector">
+          <% producto.Imagenes.forEach((imagen, index) => { %>
+          <input type="radio" id="selector<%= index %>" name="radios" <%= index === 0 ? 'checked' : '' %> />
+          <label for="selector<%= index %>"></label>
+          <% }) %>
+        </div>
+      </div>
+      <div class="info-product">
+        <h2>
+          <%= producto.nombre %>
+          <a href="a">
+            <i class="fa-regular fa-star"></i>
+          </a>
+          <a href="a" class="share">
+            <i class="fa-solid fa-share-nodes"></i>
+          </a>
+        </h2>
 
           <p class="description">
             <%= producto.descripcion %>
