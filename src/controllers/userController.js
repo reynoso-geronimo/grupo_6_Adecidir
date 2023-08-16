@@ -101,8 +101,8 @@ module.exports = {
     const errors = validationResult(req)
     if (!errors.isEmpty()) 
     {
-      console.log(errors);
-      return res.render("user/profileEdit",{ usuario: req.session.usuarioLogeado }, { errors: errors.mapped()},)
+    
+      return res.render("user/profileEdit",{ usuario: req.session.usuarioLogeado ,  errors: errors.mapped()})
 
     }
     let avatar

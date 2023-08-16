@@ -40,7 +40,7 @@ module.exports ={
       ],
       validarEditUsuario:[
         check('nombre').notEmpty().withMessage('Debes completar el campo de nombre').trim().escape(),
-        check('apellido').notEmpty().withMessage('Debes completar el campo de nombre').trim().escape(), 
+        check('apellido').notEmpty().withMessage('Debes completar el campo de apellido').trim().escape(), 
         check('avatar').custom((value,{req})=>{
           if(req.fileValidationError){
             throw new Error(req.fileValidationError)

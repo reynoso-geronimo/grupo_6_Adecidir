@@ -26,7 +26,7 @@ router.post("/register", logged,uploadImgAvatar.single('avatar'),validarImagenSi
 
 router.get("/profile", userAcess,userController.perfil);
 router.get("/profile/edit", userAcess,userController.perfilEdit);
-router.post("/profile/edit/", userAcess,uploadImgAvatar.single('avatar'),validarEditUsuario,userController.processEdit);
+router.post("/profile/edit/", userAcess,uploadImgAvatar.single('avatar'),validarImagenSize,validarEditUsuario,userController.processEdit);
 router.get("/profile/edit/password", userAcess,userController.perfilEditPassword);
 router.post("/profile/edit/password", userAcess,userController.processEditPassword);
 router.get("/admin",adminAcces, userController.adminPanel);
