@@ -97,7 +97,7 @@
               <span>
                 <button type="submit" class="botonAdd">ACTUALIZAR</button>
                 <% if (!producto.borrado) { %>
-                  <a class="botonEliminar" href="/product/<%= producto.id %>/delete" onclick="return confirm('¿Estás seguro de que deseas eliminar este producto?')">ELIMINAR ITEM</a>
+                  <a class="botonEliminar" href="/product/<%= producto.id %>/delete" >ELIMINAR ITEM</a>
                 <% } else { %>
                   <a class="botonAdd" href="/product/<%= producto.id %>/alta">DAR DE ALTA</a>
                 <% } %>
