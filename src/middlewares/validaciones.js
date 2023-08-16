@@ -21,8 +21,32 @@ module.exports ={
         })
       ],
       validarCrearProducto:[],
-      validarRegistro:[],
-      validarLogin:[],
-      validarEditUsuario:[]
+      validarRegistro:[
+        check('nombre').notEmpty().withMessage('Debes completar el campo de nombre').trim().escape(),
+        check('apellido').notEmpty().withMessage('Debes completar el campo de apellido').trim().escape(),
+        check('email').isEmail().withMessage('Debes completar el campo con un mail valido').trim().escape(),
+        check('clave').notEmpty().withMessage('Debes elegir una contraseña').trim().escape(),
+        check('avatar').custom((value,{req})=>{
+          if(req.fileValidationError){
+            throw new Error(req.fileValidationError)
+          }
+          return true
+        })
+
+      ],
+      validarLogin:[
+        check('email').isEmail().withMessage('Debes completar el campo con un mail valido').trim().escape(),
+        check('password').notEmpty().withMessage('Debes ingresar tu contraseña').trim().escape(),
+      ],
+      validarEditUsuario:[
+        check('nombre').notEmpty().withMessage('Debes completar el campo de nombre').trim().escape(),
+        check('apellido').notEmpty().withMessage('Debes completar el campo de nombre').trim().escape(), 
+        check('avatar').custom((value,{req})=>{
+          if(req.fileValidationError){
+            throw new Error(req.fileValidationError)
+          }
+          return true
+        })
+      ]
 
 }

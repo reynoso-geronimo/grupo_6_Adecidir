@@ -13,6 +13,11 @@ module.exports = {
   },
 
   loginProcess: async function (req, res) {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      return res.render("user/login", { errors: errors.mapped()})
+
+    }
     const usuario = await db.Usuarios.findOne({ where: { email: req.body.email } })
     if (!usuario) return res.render("user/login", { errors: { datosIncorrectos: { msg: "Datos Incorrectos" } } });
     try {
@@ -46,6 +51,12 @@ module.exports = {
   },
   // Registro
   processRegister: async function (req, res) {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      return res.render("user/register", { errors: errors.mapped()})
+
+    }
+
     const userInDb = await db.Usuarios.findOne({ where: { email: req.body.email } })
     if (userInDb) {
 
@@ -87,6 +98,13 @@ module.exports = {
     return res.render("user/profileEdit", { usuario: req.session.usuarioLogeado });
   },
   processEdit: async function (req, res) {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) 
+    {
+      console.log(errors);
+      return res.render("user/profileEdit",{ usuario: req.session.usuarioLogeado }, { errors: errors.mapped()},)
+
+    }
     let avatar
     if (req.file) {
       avatar = req.file.filename
