@@ -39,6 +39,9 @@ VALUES
 (6, "ropa4b.jpg"),
 (6, "ropa4c.jpg"),
 (6, "ropa4d.jpg"),
+(7, "perfume1.jpg"),
+(7, "perfume1a.jpg"),
+(7, "perfume1b.jpg"),
 (8, "1687920937522.jpg")
 
 
