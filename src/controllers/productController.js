@@ -147,7 +147,6 @@ detail : async (req, res) => {
         talleL,
         talleXL,
         talleXXL,
-        image: imageFilenames
       });
         
 
