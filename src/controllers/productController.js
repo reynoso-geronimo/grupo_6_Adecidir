@@ -77,7 +77,8 @@ detail : async (req, res) => {
       
       // aca accedo al producto por su id
       const producto = await Productos.findByPk(productId);
-  
+      const imageFilenames = req.files ? req.files.map(file => file.filename) : [];
+
      /* if (!producto) {
         aca se le puede agregar algo para el error
       } */
@@ -93,15 +94,12 @@ detail : async (req, res) => {
         }
       }
   
-      // esto todavia no funciona  bien pero se arregla
-      if (req.files && req.files.images) {
-        const images = Array.isArray(req.files.images)
-          ? req.files.images
-          : [req.files.images];
-  
-        for (const image of images) {
-          await Imagenes.create({ nombre: image.filename, id_producto: producto.id });
-        }
+      if (imageFilenames.length > 0) {
+        const imagenes = imageFilenames.map(filename => ({
+          nombre: filename,
+          id_producto: producto.id
+        }));
+        await Imagenes.bulkCreate(imagenes)
       }
   
       // update
@@ -119,7 +117,7 @@ detail : async (req, res) => {
   crearProductoForm: async function (req, res) {
     try {
       const categorias = await Categorias.findAll();
-      return res.render("products/crearProducto", { categorias : categorias });
+      return res.render("products/crearProducto", { categorias : categorias});
     } catch (error) {
       console.log(error);
       // aca se le puede agregar algo para el error
@@ -159,7 +157,7 @@ detail : async (req, res) => {
         await Imagenes.bulkCreate(imagenes)
       }
   
-      res.redirect('/')
+      res.redirect(`/product/${producto.id}`)
     } catch (error) {
       console.log(error)
       // aca se le puede agregar algo para el error
