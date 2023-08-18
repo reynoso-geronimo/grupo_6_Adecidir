@@ -25,6 +25,8 @@ CREATE TABLE `Productos`(
     `talleXL` INT NOT NULL,
     `talleXXL` INT NOT NULL,
     `talleUnico` INT NOT NULL,
+    `createdAt` DATETIME,
+    `updatedAt` DATETIME,
     `deletedAT` DATETIME
 );
 CREATE TABLE `Categorias`(
