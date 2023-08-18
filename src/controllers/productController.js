@@ -55,7 +55,8 @@ detail : async (req, res) => {
 //EDICION DE PRODUCTO
   editForm: async function (req, res) {
     try {
-      const producto = await Productos.findByPk(req.params.id,{paranoid:false});
+      const producto = await Productos.findByPk(req.params.id,{include: [{ model: db.Imagenes, as: "Imagenes" }],
+      paranoid: false});
       const categorias = await Categorias.findAll();
       
       /* if (!producto) {
