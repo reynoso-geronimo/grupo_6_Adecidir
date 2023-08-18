@@ -20,7 +20,23 @@ module.exports ={
           return true
         })
       ],
-      validarCrearProducto:[],
+      validarCrearProducto:[
+        check('nombre').notEmpty().withMessage('El nombre del producto es obligatorio.').trim().escape(),
+        check('precio').notEmpty().withMessage('El precio del producto es obligatorio.').isNumeric().withMessage('El precio debe ser un valor numérico.').trim().escape(),
+        check('id_categoria').notEmpty().withMessage('Debes seleccionar una categoría.').trim().escape(),
+        check('talles').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('tallem').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('tallel').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('tallexl').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('tallexxl').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('descripcion').notEmpty().withMessage('La descripción del producto es obligatoria.').trim().escape(),
+        check('imagenes').custom((value, { req }) => {
+          if (!req.files || req.files.length === 0) {
+            throw new Error('Debes subir al menos una imagen del producto.');
+          }
+          return true;
+        }),
+      ],
       validarRegistro:[
         check('nombre').notEmpty().withMessage('Debes completar el campo de nombre').trim().escape(),
         check('apellido').notEmpty().withMessage('Debes completar el campo de apellido').trim().escape(),

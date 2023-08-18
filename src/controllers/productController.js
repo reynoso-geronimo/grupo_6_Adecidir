@@ -125,6 +125,11 @@ detail : async (req, res) => {
   },
   save: async (req, res) => {
     try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+      }
+
       const imageFilenames = req.files ? req.files.map(file => file.filename) : [];
   
       const talleS = req.body.talles || 0;

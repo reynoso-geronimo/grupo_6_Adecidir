@@ -3,7 +3,7 @@ const router = express.Router()
 const product = require('../controllers/productController.js');
 const logDB = require('../middlewares/logDBMiddleware.js')
 const {uploadImgProducto} = require('../middlewares/fileUploadMiddleware.js')
-const { validarEditProduct,validarImagenSize } = require('../middlewares/validaciones.js');
+const { validarEditProduct,validarImagenSize, validarCrearProducto } = require('../middlewares/validaciones.js');
 const {adminAcces} = require('../middlewares/authMiddleware.js');
 
 // List
@@ -12,7 +12,7 @@ router.get('/list/:categoria?', product.list)
 //Creacion de Producto
 
 router.get("/crearProducto", adminAcces, product.crearProductoForm);
-router.post("/crearproducto", adminAcces, uploadImgProducto.array("imagenes", 5), product.save);
+router.post("/crearproducto", adminAcces, uploadImgProducto.array("imagenes", 5),validarCrearProducto, product.save);
 
 //Detalle
 router.get("/:id", product.detail);
