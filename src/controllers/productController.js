@@ -166,15 +166,12 @@ detail : async (req, res) => {
 // no funciona... por ahora 
  delete: async (req, res) => {
   try {
-    const productoId = req.params.id;
-
-    const producto = await Productos.findByPk(productoId);
-
-    if (!producto) {
-      return res.status(404).json({ error: 'Producto no encontrado' });
-    }
-
-    await producto.destroy();
+    
+    await Productos.destroy({
+      where: {
+        id: req.params.id
+      }
+    });
 
     res.redirect('/');
   } catch (error) {

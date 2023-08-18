@@ -24,7 +24,7 @@ router.put('/:id/', adminAcces,uploadImgProducto.array('images', 5),validarImage
 
 
 // Delete (no funca)
-router.delete('/product/:id/delete', product.delete);
+router.delete('/:id/delete', product.delete);
 
 router.put('/:id/alta',adminAcces,product.altaProduct)
 
