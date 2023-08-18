@@ -55,7 +55,7 @@ detail : async (req, res) => {
 //EDICION DE PRODUCTO
   editForm: async function (req, res) {
     try {
-      const producto = await Productos.findByPk(req.params.id);
+      const producto = await Productos.findByPk(req.params.id,{paranoid:false});
       const categorias = await Categorias.findAll();
       
       /* if (!producto) {
@@ -179,12 +179,21 @@ detail : async (req, res) => {
     }
 },
 
-// y esto no lo vi por ahora
-  altaProduct : function (req,res) {
-    const productoEncontrado = productos.find((row) => row.id == req.params.id);
-    productoEncontrado.borrado = false
-    fs.writeFileSync(path.resolve(__dirname, "../database/productos.json"), JSON.stringify(productos, null, 2))
-    return res.redirect(req.get('referer')) },
+
+  altaProduct :async function (req,res) {
+    try {
+    
+      await Productos.restore({
+        where: {
+          id: req.params.id
+        }
+      });
+  
+      return res.redirect(req.get('referer'))
+    } catch (error) {
+      console.log(error);
+      }
+    },
 
 };
 

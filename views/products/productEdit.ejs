@@ -95,13 +95,13 @@
               </div>
 
               <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
-                <!-- <% if (producto.borrado == false) { %>
+               <% if (!producto.deletedAT) { %>
                   <label class="botonEliminar" for="eliminarItem">ELIMINAR ITEM</label>
                   <% } %>
-                  <% if (producto.borrado == true) { %>
+                  <% if (producto.deletedAT) { %>
                     <label class="botonAdd" for="altaItem">DAR DE ALTA</label>
-                    <% } %> -->
-                    <label class="botonEliminar" for="eliminarItem">ELIMINAR ITEM</label>
+                    <% } %> 
+                   
                 
               </span>
 
