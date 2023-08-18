@@ -35,13 +35,13 @@
 
           <article>
            <div class="row-img-item">
-              <img src="/images/productos/<%=producto.imagenes[0] %>" />
+            <img src="/images/productos/<%=producto.Imagenes[0].nombre %>" />
             </div>
             <p><%= producto.nombre %></p>
             <p>$<%= producto.precio %></p>
             <p><%= producto.categoria %></p>
             <p>
-              <% if (producto.borrado) { %> BAJA <% } else { %> ACTIVO <% } %>
+              <% if (producto.deletedAT) { %> BAJA <% } else { %> ACTIVO <% } %>
             </p>
             <div class="row-acciones-items">
               <a href="/product/<%= producto.id %>"><i class="fa-solid fa-eye"></i>VER</a>

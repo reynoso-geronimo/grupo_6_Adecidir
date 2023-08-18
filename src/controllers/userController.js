@@ -85,10 +85,11 @@ module.exports = {
     }
     return res.redirect("login");
   },
-  adminPanel: function (req, res) {
-    const productos = JSON.parse(
-      fs.readFileSync(
-        path.resolve(__dirname, "../database/productos.json"), "utf-8"));
+  adminPanel:async  function (req, res) {
+    const productos = await db.Productos.findAll({
+      include: [{ model: db.Imagenes, as: "Imagenes" }],
+      paranoid: false
+    });
     return res.render("user/admin", { productos: productos });
   },
   perfil: function (req, res) {
