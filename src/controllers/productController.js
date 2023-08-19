@@ -3,9 +3,9 @@ const path = require("path");
 const { validationResult } = require('express-validator')
 const db = require('../database/models')
 
-const Categorias = db.Categorias; 
+const Categorias = db.Categorias;
 const Productos = db.Productos;
-const Imagenes = db.Imagenes; 
+const Imagenes = db.Imagenes;
 
 
 const productDetailController = {
@@ -13,7 +13,7 @@ const productDetailController = {
     try {
       const categoriaId = req.params.categoria;
       let productos = [];
-  
+
       if (categoriaId) {
         productos = await Productos.findAll({
           where: { id_categoria: categoriaId },
@@ -24,7 +24,7 @@ const productDetailController = {
           include: [{ model: Imagenes, as: "Imagenes" }]
         });
       }
-  
+
       res.render("products/productList", { productos });
     } catch (error) {
       console.log(error);
@@ -33,36 +33,38 @@ const productDetailController = {
   },
 
 
-detail : async (req, res) => {
-  try {
+  detail: async (req, res) => {
+    try {
       const producto = await Productos.findByPk(req.params.id, {
-          include: [{
-              model: Imagenes,
-              as: 'Imagenes'
-          }]
+        include: [{
+          model: Imagenes,
+          as: 'Imagenes'
+        }]
       });
 
       if (!producto) {
-          return res.status(404).send('Producto no encontrado');
+        return res.status(404).send('Producto no encontrado');
       }
 
       res.render("products/productDetail", { producto });
-  } catch (error) {
+    } catch (error) {
       console.log(error);
       // aca se le puede agregar algo para el error
-  }
-},
-//EDICION DE PRODUCTO
+    }
+  },
+  //EDICION DE PRODUCTO
   editForm: async function (req, res) {
     try {
-      const producto = await Productos.findByPk(req.params.id,{include: [{ model: db.Imagenes, as: "Imagenes" }],
-      paranoid: false});
+      const producto = await Productos.findByPk(req.params.id, {
+        include: [{ model: db.Imagenes, as: "Imagenes" }],
+        paranoid: false
+      });
       const categorias = await Categorias.findAll();
-      
+
       /* if (!producto) {
         aca se le puede agregar algo para el error
       } */
-      
+
       return res.render("products/productEdit", { producto, categorias });
     } catch (error) {
       console.log(error);
@@ -74,27 +76,29 @@ detail : async (req, res) => {
     try {
       const productId = req.params.id;
       const updatedProduct = req.body;
-  
-      
+
+
       // aca accedo al producto por su id
       const producto = await Productos.findByPk(productId);
       const imageFilenames = req.files ? req.files.map(file => file.filename) : [];
 
-     /* if (!producto) {
-        aca se le puede agregar algo para el error
-      } */
-  
+      /* if (!producto) {
+         aca se le puede agregar algo para el error
+       } */
+
       // esto todavia no funciona  bien pero se arregla
       if (req.body.imgDelete) {
         const imagesToDelete = Array.isArray(req.body.imgDelete)
           ? req.body.imgDelete
           : [req.body.imgDelete];
-  
-        for (const imageId of imagesToDelete) {
-          await Imagenes.destroy({ where: { id: imageId } });
+
+        for (const imageNombre of imagesToDelete) {
+          await Imagenes.destroy({ where: { nombre: imageNombre } });
+          fs.unlinkSync(path.resolve(__dirname, '../../public/images/productos/' + imageNombre))
+
         }
       }
-  
+
       if (imageFilenames.length > 0) {
         const imagenes = imageFilenames.map(filename => ({
           nombre: filename,
@@ -102,23 +106,23 @@ detail : async (req, res) => {
         }));
         await Imagenes.bulkCreate(imagenes)
       }
-  
+
       // update
       await producto.update(updatedProduct);
-  
+
       return res.redirect(`/product/${producto.id}`); // para que el redirect te mande al producto 
     } catch (error) {
       console.log(error);
       // aca se le puede agregar algo para el error
     }
   },
-  
-  
-// CREACION DE PRODUCTO
+
+
+  // CREACION DE PRODUCTO
   crearProductoForm: async function (req, res) {
     try {
       const categorias = await Categorias.findAll();
-      return res.render("products/crearProducto", { categorias : categorias});
+      return res.render("products/crearProducto", { categorias: categorias });
     } catch (error) {
       console.log(error);
       // aca se le puede agregar algo para el error
@@ -132,15 +136,15 @@ detail : async (req, res) => {
       }
 
       const imageFilenames = req.files ? req.files.map(file => file.filename) : [];
-  
+
       const talleS = req.body.talles || 0;
       const talleM = req.body.tallem || 0;
       const talleL = req.body.tallel || 0;
       const talleXL = req.body.tallexl || 0;
       const talleXXL = req.body.tallexxl || 0;
-  
+
       const { nombre, precio, id_categoria, descripcion } = req.body;
-  
+
       const producto = await Productos.create({
         nombre,
         precio,
@@ -152,9 +156,9 @@ detail : async (req, res) => {
         talleXL,
         talleXXL,
       });
-        
 
-  
+
+
       if (imageFilenames.length > 0) {
         const imagenes = imageFilenames.map(filename => ({
           nombre: filename,
@@ -162,44 +166,44 @@ detail : async (req, res) => {
         }));
         await Imagenes.bulkCreate(imagenes)
       }
-  
+
       res.redirect(`/product/${producto.id}`)
     } catch (error) {
       console.log(error)
       // aca se le puede agregar algo para el error
     }
   },
-// no funciona... por ahora 
- delete: async (req, res) => {
-  try {
-    
-    await Productos.destroy({
-      where: {
-        id: req.params.id
-      }
-    });
-
-    res.redirect('/');
-  } catch (error) {
-    console.log(error);
-    }
-},
-
-
-  altaProduct :async function (req,res) {
+  // no funciona... por ahora 
+  delete: async (req, res) => {
     try {
-    
+
+      await Productos.destroy({
+        where: {
+          id: req.params.id
+        }
+      });
+
+      res.redirect('/');
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+
+  altaProduct: async function (req, res) {
+    try {
+
       await Productos.restore({
         where: {
           id: req.params.id
         }
       });
-  
+
       return res.redirect(req.get('referer'))
     } catch (error) {
       console.log(error);
-      }
-    },
+    }
+  },
 
 };
 

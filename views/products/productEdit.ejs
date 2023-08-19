@@ -82,7 +82,7 @@
                   <% producto.Imagenes.forEach(element => { %>
                     <div class="edit-imagex-trash">
                       <img src="/images/productos/<%= element.nombre %>" />
-                      <input type="checkbox" id="delete-<%= element.id %>" name="imgDelete" value="<%= element.id %>" />
+                      <input type="checkbox" id="delete-<%= element.id %>" name="imgDelete" value="<%= element.nombre %>" />
                       <label for="delete-<%= element.id %>"><i class="fa-solid fa-trash"></i></label>
                     </div>
                   <% }) %>
