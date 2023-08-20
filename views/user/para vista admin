@@ -39,7 +39,7 @@
             </div>
             <p><%= producto.nombre %></p>
             <p>$<%= producto.precio %></p>
-            <p><%= producto.categoria %></p>
+            <p><%= producto.Categorias.nombre %></p>
             <p>
               <% if (producto.deletedAT) { %> BAJA <% } else { %> ACTIVO <% } %>
             </p>
