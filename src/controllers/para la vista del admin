@@ -87,9 +87,12 @@ module.exports = {
   },
   adminPanel:async  function (req, res) {
     const productos = await db.Productos.findAll({
-      include: [{ model: db.Imagenes, as: "Imagenes" }],
+      include: [
+        { model: db.Imagenes, as: "Imagenes" },
+        { model: db.Categorias, as: "Categorias" } 
+      ],
       paranoid: false
-    });
+    })
     return res.render("user/admin", { productos: productos });
   },
   perfil: function (req, res) {
