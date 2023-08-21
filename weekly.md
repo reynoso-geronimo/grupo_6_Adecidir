@@ -179,3 +179,6 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
 
 *Entre todos:
     -Que hizo en estos días: diagrama de base de datos
+
+# 12 de agosto del 2023
+Cada uno se encargó de terminar sus tareas, complear y corregir lo que había hecho, en el caso de que fuera necesario, y seguir avanzando con la teoría de la clase para no quedarse atrás.
