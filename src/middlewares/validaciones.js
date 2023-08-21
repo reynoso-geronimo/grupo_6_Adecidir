@@ -21,7 +21,11 @@ module.exports ={
         })
       ],
       validarCrearProducto:[
-        check('nombre').notEmpty().withMessage('El nombre del producto es obligatorio.').trim().escape(),
+        check('nombre')
+        .notEmpty().withMessage('El nombre del producto es obligatorio.')
+        .isLength({ min: 5 }).withMessage('El nombre debe tener al menos 5 caracteres.')
+        .trim()
+        .escape(),
         check('precio').notEmpty().withMessage('El precio del producto es obligatorio.').isNumeric().withMessage('El precio debe ser un valor numérico.').trim().escape(),
         check('id_categoria').notEmpty().withMessage('Debes seleccionar una categoría.').trim().escape(),
         check('talles').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
@@ -29,7 +33,11 @@ module.exports ={
         check('tallel').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
         check('tallexl').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
         check('tallexxl').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('descripcion').notEmpty().withMessage('La descripción del producto es obligatoria.').trim().escape(),
+        check('descripcion')
+        .notEmpty().withMessage('La descripción del producto es obligatoria.')
+        .isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres.')
+        .trim()
+        .escape(),
         check('imagenes').custom((value, { req }) => {
           if (!req.files || req.files.length === 0) {
             throw new Error('Debes subir al menos una imagen del producto.');
