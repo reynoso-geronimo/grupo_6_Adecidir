@@ -84,17 +84,16 @@
         A medida que avanza el curso, el proyecto y los conocimientos técnicos a aplicar nos damos cuenta que debemos replantear ciertas conductas para seguir entregando en tiempo y forma y seguir mejorando como personas y como profesionales. Comunicación, organización y el establecimiento de reglas claras para la división de tareas son algunas de las cosas que tenemos que seguir mejorando como equipo. 
 
 
-    ## Dinámica de la estrella de mar
+    ## Dinámica de la estrella de mar   
+        1.Comenzar a hacer: por el momento no tenemos que comenzar a hacer nada nuevo, sino mantener los cambios positivos que pudimos destacar en las restrospectivas anteriores.
         
-    1.Comenzar a hacer: por el momento no tenemos que comenzar a hacer nada nuevo, sino mantener los cambios positivos que pudimos destacar en las restrospectivas anteriores.
+        2.Hacer más: debemos comprometernos más entre nosotros, es decir, por ejemplo, si uno no puede asistir a la llamada semanal avisar de antemano para que el resto no se quede esperando y, si uno uno semana no pudo estar en la llamada, que se asegure de la siguiente.
     
-    2.Hacer más: debemos comprometernos más entre nosotros, es decir, por ejemplo, si uno no puede asistir a la llamada semanal avisar de antemano para que el resto no se quede esperando y, si uno uno semana no pudo estar en la llamada, que se asegure de la siguiente.
-   
-    3.Continuar haciendo: mantener una comunicación sincera y a tiempo real
-   
-    4.Hacer menos: subir el proyecto a último momento al repositorio.
-   
-    5.Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).
+        3.Continuar haciendo: mantener una comunicación sincera y a tiempo real
+    
+        4.Hacer menos: subir el proyecto a último momento al repositorio.
+    
+        5.Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).
 
 # RETRO SPRINT 5
     ##Conclusiones
@@ -102,13 +101,27 @@
 
 
      ## Dinámica de la estrella de mar
+        1.Comenzar a hacer: por el momento no tenemos que comenzar a hacer nada nuevo, sino mantener los cambios positivos que pudimos destacar en las restrospectivas anteriores.
         
-    1.Comenzar a hacer: por el momento no tenemos que comenzar a hacer nada nuevo, sino mantener los cambios positivos que pudimos destacar en las restrospectivas anteriores.
+        ##2.Hacer más: debemos comprometernos más entre nosotros, es decir, por ejemplo, si uno no puede asistir a la llamada semanal avisar de antemano para que el resto no se quede esperando y, si uno uno semana no pudo estar en la llamada, que se asegure de la siguiente.
     
-    2.Hacer más: debemos comprometernos más entre nosotros, es decir, por ejemplo, si uno no puede asistir a la llamada semanal avisar de antemano para que el resto no se quede esperando y, si uno uno semana no pudo estar en la llamada, que se asegure de la siguiente.
-   
-    3.Continuar haciendo: mantener una comunicación sincera y a tiempo real
-   
-    4.Hacer menos: subir el proyecto a último momento al repositorio.
-   
-    5.Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).
+        3.Continuar haciendo: mantener una comunicación sincera y a tiempo real
+    
+        4.Hacer menos: subir el proyecto a último momento al repositorio.
+    
+        5.Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).
+
+# RETRO SPRINT 6
+    ##Conclusiones
+        Cada vez hay menos para hablar y más para hacer. Durante el recorrido de este proyecto nos fuimos conociendo, abriendo entre nosotros y conociendo cada vez más, lo que nos permitió saber qué compañero convenía para qué tarea decidiéndolo a partir de sus aptitudes, ventajas y desventajas. Esto generó un buen clima de trabajo ya que nos permitía saber.  
+
+     ## Dinámica de la estrella de mar
+        1.Comenzar a hacer: Por ahora, no tenemos que empezar nada nuevo, sino mantener los cambios positivos que hemos destacado en revisiones anteriores.
+
+        2.Hacer más: tenemos que seguir avanzo con el proyecto, la dinámica organizativa que venimos manejando y la comunicación que logramos alcanzar con mucho esfuerzo, compromiso y dedicación.
+
+        3. Continuar haciendo: Tenemos que mantener compromisos entre nosotros, preservando una comunicación honesta y en tiempo real.
+
+        4. Hacer menos: subir el proyecto a último momento al repositorio.
+
+        5: Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).
