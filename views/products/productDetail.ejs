@@ -40,7 +40,7 @@
           <div class="product-talle-select">
             <p class="price">$<%= producto.precio %></p>
             <h3>Seleccione un talle</h3>
-            <form action="/user/cart" method="post">
+           
               <div >
                 <div class="radio-button">
                   <input type="radio" id="radio1" name="talle" value="s" />
@@ -55,15 +55,9 @@
                   <label for="radio5">XXL</label>
                 </div>
 
-                <button type="submit" class="boton-negro">
-                  <% if (locals.isLogged) { %>
-                    Agregar al Carrito
-                    <% } else { %>
-                     Inicia Sesion Para agregar al carrito
-                  <% } %>
-                </button>
+                <button id="addCart" class="boton-negro">Agregar al Carrito</button>
               </div>
-            </form>
+           
             <% if (locals.admin===true) { %>
             <a href="/product/<%=producto.id%>/editform/"><button>EDITAR PRODUCTO</button></a>
             <% } %>
