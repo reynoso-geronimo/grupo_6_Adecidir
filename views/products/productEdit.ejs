@@ -48,23 +48,24 @@
                   </label>
                   <div class="editar-talle">
                     <!-- ver script -->
-                    <label for="talles">S <input type="number" id="talleS" name="talles" value="0" /></label>
-                    <label for="tallem">M <input type="number" id="talleM" name="tallem" value="0" /></label>
-                    <label for="tallel">L <input type="number" id="talleL" name="tallel" value="0" /></label>
-                    <label for="tallexl">XL <input type="number" id="talleXL" name="tallexl" value="0" /></label>
-                    <label for="tallexxl">XXL <input type="number" id="talleXXL" name="tallexxl" value="0" /></label>
+                    <label for="talles">S <input type="number" id="talles" name="talleS"
+                        value="<%=producto.talleS%>" /></label>
+                    <label for="tallem">M<input type="number" id="tallem" name="talleM"
+                        value="<%=producto.talleM%>" /></label>
+                    <label for="tallel">L<input type="number" id="tallel" name="talleL"
+                        value="<%= producto.talleL %>" />
+                    </label>
+                    <label for="tallexl">XL<input type="number" id="tallexl" name="talleXL"
+                        value="<%= producto.talleXL %>" /></label>
+                    <label for="tallexxl">XXL<input type="number" id="tallexxl" name="talleXXL"
+                        value="<%= producto.talleXXL %>" /></label>
                   </div>
                 </div>
                 <div class="formDerecha">
                   <label for="descripcion">Descripción:</label>
                   <textarea name="desc" id="editDescripcion"><%= producto.descripcion %></textarea>
-
-
-
                 </div>
               </div>
-
-
               <% if (producto.Imagenes) { %>
                 <div class="edit-images">
                   <% producto.Imagenes.forEach(element=> { %>
@@ -83,21 +84,16 @@
                     <input multiple type="file" name="images" id="new-images" />
                   </div>
 
-                  <span><button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
+                  <span>
+                    <button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
                     <% if (!producto.deletedAT) { %>
                       <label class="botonEliminar" for="eliminarItem">ELIMINAR ITEM</label>
                       <% } %>
                         <% if (producto.deletedAT) { %>
                           <label class="botonAdd" for="altaItem">DAR DE ALTA</label>
                           <% } %>
-
-
                   </span>
-
-
-
             </form>
-
             <form method="POST" action="/product/<%=producto.id%>/delete?_method=DELETE">
               <button hidden id="eliminarItem" type="submit">ELIMINAR ITEM</button>
             </form>
