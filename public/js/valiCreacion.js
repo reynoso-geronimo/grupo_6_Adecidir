@@ -2,12 +2,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('.formAdd')
     const categoriasSelect = document.getElementById('categorias')
   
-    // esto quedo medio raro (en breve lo arreglo) 
+    // listo, ya arregle esto
     categoriasSelect.addEventListener('change', () => {
+        const defaultOption = categoriasSelect.querySelector('option[value=""]')
       if (categoriasSelect.value === '') {
         categoriasSelect.classList.add('default-option')
       } else {
         categoriasSelect.classList.remove('default-option')
+          if (defaultOption) {
+          defaultOption.disabled = true
+        }
       }
     }) 
   
