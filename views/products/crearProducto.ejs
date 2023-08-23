@@ -11,21 +11,23 @@
         <form class="formAdd" action="/product/crearproducto" method="post" enctype="multipart/form-data">
           <div class="formIzquierda">
             <label for="nombre">Nombre:</label>
+            <span class="error-message" id="error-nombre"></span>
             <input type="text" id="nombre" name="nombre">
-
+    
+        
             <label for="precio">Precio:</label>
+            <span class="error-message" id="error-precio"></span>
             <input type="number" id="precio" name="precio">
 
             <label for="categorias">Categorías:</label>
             <select id="categorias" name="id_categoria">
-              <option disabled selected>
-                <h4>Seleccionar categoría</h4>
-              </option>
-              <% categorias.forEach(categoria=> { %>
-                <option value="<%= categoria.id %>">
-                  <%= categoria.nombre %>
-                </option>
-                <% }) %>
+              <option  value="" class="default-option">Seleccione una categoría</option>
+              <% categorias.forEach(categoria => { %>
+              <option value="<%= categoria.id %>"><%= categoria.nombre %></option>
+              <% }) %>
+            </select>
+
+
             </select>
             <label>Talles disponibles :</label>
             <label class="switch">
@@ -41,22 +43,35 @@
               <label for="tallexxl">XXL <input type="number" id="talleXXL" name="tallexxl" value="0" /></label>
             </div>
 
+            <span class="error-message" id="error-talles"></span>
+            <span class="error-message" id="error-tallem"></span>
+            <span class="error-message" id="error-tallel"></span>
+            <span class="error-message" id="error-tallexl"></span>
+            <span class="error-message" id="error-tallexxl"></span>
+
           </div>
           <div class="formDerecha">
             <label for="descripcion">Descripción:</label>
+            <span class="error-message" id="error-descripcion"></span>
             <textarea id="descripcion" name="descripcion"></textarea>
-
+    
+      
             <label class="subirImagen">
-              <input class="input-img-crear" name="imagenes" type="file" multiple />
+              <input class="input-img-crear" name="imagenes" type="file" multiple/>
               Subir imagenes <i class="fa-solid fa-images"></i>
             </label>
-
+            <div class="error-message" id="error-imagenes"></div>
+    
+          
             <button class="botonAdd" type="submit">Crear producto</button>
-        </form>
+    </form> 
 
       </main>
       <%- include('../partials/footer.ejs') %>
-        <script src="/js/productEditCreateTalle.js"></script>
+        
+      <script src="/js/productEditCreateTalle.js"></script>
+      <script src="/js/valiCreacion.js"></script>
+
   </body>
 
 </html>
