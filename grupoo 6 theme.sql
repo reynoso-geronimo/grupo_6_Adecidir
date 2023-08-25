@@ -33,6 +33,8 @@ CREATE TABLE `Categorias`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `nombre` VARCHAR(255) NOT NULL,
     `imagen` VARCHAR(255) NOT NULL,
+    `createdAt` DATETIME,
+    `updatedAt` DATETIME,
     `deletedAT` DATETIME
 
 );
@@ -40,6 +42,8 @@ CREATE TABLE `Tickets`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `fecha` DATETIME NOT NULL,
     `usuario_id` BIGINT UNSIGNED NOT NULL,
+    `createdAt` DATETIME,
+    `updatedAt` DATETIME,
     `deletedAT` DATETIME
 );
 CREATE TABLE `Imagenes`(
@@ -57,6 +61,8 @@ CREATE TABLE `Usuarios`(
     `avatar` VARCHAR(255) NOT NULL,
     `direccion` VARCHAR(255) DEFAULT NULL,
     `telefono` INT  DEFAULT NULL,
+    `createdAt` DATETIME,
+    `updatedAt` DATETIME,
     `deletedAT` DATETIME
 );
 ALTER TABLE
