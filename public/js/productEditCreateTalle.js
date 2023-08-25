@@ -4,8 +4,7 @@ window.addEventListener("load",()=>{
     switchTalle.addEventListener("change",(e)=>{
         if(e.currentTarget.checked){
             talle.innerHTML=`
-            <label for="talles">Unidades <input type="number" id="talleUnico" name="talleunico" value="0" /></label>
-            `
+            <label for="talles">Unidades <input type="number" id="talleUnico" name="talleUnico" value="0" /></label>            `
         }else{
             talle.innerHTML=`
             <label for="talles">S <input type="number" id="talleS" name="talles" value="0" /></label>

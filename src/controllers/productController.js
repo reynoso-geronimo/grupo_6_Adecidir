@@ -82,6 +82,19 @@ const productDetailController = {
       const producto = await Productos.findByPk(productId);
       const imageFilenames = req.files ? req.files.map(file => file.filename) : [];
 
+      if (req.body.talleUnico >= 1 ) {
+        updatedProduct.talleS = 0;
+        updatedProduct.talleM = 0;
+        updatedProduct.talleL = 0;
+        updatedProduct.talleXL = 0;
+        updatedProduct.talleXXL = 0;
+      }else{
+        if (req.body.talleS >=1 ||req.body.talleM >=1 || req.body.talleL >=1 ||req.body.talleXl >=1 ||req.body.talleXXl >=1){
+          updatedProduct.talleUnico = 0;
+        }
+      }
+
+
       /* if (!producto) {
          aca se le puede agregar algo para el error
        } */
@@ -142,6 +155,8 @@ const productDetailController = {
       const talleL = req.body.tallel || 0;
       const talleXL = req.body.tallexl || 0;
       const talleXXL = req.body.tallexxl || 0;
+      const talleUnico = req.body.talleUnico || 0;
+
 
       const { nombre, precio, id_categoria, descripcion } = req.body;
 
@@ -155,6 +170,7 @@ const productDetailController = {
         talleL,
         talleXL,
         talleXXL,
+        talleUnico
       });
 
 

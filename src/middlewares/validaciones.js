@@ -28,11 +28,12 @@ module.exports ={
         .escape(),
         check('precio').notEmpty().withMessage('El precio del producto es obligatorio.').isNumeric().withMessage('El precio debe ser un valor numérico.').trim().escape(),
         check('id_categoria').notEmpty().withMessage('Debes seleccionar una categoría.').trim().escape(),
-        check('talles').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallem').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallel').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallexl').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallexxl').isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('talleUnico').if((value, { req }) => !value).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        check('talles').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('tallem').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('tallel').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('tallexl').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('tallexxl').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
         check('descripcion')
         .notEmpty().withMessage('La descripción del producto es obligatoria.')
         .isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres.')

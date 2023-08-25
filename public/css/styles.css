@@ -384,6 +384,14 @@ Pagina detalle producto
 .share {
   text-align: center;
 }
+.input-talleUnico{
+  padding: 5px;
+  border: 1px solid black ;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 60px;
+}
+
 
 /* Formulario de registro */
 .body-register {
