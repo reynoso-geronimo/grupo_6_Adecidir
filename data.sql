@@ -45,7 +45,7 @@ VALUES
 (8, "1687920937522.jpg")
 
 
-INSERT INTO theme_db.Tickets(fecha,usuario_id)VALUES('2023-08-02',1);
+INSERT INTO theme_db.Tickets(usuario_id)VALUES(1);
 INSERT INTO theme_db.Productos_tickets(id_producto,precioFechaCompra,id_ticket,cantidad)VALUES(2,'2023-08-02',2,1);
 
 
