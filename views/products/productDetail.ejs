@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
+  <%- include('../partials/head') %>
 
-<body>
-  <%- include('../partials/header') %>
+  <body>
+    <%- include('../partials/header') %>
 
-  <main>
-    <% if (producto.borrado == true) { %>
-    <h1>PRODUCTO DADO DE BAJA</h1>
-    <% } %>
-    <section class="product-container">
-      <div class="galeria">
-        <div class="imagenes-producto">
-          <% producto.Imagenes.forEach(imagen => { %>
-          <img src="/images/productos/<%= imagen.nombre %>" alt="producto" class="img-detalle" />
-          <% }) %>
+    <main>
+      <% if (producto.deletedAT == true) { %>
+      <h1>PRODUCTO DADO DE BAJA</h1>
+      <% } %>
+      <section class="product-container">
+        <div class="galeria">
+          <div class="imagenes-producto">
+            <% producto.Imagenes.forEach(imagen => { %>
+            <img
+              src="/images/productos/<%= imagen.nombre %>"
+              alt="producto"
+              class="img-detalle"
+            />
+            <% }) %>
+          </div>
+          <div class="radio-selector">
+            <% producto.Imagenes.forEach((imagen, index) => { %> <input
+            type="radio" id="selector<%= index %>" name="radios" <%= index === 0
+            ? 'checked' : '' %> />
+            <label for="selector<%= index %>"></label>
+            <% }) %>
+          </div>
         </div>
-        <div class="radio-selector">
-          <% producto.Imagenes.forEach((imagen, index) => { %>
-          <input type="radio" id="selector<%= index %>" name="radios" <%= index === 0 ? 'checked' : '' %> />
-          <label for="selector<%= index %>"></label>
-          <% }) %>
-        </div>
-      </div>
-      <div class="info-product">
-        <h2>
-          <%= producto.nombre %>
-          <a href="a">
-            <i class="fa-regular fa-star"></i>
-          </a>
-          <a href="a" class="share">
-            <i class="fa-solid fa-share-nodes"></i>
-          </a>
-        </h2>
+        <div class="info-product">
+          <h2>
+            <%= producto.nombre %>
+            <a href="a">
+              <i class="fa-regular fa-star"></i>
+            </a>
+            <a href="a" class="share">
+              <i class="fa-solid fa-share-nodes"></i>
+            </a>
+          </h2>
 
-          <p class="description">
-            <%= producto.descripcion %>
-          </p>
+          <p class="description"><%= producto.descripcion %></p>
           <div class="product-talle-select">
             <p class="price">$<%= producto.precio %></p>
+            <% if (!producto.talleUnico) { %>
             <h3>Seleccione un talle</h3>
-           
-              <div >
-                <div class="radio-button">
-                  <input type="radio" id="radio1" name="talle" value="s" />
-                  <label for="radio1">S</label>
-                  <input type="radio" id="radio2" name="talle" value="m" />
-                  <label for="radio2">M</label>
-                  <input type="radio" id="radio3" name="talle" value="l" />
-                  <label for="radio3">L</label>
-                  <input type="radio" id="radio4" name="talle" value="xl" />
-                  <label for="radio4">XL</label>
-                  <input type="radio" id="radio5" name="talle" value="xxl" />
-                  <label for="radio5">XXL</label>
-                </div>
-
-                <button id="addCart" class="boton-negro">Agregar al Carrito</button>
+            <div>
+              <div class="radio-button">
+                <input type="radio" id="radio1" name="talle" value="s" />
+                <label for="radio1">S</label>
+                <input type="radio" id="radio2" name="talle" value="m" />
+                <label for="radio2">M</label>
+                <input type="radio" id="radio3" name="talle" value="l" />
+                <label for="radio3">L</label>
+                <input type="radio" id="radio4" name="talle" value="xl" />
+                <label for="radio4">XL</label>
+                <input type="radio" id="radio5" name="talle" value="xxl" />
+                <label for="radio5">XXL</label>
               </div>
-           
+              <% } %>
+
+              <button id="addCart" class="boton-negro">
+                Agregar al Carrito
+              </button>
+            </div>
+
             <% if (locals.admin===true) { %>
-            <a href="/product/<%=producto.id%>/editform/"><button>EDITAR PRODUCTO</button></a>
+            <a href="/product/<%=producto.id%>/editform/"
+              ><button>EDITAR PRODUCTO</button></a
+            >
             <% } %>
           </div>
         </div>

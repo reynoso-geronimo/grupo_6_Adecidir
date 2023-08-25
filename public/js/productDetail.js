@@ -33,11 +33,18 @@ window.addEventListener("load", function () {
 
   const addCarrito = document.querySelector("#addCart")
   addCarrito.addEventListener("click",()=>{
-    carritoStorage.push({
-      id:"",
-      talle:"",
-    })
-    localStorage.setItem("cart", JSON.stringify(carritoStorage));
+    const selectedTalle = document.querySelector('input[name="talle"]:checked');
+    const idRegExp = /\/product\/(\d+)/;
+    const id = window.location.href.match(idRegExp);
+    if(selectedTalle){
+      carritoStorage.push({
+        id:id[1],
+        talle:selectedTalle.value,
+      })
+      localStorage.setItem("cart", JSON.stringify(carritoStorage));
+    }else{
+      addCarrito.innerText="Elige un talle"
+    }
   })
  
 });
