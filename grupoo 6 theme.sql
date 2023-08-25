@@ -40,7 +40,6 @@ CREATE TABLE `Categorias`(
 );
 CREATE TABLE `Tickets`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    `fecha` DATETIME NOT NULL,
     `usuario_id` BIGINT UNSIGNED NOT NULL,
     `createdAt` DATETIME,
     `updatedAt` DATETIME,
