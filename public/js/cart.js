@@ -35,7 +35,7 @@ window.addEventListener('load',()=>{
         checkout.innerHTML = ``
         let total = 0
         for (const item of consultaDb) {
-            total += item.precio
+            total += (item.precio*item.cantidad)
             carrito.innerHTML+= `
             <article class="carrito">
             <div>
@@ -46,7 +46,7 @@ window.addEventListener('load',()=>{
                 <h4>${item.nombre}</h4>
                 <p>Talle: ${item.talle.toUpperCase()}</p>
                 <p>Unidades: ${item.cantidad}</p>
-                <p>Precio: $${item.precio}</p>
+                <p>Precio: $${item.precio*item.cantidad}</p>
               </div>
               <div><a href="#">Guardar</a><i class="fa-solid fa-trash"></i></div>
             </div>
