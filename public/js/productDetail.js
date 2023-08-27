@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
   // agregar items al carrito
   let carritoStorage = []
   const carritoInit = function () {
-    
+
     if (!JSON.parse(localStorage.getItem("cart"))) {
       localStorage.setItem("cart", JSON.stringify(carritoStorage));
     } else {
@@ -32,19 +32,29 @@ window.addEventListener("load", function () {
   carritoInit()
 
   const addCarrito = document.querySelector("#addCart")
-  addCarrito.addEventListener("click",()=>{
+  addCarrito.addEventListener("click", () => {
     const selectedTalle = document.querySelector('input[name="talle"]:checked');
     const idRegExp = /\/product\/(\d+)/;
     const id = window.location.href.match(idRegExp);
-    if(selectedTalle){
-      carritoStorage.push({
-        id:id[1],
-        talle:selectedTalle.value,
-      })
+    if (selectedTalle) {
+
+      const producto = {
+        id: id[1],
+        talle: selectedTalle.value,
+        cantidad: 1
+      }
+      const productoEnCarrito = carritoStorage.find(itemsEnCarrito => itemsEnCarrito.id === producto.id && itemsEnCarrito.talle === producto.talle)
+      console.log(productoEnCarrito)
+      if (productoEnCarrito) {
+         productoEnCarrito.cantidad += producto.cantidad 
+         console.log(productoEnCarrito)
+        }
+      
+      else { carritoStorage.push(producto) }
       localStorage.setItem("cart", JSON.stringify(carritoStorage));
-    }else{
-      addCarrito.innerText="Elige un talle"
+    } else {
+      addCarrito.innerText = "Elige un talle"
     }
   })
- 
+
 });

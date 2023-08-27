@@ -1310,6 +1310,9 @@ display: flex;
 justify-content: space-evenly;
 width: 100vw;
 }
+.checkout{
+  width: 50%;
+}
 .carrito-container{
   width: 50%;
 }
