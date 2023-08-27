@@ -18,11 +18,11 @@ const productDetailController = {
       if (categoriaId) {
         productos = await Productos.findAll({
           where: { id_categoria: categoriaId },
-          include: [{ model: Imagenes, as: "Imagenes" }]
+          include: [{ model: Imagenes, as: "Imagenes" }],
         });
       } else {
         productos = await Productos.findAll({
-          include: [{ model: Imagenes, as: "Imagenes" }]
+          include: [{ model: Imagenes, as: "Imagenes" }],
         });
       }
 
@@ -33,18 +33,19 @@ const productDetailController = {
     }
   },
 
-
   detail: async (req, res) => {
     try {
       const producto = await Productos.findByPk(req.params.id, {
-        include: [{
-          model: Imagenes,
-          as: 'Imagenes'
-        }]
+        include: [
+          {
+            model: Imagenes,
+            as: "Imagenes",
+          },
+        ],
       });
 
       if (!producto) {
-        return res.status(404).send('Producto no encontrado');
+        return res.status(404).send("Producto no encontrado");
       }
 
       res.render("products/productDetail", { producto });
@@ -58,7 +59,7 @@ const productDetailController = {
     try {
       const producto = await Productos.findByPk(req.params.id, {
         include: [{ model: db.Imagenes, as: "Imagenes" }],
-        paranoid: false
+        paranoid: false,
       });
       const categorias = await Categorias.findAll();
 
@@ -78,23 +79,29 @@ const productDetailController = {
       const productId = req.params.id;
       const updatedProduct = req.body;
 
-
       // aca accedo al producto por su id
       const producto = await Productos.findByPk(productId);
-      const imageFilenames = req.files ? req.files.map(file => file.filename) : [];
+      const imageFilenames = req.files
+        ? req.files.map(file => file.filename)
+        : [];
 
-      if (req.body.talleUnico >= 1 ) {
+      if (req.body.talleUnico >= 1) {
         updatedProduct.talleS = 0;
         updatedProduct.talleM = 0;
         updatedProduct.talleL = 0;
         updatedProduct.talleXL = 0;
         updatedProduct.talleXXL = 0;
-      }else{
-        if (req.body.talleS >=1 ||req.body.talleM >=1 || req.body.talleL >=1 ||req.body.talleXl >=1 ||req.body.talleXXl >=1){
+      } else {
+        if (
+          req.body.talleS >= 1 ||
+          req.body.talleM >= 1 ||
+          req.body.talleL >= 1 ||
+          req.body.talleXl >= 1 ||
+          req.body.talleXXl >= 1
+        ) {
           updatedProduct.talleUnico = 0;
         }
       }
-
 
       /* if (!producto) {
          aca se le puede agregar algo para el error
@@ -108,29 +115,32 @@ const productDetailController = {
 
         for (const imageNombre of imagesToDelete) {
           await Imagenes.destroy({ where: { nombre: imageNombre } });
-          fs.unlinkSync(path.resolve(__dirname, '../../public/images/productos/' + imageNombre))
-
+          fs.unlinkSync(
+            path.resolve(
+              __dirname,
+              "../../public/images/productos/" + imageNombre
+            )
+          );
         }
       }
 
       if (imageFilenames.length > 0) {
         const imagenes = imageFilenames.map(filename => ({
           nombre: filename,
-          id_producto: producto.id
+          id_producto: producto.id,
         }));
-        await Imagenes.bulkCreate(imagenes)
+        await Imagenes.bulkCreate(imagenes);
       }
 
       // update
       await producto.update(updatedProduct);
 
-      return res.redirect(`/product/${producto.id}`); // para que el redirect te mande al producto 
+      return res.redirect(`/product/${producto.id}`); // para que el redirect te mande al producto
     } catch (error) {
       console.log(error);
       // aca se le puede agregar algo para el error
     }
   },
-
 
   // CREACION DE PRODUCTO
   crearProductoForm: async function (req, res) {
@@ -149,7 +159,9 @@ const productDetailController = {
         return res.status(400).json({ errors: errors.array() });
       }
 
-      const imageFilenames = req.files ? req.files.map(file => file.filename) : [];
+      const imageFilenames = req.files
+        ? req.files.map(file => file.filename)
+        : [];
 
       const talleS = req.body.talles || 0;
       const talleM = req.body.tallem || 0;
@@ -157,7 +169,6 @@ const productDetailController = {
       const talleXL = req.body.tallexl || 0;
       const talleXXL = req.body.tallexxl || 0;
       const talleUnico = req.body.talleUnico || 0;
-
 
       const { nombre, precio, id_categoria, descripcion } = req.body;
 
@@ -171,80 +182,73 @@ const productDetailController = {
         talleL,
         talleXL,
         talleXXL,
-        talleUnico
+        talleUnico,
       });
-
-
 
       if (imageFilenames.length > 0) {
         const imagenes = imageFilenames.map(filename => ({
           nombre: filename,
-          id_producto: producto.id
+          id_producto: producto.id,
         }));
-        await Imagenes.bulkCreate(imagenes)
+        await Imagenes.bulkCreate(imagenes);
       }
 
-      res.redirect(`/product/${producto.id}`)
+      res.redirect(`/product/${producto.id}`);
     } catch (error) {
-      console.log(error)
+      console.log(error);
       // aca se le puede agregar algo para el error
     }
   },
-  // no funciona... por ahora 
+  // no funciona... por ahora
   delete: async (req, res) => {
     try {
-
       await Productos.destroy({
         where: {
-          id: req.params.id
-        }
+          id: req.params.id,
+        },
       });
 
-      res.redirect('/');
+      res.redirect("/");
     } catch (error) {
       console.log(error);
     }
   },
-
 
   altaProduct: async function (req, res) {
     try {
-
       await Productos.restore({
         where: {
-          id: req.params.id
-        }
+          id: req.params.id,
+        },
       });
 
-      return res.redirect(req.get('referer'))
+      return res.redirect(req.get("referer"));
     } catch (error) {
       console.log(error);
     }
   },
-  cartApi: async function(req,res){
-    console.log(req.body)
-    const productos = req.body
-    const busquedas = productos.map((async(producto)=>{
-     const productoEnDB= await db.Productos.findOne({where:{id:producto.id},include: [{ model: Imagenes, as: "Imagenes" }]})
-      console.log(productoEnDB.Imagenes[0].nombre)
-     const productoEnStock = {
-      imagen:productoEnDB.Imagenes[0].nombre,
-      nombre:productoEnDB.nombre,
-      precio:productoEnDB.precio,
-      talle:producto.talle,
-      cantidad:producto.cantidad,
-     
-      
-     }
-      return productoEnStock
-    }))
-    const resultado = await Promise.all(busquedas)
-      console.log(resultado)
-   
+  cartApi: async function (req, res) {
+    const productos = req.body;
 
-    return res.json(resultado)
-  }
+    const busquedas = productos.map(async producto => {
+      const productoEnDB = await db.Productos.findOne({
+        where: { id: producto.id },
+        include: [{ model: Imagenes, as: "Imagenes" }],
+      });
 
+      const productoEnStock = {
+        imagen: productoEnDB.Imagenes[0].nombre,
+        nombre: productoEnDB.nombre,
+        precio: productoEnDB.precio,
+        talle: producto.talle,
+        cantidad: producto.cantidad,
+      };
+      return productoEnStock;
+    });
+    const resultado = await Promise.all(busquedas);
+
+    return res.json(resultado);
+  },
 };
 
 module.exports = productDetailController;
