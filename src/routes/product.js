@@ -21,11 +21,11 @@ router.get("/:id", product.detail);
 
 router.get('/:id/editform/', adminAcces,product.editForm)
 router.put('/:id/', adminAcces,uploadImgProducto.array('images', 5),validarImagenSize,validarEditProduct ,logDB.logEdit,product.editItem)
-
-
-// Delete (no funca)
-router.delete('/:id/delete', product.delete);
+router.delete('/:id/delete', adminAcces,product.delete);
 
 router.put('/:id/alta',adminAcces,product.altaProduct)
+
+//apis
+router.post('/cartitems',product.cartApi)
 
 module.exports = router;

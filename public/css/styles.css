@@ -875,7 +875,7 @@ Pagina detalle producto
   border-bottom: solid 1px gray;
 
   display: flex;
-  justify-content: center;
+  justify-content:space-evenly;
   margin-bottom: 20px;
   padding-bottom: 20px;
 }

@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const { validationResult } = require('express-validator')
 const db = require('../database/models')
+const {Op}=require('sequelize')
 
 const Categorias = db.Categorias;
 const Productos = db.Productos;
@@ -220,6 +221,29 @@ const productDetailController = {
       console.log(error);
     }
   },
+  cartApi: async function(req,res){
+    console.log(req.body)
+    const productos = req.body
+    const busquedas = productos.map((async(producto)=>{
+     const productoEnDB= await db.Productos.findOne({where:{id:producto.id},include: [{ model: Imagenes, as: "Imagenes" }]})
+      console.log(productoEnDB.Imagenes[0].nombre)
+     const productoEnStock = {
+      imagen:productoEnDB.Imagenes[0].nombre,
+      nombre:productoEnDB.nombre,
+      precio:productoEnDB.precio,
+      talle:producto.talle,
+      cantidad:producto.cantidad,
+     
+      
+     }
+      return productoEnStock
+    }))
+    const resultado = await Promise.all(busquedas)
+      console.log(resultado)
+   
+
+    return res.json(resultado)
+  }
 
 };
 
