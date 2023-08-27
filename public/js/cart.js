@@ -24,9 +24,12 @@ window.addEventListener('load',()=>{
     const generarCarrito = async function(items){
 
        if(carritoStorage.length==0){
-          
-          carrito.innerHTML += `<h1>No hay items en el carrito </h1>`
-        
+        cantidadItems.innerText = `Carrito(0)`
+          carrito.innerHTML = `<h1>No hay items en el carrito </h1>`
+          checkout.innerHTML = ``
+          checkout.style.backgroundColor = 'white';
+          checkout.style.border = 'none';
+          //checkout.remove()
        }else{
         const consultaDb = await consultarProductosDB(items)
         carrito.innerHTML = ``
