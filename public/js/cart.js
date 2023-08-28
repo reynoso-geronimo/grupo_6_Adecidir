@@ -22,7 +22,7 @@ window.addEventListener('load',()=>{
     }
     
     const generarCarrito = async function(items){
-
+      checkout.innerHTML = `<div class="lds-dual-ring"></div>`
        if(carritoStorage.length==0){
         cantidadItems.innerText = `Carrito(0)`
           carrito.innerHTML = `<h1>No hay items en el carrito </h1>`
