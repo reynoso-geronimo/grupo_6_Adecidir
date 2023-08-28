@@ -76,6 +76,11 @@ const productDetailController = {
 
   editItem: async function (req, res) {
     try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+      }
+
       const productId = req.params.id;
       const updatedProduct = req.body;
 
