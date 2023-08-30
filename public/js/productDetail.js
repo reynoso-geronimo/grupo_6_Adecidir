@@ -44,10 +44,10 @@ window.addEventListener("load", function () {
         cantidad: 1
       }
       const productoEnCarrito = carritoStorage.find(itemsEnCarrito => itemsEnCarrito.id === producto.id && itemsEnCarrito.talle === producto.talle)
-      console.log(productoEnCarrito)
+      
       if (productoEnCarrito) {
          productoEnCarrito.cantidad += producto.cantidad 
-         console.log(productoEnCarrito)
+        
         }
       
       else { carritoStorage.push(producto) }

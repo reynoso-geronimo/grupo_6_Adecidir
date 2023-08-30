@@ -228,5 +228,8 @@ ${link}`
       res.send('Token invalido o expirado')
     }
   
+  },
+  apiTikcketProcess : (req,res)=>{
+    
   }
 };

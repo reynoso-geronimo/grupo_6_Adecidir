@@ -61,7 +61,7 @@ window.addEventListener('load',()=>{
         checkout.innerHTML = `
         <p>Total: $ ${total}</p>
         <button class="boton-negro invertido">Seguir Comprando</button>
-        <button class="boton-negro">Comprar Carrito</button>`
+        <button id="checkout" class="boton-negro">Comprar Carrito</button>`
        }
   
       cargarEliminar()

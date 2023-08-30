@@ -31,7 +31,9 @@ router.get("/profile/edit/password", userAcess,userController.perfilEditPassword
 router.post("/profile/edit/password", userAcess,userController.processEditPassword);
 router.get("/admin",adminAcces, userController.adminPanel);
 router.get("/cart",userAcess ,userController.cart);
-//TODO ruta agregar al carrito
-//router.post("/cart",userAcess ,userController.subirProdCarrito);
+
+//TODO ruta de ticket
+
+router.post("/api/ticket", userController.apiTikcketProcess)
 
 module.exports = router
