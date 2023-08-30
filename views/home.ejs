@@ -7,12 +7,34 @@
 
       <main class="home">
         
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img class="banner-home" src="/images/banner sin plaquita.jpg" alt="graffiti" ></div>
+            <div class="swiper-slide"><img class="banner-home" src="/images/5313737.jpg" alt="graffiti" ></div>
+            <div class="swiper-slide"><img class="banner-home" src="/images/fondo.jpg" alt="graffiti" ></div>
+            <div class="swiper-slide"><img class="banner-home" src="/images/3979540.jpg" alt="graffiti" ></div>
 
+            
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
         
           <!-- <i class="fa-solid fa-caret-left"></i>
         <img src="imagen-de-ejemplo" alt="Destacados/Ofertas" />
         <i class="fa-solid fa-caret-right"></i>   -->
-        <div id="banner">
+       <!--  <div id="banner">
           <img class="banner-home" src="/images/banner sin plaquita.jpg" alt="graffiti">
           <div class="placa-banner">
             <h3>THEME</h3>
@@ -20,7 +42,7 @@
           </div>
         </div>
 
-
+ -->
         <!-- <div class="contain-3">
         <h3>CATEGORIAS</h3>
       </div> -->
@@ -50,6 +72,10 @@
         </section>
       </main>
       <%- include('./partials/footer.ejs') %>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script src="/js/swiper.js"></script>
+      
+
   </body>
 
 </html>
