@@ -7,24 +7,47 @@
     <i class="fa-solid fa-magnifying-glass"></i>
     <a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a>
     <% if (locals.admin===true) { %>
-      <i id="userIcon" class="fa-solid fa-user-secret"></i>
+      <i id="userIcon" class="fa-solid fa-user-secret" onclick="toggleMenu()" ></i>
       <% } else { %>
-        <i id="userIcon" class="fa-solid fa-user"></i>
-    <% } %>
+        <i id="userIcon" class="fa-solid fa-user" onclick="toggleMenu()" ></i>
+      <% } %>
   </div>
 
-  <div class='login-register'>
-    <% if (locals.isLogged===false) { %>
-      <a href="/user/register"><button>REGISTRARME</button></a>
-      <a href="/user/login"><button>INICIAR SESIÓN</button></a>
-      <% } else if  (locals.isLogged===true) { %>
-        <a href="/user/profile"><button>VER MI PERFIL</button></a>
-        <% if (locals.admin===true) { %>
-          <a href="/user/admin"><button>ADMINISTRACION</button></a>
-        <% }  %>
-        <a href="/user/logout"><button>CERRAR SESION</button></a>
-    <% } %>
-      
+  <div class="sub-menu-wrap" id="subMenu">
+    <div class="sub-menu">
+        <div class="user-info">
+        </div>            
+        <% if (locals.isLogged===false) { %>
+            <a href="/user/register" class="sub-menu-link">
+                <p>REGISTRARME</p>
+                <span>></span>
+            </a>
+            <a href="/user/login" class="sub-menu-link">
+                <p>INICIAR SESION</p>
+                <span>></span>
+            </a>
+            <% } else if  (locals.isLogged===true) { %>
+              <a href="/user/profile" class="sub-menu-link">
+                <img src="/images/icons/18764668-01.png" alt="">
+              <p>Ver Perfil</p>
+              <span>></span>
+
+            </a>
+              <% if (locals.admin===true) { %>
+                <a href="/user/admin" class="sub-menu-link">
+                    <img src="/images/icons/18764668-07.png" alt="">
+                    <p>Administracion</p>
+                    <span>></span>
+
+                </a>
+              <% }  %>
+              <a href="/user/logout" class="sub-menu-link"> 
+                <img src="/images/icons/18764668-05.png" alt="">
+                <p>Cerrar Sesion</p>
+                <span>></span>
+              </a>
+          <% } %>
+    </div>
   </div>
   <div class='search-bar-header'>
     <form action="/" method="get"><input type="search" name="search-bar-header" id="search-bar-header-input"><button
@@ -33,4 +56,4 @@
  
 </header>
 
-<script src="/js/header.js"></script>
+<script src="/js/dropDown.js"></script>
