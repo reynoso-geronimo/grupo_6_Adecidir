@@ -23,6 +23,7 @@ window.addEventListener('load',()=>{
     
     const generarCarrito = async function(items){
       checkout.innerHTML = `<div class="lds-dual-ring"></div>`
+      checkout.style.backgroundColor = 'white';
        if(carritoStorage.length==0){
         cantidadItems.innerText = `Carrito(0)`
           carrito.innerHTML = `<h1>No hay items en el carrito </h1>`
@@ -62,6 +63,7 @@ window.addEventListener('load',()=>{
         <p>Total: $ ${total}</p>
         <button class="boton-negro invertido">Seguir Comprando</button>
         <button id="checkout" class="boton-negro">Comprar Carrito</button>`
+        checkout.style.backgroundColor = 'rgba(165, 165, 165, 80%)';
        }
   
       cargarEliminar()
