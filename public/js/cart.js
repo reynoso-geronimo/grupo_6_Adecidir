@@ -23,6 +23,7 @@ window.addEventListener('load',()=>{
     
     const generarCarrito = async function(items){
       checkout.innerHTML = `<div class="lds-dual-ring"></div>`
+      checkout.style.backgroundColor = 'white';
        if(carritoStorage.length==0){
         cantidadItems.innerText = `Carrito(0)`
           carrito.innerHTML = `<h1>No hay items en el carrito </h1>`
@@ -36,7 +37,7 @@ window.addEventListener('load',()=>{
         checkout.innerHTML = ``
         cantidadItems.innerText = `Carrito(${consultaDb.length})`
         let total = 0
-        let lugarEnArray = 0
+        let index = 0
         for (const item of consultaDb) {
             total += (item.precio*item.cantidad)
             carrito.innerHTML+= `
@@ -51,17 +52,18 @@ window.addEventListener('load',()=>{
                 <p>Unidades: ${item.cantidad}</p>
                 <p>Precio: $${item.precio*item.cantidad}</p>
               </div>
-              <div><i id="${lugarEnArray}" class="fa-solid fa-trash"></i></div>
+              <div><i id="${index}" class="fa-solid fa-trash"></i></div>
             </div>
           </article>
             `
-          lugarEnArray++
+          index++
         }
         
         checkout.innerHTML = `
         <p>Total: $ ${total}</p>
         <button class="boton-negro invertido">Seguir Comprando</button>
-        <button class="boton-negro">Comprar Carrito</button>`
+        <button id="checkout" class="boton-negro">Comprar Carrito</button>`
+        checkout.style.backgroundColor = 'rgba(165, 165, 165, 80%)';
        }
   
       cargarEliminar()
