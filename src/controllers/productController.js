@@ -254,6 +254,27 @@ const productDetailController = {
 
     return res.json(resultado);
   },
+  searchProducts: async function (req, res) {
+    try {
+        const { keyword } = req.body;
+
+        const products = await Productos.findAll({
+            where: {
+                [sequelize.Op.or]: [
+                    { nombre: { [sequelize.Op.like]: `%${keyword}%` } },
+                    { descripcion: { [sequelize.Op.like]: `%${keyword}%` } }
+                ]
+            }
+        });
+
+        res.status(200).json({ products });
+    } catch (error) {
+        console.error('Error en la busqueda', error);
+        res.status(500).json({ error: 'Ocurrio un error intentalo mas tarde' });
+    }
+}
 };
+
+
 
 module.exports = productDetailController;
