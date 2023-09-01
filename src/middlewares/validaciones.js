@@ -6,7 +6,7 @@ module.exports ={
         check('nombre').notEmpty().withMessage('Debes completar el campo de nombre').isLength({min : 5}).withMessage('El nombre del producto debe tener al menos 5 caracteres').trim().escape(),
         check('precio').notEmpty().withMessage('Debes completar el campo de precio con un valor valido').bail().isFloat({gt:0}).withMessage('Debes completar el campo de precio con un valor valido').trim().escape(),
         check('id_categoria').notEmpty().withMessage('Debes completar el campo de categoria').trim().escape(),
-        check('desc').notEmpty().withMessage('Debes completar el campo de descripcion').isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres.').escape().trim(),
+        check('descripcion').notEmpty().withMessage('Debes completar el campo de descripcion').isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres.').escape().trim(),
         check('talleUnico').if(( { req }) => !value).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
         check('talles').if(( { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
         check('tallem').if(( { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
