@@ -30,7 +30,7 @@ router.post("/profile/edit/", userAcess,uploadImgAvatar.single('avatar'),validar
 router.get("/profile/edit/password", userAcess,userController.perfilEditPassword);
 router.post("/profile/edit/password", userAcess,userController.processEditPassword);
 router.get("/admin",adminAcces, userController.adminPanel);
-router.get("/cart",userAcess ,userController.cart);
+router.get("/cart",userController.cart);
 
 //TODO ruta de ticket
 

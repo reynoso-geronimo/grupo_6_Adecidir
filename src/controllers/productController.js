@@ -1,13 +1,12 @@
 const fs = require("fs");
 const path = require("path");
-const { validationResult } = require('express-validator')
-const db = require('../database/models')
-const {Op}=require('sequelize')
+const { validationResult } = require("express-validator");
+const db = require("../database/models");
+const { Op } = require("sequelize");
 
 const Categorias = db.Categorias;
 const Productos = db.Productos;
 const Imagenes = db.Imagenes;
-
 
 const productDetailController = {
   list: async (req, res) => {
@@ -57,11 +56,13 @@ const productDetailController = {
   //EDICION DE PRODUCTO
   editForm: async function (req, res) {
     try {
-      const producto = await Productos.findByPk(req.params.id, {
-        include: [{ model: db.Imagenes, as: "Imagenes" }],
-        paranoid: false,
-      });
-      const categorias = await Categorias.findAll();
+      const [producto, categorias] = await Promise.all([
+        Productos.findByPk(req.params.id, {
+          include: [{ model: db.Imagenes, as: "Imagenes" }],
+          paranoid: false,
+        }),
+        Categorias.findAll(),
+      ]);
 
       /* if (!producto) {
         aca se le puede agregar algo para el error
@@ -233,57 +234,59 @@ const productDetailController = {
     }
   },
   cartApi: async function (req, res) {
-    const productos = req.body;
+    try {
+      const productos = req.body;
 
-    const busquedas = productos.map(async producto => {
-      const productoEnDB = await db.Productos.findOne({
-        where: { id: producto.id },
-        include: [{ model: Imagenes, as: "Imagenes" }],
+      const busquedas = productos.map(async producto => {
+        const productoEnDB = await db.Productos.findOne({
+          where: { id: producto.id },
+          include: [{ model: Imagenes, as: "Imagenes" }],
+        });
+
+        const productoEnStock = {
+          imagen: productoEnDB.Imagenes[0].nombre,
+          nombre: productoEnDB.nombre,
+          precio: productoEnDB.precio,
+          talle: producto.talle,
+          cantidad: producto.cantidad,
+        };
+        return productoEnStock;
       });
+      const resultado = await Promise.all(busquedas);
 
-      const productoEnStock = {
-        imagen: productoEnDB.Imagenes[0].nombre,
-        nombre: productoEnDB.nombre,
-        precio: productoEnDB.precio,
-        talle: producto.talle,
-        cantidad: producto.cantidad,
-      };
-      return productoEnStock;
-    });
-    const resultado = await Promise.all(busquedas);
-
-    return res.json(resultado);
+      return res.json(resultado);
+    } catch (error) {
+      return res.status(500).json({ error: "Error al procesar la solicitud" });
+    }
   },
   searchProducts: async function (req, res) {
     try {
-        const { keyword } = req.body;
+      const { keyword } = req.body;
 
-        const products = await Productos.findAll({
-          where: {
-              [sequelize.Op.or]: [
-                  { nombre: { [sequelize.Op.like]: `%${keyword}%` } },
-                  { descripcion: { [sequelize.Op.like]: `%${keyword}%` } }
-              ]
+      const products = await Productos.findAll({
+        where: {
+          [Op.or]: [
+            { nombre: { [Op.like]: `%${keyword}%` } },
+            { descripcion: { [Op.like]: `%${keyword}%` } },
+          ],
+        },
+        include: [
+          {
+            model: Categorias,
+            as: "Categorias",
+            where: {
+              nombre: { [sequelize.Op.like]: `%${keyword}%` },
+            },
           },
-          include: [
-              {
-                  model: Categorias,
-                  as: 'Categorias',
-                  where: {
-                      nombre: { [sequelize.Op.like]: `%${keyword}%` }
-                  }
-              }
-          ]
+        ],
       });
 
-        res.status(200).json({ products });
+      res.status(200).json({ products });
     } catch (error) {
-        console.error('Error en la busqueda', error);
-        res.status(500).json({ error: 'Ocurrio un error intentalo mas tarde' });
+      console.error("Error en la busqueda", error);
+      res.status(500).json({ error: "Ocurrio un error intentalo mas tarde" });
     }
-}
+  },
 };
-
-
 
 module.exports = productDetailController;
