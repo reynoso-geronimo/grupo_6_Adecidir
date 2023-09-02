@@ -42,32 +42,26 @@
           <p class="description"><%= producto.descripcion %></p>
           <div class="product-talle-select">
             <p class="price">$<%= producto.precio %></p>
-            <div>
+         <div>
               <% if (producto.talleUnico >= 1) { %>
                 <h3>Talle Unico!</h3>
                 <label for="cantidad">Cantidad: <input type="number" class="input-talleUnico" id="cantidad" name="cantidad" value="1" min="1" /></label>
-               
-                  <input hidden type="radio" id="radio6" name="talle" value="unico" checked/>
-                  
-               
+                <input hidden type="radio" id="radio6" name="talle" value="unico" checked/>
               <% } else { %>
                 <h3>Seleccione un talle</h3>
                 <div class="radio-button">
                   <input type="radio" id="radio1" name="talle" value="s" <% if (producto.talleS === 0) { %>disabled<% } %> />
-                  <label for="radio1">S</label>
+                  <label for="radio1" class="<%= (producto.talleS === 0) ? 'tachado' : '' %>">S</label>
                   <input type="radio" id="radio2" name="talle" value="m" <% if (producto.talleM === 0) { %>disabled<% } %> />
-                  <label for="radio2">M</label>
+                  <label for="radio2" class="<%= (producto.talleM === 0) ? 'tachado' : '' %>">M</label>
                   <input type="radio" id="radio3" name="talle" value="l" <% if (producto.talleL === 0) { %>disabled<% } %> />
-                  <label for="radio3">L</label>
+                  <label for="radio3" class="<%= (producto.talleL === 0) ? 'tachado' : '' %>">L</label>
                   <input type="radio" id="radio4" name="talle" value="xl" <% if (producto.talleXL === 0) { %>disabled<% } %> />
-                  <label for="radio4">XL</label>
+                  <label for="radio4" class="<%= (producto.talleXL === 0) ? 'tachado' : '' %>">XL</label>
                   <input type="radio" id="radio5" name="talle" value="xxl" <% if (producto.talleXXL === 0) { %>disabled<% } %> />
-                  <label for="radio5">XXL</label>
+                  <label for="radio5" class="<%= (producto.talleXXL === 0) ? 'tachado' : '' %>">XXL</label>
                 </div>
-
-                
               <% } %>
-              
             </div>
             
             <div>
