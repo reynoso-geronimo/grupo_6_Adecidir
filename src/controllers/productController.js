@@ -162,6 +162,18 @@ const productDetailController = {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
+        const imagesToDelete = req.files
+        ? req.files.map(file => file.filename)
+        : [];
+        for (const imageNombre of imagesToDelete) {
+          fs.unlinkSync(
+            path.resolve(
+              __dirname,
+              "../../public/images/productos/" + imageNombre
+            )
+          );
+        }
+
         return res.status(400).json({ errors: errors.array() });
       }
 
