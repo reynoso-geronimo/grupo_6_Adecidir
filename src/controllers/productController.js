@@ -79,7 +79,38 @@ const productDetailController = {
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
-        return res.status(400).json({ errors: errors.array() });
+        {
+          const [producto, categorias] = await Promise.all([
+            Productos.findByPk(req.params.id, {
+              include: [{ model: db.Imagenes, as: "Imagenes" }],
+              paranoid: false,
+            }),
+            Categorias.findAll(),
+          ]);
+          const old = { ...req.body }
+          console.log(producto.Imagenes)
+          old.Imagenes=producto.Imagenes
+          old.id=producto.id
+         
+          if (req.files.length > 0) {
+            const imagesToDelete = req.files
+            ? req.files.map(file => file.filename)
+            : [];
+            for (const imageNombre of imagesToDelete) {
+              fs.unlinkSync(
+                path.resolve(
+                  __dirname,
+                  "../../public/images/productos/" + imageNombre
+                )
+              );
+            }
+          }
+    
+          
+          return res.render("products/productEdit", { producto: old, errors: errors.mapped() , categorias: categorias })
+        }
+       
+       // return res.status(400).json({ errors: errors.array() });
       }
 
       const productId = req.params.id;

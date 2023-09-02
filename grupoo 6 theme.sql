@@ -18,7 +18,6 @@ CREATE TABLE `Productos`(
     `descripcion` TEXT NOT NULL,
     `id_categoria` BIGINT UNSIGNED NOT NULL,
     `precio` DOUBLE(8, 2) NOT NULL,
-    `talleXS` INT NOT NULL,
     `talleS` INT NOT NULL,
     `talleM` INT NOT NULL,
     `talleL` INT NOT NULL,

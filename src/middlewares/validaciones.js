@@ -8,12 +8,13 @@ module.exports ={
         check('id_categoria').notEmpty().withMessage('Debes completar el campo de categoria').trim().escape(),
         check('descripcion').notEmpty().withMessage('Debes completar el campo de descripcion').bail().isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres.').escape().trim(),
         check('talleUnico').if((value, { req }) => req.body.talleUnico).isInt({ min: 1 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
-        check('talleUnico').if((value, { req }) => !req.body.talleUnico&&req.body.talles+req.body.tallem+req.body.tallel+req.body.tallexl+req.body.tallexxl==0).isInt({ min: 1 }).withMessage('Debes cargar un talle').trim().escape(),
-        check('talles').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallem').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallel').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallexl').if(( value,{ req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallexxl').if(( value,{ req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('talles').if((value, { req }) => req.body.talles).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        check('tallem').if((value, { req }) => req.body.tallem).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        check('tallel').if((value, { req }) => req.body.tallel).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        check('tallexl').if((value, { req }) => req.body.tallexl).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        check('tallexxl').if((value, { req }) => req.body.tallexxl).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        //check('talleUnico').if((value, { req }) => !req.body.talleUnico&&req.body.talles+req.body.tallem+req.body.tallel+req.body.tallexl+req.body.tallexxl==0).isInt({ min: 1 }).withMessage('Debes cargar un talle').trim().escape(),
+        
         //TODO validar campo talle unico
         check('imagenes').custom((value,{req})=>{
           if(req.fileValidationError){
@@ -27,12 +28,13 @@ module.exports ={
         check('precio').notEmpty().withMessage('El precio del producto es obligatorio.').bail().isNumeric().withMessage('El precio debe ser un valor numérico.').trim().escape(),
         check('id_categoria').notEmpty().withMessage('Debes seleccionar una categoría.').trim().escape(),
         check('talleUnico').if((value, { req }) => req.body.talleUnico).isInt({ min: 1 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
-        check('talleUnico').if((value, { req }) => !req.body.talleUnico&&req.body.talles+req.body.tallem+req.body.tallel+req.body.tallexl+req.body.tallexxl==0).isInt({ min: 1 }).withMessage('Debes cargar un talle').trim().escape(),
-        check('talles').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallem').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallel').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallexl').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
-        check('tallexxl').if((value, { req }) => !req.body.talleUnico).isInt({ min: 0 }).withMessage('Los talles deben ser enteros no negativos.').trim().escape(),
+        check('talles').if((value, { req }) => req.body.talles).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        check('tallem').if((value, { req }) => req.body.tallem).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        check('tallel').if((value, { req }) => req.body.tallel).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        check('tallexl').if((value, { req }) => req.body.tallexl).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        check('tallexxl').if((value, { req }) => req.body.tallexxl).isInt({ min: 0 }).withMessage('El talle debe ser entero no negativo.').trim().escape(),
+        //check('talleUnico').if((value, { req }) => !req.body.talleUnico&&req.body.talles+req.body.tallem+req.body.tallel+req.body.tallexl+req.body.tallexxl==0).isInt({ min: 1 }).withMessage('Debes cargar un talle').trim().escape(),
+        
         check('descripcion').notEmpty().withMessage('La descripción del producto es obligatoria.').bail().isLength({ min: 20 }).withMessage('La descripción debe tener al menos 20 caracteres.').trim().escape(),
         check('imagenes').custom((value, { req }) => {
           if (!req.files || req.files.length === 0) {
