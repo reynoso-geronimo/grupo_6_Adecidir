@@ -228,7 +228,14 @@ footer a i {
 /* 
 Pagina detalle producto
 */
+.share i {
+  font-size: 24px; 
+  color: #333; 
+}
 
+.share.clicked i {
+  color: #11B914; 
+}
 .product-container {
   display: flex;
   flex-direction: column;
