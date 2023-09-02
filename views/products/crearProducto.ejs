@@ -58,10 +58,11 @@
     
       
             <label class="subirImagen">
-              <input class="input-img-crear" name="imagenes" type="file" multiple/>
+              <input class="input-img-crear" name="imagenes" type="file" multiple id="imageInput" onchange="previewImages(event)" />
               Subir imagenes <i class="fa-solid fa-images"></i>
             </label>
             <div class="error-message" id="error-imagenes"></div>
+            <div id="imagePreview" class="image-preview"></div>
     
           
             <button class="botonAdd" type="submit">Crear producto</button>
@@ -72,6 +73,8 @@
         
       <!-- <script src="/js/productEditCreateTalle.js"></script> -->
       <script src="/js/valiCreacion.js"></script>
+      <script src="/js/preview.js"></script>
+
 
   </body>
 
