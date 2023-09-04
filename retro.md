@@ -128,7 +128,7 @@
 
 # RETRO SPRINT 7
     ##Conclusiones
-        En la reunión para la restrospectiva de este sprint fueron dichas muchas cosas sobre los conocimientos, la participación y comunicación entre nosotros.
+        En la reunión para la restrospectiva de este sprint fueron dichas muchas cosas sobre los conocimientos, la participación y comunicación entre nosotros. Además, nos pusimos a analizar todo el proyecto e hicimos una lista de las cosas pendientes que nos quedan hacer, o mejorar, de los sprints anteriores para que el proyecto llegue lo mejor posible a la entrega final.
 
      ## Dinámica de la estrella de mar
         1.Comenzar a hacer: guiarnos con códigos que esten bien hechos o con lo que hicieron nuestros compañeros de grupo
