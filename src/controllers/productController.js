@@ -8,7 +8,7 @@ const Categorias = db.Categorias;
 const Productos = db.Productos;
 const Imagenes = db.Imagenes;
 
-const productDetailController = {
+const productController = {
   list: async (req, res) => {
     try {
       const categoriaId = req.params.categoria;
@@ -326,4 +326,4 @@ const productDetailController = {
   }
 };
 
-module.exports = productDetailController;
+module.exports = productController;
