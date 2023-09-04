@@ -8,8 +8,10 @@
     <main class="register">
       <h1> Nuevo Password</h1>
       <form action="" method="post" id="PwResetForm">
-        <input type="password" name="newPassword" placeholder="Nueva contraseña"  />
-        <input type="password" name="newPasswordCheck" placeholder="Repite tu nueva contraseña"  />
+        <input type="password" name="newPassword" placeholder="Nueva contraseña" id="clave" />
+        <span class="error-message" id="error-clave"></span>
+        <input type="password" name="newPasswordCheck" placeholder="Repite tu nueva contraseña" id="passwordRepeat" />
+         <span class="error-message" id="error-claveRepeat"></span>
         <input type="submit" value="Cambiar Password" class="boton-negro" />
       </form>
 
