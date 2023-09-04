@@ -303,34 +303,27 @@ const productDetailController = {
     }
   },
   searchProducts: async function (req, res) {
-   
     try {
       const { keyword } = req.body;
       console.log(keyword);
+  
       const products = await Productos.findAll({
         where: {
           [Op.or]: [
             { nombre: { [Op.like]: `%${keyword}%` } },
             { descripcion: { [Op.like]: `%${keyword}%` } },
+            {'$Categorias.nombre$': { [Op.like]: `%${keyword}%` },},
           ],
-        }/*,
-        include: [
-          {
-            model: Categorias,
-            as: "Categorias",
-            where: {
-              nombre: { [Op.like]: `%${keyword}%` },
-            },
-          },
-        ],*/
+        },
+        include: [{model: Categorias,as: "Categorias"}]
       });
-
+  
       res.status(200).json({ products });
     } catch (error) {
-      console.error("Error en la busqueda", error);
-      res.status(500).json({ error: "Ocurrio un error intentalo mas tarde" });
+      console.error("Error en la búsqueda", error);
+      res.status(500).json({ error: "Ocurrió un error, inténtalo más tarde" });
     }
-  },
+  }
 };
 
 module.exports = productDetailController;
