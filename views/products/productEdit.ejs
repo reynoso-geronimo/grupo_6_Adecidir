@@ -25,10 +25,13 @@
               <div class="edit-box">
                 <div class="formIzquierda">
                   <label for="nombre">Nombre:</label>
+                  <span class="error-message" id="error-nombre"></span>
                   <input type="text" name="nombre" id="nombre" value="<%= producto.nombre %>" />
 
                   <label for="precio">Precio:</label>
                   <input type="number" name="precio" id="precio" value="<%= producto.precio %>" />
+                  <span class="error-message" id="error-precio"></span>
+
 
                   <label for="categorias">Categorías:</label>
                   <select id="categorias" name="id_categoria">
@@ -43,17 +46,12 @@
                   </select>
                   <label>Talles disponibles :</label>
                   <label class="switch">
-                    <input type="checkbox" id="switchTalle"
-                      <% if (producto.talleUnico) { %>
-                        checked
-                      <% } %>
-                    >
+                    <input type="checkbox" id="switchTalle">
                     <span class="slider"></span>
                   </label>
                   <div class="editar-talle">
                     <!-- ver script -->
-                    <% if (!producto.talleUnico) { %>
-                      <label for="talles">S <input type="number" id="talles" name="talleS"
+                    <label for="talles">S <input type="number" id="talles" name="talleS"
                         value="<%=producto.talleS%>" /></label>
                     <label for="tallem">M<input type="number" id="tallem" name="talleM"
                         value="<%=producto.talleM%>" /></label>
@@ -64,15 +62,20 @@
                         value="<%= producto.talleXL %>" /></label>
                     <label for="tallexxl">XXL<input type="number" id="tallexxl" name="talleXXL"
                         value="<%= producto.talleXXL %>" /></label>
-                        <% } else { %>
-                          <label for="talles">Unidades <input type="number" id="talleUnico" name="talleUnico" value="<%= producto.talleUnico %>" /></label>  
-                    <% } %>
-                    
                   </div>
+                  <span class="error-message" id="error-talles"></span>
+                  <span class="error-message" id="error-tallem"></span>
+                  <span class="error-message" id="error-tallel"></span>
+                  <span class="error-message" id="error-tallexl"></span>
+                  <span class="error-message" id="error-tallexxl"></span>
+                  <span class="error-message" id="error-talleUnico"></span>
+
                 </div>
                 <div class="formDerecha">
                   <label for="descripcion">Descripción:</label>
                   <textarea name="descripcion" id="editDescripcion"><%= producto.descripcion %></textarea>
+                  <span class="error-message" id="error-descripcion"></span>
+
                 </div>
               </div>
               <% if (producto.Imagenes) { %>
@@ -121,7 +124,8 @@
 
       </main>
       <%- include('../partials/footer.ejs') %>
-        <script src="/js/productEditCreateTalle.js"></script>
+        <!-- <script src="/js/productEditCreateTalle.js"></script>  -->
+        <script src="/js/valiEdit.js"></script>
   </body>
 
 </html>
