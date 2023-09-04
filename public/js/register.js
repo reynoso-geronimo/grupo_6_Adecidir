@@ -6,6 +6,7 @@ formularioRegistro.onsubmit= (event)=>{
     let email = document.querySelector("#email");
     let clave = document.querySelector("#clave");
     let passwordRepeat = document.querySelector("#passwordRepeat");
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
     let errores = 0;
     if(nombre.value.length <= 1 ){
@@ -20,11 +21,11 @@ formularioRegistro.onsubmit= (event)=>{
     }else{
         document.querySelector('#error-apellido').innerText=""
     }
-    if(email.value.length < 8 || email.length > 255){
-        errores ++
-        document.querySelector('#error-email').innerText="Ingresa un email con formato valido" 
-    }else{
-        document.querySelector('#error-email').innerText=""
+    if (!emailRegex.test(email.value)) {
+        errores++;
+        document.querySelector('#error-email').innerText = "Ingresa un email con formato válido";
+    } else {
+        document.querySelector('#error-email').innerText = "";
     }
     if(clave.value.length < 8 || clave.length > 255){
         errores ++
