@@ -1,28 +1,26 @@
 let formularioLogin = document.querySelector("#formularioLogin");
 formularioLogin.onsubmit= ()=>{
-    let email = document.querySelector("input.email");
-    let password = document.querySelector("input.password");
-    let errores = [];
-    if(email.length < 8 || email.length > 255){
-        errores.push("El Email esta fuera de rango, no tiene entre 8 y 255 caracteres");
+    const email = formularioLogin.querySelector('input[name="email"]');
+    const password = document.querySelector('input[name="password"]');
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    existeError=false;
+
+    if(email.value.length < 8 || email.value.length > 255){
+        email.insertAdjacentHTML('afterend', '<p>El Email debe tener entre 8 y 255 caracteres</p>');
+        existeError=true;
     }
-    if(!email.includes("@") || !email.includes(".")){
-        errores.push("El Email no tiene el formato de correo electrónico (ejemplo: sara@gmail.com).");
+    if(!emailRegex.test(email.value)){
+        email.insertAdjacentHTML('afterend', '<p>El Email dene tener formato de correo electronico.</p>');
+        existeError=true;
 
     }
-    if(password.length < 8 || password.length > 255){
-        errores.push("La Contraseña esta fuera de rango, no tiene entre 8 y 255 caracteres");
+    if(password.value.length < 8 || password.value.length > 255){
+        password.insertAdjacentHTML('afterend', '<p>La Contraseña debe tener entre 8 y 255 caracteres</p>');
+        existeError=true;
     }
 
-    if(errores.length > 0){
+    if(existeError){
         event.preventDefault();
-        let signIn = document.querySelector(".body-login .sign-in");
-        signIn+= '<div class="errores">';
-        errores.forEach(error=>{
-            signIn+= '<p>${error}</p>';
-        });
-        signIn+= '</div">';
-
-    }
+     }
     
 }
