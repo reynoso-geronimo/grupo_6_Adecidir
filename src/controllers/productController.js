@@ -305,7 +305,7 @@ const productDetailController = {
   searchProducts: async function (req, res) {
     try {
       const { keyword } = req.body;
-      console.log(keyword);
+    
   
       const products = await Productos.findAll({
         where: {
