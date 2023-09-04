@@ -43,6 +43,8 @@ formularioRegistro.onsubmit= (event)=>{
         });
         signIn.innerHTML+= '</div">';
 
+    }else{
+        formularioRegistro.submit()
     }
     
 }
