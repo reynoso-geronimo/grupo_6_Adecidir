@@ -315,7 +315,7 @@ const productDetailController = {
             {'$Categorias.nombre$': { [Op.like]: `%${keyword}%` },},
           ],
         },
-        include: [{model: Categorias,as: "Categorias"}]
+        include: [{model: Categorias,as: "Categorias"},{ model: Imagenes, as: "Imagenes" }]
       });
   
       res.status(200).json({ products });
