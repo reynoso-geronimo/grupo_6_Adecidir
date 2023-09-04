@@ -27,5 +27,6 @@ router.put('/:id/alta',adminAcces,product.altaProduct)
 
 //apis
 router.post('/cartitems',product.cartApi)
+router.post('/busqueda',product.searchProducts)
 
 module.exports = router;

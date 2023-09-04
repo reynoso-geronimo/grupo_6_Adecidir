@@ -303,25 +303,26 @@ const productDetailController = {
     }
   },
   searchProducts: async function (req, res) {
+   
     try {
       const { keyword } = req.body;
-
+      console.log(keyword);
       const products = await Productos.findAll({
         where: {
           [Op.or]: [
             { nombre: { [Op.like]: `%${keyword}%` } },
             { descripcion: { [Op.like]: `%${keyword}%` } },
           ],
-        },
+        }/*,
         include: [
           {
             model: Categorias,
             as: "Categorias",
             where: {
-              nombre: { [sequelize.Op.like]: `%${keyword}%` },
+              nombre: { [Op.like]: `%${keyword}%` },
             },
           },
-        ],
+        ],*/
       });
 
       res.status(200).json({ products });
