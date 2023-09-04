@@ -23,10 +23,20 @@
       <h1>Creá tu cuenta</h1>
       <form action="/user/register" method="post" enctype="multipart/form-data" id ="formularioRegistro">
         <input type="text" id="nombre" name="nombre" placeholder="Nombre" />
+        <span class="error-message" id="error-nombre"></span>
+
         <input type="text" id="apellido" name="apellido" placeholder="Apellido" />
+        <span class="error-message" id="error-apellido"></span>
+
         <input type="email" id="email" name="email" placeholder="Email" />
+        <span class="error-message" id="error-email"></span>
+
         <input type="password"id="clave" name="clave" placeholder="Contraseña" />
+        <span class="error-message" id="error-clave"></span>
+
         <input type="password" id="passwordRepeat" name="passwordRepeat" placeholder="Repite tu contraseña" />
+        <span class="error-message" id="error-claveRepeat"></span>
+
         <div class="register-avatar">
         <label for="new-avatar"><i class="fa-solid fa-cloud-arrow-up"></i>Imagen de perfil opcional</label>
         <input type="file" name="avatar" id="new-avatar" />
