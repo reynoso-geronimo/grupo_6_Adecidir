@@ -125,3 +125,19 @@
         4. Hacer menos: subir el proyecto a último momento al repositorio.
 
         5: Dejar de hacer: dejar código inutilizado (se pueden hacer branches para hacer pruebas).
+
+# RETRO SPRINT 7
+    ##Conclusiones
+        En la reunión para la restrospectiva de este sprint fueron dichas muchas cosas sobre los conocimientos, la participación y comunicación entre nosotros.
+
+     ## Dinámica de la estrella de mar
+        1.Comenzar a hacer: guiarnos con códigos que esten bien hechos o con lo que hicieron nuestros compañeros de grupo
+
+        2.Hacer más: aumentar la comunicación entre nosotros, especialmente si no entendemos o no nos sale la consigna del sprint o, incluso, avisar si alguien no puede hacer su parte
+
+        3. Continuar haciendo: pedir ayuda cuando alguno de nosotros la necesite
+
+        4. Hacer menos: desaparecer y no avisar
+
+        5: Dejar de hacer: pensar que estamos solos
+
