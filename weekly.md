@@ -182,3 +182,24 @@ los que no estan nos lucho y franco y valentin y falta que valen pusheé su part
 
 # 12 de agosto del 2023
 Cada uno se encargó de terminar sus tareas, complear y corregir lo que había hecho, en el caso de que fuera necesario, y seguir avanzando con la teoría de la clase para no quedarse atrás.
+
+# 1° de septiembre del 2023
+*Emiliano Apostolo
+    -Que hizo en estos días: se encargó de escapar los datos de clave de las validaciones del front
+    -Si se encontró con algún impedimento: si
+    -Qué va a hacer los próximos días: va a continuar con el playground y repasar lo que no logró
+
+*Furfaro ignacio
+    -Que hizo en estos días: se encargó de las validaciones de editar producto del lado del front-end
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground 
+
+*Geronimo Reynoso
+    -Que hizo en estos días: se encargó de las validaciones de usuario de backend
+    -Si se encontró con algún impedimento: no
+    -Qué va a hacer los próximos días: va a continuar con el playground 
+
+*Jennifer Lichtensztejn
+    -Que hizo en estos días: se encargó de las validaciones de  front-end de edición de perfil de usuario, registro de usuario y clave de usuario 
+    -Si se encontró con algún impedimento: si. Tuvo problemas para desarrollar la lógica del prevent default y le faltó la lógica de cuando no hay errores en el formulario.
+    -Qué va a hacer los próximos días: va a continuar con el playground y repasar lo que no logró
