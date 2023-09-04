@@ -8,7 +8,7 @@ formularioRegistro.onsubmit= (event)=>{
     const passwordRepeat = document.querySelector("#passwordRepeat");
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    const errores = 0;
+    let errores = 0;
     if(nombre.value.length <= 1 ){
         errores ++
         document.querySelector('#error-nombre').innerText="El nombre es un campo obligatorio." 
