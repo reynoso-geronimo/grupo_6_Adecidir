@@ -1,14 +1,14 @@
-let formularioRegistro = document.querySelector("#formularioRegistro");
+const formularioRegistro = document.querySelector("#formularioRegistro");
 formularioRegistro.onsubmit= (event)=>{
     event.preventDefault()
-    let nombre = document.querySelector("#nombre");
-    let apellido = document.querySelector("#apellido");
-    let email = document.querySelector("#email");
-    let clave = document.querySelector("#clave");
-    let passwordRepeat = document.querySelector("#passwordRepeat");
+    const nombre = document.querySelector("#nombre");
+    const apellido = document.querySelector("#apellido");
+    const email = document.querySelector("#email");
+    const clave = document.querySelector("#clave");
+    const passwordRepeat = document.querySelector("#passwordRepeat");
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    let errores = 0;
+    const errores = 0;
     if(nombre.value.length <= 1 ){
         errores ++
         document.querySelector('#error-nombre').innerText="El nombre es un campo obligatorio." 
