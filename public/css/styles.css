@@ -1030,6 +1030,7 @@ Pagina detalle producto
   border-bottom: solid 1px #B3B3B3;
   margin-bottom: 20px;
   font-size: 20px;
+  justify-content: center;
  
 }
 .article-card a{
