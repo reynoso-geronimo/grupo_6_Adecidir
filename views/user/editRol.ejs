@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+<body class="body-categorias">
+    <%- include('../partials/header') %>
+
+    <main >
+          <div class="form-container">
+
+        <h1>
+            <img
+                id="avatarUsuario"
+                src="/../images/avatar/defaultAvatar.png" 
+                alt=""
+                width="60px"
+            /> Edita el Rol
+        </h1>
+        
+        <form action="/user/editarRol" method="POST">
+            
+            <label for="usuario">Selecciona un usuario:</label>
+            <select name="usuario" id="usuario">
+                <% usuario.forEach(usuario => { %>
+                    <option value="<%= usuario.id %>" data-avatar="<%= usuario.avatar %>"><%= usuario.email %></option>
+                <% }); %>
+            </select>
+        
+            <label for="nuevoRol">Nuevo Rol:</label>
+            <select name="nuevoRol" id="nuevoRol">
+                <option value="superadmin">Superadmin</option>
+                <option value="admin">Admin</option>
+                <option value="customer">Customer</option>
+            </select>
+        
+            <input type="submit" value="Editar rol" />
+        </form>
+        </div>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+    <script src="/js/avatarAdmin.js"></script>
+
+</body>
+</html>

@@ -31,6 +31,8 @@ router.get("/profile/edit/password", userAcess,userController.perfilEditPassword
 router.post("/profile/edit/password", userAcess,userController.processEditPassword);
 router.get("/admin",adminAcces, userController.adminPanel);
 router.get("/adminUsers",adminAcces, userController.adminUsers);
+router.get("/editarRol",adminAcces, userController.editarRol);
+router.post("/editarRol",adminAcces, userController.editarCategoria);
 router.get("/cart",userController.cart);
 
 //TODO ruta de ticket

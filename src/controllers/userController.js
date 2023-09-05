@@ -101,6 +101,25 @@ module.exports = {
     })
     return res.render("user/adminUsers", { usuarios: usuarios });
   },
+  editarRol : async (req, res) => {
+        const usuarios = await db.Usuarios.findAll({});
+        return res.render("user/editRol", { usuario: usuarios });
+  },
+  editarCategoria: async (req, res) => {
+    try {
+      const { usuario, nuevoRol } = req.body;
+
+      await db.Usuarios.update(
+        { categoria: nuevoRol },
+        { where: { id: usuario } }
+      );
+
+      res.redirect('/user/adminUsers'); 
+    } catch (error) {
+      console.error('Error al actualizar el rol del usuario:', error);
+      res.status(500).send('Error interno del servidor');
+    }
+  },
   perfil: function (req, res) {
     return res.render("user/profile", { usuario: req.session.usuarioLogeado });
   },

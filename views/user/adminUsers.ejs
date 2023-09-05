@@ -6,14 +6,18 @@
     <%- include('../partials/header') %>
 
     <main>
-      
+      <div class="admin-actions">
+        <a href="/user/editarRol"><button><i class="fa-solid fa-pen-to-square"></i>EDITAR ROLES</button></a>
+      </div>
 
       <section class="admin-items-table">
         <div class="header-tabla-admin">
-          <h4>Avatar</h4>
-          <h4>Nombre y Apellido</h4>
+          <h4>AVATAR</h4>
+          <h4>NOMBRE y APELLIDO</h4>
+          <h4>EMAIL</h4>
           <h4>CATEGORIA</h4>
-          <h4>Email</h4>
+          <h4>TELEFONO</h4>
+          <h4></h4>
         </div>
         <% if (usuarios.length>0) { %>
         <div class="row-tabla-admin">
@@ -26,10 +30,8 @@
             <p><%= usuario.nombre +' ' + usuario.apellido %></p>
             <p><%= usuario.email %></p>
             <p><%= usuario.categoria %></p>
+            <p><%= usuario.telefono %></p>
             <div class="row-acciones-items">
-                <a href="/user/profile"><i class="fa-solid fa-eye"></i>VER</a>
-                <a href="/user/editarRol"><i class="fa-solid fa-pen-to-square"></i>EDITAR ROL</a>
-
               </div>
           </article>
           <% }) %>
