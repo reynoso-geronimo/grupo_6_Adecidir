@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header') %>
+
+    <main>
+      
+
+      <section class="admin-items-table">
+        <div class="header-tabla-admin">
+          <h4>Avatar</h4>
+          <h4>Nombre y Apellido</h4>
+          <h4>CATEGORIA</h4>
+          <h4>Email</h4>
+        </div>
+        <% if (usuarios.length>0) { %>
+        <div class="row-tabla-admin">
+          %> <% usuarios.forEach(usuario=> { %>
+
+          <article>
+           <div class="row-img-item">
+            <img src="/images/avatar/<%=usuario.avatar %>" />
+            </div>
+            <p><%= usuario.nombre +' ' + usuario.apellido %></p>
+            <p><%= usuario.email %></p>
+            <p><%= usuario.categoria %></p>
+            <div class="row-acciones-items">
+                <a href="/user/profile"><i class="fa-solid fa-eye"></i>VER</a>
+                <a href="/user/editarRol"><i class="fa-solid fa-pen-to-square"></i>EDITAR ROL</a>
+
+              </div>
+          </article>
+          <% }) %>
+        </div>
+
+        <% } else {%>
+        <% } %>
+      </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+  </body>
+</html>
