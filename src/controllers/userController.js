@@ -95,6 +95,12 @@ module.exports = {
     })
     return res.render("user/admin", { productos: productos });
   },
+  adminUsers:async  function (req, res) {
+    const usuarios = await db.Usuarios.findAll({
+      
+    })
+    return res.render("user/adminUsers", { usuarios: usuarios });
+  },
   perfil: function (req, res) {
     return res.render("user/profile", { usuario: req.session.usuarioLogeado });
   },
