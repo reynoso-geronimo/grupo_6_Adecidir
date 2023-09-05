@@ -4,33 +4,62 @@
     <h1 class="copy-header"><a href="/">THEME</a></h1>
   </div>
   <div class="main-header-right-bar">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <div class="containerLupa">
+      <input type="text" name="barra" class="inputLupa" required="" >
+        <i  id="iconoLupa" class="fa-solid fa-magnifying-glass"></i>
+  </div>
     <a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a>
     <% if (locals.admin===true) { %>
-      <i id="userIcon" class="fa-solid fa-user-secret"></i>
+      <i id="userIcon" class="fa-solid fa-user-secret" onclick="toggleMenu()" ></i>
       <% } else { %>
-        <i id="userIcon" class="fa-solid fa-user"></i>
-    <% } %>
+        <i id="userIcon" class="fa-solid fa-user" onclick="toggleMenu()" ></i>
+      <% } %>
   </div>
 
-  <div class='login-register'>
-    <% if (locals.isLogged===false) { %>
-      <a href="/user/register"><button>REGISTRARME</button></a>
-      <a href="/user/login"><button>INICIAR SESIÓN</button></a>
-      <% } else if  (locals.isLogged===true) { %>
-        <a href="/user/profile"><button>VER MI PERFIL</button></a>
-        <% if (locals.admin===true) { %>
-          <a href="/user/admin"><button>ADMINISTRACION</button></a>
-        <% }  %>
-        <a href="/user/logout"><button>CERRAR SESION</button></a>
-    <% } %>
-      
+  <div class="sub-menu-wrap" id="subMenu">
+    <div class="sub-menu">
+        <div class="user-info">
+        </div>            
+        <% if (locals.isLogged===false) { %>
+            <a href="/user/register" class="sub-menu-link">
+                <i class="fa-solid fa-user-ninja"></i>                
+                <p>REGISTRARME</p>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            <a href="/user/login" class="sub-menu-link">
+                <i class="fa-solid fa-right-to-bracket"></i>
+                <p>INICIAR SESION</p>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            <% } else if  (locals.isLogged===true) { %>
+              <a href="/user/profile" class="sub-menu-link">
+                <!-- <img src="/images/icons/18764668-01.png" alt=""> -->
+                <i class="fa-sharp fa-solid fa-user"></i>
+              <p>Ver Perfil</p>
+              <span><i class="fa-solid fa-arrow-right"></i></span>
+
+            </a>
+              <% if (locals.admin===true) { %>
+                <a href="/user/admin" class="sub-menu-link">
+                  <i class="fa-solid fa-display"></i>
+                  <p>Administracion</p>
+                    <span><i class="fa-solid fa-arrow-right"></i></span>
+
+                </a>
+              <% }  %>
+              <a href="/user/logout" class="sub-menu-link"> 
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <p>Cerrar Sesion</p>
+                <span><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+          <% } %>
+    </div>
   </div>
   <div class='search-bar-header'>
-    <form action="/product/busqueda" method="post"><input type="search" name="keyword" id="search-bar-header-input"><button
+    <form action="/" method="get"><input type="search" name="search-bar-header" id="search-bar-header-input"><button
         type="submit">Buscar</button></form>
   </div>
  
 </header>
 
-<script src="/js/header.js"></script>
+<script src="/js/dropDown.js"></script>
