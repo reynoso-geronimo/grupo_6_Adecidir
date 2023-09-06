@@ -46,22 +46,30 @@
                   </select>
                   <label>Talles disponibles :</label>
                   <label class="switch">
-                    <input type="checkbox" id="switchTalle">
+                    <input type="checkbox" id="switchTalle"
+                    <% if (producto.talleUnico) { %>
+                      checked
+                    <% } %>
+                  >
                     <span class="slider"></span>
                   </label>
                   <div class="editar-talle">
                     <!-- ver script -->
-                    <label for="talles">S <input type="number" id="talles" name="talleS"
-                        value="<%=producto.talleS%>" /></label>
-                    <label for="tallem">M<input type="number" id="tallem" name="talleM"
-                        value="<%=producto.talleM%>" /></label>
-                    <label for="tallel">L<input type="number" id="tallel" name="talleL"
-                        value="<%= producto.talleL %>" />
-                    </label>
-                    <label for="tallexl">XL<input type="number" id="tallexl" name="talleXL"
-                        value="<%= producto.talleXL %>" /></label>
-                    <label for="tallexxl">XXL<input type="number" id="tallexxl" name="talleXXL"
-                        value="<%= producto.talleXXL %>" /></label>
+                    <% if (!producto.talleUnico) { %>
+                      <label for="talles">S <input type="number" id="talles" name="talleS"
+                          value="<%=producto.talleS%>" /></label>
+                      <label for="tallem">M<input type="number" id="tallem" name="talleM"
+                          value="<%=producto.talleM%>" /></label>
+                      <label for="tallel">L<input type="number" id="tallel" name="talleL"
+                          value="<%= producto.talleL %>" />
+                      </label>
+                      <label for="tallexl">XL<input type="number" id="tallexl" name="talleXL"
+                          value="<%= producto.talleXL %>" /></label>
+                      <label for="tallexxl">XXL<input type="number" id="tallexxl" name="talleXXL"
+                          value="<%= producto.talleXXL %>" /></label>
+                    <% } else { %>
+                      <label for="talles">Unidades <input type="number" id="talleUnico" name="talleUnico" value="<%= producto.talleUnico %>" /></label>  
+                    <% } %>
                   </div>
                   <span class="error-message" id="error-talles"></span>
                   <span class="error-message" id="error-tallem"></span>
