@@ -15,8 +15,8 @@
           <h4>AVATAR</h4>
           <h4>NOMBRE y APELLIDO</h4>
           <h4>EMAIL</h4>
-          <h4>CATEGORIA</h4>
-          <h4>TELEFONO</h4>
+          <h4>CATEGORÍA</h4>
+          <h4>TELÉFONO</h4>
           <h4></h4>
         </div>
         <% if (usuarios.length>0) { %>
@@ -30,7 +30,11 @@
             <p><%= usuario.nombre +' ' + usuario.apellido %></p>
             <p><%= usuario.email %></p>
             <p><%= usuario.categoria %></p>
+            <% if (usuario.telefono) { %>
             <p><%= usuario.telefono %></p>
+            <% } else { %>
+              <p>No se enconto teléfono</p>
+            <% } %>
             <div class="row-acciones-items">
               </div>
           </article>
