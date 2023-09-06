@@ -23,7 +23,11 @@ module.exports = {
         res.locals.isLogged = false
         if (req.session.usuarioLogeado) {
             res.locals.isLogged = true
-            if(req.session.usuarioLogeado.categoria === "admin"||req.session.usuarioLogeado.categoria === "superadmin") res.locals.admin = true , res.locals.superadmin = true
+            if(req.session.usuarioLogeado.categoria === "admin") {
+                res.locals.admin = true
+            } else if (req.session.usuarioLogeado.categoria === "superadmin") {
+                res.locals.superadmin = true
+            }
             next()
         } else {
             next()
