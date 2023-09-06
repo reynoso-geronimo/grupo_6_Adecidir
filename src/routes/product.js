@@ -25,8 +25,10 @@ router.delete('/:id/delete', adminAcces,product.delete);
 
 router.put('/:id/alta',adminAcces,product.altaProduct)
 
+router.post('/busqueda',product.searchProductsApi)
+
 //apis
 router.post('/cartitems',product.cartApi)
-router.post('/busqueda',product.searchProducts)
+router.post('/api/busqueda',product.searchProductsApi)
 
 module.exports = router;

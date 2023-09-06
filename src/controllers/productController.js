@@ -87,15 +87,15 @@ const productController = {
             }),
             Categorias.findAll(),
           ]);
-          const old = { ...req.body }
-          console.log(producto.Imagenes)
-          old.Imagenes=producto.Imagenes
-          old.id=producto.id
-         
+          const old = { ...req.body };
+          console.log(producto.Imagenes);
+          old.Imagenes = producto.Imagenes;
+          old.id = producto.id;
+
           if (req.files.length > 0) {
             const imagesToDelete = req.files
-            ? req.files.map(file => file.filename)
-            : [];
+              ? req.files.map(file => file.filename)
+              : [];
             for (const imageNombre of imagesToDelete) {
               fs.unlinkSync(
                 path.resolve(
@@ -105,12 +105,15 @@ const productController = {
               );
             }
           }
-    
-          
-          return res.render("products/productEdit", { producto: old, errors: errors.mapped() , categorias: categorias })
+
+          return res.render("products/productEdit", {
+            producto: old,
+            errors: errors.mapped(),
+            categorias: categorias,
+          });
         }
-       
-       // return res.status(400).json({ errors: errors.array() });
+
+        // return res.status(400).json({ errors: errors.array() });
       }
 
       const productId = req.params.id;
@@ -194,8 +197,8 @@ const productController = {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         const imagesToDelete = req.files
-        ? req.files.map(file => file.filename)
-        : [];
+          ? req.files.map(file => file.filename)
+          : [];
         for (const imageNombre of imagesToDelete) {
           fs.unlinkSync(
             path.resolve(
@@ -276,6 +279,29 @@ const productController = {
       console.log(error);
     }
   },
+
+  searchProducts: async function (req, res) {
+    try {
+      const { keyword } = req.body;
+      const products = await Productos.findAll({
+        where: {
+          [Op.or]: [
+            { nombre: { [Op.like]: `%${keyword}%` } },
+            { descripcion: { [Op.like]: `%${keyword}%` } },
+            { "$Categorias.nombre$": { [Op.like]: `%${keyword}%` } },
+          ],
+        },
+        include: [
+          { model: Categorias, as: "Categorias" },
+          { model: Imagenes, as: "Imagenes" },
+        ],
+      });
+
+      //aca va el return render
+    } catch (error) {
+      console.error("Error en la búsqueda", error);
+    }
+  },
   cartApi: async function (req, res) {
     try {
       const productos = req.body;
@@ -302,28 +328,30 @@ const productController = {
       return res.status(500).json({ error: "Error al procesar la solicitud" });
     }
   },
-  searchProducts: async function (req, res) {
+  searchProductsApi: async function (req, res) {
     try {
       const { keyword } = req.body;
-    
-  
+
       const products = await Productos.findAll({
         where: {
           [Op.or]: [
             { nombre: { [Op.like]: `%${keyword}%` } },
             { descripcion: { [Op.like]: `%${keyword}%` } },
-            {'$Categorias.nombre$': { [Op.like]: `%${keyword}%` },},
+            { "$Categorias.nombre$": { [Op.like]: `%${keyword}%` } },
           ],
         },
-        include: [{model: Categorias,as: "Categorias"},{ model: Imagenes, as: "Imagenes" }]
+        include: [
+          { model: Categorias, as: "Categorias" },
+          { model: Imagenes, as: "Imagenes" },
+        ],
       });
-  
+
       res.status(200).json({ products });
     } catch (error) {
       console.error("Error en la búsqueda", error);
       res.status(500).json({ error: "Ocurrió un error, inténtalo más tarde" });
     }
-  }
+  },
 };
 
 module.exports = productController;
