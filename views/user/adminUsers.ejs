@@ -21,7 +21,6 @@
           <h4>EMAIL</h4>
           <h4>CATEGORÍA</h4>
           <h4>TELÉFONO</h4>
-          <h4></h4>
         </div>
         <% if (usuarios.length>0) { %>
         <div class="row-tabla-admin">
@@ -31,7 +30,7 @@
            <div class="row-img-item">
             <img src="/images/avatar/<%=usuario.avatar %>" />
             </div>
-            <p><%= usuario.nombre +' ' + usuario.apellido %></p>
+            <p><%= usuario.nombre + ' ' + usuario.apellido %></p>
             <p><%= usuario.email %></p>
             <p><%= usuario.categoria %></p>
             <% if (usuario.telefono) { %>
@@ -39,8 +38,6 @@
             <% } else { %>
               <p>No se enconto teléfono</p>
             <% } %>
-            <div class="row-acciones-items">
-              </div>
           </article>
           <% }) %>
         </div>

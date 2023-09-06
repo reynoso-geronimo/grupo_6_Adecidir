@@ -71,7 +71,7 @@
               </button>
             </div>
 
-            <% if (locals.admin===true) { %>
+            <% if (locals.admin===true ||locals.superadmin===true ) { %>
             <a href="/product/<%=producto.id%>/editform/"
               ><button>EDITAR PRODUCTO</button></a
             >
