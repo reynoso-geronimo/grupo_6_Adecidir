@@ -9,7 +9,7 @@
         <i  id="iconoLupa" class="fa-solid fa-magnifying-glass"></i>
   </div>
     <a href="/user/cart"><i class="fa-solid fa-cart-shopping"></i></a>
-    <% if (locals.admin===true) { %>
+    <% if (locals.admin===true || locals.superadmin===true) { %>
       <i id="userIcon" class="fa-solid fa-user-secret" onclick="toggleMenu()" ></i>
       <% } else { %>
         <i id="userIcon" class="fa-solid fa-user" onclick="toggleMenu()" ></i>
