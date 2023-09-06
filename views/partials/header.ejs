@@ -46,17 +46,20 @@
                     <span><i class="fa-solid fa-arrow-right"></i></span>
 
                 </a>
-              <% }  %>
+                <% }  %>
+                <% if (locals.superadmin === true) {  %>
+                <a href="/user/adminUsers" class="sub-menu-link"> 
+                  <i class="fa-solid fa-walkie-talkie"></i>
+                  <p>Admin users</p>
+                  <span><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <% } %>
               <a href="/user/logout" class="sub-menu-link"> 
                 <i class="fa-solid fa-right-from-bracket"></i>
                 <p>Cerrar Sesion</p>
                 <span><i class="fa-solid fa-arrow-right"></i></span>
               </a>
-               <a href="/user/adminUsers" class="sub-menu-link"> 
-                <i class="fa-solid fa-walkie-talkie"></i>
-                <p>Admin users</p>
-                <span><i class="fa-solid fa-arrow-right"></i></span>
-              </a>
+               
           <% } %>
     </div>
   </div>

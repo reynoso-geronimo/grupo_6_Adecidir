@@ -14,11 +14,16 @@ module.exports = {
             next()
         } else return res.redirect('/')
     },
+    superAdminAcces: function (req, res, next) {
+        if ((req.session.usuarioLogeado && req.session.usuarioLogeado.categoria === "superadmin")) {
+            next()
+        } else return res.redirect('/')
+    },
     isLogged: function (req, res, next) {
         res.locals.isLogged = false
         if (req.session.usuarioLogeado) {
             res.locals.isLogged = true
-            if(req.session.usuarioLogeado.categoria === "admin"||req.session.usuarioLogeado.categoria === "superadmin") res.locals.admin = true
+            if(req.session.usuarioLogeado.categoria === "admin"||req.session.usuarioLogeado.categoria === "superadmin") res.locals.admin = true , res.locals.superadmin = true
             next()
         } else {
             next()

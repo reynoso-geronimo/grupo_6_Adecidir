@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router()
 const validateAvatar = require('../middlewares/avatarMiddleware.js')
 const { validarRegistro,validarLogin,validarEditUsuario,validarImagenSize } = require('../middlewares/validaciones.js');
-const {logged, userAcess,adminAcces} = require('../middlewares/authMiddleware.js');
+const {logged, userAcess,adminAcces, superAdminAcces} = require('../middlewares/authMiddleware.js');
 const {uploadImgAvatar} = require('../middlewares/fileUploadMiddleware.js')
 const userController = require('../controllers/userController.js');
 
@@ -30,9 +30,9 @@ router.post("/profile/edit/", userAcess,uploadImgAvatar.single('avatar'),validar
 router.get("/profile/edit/password", userAcess,userController.perfilEditPassword);
 router.post("/profile/edit/password", userAcess,userController.processEditPassword);
 router.get("/admin",adminAcces, userController.adminPanel);
-router.get("/adminUsers",adminAcces, userController.adminUsers);
-router.get("/editarRol",adminAcces, userController.editarRol);
-router.post("/editarRol",adminAcces, userController.editarCategoria);
+router.get("/adminUsers",superAdminAcces, userController.adminUsers);
+router.get("/editarRol",superAdminAcces, userController.editarRol);
+router.post("/editarRol",superAdminAcces, userController.editarCategoria);
 router.get("/cart",userController.cart);
 
 //TODO ruta de ticket
