@@ -346,7 +346,7 @@ const productController = {
         ],
       });
 
-      res.status(200).json({ products });
+      res.status(200).json({ data:products });
     } catch (error) {
       console.error("Error en la búsqueda", error);
       res.status(500).json({ error: "Ocurrió un error, inténtalo más tarde" });
