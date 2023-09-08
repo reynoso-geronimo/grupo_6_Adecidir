@@ -132,7 +132,25 @@ module.exports = {
       res.status(500).send("Error interno del servidor");
     }
   },
-  perfil: function (req, res) {
+  perfil: async function (req, res) {
+    try {
+      const tickets = await db.Tickets.findAll({
+        where: { usuario_id: req.session.usuarioLogeado.id },
+        include: [
+          {
+            model: db.Productos,
+            as: "Productos", 
+            through: {
+              model: db.Productos_tickets,
+              as: "Tickets",
+            },
+          },
+        ],
+      });
+      console.log(tickets);
+    } catch (error) {
+      console.log(error);
+    }
     return res.render("user/profile", { usuario: req.session.usuarioLogeado });
   },
   perfilEdit: function (req, res) {
