@@ -44,8 +44,19 @@
       </section>
       <section>
         <h2><i class="fa-solid fa-receipt"></i> TUS COMPRAS</h2>
-        <div class="profile-info">
-        </div>
+        <% tickets.forEach(ticket => { %>
+          <div class="profile-info">
+            <p>Nro : <%= ticket.id %>  </p>  
+            <p>Fecha: <%= new Date(ticket.createdAt).toLocaleDateString() %></p>
+            <% let total = 0 %>
+            <% ticket.Productos.forEach(producto => { %>
+              <% total+= (producto.Tickets.cantidad * producto.Tickets.precioFechaCompra) %>
+              <p><%=  producto.Tickets.cantidad %> X <%= producto.nombre %> U:$<%=  producto.Tickets.precioFechaCompra %> </p>
+            <% }) %>
+            <p>Total: $<%= total %></p>
+          </div>
+        <% }) %>
+       
        
           
       

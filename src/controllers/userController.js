@@ -139,19 +139,23 @@ module.exports = {
         include: [
           {
             model: db.Productos,
-            as: "Productos", 
+            as: "Productos",
             through: {
               model: db.Productos_tickets,
               as: "Tickets",
             },
+            attributes: ["id", "nombre"], //columnas que quiero obtener de la tabla Productos
+            pivotAttributes: ["precioFechaCompra", "cantidad"], // columnas de la tabla pivot
           },
         ],
       });
-      console.log(tickets);
+      
+      
+      return res.render("user/profile", { usuario: req.session.usuarioLogeado, tickets:[...tickets] });
     } catch (error) {
       console.log(error);
     }
-    return res.render("user/profile", { usuario: req.session.usuarioLogeado });
+    
   },
   perfilEdit: function (req, res) {
     return res.render("user/profileEdit", {
