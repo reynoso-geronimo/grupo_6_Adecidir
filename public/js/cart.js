@@ -85,6 +85,9 @@ window.addEventListener('load',()=>{
   }
 
   cargarEliminar();
+
+
+
     
 })
 

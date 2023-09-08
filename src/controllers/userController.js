@@ -254,7 +254,55 @@ ${link}`
     }
   
   },
-  apiTikcketProcess : (req,res)=>{
-    
+  apiTikcketProcess : async (req,res)=>{
+    const t = await db.sequelize.transaction();
+  
+    try {
+     
+      const usuario_id = req.session.usuarioLogeado.id;
+  
+      
+      const nuevoTicket = await db.Tickets.create({
+        usuario_id,
+        estado: 'Abierto'
+      }, { transaction: t });
+  
+     
+      const id_ticket = nuevoTicket.id;
+  
+      
+      const productos = req.body;
+  
+      
+      await Promise.all(
+        productos.map(async (producto) => {
+         
+          const { precio } = await db.Productos.findByPk(producto.id, { attributes: ['precio'], transaction: t });
+
+          await db.Productos_tickets.create({
+            id_producto: producto.id,
+            id_ticket,
+            precioFechaCompra: precio, 
+            cantidad: producto.cantidad
+          }, { transaction: t });
+        })
+      );
+  
+      
+      await t.commit();
+  
+     
+      return res.status(201).json({
+        mensaje: 'Ticket y productos asociados creados con éxito',
+        ticket: nuevoTicket,
+        productosAsociados: productos
+      });
+    } catch (error) {
+   
+      await t.rollback();
+  
+      console.error('Error al crear el ticket y productos asociados:', error);
+      return res.status(500).json({ error: 'Error interno del servidor' });
+    }
   }
 };

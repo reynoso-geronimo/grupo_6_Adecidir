@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) => {
          type: dataTypes.BIGINT
         },
         cantidad:{
-         type: dataTypes.BOOLEAN
+         type: dataTypes.INTEGER
         }
        
     };
@@ -27,19 +27,7 @@ module.exports = (sequelize, dataTypes) => {
     
     const Producto_ticket = sequelize.define(alias, cols, config);
 
-    Producto_ticket.associate = function(models){
-        Producto_ticket.hasMany(models.Productos, {
-            as: "Productos",
-            foreignKey: "id_producto"
-        })
-    }
-
-    Producto_ticket.associate = function(models){
-        Producto_ticket.hasMany(models.Tickets, {
-            as: "Tickets",
-            foreignKey: "id_ticket"
-        })
-    }
+    
 
    
 

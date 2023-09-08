@@ -63,11 +63,8 @@ module.exports = (sequelize, dataTypes) => {
             as: "Imagenes",
             foreignKey: "id_producto"
         });
-    
-        Producto.belongsTo(models.Productos_tickets, {
-            as: "Productos_tickets",
-            foreignKey: "id" //id_producto < esto me da error asi que lo deje asi 
-        });
+        Producto.belongsToMany(models.Tickets, { through: 'Productos_tickets' })
+       
     }
     
     return Producto;

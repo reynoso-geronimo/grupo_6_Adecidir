@@ -6,7 +6,7 @@ module.exports = (sequelize, dataTypes) => {
         primaryKey: true,
         autoIncrement: true
         },
-        fecha:{
+        createdAt:{
          type: dataTypes.DATE
         },
         usuario_id:{
@@ -28,18 +28,15 @@ module.exports = (sequelize, dataTypes) => {
     const Ticket = sequelize.define(alias, cols, config);
 
     Ticket.associate = function(models){
-        Ticket.belongsTo(models.Productos_tickets, {
-            as: "Productos_tickets",
-            foreignKey: "id_ticket"
-        })
-    }
-
-    Ticket.associate = function(models){
+        
         Ticket.belongsTo(models.Usuarios, {
             as: "Usuarios",
             foreignKey: "usuario_id"
         })
+        Ticket.belongsToMany(models.Productos, { through: 'Productos_tickets' })
     }
+
+    
 
     return Ticket;
 }
