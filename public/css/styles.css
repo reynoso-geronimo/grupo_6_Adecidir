@@ -1349,6 +1349,14 @@ Pagina detalle producto
 .profile-actions button{
   width: 95%;
 }
+.ticket-info{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px gray;
+}
+.ticket-info-total{
+  text-align: end;
+}
 
 /* spinner */
 .lds-dual-ring {
