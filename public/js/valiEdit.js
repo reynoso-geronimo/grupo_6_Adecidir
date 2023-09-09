@@ -9,11 +9,11 @@ window.addEventListener("load", () => {
           `;
         } else {
           talle.innerHTML = `
-            <label for="talles">S <input type="number" id="talleS" name="talles" value="0" /></label>
-            <label for="tallem">M <input type="number" id="talleM" name="tallem" value="0" /></label>
-            <label for="tallel">L <input type="number" id="talleL" name="tallel" value="0" /></label>
-            <label for="tallexl">XL <input type="number" id="talleXL" name="tallexl" value="0" /></label>
-            <label for="tallexxl">XXL <input type="number" id="talleXXL" name="tallexxl" value="0" /></label>
+            <label for="talles">S <input type="number" id="talleS" name="talleS" value="0" /></label>
+            <label for="tallem">M <input type="number" id="talleM" name="talleM" value="0" /></label>
+            <label for="tallel">L <input type="number" id="talleL" name="talleL" value="0" /></label>
+            <label for="tallexl">XL <input type="number" id="talleXL" name="talleXL" value="0" /></label>
+            <label for="tallexxl">XXL <input type="number" id="talleXXL" name="talleXXL" value="0" /></label>
           `;
         }
       });
@@ -59,11 +59,11 @@ window.addEventListener("load", () => {
       }
   
       if (!switchTalle.checked) {
-        const talleS = parseInt(document.getElementById('talles').value)
-        const talleM = parseInt(document.getElementById('tallem').value)
-        const talleL = parseInt(document.getElementById('tallel').value)
-        const talleXL = parseInt(document.getElementById('tallexl').value)
-        const talleXXL = parseInt(document.getElementById('tallexxl').value)
+        const talleS = parseInt(document.getElementById('talleS').value)
+        const talleM = parseInt(document.getElementById('talleM').value)
+        const talleL = parseInt(document.getElementById('talleL').value)
+        const talleXL = parseInt(document.getElementById('talleXL').value)
+        const talleXXL = parseInt(document.getElementById('talleXXL').value)
   
         if (talleS < 0 || talleM < 0 || talleL < 0 || talleXL < 0 || talleXXL < 0) {
           errores.push({ campo: 'talles', mensaje: 'Los talles deben ser enteros no negativos.' })

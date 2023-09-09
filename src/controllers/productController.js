@@ -115,7 +115,7 @@ const productController = {
 
         // return res.status(400).json({ errors: errors.array() });
       }
-
+      console.log(req.body)
       const productId = req.params.id;
       const updatedProduct = req.body;
 
@@ -173,6 +173,7 @@ const productController = {
       }
 
       // update
+      console.log(updatedProduct)
       await producto.update(updatedProduct);
 
       return res.redirect(`/product/${producto.id}`); // para que el redirect te mande al producto

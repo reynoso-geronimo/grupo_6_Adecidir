@@ -56,16 +56,16 @@
                   <div class="editar-talle">
                     <!-- ver script -->
                     <% if (!producto.talleUnico) { %>
-                      <label for="talles">S <input type="number" id="talles" name="talleS"
+                      <label for="talles">S <input type="number" id="talleS" name="talleS"
                           value="<%=producto.talleS%>" /></label>
-                      <label for="tallem">M<input type="number" id="tallem" name="talleM"
+                      <label for="tallem">M<input type="number" id="talleM" name="talleM"
                           value="<%=producto.talleM%>" /></label>
-                      <label for="tallel">L<input type="number" id="tallel" name="talleL"
+                      <label for="tallel">L<input type="number" id="talleL" name="talleL"
                           value="<%= producto.talleL %>" />
                       </label>
-                      <label for="tallexl">XL<input type="number" id="tallexl" name="talleXL"
+                      <label for="tallexl">XL<input type="number" id="talleXL" name="talleXL"
                           value="<%= producto.talleXL %>" /></label>
-                      <label for="tallexxl">XXL<input type="number" id="tallexxl" name="talleXXL"
+                      <label for="tallexxl">XXL<input type="number" id="talleXXL" name="talleXXL"
                           value="<%= producto.talleXXL %>" /></label>
                     <% } else { %>
                       <label for="talles">Unidades <input type="number" id="talleUnico" name="talleUnico" value="<%= producto.talleUnico %>" /></label>  
