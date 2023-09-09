@@ -136,26 +136,36 @@ module.exports = {
     try {
       const tickets = await db.Tickets.findAll({
         where: { usuario_id: req.session.usuarioLogeado.id },
-        include: [
-          {
-            model: db.Productos,
-            as: "Productos",
-            through: {
-              model: db.Productos_tickets,
-              as: "Tickets",
-            },
-            attributes: ["id", "nombre"], //columnas que quiero obtener de la tabla Productos
-            pivotAttributes: ["precioFechaCompra", "cantidad"], // columnas de la tabla pivot
-          },
-        ],
       });
+  
+      const ticketDetails = await Promise.all(
+        tickets.map(async (ticket) => {
+          const products = await db.Productos_tickets.findAll({
+            where: { id_ticket: ticket.id },
+            include: [
+              {
+                model: db.Productos,
+                as: "producto", 
+                attributes: ["id", "nombre"],
+              },
+            ],
+          });
       
+          return {
+            ticket: ticket,
+            products: products,
+          };
+        })
       
-      return res.render("user/profile", { usuario: req.session.usuarioLogeado, tickets:[...tickets] });
+      );
+        
+      return res.render("user/profile", {
+        usuario: req.session.usuarioLogeado,
+        ticketDetails: ticketDetails,
+      });
     } catch (error) {
       console.log(error);
     }
-    
   },
   perfilEdit: function (req, res) {
     return res.render("user/profileEdit", {
@@ -323,11 +333,22 @@ ${link}`,
     }
   },
   apiTikcketProcess: async (req, res) => {
-    const t = await db.sequelize.transaction();
+    console.log(req.body);
 
+   
+    if(!req.session.usuarioLogeado){
+      return res.status(401).json({ 
+        status:'error',
+        error: "No hay sesion", 
+        mensaje: "Debes iniciar sesion para finalizar tu compra" 
+      
+      });
+      
+    }
+    const t = await db.sequelize.transaction();
     try {
       const usuario_id = req.session.usuarioLogeado.id;
-
+      
       const nuevoTicket = await db.Tickets.create(
         {
           usuario_id,
@@ -353,6 +374,7 @@ ${link}`,
               id_ticket,
               precioFechaCompra: precio,
               cantidad: producto.cantidad,
+              talle:producto.talle
             },
             { transaction: t }
           );
@@ -362,6 +384,7 @@ ${link}`,
       await t.commit();
 
       return res.status(201).json({
+        status: "success",
         mensaje: "Ticket y productos asociados creados con éxito",
         ticket: nuevoTicket,
         productosAsociados: productos,
@@ -370,7 +393,12 @@ ${link}`,
       await t.rollback();
 
       console.error("Error al crear el ticket y productos asociados:", error);
-      return res.status(500).json({ error: "Error interno del servidor" });
+      return res.status(500).json({ 
+        status:'error',
+        error: "Error interno del servidor", 
+        mensaje: "Ocurrio un error" 
+      
+      });
     }
   },
 };

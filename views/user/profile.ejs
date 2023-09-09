@@ -44,14 +44,15 @@
       </section>
       <section>
         <h2><i class="fa-solid fa-receipt"></i> TUS COMPRAS</h2>
-        <% tickets.forEach(ticket => { %>
+        <% ticketDetails.forEach(ticket => { %>
           <div class="profile-info">
-            <p>Nro : <%= ticket.id %>  </p>  
-            <p>Fecha: <%= new Date(ticket.createdAt).toLocaleDateString() %></p>
+            <p>Nro : <%= ticket.ticket.id %>  </p>  
+            <p>Fecha: <%= new Date(ticket.ticket.createdAt).toLocaleDateString() %></p>
             <% let total = 0 %>
-            <% ticket.Productos.forEach(producto => { %>
-              <% total+= (producto.Tickets.cantidad * producto.Tickets.precioFechaCompra) %>
-              <p><%=  producto.Tickets.cantidad %> X <%= producto.nombre %> U:$<%=  producto.Tickets.precioFechaCompra %> </p>
+            <% ticket.products.forEach(producto => { %>
+              <% total+= producto.cantidad * producto.precioFechaCompra %>
+              <p><%= producto.cantidad%> X <%= producto.producto.nombre %> <% if (producto.talle) {%> Talle: <%=producto.talle.toUpperCase()  %><%}%>  U:$<%= producto.precioFechaCompra%></p>
+              
             <% }) %>
             <p>Total: $<%= total %></p>
           </div>

@@ -11,6 +11,7 @@ CREATE TABLE `Productos_tickets`(
     `precioFechaCompra` DOUBLE(8, 2) NOT NULL,
     `id_ticket` BIGINT UNSIGNED NOT NULL,
     `cantidad` TINYINT NOT NULL
+    `talle` VARCHAR(255) NULL
 );
 CREATE TABLE `Productos`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,

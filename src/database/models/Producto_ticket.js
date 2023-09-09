@@ -17,6 +17,9 @@ module.exports = (sequelize, dataTypes) => {
         },
         cantidad:{
          type: dataTypes.INTEGER
+        },
+        talle:{
+          type: dataTypes.STRING
         }
        
     };
