@@ -7,6 +7,8 @@ router.get('/products/list/:categoria?', apiController.productList)
 
 //usuarios
 router.get('/users/list/', apiController.userList)
+router.get('/users/:id', apiController.userDetail)
+
 
 
 

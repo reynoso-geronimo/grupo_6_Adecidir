@@ -35,20 +35,32 @@ const apiController = {
       const usuarios = await db.Usuarios.findAll({});
 
       let response = {
+        count: usuarios.length,
         users: usuarios.map(usuario => {
           return {
             id: usuario.id,
             name: usuario.nombre,
             email: usuario.email,
-            deatail: "",
+            detail: "/api/users/"+ usuario.id,
           };
         }),
-        count: usuarios.length,
       };
 
       return res.json(response);
     } catch (error) {}
   },
+  userDetail : async function (req, res){
+    let response = {}
+    try {
+      const findUser = await db.Usuarios.findByPk(req.params.id,  {attributes:{exclude: ["password", "categoria",]}})
+      response.data= findUser
+      response.data.avatar =`/public/images/avatar${findUser.avatar}`
+      return res.json(response)
+    }
+    catch (error) {
+      console.log(error)
+    }
+  }
 };
 
 module.exports = apiController;
