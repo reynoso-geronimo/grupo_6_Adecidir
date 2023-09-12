@@ -60,6 +60,27 @@ const apiController = {
     catch (error) {
       console.log(error)
     }
+  },searchAllproducsAndQuantities: async function (req, res) {
+    let response={};
+    try{
+      const [productos,categorias] = await Promise.all([Productos.findAll({include:[{association : "Categorias"}]}),Categorias.findAll({include:[{association : "Productos"}]}),])
+      response.count=productos.length;
+      response.countByCategory = {};
+      categorias.forEach((categoria) => {
+        response.countByCategory[categoria.nombre]= categoria.Productos.length        
+      })
+      response.products= productos.map((producto)=>{return{
+        id:producto.id,
+        name:producto.nombre,
+        description:producto.descripcion,
+        category:producto.Categorias,
+        detail: '/api/products/'+producto.id
+      }})
+      return res.json(response)
+    }catch(e){
+      response.msg="Hubo un error"+e
+      return res.json(response)
+    }
   }
 };
 
