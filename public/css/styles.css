@@ -443,7 +443,7 @@ Pagina detalle producto
 .price {
   text-align: center;
   font-size: 20px;
-  margin: 0 0 20px 0;
+  margin: 40px 0 20px 0; 
   font-weight: bold;
 }
 
