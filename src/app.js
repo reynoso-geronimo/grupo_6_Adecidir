@@ -4,6 +4,7 @@ const methodOverride = require('method-override');
 const home = require('./routes/home.js');
 const product = require('./routes/product.js');
 const user = require('./routes/user.js');
+const api =require('./routes/apiRoutes.js')
 const session = require("express-session");
 const cookie = require("cookie-parser");
 const cookieUsuario = require("./middlewares/cookieMiddleware.js");
@@ -42,6 +43,7 @@ app.listen(port, () => {
 app.use(home)
 app.use('/product', product)
 app.use('/user', user)
+app.use('/api', api)
 
 
 app.use((req,res, next)=>{
