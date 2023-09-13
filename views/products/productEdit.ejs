@@ -106,10 +106,10 @@
 
                   <span>
                     <button type="submit" class="botonAdd" type="submit">ACTUALIZAR</button>
-                    <% if (!producto.deletedAT) { %>
+                    <% if (!producto.deletedAt) { %>
                       <label class="botonEliminar" for="eliminarItem">ELIMINAR ITEM</label>
                       <% } %>
-                        <% if (producto.deletedAT) { %>
+                        <% if (producto.deletedAt) { %>
                           <label class="botonAdd" for="altaItem">DAR DE ALTA</label>
                           <% } %>
                   </span>

@@ -31,13 +31,13 @@ const apiController = {
     try {
       const findUser = await db.Usuarios.findByPk(req.params.id,  {attributes:{exclude: ["password", "categoria",]}})
       response.data= findUser
-      response.data.avatar =`/public/images/avatar${findUser.avatar}`
+      response.data.avatar =`/public/images/avatar/${findUser.avatar}`
       return res.json(response)
     }
     catch (error) {
       console.log(error)
     }
-  },searchAllproducsAndQuantities: async function (req, res) {
+  },searchAllproductsAndQuantities: async function (req, res) {
     let response={};
     try{
       const [productos,categorias] = await Promise.all([Productos.findAll({include:[{association : "Categorias"}]}),Categorias.findAll({include:[{association : "Productos"}]}),])
@@ -55,7 +55,31 @@ const apiController = {
       }})
       return res.json(response)
     }catch(e){
-      response.msg="Hubo un error"+e
+      response.msg="Hubo un error "+e
+      return res.json(response)
+    }
+  },
+  searchProduct:async function (req, res){
+    let response = {data:{imagen:""}}
+  
+    try {
+      const findProduct = await db.Productos.findByPk(req.params.id,{include:[{association : "Imagenes"}, {association : "Categorias"}, {
+        model: db.Tickets,
+        as: "Tickets",
+        attributes: ["id"],
+        through: {
+          attributes: []
+        }
+      }]})
+      response.data= findProduct
+      response.data.imagen =`/public/images/productos/${findProduct.Imagenes[0].nombre}`
+      
+      return res.json(response)
+
+   
+    }
+    catch (error) {
+      response.msg="Hubo un error "+error
       return res.json(response)
     }
   }

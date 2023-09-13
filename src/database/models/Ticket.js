@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
         estado:{
         type: dataTypes.STRING
         },
-        deletedAT:{
+        deletedAt:{
             type: dataTypes.DATE
            }
         

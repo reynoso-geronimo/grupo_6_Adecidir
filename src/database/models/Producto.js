@@ -40,9 +40,7 @@ module.exports = (sequelize, dataTypes) => {
         talleUnico:{
          type: dataTypes.INTEGER
         },
-        deletedAT:{
-            type: dataTypes.DATE
-           },
+        
     };
     let config = {
         timestamps:true,

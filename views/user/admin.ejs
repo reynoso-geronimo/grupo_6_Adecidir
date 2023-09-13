@@ -48,7 +48,7 @@
             <p>$<%= producto.precio %></p>
             <p><%= producto.Categorias.nombre %></p>
             <p>
-              <% if (producto.deletedAT) { %> BAJA <% } else { %> ACTIVO <% } %>
+              <% if (producto.deletedAt) { %> BAJA <% } else { %> ACTIVO <% } %>
             </p>
             <div class="row-acciones-items">
               <a href="/product/<%= producto.id %>"><i class="fa-solid fa-eye"></i>VER</a>

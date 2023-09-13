@@ -8,7 +8,8 @@ router.get('/users/', apiController.userList)
 router.get('/users/:id', apiController.userDetail)
 
 // products
-router.get('/products/',apiController.searchAllproducsAndQuantities)
+router.get('/products/',apiController.searchAllproductsAndQuantities)
+router.get('/products/:id',apiController.searchProduct)
 
 
 

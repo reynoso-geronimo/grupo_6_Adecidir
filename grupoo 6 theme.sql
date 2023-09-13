@@ -27,7 +27,7 @@ CREATE TABLE `Productos`(
     `talleUnico` INT NOT NULL,
     `createdAt` DATETIME,
     `updatedAt` DATETIME,
-    `deletedAT` DATETIME
+    `deletedAt` DATETIME
 );
 CREATE TABLE `Categorias`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -35,7 +35,7 @@ CREATE TABLE `Categorias`(
     `imagen` VARCHAR(255) NOT NULL,
     `createdAt` DATETIME,
     `updatedAt` DATETIME,
-    `deletedAT` DATETIME
+    `deletedAt` DATETIME
 
 );
 CREATE TABLE `Tickets`(
@@ -43,7 +43,7 @@ CREATE TABLE `Tickets`(
     `usuario_id` BIGINT UNSIGNED NOT NULL,
     `createdAt` DATETIME,
     `updatedAt` DATETIME,
-    `deletedAT` DATETIME
+    `deletedAt` DATETIME
 );
 CREATE TABLE `Imagenes`(
     `id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -62,7 +62,7 @@ CREATE TABLE `Usuarios`(
     `telefono` INT  DEFAULT NULL,
     `createdAt` DATETIME,
     `updatedAt` DATETIME,
-    `deletedAT` DATETIME
+    `deletedAt` DATETIME
 );
 ALTER TABLE
     `Productos` ADD CONSTRAINT `productos_id_categoria_foreign` FOREIGN KEY(`id_categoria`) REFERENCES `Categorias`(`id`);
