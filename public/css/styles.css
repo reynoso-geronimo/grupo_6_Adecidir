@@ -998,11 +998,13 @@ Pagina detalle producto
 /*Home*/
 .swiper {
   width: 90%;
-  height: 450px;
+  height: auto; 
+  margin: 0 auto; 
 }
-.swiper img{
-  height: 450px;
+
+.swiper img {
   width: 100%;
+  height: auto; 
 }
 .home {
   display: flex;
