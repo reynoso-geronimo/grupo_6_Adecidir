@@ -6,19 +6,42 @@
     <%- include('./partials/header') %>
 
       <main class="home">
+         <!-- Slider main container -->
+         <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img class="banner-home" src="/images/graffiti/Slide16_9-4.jpg" alt="graffiti" ></div>
+            <div class="swiper-slide"><img class="banner-home" src="/images/graffiti/Slide16_9-5.jpg" alt="graffiti" ></div>
+            <div class="swiper-slide"><img class="banner-home" src="/images/graffiti/Slide16_9-6.jpg" alt="graffiti" ></div>
+            <div class="swiper-slide"><img class="banner-home" src="/images/graffiti/Slide16_9-7.jpg" alt="graffiti" ></div>
+
+            
+            ...
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
         
 
         
           <!-- <i class="fa-solid fa-caret-left"></i>
         <img src="imagen-de-ejemplo" alt="Destacados/Ofertas" />
-        <i class="fa-solid fa-caret-right"></i>   -->
-        <div id="banner">
+        <i class="fa-solid fa-caret-right"></i>   
+         <div id="banner">
           <img class="banner-home" src="/images/banner sin plaquita.jpg" alt="graffiti">
           <div class="placa-banner">
             <h3>THEME</h3>
             <H5>TODO LO QUE NECESITAS EN UN MISMO LUGAR</H5>
           </div>
-        </div>
+        </div> -->
 
 
         <!-- <div class="contain-3">
@@ -50,6 +73,8 @@
         </section>
       </main>
       <%- include('./partials/footer.ejs') %>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <script src="/js/swiper.js"></script>
   </body>
 
 </html>
