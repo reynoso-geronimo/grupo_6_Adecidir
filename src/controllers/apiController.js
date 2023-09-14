@@ -8,10 +8,11 @@ const Imagenes = db.Imagenes;
 const apiController = {
   
   userList: async function (req, res) {
+    let response={data:{}} 
     try {
       const usuarios = await db.Usuarios.findAll({});
 
-      let response = {
+       response.data = {
         count: usuarios.length,
         users: usuarios.map(usuario => {
           return {
@@ -38,15 +39,15 @@ const apiController = {
       console.log(error)
     }
   },searchAllproductsAndQuantities: async function (req, res) {
-    let response={};
+    let response={data:{}};
     try{
       const [productos,categorias] = await Promise.all([Productos.findAll({include:[{association : "Categorias"}]}),Categorias.findAll({include:[{association : "Productos"}]}),])
-      response.count=productos.length;
-      response.countByCategory = {};
+      response.data.count=productos.length;
+      response.data.countByCategory = {};
       categorias.forEach((categoria) => {
-        response.countByCategory[categoria.nombre]= categoria.Productos.length        
+        response.data.countByCategory[categoria.nombre]= categoria.Productos.length        
       })
-      response.products= productos.map((producto)=>{return{
+      response.data.products= productos.map((producto)=>{return{
         id:producto.id,
         name:producto.nombre,
         description:producto.descripcion,
