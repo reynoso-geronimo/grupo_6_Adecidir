@@ -1104,6 +1104,7 @@ Pagina detalle producto
 }
 
 .productos-home {
+  margin-top: -5px;
   display: flex;
   flex-direction: column;
   align-items: center;
