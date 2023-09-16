@@ -23,14 +23,12 @@ window.addEventListener('load',()=>{
     
     const generarCarrito = async function(items){
       checkout.innerHTML = `<div class="lds-dual-ring"></div>`
-      checkout.style.backgroundColor = 'white';
        if(carritoStorage.length==0){
-        
-          carrito.innerHTML = `<h1>No hay items en el carrito </h1>`
-          checkout.innerHTML = ``
-          checkout.style.backgroundColor = 'white';
+          checkout.innerHTML = `<h1 style="text-align:center;">NO HAY ITEMS EN EL CARRITO. </h1>`
           checkout.style.border = 'none';
-          //checkout.remove()
+          carrito.innerHTML ='';
+          cantidadItems.innerText = `Carrito(0)`
+
        }else{
         const consultaDb = await consultarProductosDB(items)
         carrito.innerHTML = ``
@@ -62,9 +60,8 @@ window.addEventListener('load',()=>{
         
         checkout.innerHTML = `
         <p>Total: $ ${total}</p>
-        <button class="boton-negro invertido" id="home">Seguir Comprando</button>
-        <button id="checkout" class="boton-negro">Comprar Carrito</button>`
-        checkout.style.backgroundColor = 'rgba(165, 165, 165, 80%)';
+        <button class="boton-negro invertido">Seguir Comprando</button>
+        <button id="checkout" class="boton-negro">Finalizar compra</button>`
        }
   
        botonesProducto()

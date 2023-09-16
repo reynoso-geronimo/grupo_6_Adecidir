@@ -7,7 +7,7 @@
 
     <main class="product-list">
       <% if (productos.length > 0) { %>
-        <% productos.forEach(producto => { %>
+        <% productos.forEach(producto => { %>  
           <article class="article-card">
             <a href="/product/<%=producto.id%>">
               <% if (producto.Imagenes && producto.Imagenes.length > 0) { %>

@@ -972,13 +972,31 @@ Pagina detalle producto
 /* Carrito de compras */
 
 .img-prod-cart {
+  margin:auto;
   width: 150px;
 }
 .carritoTop {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  margin-top: 20%;
 }
+
+.indicador-interna{
+  background-color: #fff;
+  padding: 3%;
+  margin: 0;
+  font-weight: bold;
+  /* text-align: center; */
+
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  height: 5rem;
+  position: fixed;
+  /* z-index: 100;*/
+}
+
 .carritoTop button {
   height: 50px;
   width: 50vw;
@@ -1002,40 +1020,38 @@ Pagina detalle producto
   color: #000;
 }
 .carrito {
-  border-bottom: solid 1px gray;
-
+  /*border-bottom: solid 1px gray;*/
+  background-color: #fff;
+  width: 90%;
+  margin: auto;
   display: flex;
   justify-content:space-evenly;
+  margin-top: 20px;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  padding-top:50px ;
+  padding-top: 20px;
+  box-shadow: 0px 0px 4px #000;
+  border-bottom: solid 1px gray;
 }
 .carrito p {
   margin-top: 8px;
   margin-bottom: 8px;
 }
-.detalles-producto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+
 
 .checkout {
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
-  position: sticky;
-  max-width: 500px;
-  width: 100%;
+
+  background-color: #E6E6E6;
+  width:90%;
   bottom: 0;
-  justify-content: space-around;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;  
 }
 .checkout p {
   padding: 10px;
-  background-color: #ebebee;
-  width:55%;
+  width: 80vw;
   font-weight: 900;
   border-radius: 2%;
   margin: 10px 0 15px 0;
@@ -1416,7 +1432,6 @@ Pagina detalle producto
   }
 
   /* HOME */
-
   .productos-home {
     flex-direction: row;
 
@@ -1438,6 +1453,15 @@ Pagina detalle producto
   }
   
 }
+
+/* Carrito */
+.main-carrito{
+  /*display: flex;
+  justify-content: space-evenly;
+  width: 100vw;*/
+  height: 100vh;
+  background-image: url('../images/graffiti/colorful-graffiti-wall-art-background-street-art-hip-hop-urban-illustration-background-seamless-amazing-graff.jpg');
+  }
 
 @media (min-width: 769px) {
   /* PAGINA DE PRODUCTO*/
@@ -1539,16 +1563,23 @@ Pagina detalle producto
 display: flex;
 justify-content: space-evenly;
 width: 100vw;
+height: 100vh;
 }
 .checkout{
-  width: 50%;
-  position: sticky;
+  width: 90%;
   padding: 20px;
   top:15%;
   height: 200px;
-  margin-bottom: 20px;
+  margin-top: 20px;  
+  margin-bottom: 20px;  
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #E6E6E6;
+
 }
+
 .carrito-container{
+  margin-top: 160px;
   width: 50%;
 }
 .carrito-otros{
