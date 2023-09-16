@@ -62,7 +62,7 @@ window.addEventListener('load',()=>{
         
         checkout.innerHTML = `
         <p>Total: $ ${total}</p>
-        <button class="boton-negro invertido">Seguir Comprando</button>
+        <button class="boton-negro invertido" id="home">Seguir Comprando</button>
         <button id="checkout" class="boton-negro">Comprar Carrito</button>`
         checkout.style.backgroundColor = 'rgba(165, 165, 165, 80%)';
        }
