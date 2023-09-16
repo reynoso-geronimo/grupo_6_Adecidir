@@ -1008,6 +1008,7 @@ Pagina detalle producto
   justify-content:space-evenly;
   margin-bottom: 20px;
   padding-bottom: 20px;
+  padding-top:50px ;
 }
 .carrito p {
   margin-top: 8px;
@@ -1026,7 +1027,7 @@ Pagina detalle producto
   flex-wrap: wrap;
   align-items: center;
   position: sticky;
- 
+  max-width: 500px;
   width: 100%;
   bottom: 0;
   justify-content: space-around;
@@ -1034,7 +1035,7 @@ Pagina detalle producto
 .checkout p {
   padding: 10px;
   background-color: #ebebee;
-  width: 80%;
+  width:55%;
   font-weight: 900;
   border-radius: 2%;
   margin: 10px 0 15px 0;
@@ -1543,7 +1544,7 @@ width: 100vw;
   width: 50%;
   position: sticky;
   padding: 20px;
-  top:30%;
+  top:15%;
   height: 200px;
   margin-bottom: 20px;
 }
