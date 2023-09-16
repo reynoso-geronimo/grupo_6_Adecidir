@@ -1,6 +1,5 @@
 window.addEventListener("load", async () => {
-  let carritoStorage = JSON.parse(localStorage.getItem("cart"));
-
+ 
   const checkout = document.querySelector(".checkout");
   checkout.addEventListener("click", async e => {
     switch (e.target.id) {
@@ -16,6 +15,8 @@ window.addEventListener("load", async () => {
         });
 
         try {
+          let carritoStorage = JSON.parse(localStorage.getItem("cart"));
+
           const resultado = await fetch("/user/api/ticket", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -46,12 +47,13 @@ window.addEventListener("load", async () => {
             window.location.href = "/";
           }
         } catch (error) {
-          
-          
+          console.log(error)
+            console.log(hola)
           Swal.fire({
             icon: "error",
             title: "Ocurrió un error al procesar la solicitud",
             confirmButtonColor: "#000000",
+            
           });
         } finally {
          

@@ -2,10 +2,10 @@ const { validationResult } = require("express-validator");
 const fs = require("fs");
 const path = require("path");
 const bcryptjs = require("bcryptjs");
-const db = require('../database/models')
+const db = require("../database/models");
 const { sequelize } = require("../database/models");
-const { enviarEmail } = require('../helpers/email.js');
-const  jwt  = require("jsonwebtoken");
+const { enviarEmail } = require("../helpers/email.js");
+const jwt = require("jsonwebtoken");
 
 module.exports = {
   loginForm: function (req, res) {
@@ -137,28 +137,27 @@ module.exports = {
       const tickets = await db.Tickets.findAll({
         where: { usuario_id: req.session.usuarioLogeado.id },
       });
-  
+
       const ticketDetails = await Promise.all(
-        tickets.map(async (ticket) => {
+        tickets.map(async ticket => {
           const products = await db.Productos_tickets.findAll({
             where: { id_ticket: ticket.id },
             include: [
               {
                 model: db.Productos,
-                as: "producto", 
+                as: "producto",
                 attributes: ["id", "nombre"],
               },
             ],
           });
-      
+
           return {
             ticket: ticket,
             products: products,
           };
         })
-      
       );
-        
+
       return res.render("user/profile", {
         usuario: req.session.usuarioLogeado,
         ticketDetails: ticketDetails,
@@ -333,22 +332,17 @@ ${link}`,
     }
   },
   apiTikcketProcess: async (req, res) => {
-    console.log(req.body);
-
-   
-    if(!req.session.usuarioLogeado){
-      return res.status(401).json({ 
-        status:'error',
-        error: "No hay sesion", 
-        mensaje: "Debes iniciar sesion para finalizar tu compra" 
-      
+    if (!req.session.usuarioLogeado) {
+      return res.status(401).json({
+        status: "error",
+        error: "No hay sesion",
+        mensaje: "Debes iniciar sesion para finalizar tu compra",
       });
-      
     }
     const t = await db.sequelize.transaction();
     try {
       const usuario_id = req.session.usuarioLogeado.id;
-      
+
       const nuevoTicket = await db.Tickets.create(
         {
           usuario_id,
@@ -363,8 +357,12 @@ ${link}`,
 
       await Promise.all(
         productos.map(async producto => {
-          const { precio } = await db.Productos.findByPk(producto.id, {
-            attributes: ["precio"],
+          const talleComprado = "talle" + producto.talle;
+
+          const prod = await db.Productos.findByPk(producto.id);
+
+          await prod.decrement(talleComprado, {
+            by: producto.cantidad,
             transaction: t,
           });
 
@@ -372,9 +370,9 @@ ${link}`,
             {
               id_producto: producto.id,
               id_ticket,
-              precioFechaCompra: precio,
+              precioFechaCompra: prod.precio,
               cantidad: producto.cantidad,
-              talle:producto.talle
+              talle: producto.talle,
             },
             { transaction: t }
           );
@@ -393,11 +391,14 @@ ${link}`,
       await t.rollback();
 
       console.error("Error al crear el ticket y productos asociados:", error);
-      return res.status(500).json({ 
-        status:'error',
-        error: "Error interno del servidor", 
-        mensaje: "Ocurrio un error" 
-      
+
+      return res.status(500).json({
+        status: "error",
+        error: "Error interno del servidor",
+        mensaje:
+          error.parent.errno == 1690
+            ? "Insuficiente Stock"
+            : "Ocurrio un error",
       });
     }
   },
