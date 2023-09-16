@@ -16,6 +16,7 @@ window.addEventListener("load", () => {
         icon: "error",
         title: ticket.mensaje,
         allowOutsideClick: false,
+        confirmButtonColor:"#000000",
       });
     } else {
     localStorage.setItem("cart", JSON.stringify([]));
@@ -23,6 +24,7 @@ window.addEventListener("load", () => {
         title: "Gracias por tu compra!",
         icon: "success",
         allowOutsideClick: false,
+        confirmButtonColor:"#000000",
       }).then((result) => {
         if (result.isConfirmed) {
           window.location.href='/'
