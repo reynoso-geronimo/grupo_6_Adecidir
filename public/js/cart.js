@@ -27,7 +27,7 @@ window.addEventListener('load',()=>{
           checkout.innerHTML = `<h1 style="text-align:center;">NO HAY ITEMS EN EL CARRITO. </h1>`
           checkout.style.border = 'none';
           carrito.innerHTML ='';
-          cantidadItems.innerText = `Carrito(0)`
+         
 
        }else{
         const consultaDb = await consultarProductosDB(items)
@@ -60,8 +60,8 @@ window.addEventListener('load',()=>{
         
         checkout.innerHTML = `
         <p>Total: $ ${total}</p>
-        <button class="boton-negro invertido">Seguir Comprando</button>
-        <button id="checkout" class="boton-negro">Finalizar compra</button>`
+        <button class="boton-negro invertido" id="home">Seguir Comprando</button>
+        <button id="checkout" class="boton-negro" >Finalizar compra</button>`
        }
   
        botonesProducto()
