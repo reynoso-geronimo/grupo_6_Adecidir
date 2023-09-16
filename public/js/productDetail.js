@@ -55,19 +55,21 @@ window.addEventListener("load", function () {
       localStorage.setItem("cart", JSON.stringify(carritoStorage));
       Swal.fire({
         title: "<strong>Producto agregado al carrito</strong>",
-        // icon: "info",
-        html:
-          // "You can use <b>bold text</b>, " +
-          // '<a href="//sweetalert2.github.io">links</a> ' +
-          // "and other HTML tags",
-          "",
         showCloseButton: false,
         showCancelButton: true,
-        focusConfirm: true,
-        confirmButtonText: '<a href="/user/cart">Finalizar compra</a>',
-        confirmButtonAriaLabel: "Thumbs up, great!",
-        cancelButtonText: '<a href="/">Seguir comprando</a>',
-        cancelButtonAriaLabel: "Thumbs down",
+        focusConfirm: false,
+        confirmButtonColor:"#000000",
+        confirmButtonText: 'Finalizar compra',
+      
+        cancelButtonText: 'Seguir comprando',
+        allowOutsideClick: false,
+        
+      }).then((result)=>{
+        if (result.isConfirmed){
+          window.location.href= '/user/cart'
+        }else{
+          window.location.href= '/'
+        }
       });
     } else {
       addCarrito.innerText = "Elige un talle";
