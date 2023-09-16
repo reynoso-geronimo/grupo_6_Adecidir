@@ -1026,7 +1026,7 @@ Pagina detalle producto
   flex-wrap: wrap;
   align-items: center;
   position: sticky;
-  background-color: rgba(165, 165, 165, 80%);
+ 
   width: 100%;
   bottom: 0;
   justify-content: space-around;
@@ -1034,7 +1034,7 @@ Pagina detalle producto
 .checkout p {
   padding: 10px;
   background-color: #ebebee;
-  width: 80vw;
+  width: 80%;
   font-weight: 900;
   border-radius: 2%;
   margin: 10px 0 15px 0;
@@ -1042,6 +1042,21 @@ Pagina detalle producto
 .checkout button {
   width: 47%;
   margin-bottom: 10px;
+}
+.producto-carrito-cantidad{
+  display: flex;
+}
+.producto-carrito-cantidad i {
+  height: 30px;
+  width: 30px;
+  border: solid 1px grey;
+}
+.producto-carrito-cantidad div {
+  height: 30px;
+  width: 60px;
+  border: solid 1px grey;
+  text-align: center;
+  padding-top:5px;
 }
 .invertido {
   background-color: white;

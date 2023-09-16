@@ -1,5 +1,5 @@
 window.addEventListener('load',()=>{
-   
+   top
     if(!JSON.parse(localStorage.getItem('cart'))){
         localStorage.setItem('cart', JSON.stringify([
            
@@ -10,7 +10,7 @@ window.addEventListener('load',()=>{
 
     let carrito =  document.querySelector("#productos")
     let checkout =  document.querySelector(".checkout")
-    let cantidadItems =  document.querySelector("#cantidadCarrito")
+    
 
     const consultarProductosDB = async function(productos){
       const resultado= await fetch('/product/cartitems',{
@@ -25,7 +25,7 @@ window.addEventListener('load',()=>{
       checkout.innerHTML = `<div class="lds-dual-ring"></div>`
       checkout.style.backgroundColor = 'white';
        if(carritoStorage.length==0){
-        cantidadItems.innerText = `Carrito(0)`
+        
           carrito.innerHTML = `<h1>No hay items en el carrito </h1>`
           checkout.innerHTML = ``
           checkout.style.backgroundColor = 'white';
@@ -35,7 +35,7 @@ window.addEventListener('load',()=>{
         const consultaDb = await consultarProductosDB(items)
         carrito.innerHTML = ``
         checkout.innerHTML = ``
-        cantidadItems.innerText = `Carrito(${consultaDb.length})`
+       
         let total = 0
         let index = 0
         for (const item of consultaDb) {
@@ -52,6 +52,7 @@ window.addEventListener('load',()=>{
                 <p>Unidades: ${item.cantidad}</p>
                 <p>Precio: $${item.precio*item.cantidad}</p>
               </div>
+              <div class="producto-carrito-cantidad"><i class="fa-solid fa-minus"></i><div id="cantidad">${item.cantidad}</div><i class="fa-solid fa-plus"></i></div>
               <div><i id="${index}" class="fa-solid fa-trash"></i></div>
             </div>
           </article>
@@ -66,13 +67,16 @@ window.addEventListener('load',()=>{
         checkout.style.backgroundColor = 'rgba(165, 165, 165, 80%)';
        }
   
-      cargarEliminar()
+       botonesProducto()
     }
     
     generarCarrito(carritoStorage)
 
-    function cargarEliminar() {
+    function botonesProducto() {
       const botonEliminar = document.querySelectorAll('.fa-trash');
+      const botonMas = document.querySelectorAll('.fa-plus');
+      const botonMenos = document.querySelectorAll('.fa-minus');
+     
 
       botonEliminar.forEach((boton, index) => {
           boton.addEventListener('click', () => {
@@ -82,9 +86,29 @@ window.addEventListener('load',()=>{
               generarCarrito(carritoStorage); 
           });
       });
+      
+      botonMas.forEach((boton, index) => {
+        boton.addEventListener('click', () => {
+            carritoStorage[index].cantidad++
+            localStorage.setItem('cart', JSON.stringify(carritoStorage)); 
+              generarCarrito(carritoStorage); 
+        });
+    });
+    botonMenos.forEach((boton, index) => {
+      boton.addEventListener('click', () => {
+          carritoStorage[index].cantidad--
+          if(carritoStorage[index].cantidad==0){
+            carritoStorage.splice(index, 1);
+          }
+          localStorage.setItem('cart', JSON.stringify(carritoStorage)); 
+            generarCarrito(carritoStorage); 
+      });
+  });
   }
 
-  cargarEliminar();
+  
+
+  botonesProducto();
 
 
 
