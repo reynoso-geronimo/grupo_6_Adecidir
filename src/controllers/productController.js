@@ -284,7 +284,7 @@ const productController = {
   searchProducts: async function (req, res) {
     try {
       const { keyword } = req.body;
-      const products = await Productos.findAll({
+      const productos = await Productos.findAll({
         where: {
           [Op.or]: [
             { nombre: { [Op.like]: `%${keyword}%` } },
@@ -298,7 +298,7 @@ const productController = {
         ],
       });
 
-      //aca va el return render
+      return res.render("products/productList", { productos });
     } catch (error) {
       console.error("Error en la búsqueda", error);
     }
@@ -332,7 +332,7 @@ const productController = {
   searchProductsApi: async function (req, res) {
     try {
       const { keyword } = req.body;
-
+ 
       const products = await Productos.findAll({
         where: {
           [Op.or]: [
