@@ -18,7 +18,9 @@ const apiController = {
           return {
             id: usuario.id,
             name: usuario.nombre,
+            lastName: usuario.apellido,
             email: usuario.email,
+            avatar:usuario.avatar,
             detail: "/api/users/"+ usuario.id,
           };
         }),
