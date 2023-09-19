@@ -971,15 +971,19 @@ Pagina detalle producto
 }
 /* Carrito de compras */
 
+
+.main-carrito{
+  /*display: flex;
+  justify-content: space-evenly;
+  */
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url('../images/graffiti/colorful-graffiti-wall-art-background-street-art-hip-hop-urban-illustration-background-seamless-amazing-graff.jpg');
+  }
+
 .img-prod-cart {
   margin:auto;
   width: 150px;
-}
-.carritoTop {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-top: 20%;
 }
 
 .indicador-interna{
@@ -997,28 +1001,10 @@ Pagina detalle producto
   /* z-index: 100;*/
 }
 
-.carritoTop button {
-  height: 50px;
-  width: 50vw;
-  border: none;
-  font-size: 16px;
-  font-weight: 600;
-}
-.carritoTop button:first-child {
-  border: 3px solid #000;
-  background-color: #fff;
-}
-.carritoTop button:last-child {
-  border: 3px solid #000;
-  background-color: #000;
-  color: #fff;
+.carro{
+  margin-top: 6rem;
 }
 
-.carritoTop button:hover {
-  border: 3px solid #000;
-  background-color: #FFF500;
-  color: #000;
-}
 .carrito {
   /*border-bottom: solid 1px gray;*/
   background-color: #fff;
@@ -1041,17 +1027,21 @@ Pagina detalle producto
 
 .checkout {
   align-items: center;
-
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   background-color: #E6E6E6;
-  width:90%;
+  width:90vw;
   bottom: 0;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;  
 }
 .checkout p {
+  position: relative;
+  left: -60px;
   padding: 10px;
-  width: 80vw;
+  width: 55%;
   font-weight: 900;
   border-radius: 2%;
   margin: 10px 0 15px 0;
@@ -1454,14 +1444,7 @@ Pagina detalle producto
   
 }
 
-/* Carrito */
-.main-carrito{
-  /*display: flex;
-  justify-content: space-evenly;
-  width: 100vw;*/
-  height: 100vh;
-  background-image: url('../images/graffiti/colorful-graffiti-wall-art-background-street-art-hip-hop-urban-illustration-background-seamless-amazing-graff.jpg');
-  }
+
 
 @media (min-width: 769px) {
   /* PAGINA DE PRODUCTO*/
@@ -1563,7 +1546,7 @@ Pagina detalle producto
 display: flex;
 justify-content: space-evenly;
 width: 100vw;
-height: 100vh;
+min-height: 100vh;
 }
 .checkout{
   width: 90%;
@@ -1579,7 +1562,7 @@ height: 100vh;
 }
 
 .carrito-container{
-  margin-top: 160px;
+  margin-top: 100px;
   width: 50%;
 }
 .carrito-otros{
