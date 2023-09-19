@@ -43,21 +43,26 @@
         </div>
       </section>
       <section>
-        <h2><i class="fa-solid fa-receipt"></i> TUS COMPRAS</h2>
-        <% ticketDetails.forEach(ticket => { %>
-          <% let total = 0 %>
 
-          <div class="profile-info">
-            <div class="ticket-info"><p>Nro : <%= ticket.ticket.id %></p>  <p>Fecha: <%= new Date(ticket.ticket.createdAt).toLocaleDateString() %></p></div>
+        <h2><i class="fa-solid fa-receipt"></i> TUS COMPRAS</h2>
+        <button id="toggleTickets" class="mostrar">Esconder</button>
+        <br>
+
+        <% ticketDetails.forEach((ticket, index) => { %>
+          <% let total = 0 %>
+          <div class="profile-info ticket-container" id="ticketContainer<%= index %>">
+            <div class="ticket-info"><p>Nro : <%= ticket.ticket.id %></p> <p>Fecha: <%= new Date(ticket.ticket.createdAt).toLocaleDateString() %></p></div>
             <% ticket.products.forEach(producto => { %>
-              <% total+= producto.cantidad * producto.precioFechaCompra %>
-              
-             <div class="ticket-info"><p><%= producto.cantidad%> X <%= producto.producto.nombre %></p> <% if  (producto.talle) {%> <p> Talle: <%=producto.talle.toUpperCase()  %> </p><% }%> <p> U:$<%= producto.precioFechaCompra%></p> </div> 
-              
+              <% total += producto.cantidad * producto.precioFechaCompra %>
+        
+              <div class="ticket-info"><p><%= producto.cantidad %> X <%= producto.producto.nombre %></p> <% if  (producto.talle) {%> <p> Talle: <%= producto.talle.toUpperCase() %> </p><% } %>
+                <p> U:$<%= producto.precioFechaCompra %></p>
+              </div>
             <% }) %>
             <p class="ticket-info-total">Total: $<%= total %></p>
           </div>
         <% }) %>
+        
        
        
           
@@ -66,5 +71,6 @@
       </section>
     </main>
     <%- include('../partials/footer.ejs') %>
+    <script src="/js/mostrarEsconder.js"></script>
   </body>
 </html>
