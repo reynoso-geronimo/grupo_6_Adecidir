@@ -314,7 +314,8 @@ const productController = {
         });
 
         const productoEnStock = {
-          imagen: productoEnDB.Imagenes[0].nombre,
+          
+          imagenes: productoEnDB.Imagenes,
           nombre: productoEnDB.nombre,
           precio: productoEnDB.precio,
           talle: producto.talle,

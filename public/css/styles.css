@@ -984,10 +984,19 @@ Pagina detalle producto
 
   }
 
-.img-prod-cart {
-  margin:auto;
+.swiper-cart{
+  margin:0 !important;
   width: 150px;
+  
 }
+
+.swiper-cart img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 
 .indicador-interna{
   background-color: #fff;
@@ -995,7 +1004,7 @@ Pagina detalle producto
   margin: 0;
   font-weight: bold;
   /* text-align: center; */
-
+  z-index: 1000000000000000;
   display: flex;
   width: 100vw;
   justify-content: center;

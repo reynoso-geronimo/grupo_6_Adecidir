@@ -36,13 +36,40 @@ window.addEventListener('load',()=>{
        
         let total = 0
         let index = 0
+        let htmlImagenes = ""
         for (const item of consultaDb) {
+            htmlImagenes = ""
             total += (item.precio*item.cantidad)
+            item.imagenes.forEach(imagen => {
+              htmlImagenes +=`<div class="swiper-slide"><img src="../images/productos/${imagen.nombre}" alt="producto" /></div>`
+            });
+            
+            
             carrito.innerHTML+= `
             <article class="carrito">
-            <div>
-              <img src="../images/productos/${item.imagen}" alt="producto" class="img-prod-cart" />
-            </div>
+            
+            <div class="swiper swiper-cart">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            
+            ${htmlImagenes}
+
+            
+         
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <!-- <div class="swiper-button-prev"></div>-->
+          <!--<div class="swiper-button-next"></div>-->
+
+          <!-- If we need scrollbar -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+       
+       
             <div class="detalles-producto">
               <div>
                 <h4>${item.nombre}</h4>
@@ -65,6 +92,36 @@ window.addEventListener('load',()=>{
        }
   
        botonesProducto()
+       const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        effect : "fade",
+        autoHeight : true,
+        autoplay : {
+            delay : 3000,
+            pauseOnMouseEnter : true,
+            disableOnInteraction: true 
+        },
+    
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+          clickable : true,
+          dynamicBullets:true, 
+        },
+    
+        // Navigation arrows
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+    
+        // And if we need scrollbar
+        /* scrollbar: {
+          el: '.swiper-scrollbar',
+        }, */
+      });
     }
     
     generarCarrito(carritoStorage)
@@ -107,9 +164,7 @@ window.addEventListener('load',()=>{
 
   botonesProducto();
 
-
-
-    
+ 
 })
 
 
