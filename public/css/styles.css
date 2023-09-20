@@ -5,6 +5,7 @@
 #FFFFFF blanco
 */
 *{
+  --swiper-theme-color : yellow !important;
   --swiper-pagination-color: yellow;
   --swiper-pagination-bullet-size: 5px;
   --swiper-pagination-bullet-width: 10px;
@@ -1385,7 +1386,6 @@ Pagina detalle producto
   transition: all 250ms;
   overflow: hidden;
  }
- 
  .mostrar::before {
   content: "";
   position: absolute;
