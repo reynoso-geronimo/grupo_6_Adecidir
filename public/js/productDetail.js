@@ -1,22 +1,60 @@
 window.addEventListener("load", function () {
-  const radios = document.querySelectorAll('input[name="radios"]');
-  const imagesSelect = document.querySelectorAll(".img-detalle");
+  //const radios = document.querySelectorAll('input[name="radios"]');
+  // const imagesSelect = document.querySelectorAll(".img-detalle");
 
-  imagesSelect[0].style.display = "block";
+  // imagesSelect[0].style.display = "block";
 
-  radios.forEach(function (radio) {
-    radio.addEventListener("change", function () {
-      const selectedRadio = document.querySelector(
-        'input[name="radios"]:checked'
-      );
-      for (let index = 0; index < imagesSelect.length; index++) {
-        if (selectedRadio.id === "selector" + index) {
-          imagesSelect[index].style.display = "block";
-        } else {
-          imagesSelect[index].style.display = "none";
-        }
-      }
-    });
+  // radios.forEach(function (radio) {
+  //   radio.addEventListener("change", function () {
+  //     const selectedRadio = document.querySelector(
+  //       'input[name="radios"]:checked'
+  //     );
+  //     for (let index = 0; index < imagesSelect.length; index++) {
+  //       if (selectedRadio.id === "selector" + index) {
+  //         imagesSelect[index].style.display = "block";
+  //       } else {
+  //         imagesSelect[index].style.display = "none";
+  //       }
+  //     }
+  //   });
+  // });
+
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    effect : "cube",
+    grabCursor: true,
+    cubeEffect: {
+      shadow: false,
+      slideShadows: false,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+    autoHeight : true,
+    autoplay : {
+        delay : 3000,
+        pauseOnMouseEnter : true,
+        disableOnInteraction: true 
+    },
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable : true,
+      dynamicBullets:true, 
+    },
+
+    // Navigation arrows
+    /*navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },*/
+
+    // And if we need scrollbar
+    /* scrollbar: {
+      el: '.swiper-scrollbar',
+    }, */
   });
 
   // agregar items al carrito
