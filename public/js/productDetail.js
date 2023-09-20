@@ -57,6 +57,22 @@ window.addEventListener("load", function () {
     }, */
   });
 
+  const slides = this.document.querySelectorAll('.swiper-slide')
+
+  slides.forEach(slide => {
+    slide.addEventListener("click",(e)=>{
+      console.log(e.target.src)
+      Swal.fire({
+        showConfirmButton: false,
+        showCloseButton: true,
+        imageUrl: e.target.src,
+        imageAlt: "Custom image",
+        
+    });
+    })
+  });
+
+
   // agregar items al carrito
   let carritoStorage = [];
   const carritoInit = function () {
