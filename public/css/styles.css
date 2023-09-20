@@ -4,6 +4,25 @@
 #FFF500 amarillo
 #FFFFFF blanco
 */
+*{
+  --swiper-pagination-color: yellow;
+  --swiper-pagination-bullet-size: 5px;
+  --swiper-pagination-bullet-width: 10px;
+  --swiper-pagination-bullet-height: 10px;
+  --swiper-pagination-bullet-inactive-color: #000;
+  --swiper-pagination-bullet-inactive-opacity: 0.2;
+  --swiper-pagination-bullet-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 4px;
+  --swiper-pagination-bullet-vertical-gap: 6px;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+
+  opacity: 1;
+  height: 10px;
+  width: 10px;
+  border: 2px solid black;
+}
 
 h1 {
   font-family: "Playfair Display", serif;
@@ -1440,7 +1459,7 @@ Pagina detalle producto
   width: 80px;
   height: 80px;
   position: fixed;
-  top: 30%;
+  top: 60%;
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);

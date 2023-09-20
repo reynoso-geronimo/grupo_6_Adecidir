@@ -113,10 +113,10 @@ window.addEventListener('load',()=>{
         },
     
         // Navigation arrows
-        navigation: {
+        /*navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
-        },
+        },*/
     
         // And if we need scrollbar
         /* scrollbar: {
