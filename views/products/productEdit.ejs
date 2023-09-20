@@ -101,7 +101,8 @@
 
                   <div class="edit-nuevas-images">
                     <label for="new-images"><i class="fa-solid fa-cloud-arrow-up"></i>Subir nuevas imágenes</label>
-                    <input multiple type="file" name="images" id="new-images" />
+                    <input multiple type="file" name="images" id="new-images" onchange="previewImages(event)" />
+                    <div id="imagePreview" class="image-preview"></div>
                   </div>
 
                   <span>
@@ -134,6 +135,7 @@
       <%- include('../partials/footer.ejs') %>
         <!-- <script src="/js/productEditCreateTalle.js"></script>  -->
         <script src="/js/valiEdit.js"></script>
+        <script src="/js/preview.js"></script>
   </body>
 
 </html>
