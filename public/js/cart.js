@@ -45,43 +45,44 @@ window.addEventListener('load',()=>{
             });
             
             
-            carrito.innerHTML+= `
+            carrito.innerHTML += `
             <article class="carrito">
             
-            <div class="swiper swiper-cart">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            
-            ${htmlImagenes}
+              <div class="swiper swiper-cart">
 
-            
-         
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                <!-- Slides --> 
+                ${htmlImagenes}
+                </div>
 
-          <!-- If we need navigation buttons -->
-          <!-- <div class="swiper-button-prev"></div>-->
-          <!--<div class="swiper-button-next"></div>-->
+                <!-- If we need pagination -->
+              
+                <div class="swiper-pagination"></div>
 
-          <!-- If we need scrollbar -->
-          <!-- <div class="swiper-scrollbar"></div> -->
-        </div>
-       
-       
-            <div class="detalles-producto">
-              <div>
-                <h4>${item.nombre}</h4>
-                <p>Talle: ${item.talle.toUpperCase()}</p>
-                <p>Unidades: ${item.cantidad}</p>
-                <p>Precio: $${item.precio*item.cantidad}</p>
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div>-->
+                <!--<div class="swiper-button-next"></div>-->
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
               </div>
-              <div class="producto-carrito-cantidad"><i class="fa-solid fa-minus"></i><div id="cantidad">${item.cantidad}</div><i class="fa-solid fa-plus"></i></div>
-              <div><i id="${index}" class="fa-solid fa-trash"></i></div>
-            </div>
-          </article>
-            `
+       
+       
+              <div class="detalles-producto">
+                <div>
+                  <h4>${item.nombre}</h4>
+                  <p>Talle: ${item.talle.toUpperCase()}</p>
+                  <p>Unidades: ${item.cantidad}</p>
+                  <p>Precio: $${item.precio * item.cantidad}</p>
+                </div>
+                <div class="producto-carrito-cantidad"><i class="fa-solid fa-minus"></i><div id="cantidad">${
+                  item.cantidad
+                }</div><i class="fa-solid fa-plus"></i></div>
+                <div><i id="${index}" class="fa-solid fa-trash"></i></div>
+              </div>
+            </article>
+            `;
           index++
         }
         
