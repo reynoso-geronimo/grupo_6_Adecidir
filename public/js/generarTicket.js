@@ -48,7 +48,7 @@ window.addEventListener("load", async () => {
           }
         } catch (error) {
           console.log(error)
-            console.log(hola)
+           
           Swal.fire({
             icon: "error",
             title: "Ocurrió un error al procesar la solicitud",
