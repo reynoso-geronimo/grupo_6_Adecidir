@@ -85,7 +85,26 @@ const apiController = {
       response.msg="Hubo un error "+error
       return res.json(response)
     }
-  }
+  },
+  ticketList: async function (req, res) {
+    let response={data:{}} 
+    try {
+      const tickets = await db.Tickets.findAll({});
+
+       response.data = {
+        count: tickets.length,
+        tickets: tickets.map(ticket => {
+          return {
+            id: ticket.id,
+            
+          };
+        }),
+      };
+
+      return res.json(response);
+    } catch (error) {}
+  },
+
 };
 
 module.exports = apiController;

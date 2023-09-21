@@ -11,7 +11,7 @@ router.get('/users/:id', apiController.userDetail)
 router.get('/products/',apiController.searchAllproductsAndQuantities)
 router.get('/products/:id',apiController.searchProduct)
 
-
+router.get('/tickets/', apiController.ticketList)
 
 
 

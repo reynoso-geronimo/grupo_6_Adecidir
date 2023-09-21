@@ -225,6 +225,7 @@ header i{
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.5s;
+ 
 }
 .sub-menu-wrap.open-menu{
   max-height: 400px;
@@ -235,22 +236,9 @@ header i{
   padding: 20px;
   margin: 10px;
   border-radius: 30px;
+  
 }
 
-
-.user-info{
-  display: flex;
-  align-items: center;
-}
-
-.user-info h3{
-  color: #000;
-  font-weight: 500;
-}
-.user-info img{
-  width: 60px;
-  margin-right: 15px;
-}
 
 .sub-menu-link{
   display: flex;
@@ -258,6 +246,7 @@ header i{
   text-decoration: none;
   color: #525252;
   margin: 12px 0;
+  
 
 }
 
@@ -1037,11 +1026,11 @@ Pagina detalle producto
 
 .indicador-interna{
   background-color: #fff;
-  padding: 3%;
+  padding: 2rem;
   margin: 0;
   font-weight: bold;
   /* text-align: center; */
-  z-index: 1000000000000000;
+  z-index: 2;
   display: flex;
   width: 100vw;
   justify-content: center;
@@ -1637,9 +1626,9 @@ min-height: 100vh;
 }
 .checkout{
   width: 90%;
-  padding: 20px;
+  
   top:15%;
-  height: 200px;
+  
   margin-top: 20px;  
   margin-bottom: 20px;  
   margin-left: auto;
@@ -1647,10 +1636,16 @@ min-height: 100vh;
   background-color: #E6E6E6;
 
 }
-
+.checkout p { 
+  padding: 20px;
+}
+.checkout button {
+  margin-bottom: 30px;
+}
 .carrito-container{
 
-  width: 50%;
+  width: 70%;
+  max-width: 680px;
 }
 .carrito-otros{
  width: 50%;
