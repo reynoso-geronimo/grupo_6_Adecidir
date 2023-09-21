@@ -105,7 +105,7 @@ main {
 
 .copy-header {
   font-size: 2.3rem;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .copy-header a {
@@ -118,7 +118,8 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px 15px;
+  padding: 0px 20px;
+
 }
 .main-header-right-bar i {
   color: white;
