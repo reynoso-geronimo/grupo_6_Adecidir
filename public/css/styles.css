@@ -1003,7 +1003,7 @@ Pagina detalle producto
   justify-content: space-evenly;
   */
   width: 100vw;
-  min-height: 100vh;
+  min-height: 90vh;
   background-image: url('../images/graffiti/colorful-graffiti-wall-art-background-street-art-hip-hop-urban-illustration-background-seamless-amazing-graff.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -1532,6 +1532,8 @@ Pagina detalle producto
   .description {
     padding-left: 7%;
     padding-right: 5%;
+
+    align-self: center;
   }
   
 }
@@ -1638,7 +1640,7 @@ Pagina detalle producto
 display: flex;
 justify-content: space-evenly;
 width: 100vw;
-min-height: 100vh;
+
 }
 .checkout{
   width: 90%;
