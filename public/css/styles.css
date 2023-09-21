@@ -368,16 +368,15 @@ Pagina detalle producto
 .product-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .product-container div {
-  max-width: 500px;
+  max-width: 100vw;
 }
 
 .swiper-product{
-  margin:5px !important;
-  max-height: 380px;
-  max-width: 300px;
-  padding: 5px;
+  align-self: flex-start;
+  margin: 20px;
 }
 
 .swiper-product img {
@@ -471,7 +470,7 @@ Pagina detalle producto
 }
 
 .description {
-  margin:0;
+  margin:20px;
 }
 
 .product-talle-select {
