@@ -42,7 +42,7 @@
 
           <article>
            <div class="row-img-item">
-            <img src="/images/productos/<%=producto.Imagenes[0].nombre %>" />
+            <img src="/images/productos/<%=producto.Imagenes.length>0?producto.Imagenes[0].nombre:"messi.jpg" %>" />
             </div>
             <p><%= producto.nombre %></p>
             <p>$<%= producto.precio %></p>
