@@ -410,6 +410,7 @@ Pagina detalle producto
   display:flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
  
 
@@ -471,6 +472,7 @@ Pagina detalle producto
 
 .description {
   margin:20px;
+  max-width: 80%;
 }
 
 .product-talle-select {
@@ -1529,12 +1531,7 @@ Pagina detalle producto
     justify-content: flex-end;
     height: 100%;
   }
-  .description {
-    padding-left: 7%;
-    padding-right: 5%;
-
-    align-self: center;
-  }
+ 
   
 }
 
@@ -1715,6 +1712,20 @@ width: 100vw;
   }
   .productos-home article {
     width: 33.3333333333333333333333333333%;
+    
+  }
+  /* detalle de producto */
+  .swiper-product  {
+   
+    max-height: 500px;
+   
+    
+  }
+  .swiper-product img {
+   
+    max-height: 500px;
+  
+    object-fit: contain;
     
   }
 }
