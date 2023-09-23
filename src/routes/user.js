@@ -35,8 +35,11 @@ router.get("/editarRol",superAdminAcces, userController.editarRol);
 router.post("/editarRol",superAdminAcces, userController.editarCategoria);
 router.get("/cart",userController.cart);
 
+
+
 //TODO ruta de ticket
 
 router.post("/api/ticket", userController.apiTikcketProcess)
+router.get("/ticket/:id", userController.ticketCheckout)
 
 module.exports = router

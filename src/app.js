@@ -10,9 +10,12 @@ const cookie = require("cookie-parser");
 const cookieUsuario = require("./middlewares/cookieMiddleware.js");
 const {isLogged}= require ("./middlewares/authMiddleware.js")
 
-
-
-
+// SDK de Mercado Pago
+const mercadopago = require("mercadopago");
+// Agrega credenciales
+mercadopago.configure({
+  access_token: process.env.PROD_ACCESS_TOKEN,
+});
 
 const port = 3006
 
@@ -44,6 +47,48 @@ app.use(home)
 app.use('/product', product)
 app.use('/user', user)
 app.use('/api', api)
+
+//MERCADOPAGO
+
+app.post("/create_preference", (req, res) => {
+  console.log("hi")  
+  
+
+	let preference = {
+		items: [
+			{
+				title: req.body.description,
+				unit_price: Number(req.body.price),
+				quantity: Number(req.body.quantity),
+			}
+		],
+		back_urls: {
+			"success": `http://localhost:${port}/feedback`,
+			"failure": `http://localhost:${port}/feedback`,
+			"pending": ``
+		},
+		auto_return: "approved",
+	};
+
+	mercadopago.preferences.create(preference)
+		.then(function (response) {
+			res.json({
+				id: response.body.id
+			});
+		}).catch(function (error) {
+			console.log(error);
+		});
+});
+
+app.get('/feedback', function (req, res) {
+	res.json({
+		Payment: req.query.payment_id,
+		Status: req.query.status,
+		MerchantOrder: req.query.merchant_order_id
+	});
+});
+// FIN MERCADOPAGO
+
 
 
 app.use((req,res, next)=>{
