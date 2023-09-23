@@ -146,7 +146,7 @@ module.exports = {
               {
                 model: db.Productos,
                 as: "producto",
-                attributes: ["id", "nombre"],
+                attributes: ["id", "nombre"],paranoid:false
               },
             ],
           });
