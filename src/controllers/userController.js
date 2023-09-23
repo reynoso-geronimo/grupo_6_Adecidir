@@ -404,13 +404,23 @@ ${link}`,
   },
   ticketCheckout: async (req,res)=>{
   
+    const ticket = await db.Tickets.findByPk(req.params.id );
+    
+        const products = await db.Productos_tickets.findAll({
+          where: { id_ticket: req.params.id },
+          include: [
+            {
+              model: db.Productos,
+              as: "producto",
+              attributes: ["id", "nombre"],paranoid: false,
+            },
+          ],
+          paranoid: false,});
+        
+        
+      
+    
      
-
-    const [ticket,productosTicket] = await Promise.all([db.Tickets.findByPk(req.params.id),db.Productos_tickets.findAll({where:{id_ticket:req.params.id}})])
-    const respuesta= {
-      ticket:ticket,
-      productosTicket:productosTicket
-    }
-    res.json(respuesta)
+    res.render('user/ticket',{ticket:{...ticket.dataValues ,products}})
   }
 };

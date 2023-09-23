@@ -7,70 +7,36 @@
 
     <main class="user-profile">
       <section>
-        <h1>
-          <img
-            src="../images/avatar/<%= usuario.avatar %>"
-            alt=""
-            class="profile-avatar"
-          />
-          <%= usuario.nombre %> <%= usuario.apellido %>
-        </h1>
-        <h2><i class="fa-solid fa-address-card"></i>Tu informacion</h2>
-        <div class="profile-info" >
-          <h3>
-            <i class="fa-solid fa-envelope"></i> Email: <%= usuario.email %>
-          </h3>
-
-          <% if (usuario.telefono) { %>
-          <h3><i class="fa-solid fa-phone"></i>Telefono: <%= usuario.telefono %></h3>
-          <% } else { %>
-          <h3>
-            <i class="fa-solid fa-phone"></i>No tenemos tu telefono, completa tu
-            perfil
-          </h3>
-          <% } %> <% if (usuario.direccion) { %>
-          <h3><i class="fa-solid fa-location-dot"></i>Direccion: <%= usuario.direccion %></h3>
-          <% } else { %>
-          <h3>
-            <i class="fa-solid fa-location-dot"></i>No tenemos tu direccion,
-            completa tu perfil
-          </h3>
-          <% } %>
-        </div>
-        <div class="profile-info profile-actions">
-          <a href="/user/profile/edit"><button>EDITAR MI INFORMACION</button></a>
-        <a href="/user/profile/edit/password"><button>CAMBIAR CONTRASEÑA</button></a>
-        </div>
-      </section>
-      <section>
-
-        <h2><i class="fa-solid fa-receipt"></i> TUS COMPRAS</h2>
-        <button id="toggleTickets" class="mostrar">Esconder</button>
-        <br>
-
-        <% ticketDetails.forEach((ticket, index) => { %>
+       
           <% let total = 0 %>
-          <div class="profile-info ticket-container" id="ticketContainer<%= index %>">
-            <div class="ticket-info"><p>Nro : <%= ticket.ticket.id %></p> <p>Fecha: <%= new Date(ticket.ticket.createdAt).toLocaleDateString() %></p></div>
+          <div class="profile-info ticket-container">
+            <div class="ticket-info"><h1>Resumen de compra</h1> <p>Fecha: <%= new Date(ticket.createdAt).toLocaleDateString() %></p></div>
+
             <% ticket.products.forEach(producto => { %>
               <% total += producto.cantidad * producto.precioFechaCompra %>
         
-              <div class="ticket-info"><p><%= producto.cantidad %> X <%= producto.producto.nombre %></p> <% if  (producto.talle) {%> <p> Talle: <%= producto.talle.toUpperCase() %> </p><% } %>
+              <div class="ticket-info"><p id="prod-detalle"><%= producto.cantidad %> X <%=producto.producto.nombre %></p> <% if  (producto.talle) {%> <p> Talle: <%= producto.talle.toUpperCase() %> </p><% } %>
                 <p> U:$<%= producto.precioFechaCompra %></p>
               </div>
+              
             <% }) %>
-            <p class="ticket-info-total">Total: $<%= total %></p>
+
+            
+     
+            <p class="ticket-info-total">Total: $<span id="total-ticket"><%= total %></span></p>
           </div>
-        <% }) %>
+       
         
        
-       
+          <div id="wallet_container"></div>
           
       
         
       </section>
     </main>
     <%- include('../partials/footer.ejs') %>
-    <script src="/js/mostrarEsconder.js"></script>
+    <script src="/js/mercadopago.js"></script>
+    
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
   </body>
 </html>
