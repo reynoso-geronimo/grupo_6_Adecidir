@@ -9,7 +9,7 @@
       <section>
        
           <% let total = 0 %>
-          <div class="profile-info ticket-container">
+          <div class="profile-info ticket-checkout">
             <div class="ticket-info"><h1>Resumen de compra</h1> <p>Fecha: <%= new Date(ticket.createdAt).toLocaleDateString() %></p></div>
 
             <% ticket.products.forEach(producto => { %>

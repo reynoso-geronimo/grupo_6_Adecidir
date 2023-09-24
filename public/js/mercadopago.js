@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded',()=>{
      descripcionMP = descripcionMP.slice(0, -2);
      const total = document.querySelector('#total-ticket')
     const orderData = {
+        metadata:{id:123},
         quantity: 1,
         description: descripcionMP,
-        price: total.innerHTML
+        price: total.innerHTML,
+        
       };
 
      //MERCADOPAGO///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

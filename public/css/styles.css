@@ -1493,6 +1493,13 @@ Pagina detalle producto
     transform: rotate(360deg);
   }
 }
+/*TICKET CHECKOUT*/
+.ticket-checkout{
+  margin-top: 40px;
+  width: 600px;
+  max-width: 90vw;
+}
+
 
 @media (min-width: 481px) {
   /* listado de productos */
