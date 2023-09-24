@@ -60,7 +60,13 @@
                 <p> U:$<%= producto.precioFechaCompra %></p>
               </div>
             <% }) %>
-            <p class="ticket-info-total">Total: $<%= total %></p>
+            <div class="ticket-info">
+              <p class="ticket-info-status"><%= ticket.ticket.estado %></p>
+              <p class="ticket-info-total">Total: $<%= total %></p>  
+            </div>
+            <% if (ticket.ticket.estado=="Abierto") { %>
+              <a class="ticket-info-status"href="/user/ticket/<%=ticket.ticket.id%>">Finalizar compra</a>
+            <% } %>
           </div>
         <% }) %>
         

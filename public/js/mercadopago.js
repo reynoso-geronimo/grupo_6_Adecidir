@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded',()=>{
 
     const detalleSelector= document.querySelectorAll('#prod-detalle')
+    const ticketSelector= document.querySelector('#ticket-id').innerHTML
+    
     let descripcionMP = ``
 
     detalleSelector.forEach(element => {
@@ -9,7 +11,7 @@ document.addEventListener('DOMContentLoaded',()=>{
      descripcionMP = descripcionMP.slice(0, -2);
      const total = document.querySelector('#total-ticket')
     const orderData = {
-        metadata:{id:123},
+        metadata:{id_ticket:ticketSelector},
         quantity: 1,
         description: descripcionMP,
         price: total.innerHTML,

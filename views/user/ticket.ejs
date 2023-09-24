@@ -10,8 +10,9 @@
        
           <% let total = 0 %>
           <div class="profile-info ticket-checkout">
+            <h1 id="ticket-id"><%= ticket.id %></h1>
             <div class="ticket-info"><h1>Resumen de compra</h1> <p>Fecha: <%= new Date(ticket.createdAt).toLocaleDateString() %></p></div>
-
+            
             <% ticket.products.forEach(producto => { %>
               <% total += producto.cantidad * producto.precioFechaCompra %>
         
@@ -27,9 +28,11 @@
           </div>
        
         
-       
-          <div id="wallet_container"></div>
+       <% if (ticket.estado=="Abierto") { %>
+        
+        <div id="wallet_container"></div>
           
+       <% } %>
       
         
       </section>

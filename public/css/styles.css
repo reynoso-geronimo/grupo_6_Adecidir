@@ -1462,6 +1462,9 @@ Pagina detalle producto
 .ticket-info-total{
   text-align: end;
 }
+.ticket-info-status{
+  font-weight: bolder;
+}
 
 /* spinner */
 .lds-dual-ring {
