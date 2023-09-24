@@ -476,9 +476,7 @@ Pagina detalle producto
   overflow: hidden;
   white-space: wrap;
 }
-.description p {
-  
-}
+
 
 .product-talle-select {
   text-align: center;
@@ -1466,6 +1464,7 @@ Pagina detalle producto
 }
 .ticket-info-total{
   text-align: end;
+  font-weight: bold;
 }
 .ticket-info-status{
   font-weight: bolder;
@@ -1506,8 +1505,13 @@ Pagina detalle producto
   margin-top: 40px;
   width: 600px;
   max-width: 90vw;
+  font-size: 12px;
+  padding: 4px;
 }
-
+.ticket-info-talle{
+ 
+white-space: nowrap;
+}
 
 @media (min-width: 481px) {
   /* listado de productos */
@@ -1547,8 +1551,13 @@ Pagina detalle producto
     height: 100%;
   }
  
+  /*TICKET CHECKOUT*/
+.ticket-checkout{
+ 
+  font-size: 16px;
   
 }
+
 
 /* PERFIL DE USUARIO*/
 .profile-info{

@@ -16,7 +16,7 @@
             <% ticket.products.forEach(producto => { %>
               <% total += producto.cantidad * producto.precioFechaCompra %>
         
-              <div class="ticket-info"><p id="prod-detalle"><%= producto.cantidad %> X <%=producto.producto.nombre %></p> <% if  (producto.talle) {%> <p> Talle: <%= producto.talle.toUpperCase() %> </p><% } %>
+              <div class="ticket-info"><p id="prod-detalle"><%= producto.cantidad %> X <%=producto.producto.nombre %></p> <% if  (producto.talle) {%> <p class="ticket-info-talle"> Talle: <%= producto.talle.toUpperCase() %> </p><% } %>
                 <p> U:$<%= producto.precioFechaCompra %></p>
               </div>
               
