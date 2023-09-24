@@ -1545,7 +1545,11 @@ Pagina detalle producto
   
 }
 
-
+/* PERFIL DE USUARIO*/
+.profile-info{
+  width: 90vw;
+  max-width: 600px;
+}
 
 @media (min-width: 769px) {
   /* PAGINA DE PRODUCTO*/

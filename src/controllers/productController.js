@@ -320,6 +320,7 @@ const productController = {
           precio: productoEnDB.precio,
           talle: producto.talle,
           cantidad: producto.cantidad,
+          stock:productoEnDB["talle"+producto.talle],
         };
         return productoEnStock;
       });
