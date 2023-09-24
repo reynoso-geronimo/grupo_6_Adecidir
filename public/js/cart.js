@@ -1,5 +1,5 @@
 window.addEventListener('load',()=>{
-   top
+   let stock 
     if(!JSON.parse(localStorage.getItem('cart'))){
         localStorage.setItem('cart', JSON.stringify([
            
@@ -86,10 +86,10 @@ window.addEventListener('load',()=>{
           index++
         }
         
-        checkout.innerHTML = `
+        stock?checkout.innerHTML = `
         <p>Total: $ ${total}</p>
         <button class="boton-negro invertido" id="home">Seguir Comprando</button>
-        <button id="checkout" class="boton-negro" >Finalizar compra</button>`
+        <button id="checkout" class="boton-negro" >Finalizar compra</button>`:``
        }
   
        botonesProducto()
@@ -166,16 +166,22 @@ window.addEventListener('load',()=>{
   botonesProducto();
 
   
-})
-
-
 function verificarCantidades(item) {
   let mensaje= "";
   if(item.stock === 0){
+    stock=false
     mensaje = `No hay stock de este producto.`;
+    
   }
   if(item.cantidad > item.stock && item.stock > 0){
+    stock=false
     mensaje = `Nuestro Stock actual es : ${item.stock}.`;
+    
+  
+  }else{
+    stock=true
   }
   return mensaje;
 }
+})
+
