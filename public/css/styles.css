@@ -473,6 +473,8 @@ Pagina detalle producto
 .description {
   margin:20px;
   max-width: 80%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .product-talle-select {
