@@ -78,8 +78,8 @@ window.addEventListener('load',()=>{
                 </div>
                 <div class="producto-carrito-cantidad"><i class="fa-solid fa-minus"></i><div id="cantidad">${
                   item.cantidad
-                }</div><i class="fa-solid fa-plus"></i></div>
-                <div><i id="${index}" class="fa-solid fa-trash"></i></div>
+                }</div><i class="fa-solid fa-plus"></i> <i id="${index}" class="fa-solid fa-trash"></i></div>
+                <div>${verificarCantidades(item)}</div>
               </div>
             </article>
             `;
@@ -165,7 +165,17 @@ window.addEventListener('load',()=>{
 
   botonesProducto();
 
- 
+  
 })
 
 
+function verificarCantidades(item) {
+  let mensaje= "";
+  if(item.stock === 0){
+    mensaje = `No hay stock de este producto.`;
+  }
+  if(item.cantidad > item.stock && item.stock > 0){
+    mensaje = `Nuestro Stock actual es : ${item.stock}.`;
+  }
+  return mensaje;
+}
