@@ -172,8 +172,7 @@ function verificarCantidades(item) {
     stock=false
     mensaje = `No hay stock de este producto.`;
     
-  }
-  if(item.cantidad > item.stock && item.stock > 0){
+  } else if (item.cantidad > item.stock && item.stock > 0){
     stock=false
     mensaje = `Nuestro Stock actual es : ${item.stock}.`;
     
