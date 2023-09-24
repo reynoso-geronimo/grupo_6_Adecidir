@@ -256,3 +256,4 @@ Sat Sep 23 2023 00:37:38 GMT-0300 (hora estándar de Argentina) Se edito el resg
 Sat Sep 23 2023 00:37:53 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 81
 Sat Sep 23 2023 00:38:14 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 81
 Sat Sep 23 2023 00:39:07 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 81
+Sun Sep 24 2023 11:58:06 GMT-0300 (hora estándar de Argentina) Se edito el resgistro id: 6
