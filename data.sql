@@ -23,7 +23,7 @@ VALUES
 ('Chaleco','Un chaleco',3,400,3,4,5,6,7,3,0),
 ('jeans','pantalon largo negro',1,400,3,4,5,6,7,3,0),
 ('Perfume','Au de toilette',1,400,0,0,0,0,0,0,1),
-('Gift-Card','Gitf-Card $50000',1,400,0,0,0,0,0,0,1),
+
 
 INSERT INTO theme_db.Imagenes(id_producto,nombre)
 VALUES
