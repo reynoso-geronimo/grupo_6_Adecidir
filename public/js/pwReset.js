@@ -21,7 +21,10 @@ window.addEventListener('load',function(){
 
     if(errores===0){
         pwResetForm.submit()
-        Swal.fire('Se enviara un link para recuperar tu usuario si el correo es correcto')
+        Swal.fire({
+            title:'Se enviara un link para recuperar tu usuario si el correo es correcto',
+            confirmButtonColor: "#000000"
+        })
             .then(function() {
                 window.location = "/"
             })
