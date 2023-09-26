@@ -14,7 +14,7 @@ VALUES
 ('REMERAS','Mockup_Camiseta_Doblada_mockupgratis.com.jpg'),
 ('ABRIGOS','Mockup_Hoodie_Sudadera_mockupgratis.com.jpg'),
 ('COMPLEMENTOS','Mockup_Bolsa_Tela_Chica_mockupgratis.com.jpg'),
-('GIFT CARD','Tarjeta_Presentacion_mockupgratis.com.jpg');
+('CAMISAS','Camisas.png');
 
 INSERT INTO theme_db.Productos(nombre,descripcion,id_categoria,precio,talleXS,talleS,talleM,talleL,talleXL,talleXXL,talleUnico)
 VALUES
