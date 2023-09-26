@@ -1369,16 +1369,17 @@ input:checked + .slider:after {
   border-radius: 100%;
 }
 .profile-info {
-  padding: 20px;
+  padding:10px;
   margin-bottom: 2rem;
   border: solid 1px grey;
   box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
     0 1px 3px 0 rgba(0, 0, 0, 0.12);
-  width: 370px;
+  width: 90vw;
+  max-width: 600px;
 }
 .profile-actions {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .profile-actions button {
   width: 95%;
@@ -1388,6 +1389,7 @@ input:checked + .slider:after {
   justify-content: space-between;
   align-items: center;
   border-bottom: solid 1px gray;
+  font-size: 12px;
 }
 .ticket-info-total {
   text-align: end;
@@ -1467,9 +1469,9 @@ input:checked + .slider:after {
   }
 
   /* PERFIL DE USUARIO*/
-  .profile-info {
-    width: 90vw;
+  .ticket-info{
     max-width: 600px;
+    font-size: 18px;
   }
 }
 @media (min-width: 769px) {
