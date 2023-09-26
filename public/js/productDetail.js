@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
     autoplay : {
         delay : 3000,
         pauseOnMouseEnter : true,
-        disableOnInteraction: true 
+        disableOnInteraction: false
     },
 
     // If we need pagination
