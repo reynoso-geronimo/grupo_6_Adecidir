@@ -21,6 +21,7 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   opacity: 1;
   height: 10px;
   width: 10px;
+  padding: 5px;
   border: 2px solid black;
 }
 
@@ -1096,34 +1097,6 @@ input:checked + .slider:after {
   flex-direction: column;
 }
 
-.placa-banner {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  height: 50px;
-  max-width: 60vw;
-  border: 1px solid #fff;
-  background-color: #fff;
-  position: absolute;
-  z-index: 2;
-  top: 6.2rem;
-  text-align: center;
-  align-items: center;
-}
-
-.placa-banner h3 {
-  margin: 0;
-  padding: 0 0 0 0;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.placa-banner h5 {
-  margin: 0;
-  padding: 0 10px 0 10px;
-  font-size: 10px;
-}
-
 .productos-home {
   margin-top: -5px;
   display: flex;
@@ -1473,20 +1446,6 @@ input:checked + .slider:after {
   }
 
   /* HOME */
-
-  .placa-banner {
-    top: 8rem;
-    height: 70px;
-    max-width: 60vw;
-  }
-
-  .placa-banner h3 {
-    font-size: 18px;
-  }
-  .placa-banner h5 {
-    font-size: 14px;
-  }
-
   .productos-home {
     flex-direction: row;
 
@@ -1650,17 +1609,6 @@ input:checked + .slider:after {
     max-width: 1500px;
   }
 
-  .placa-banner {
-    top: 10rem;
-    height: 90px;
-  }
-
-  .placa-banner h3 {
-    font-size: 30px;
-  }
-  .placa-banner h5 {
-    font-size: 18px;
-  }
   .productos-home a label {
     position: absolute;
     height: 100%;
