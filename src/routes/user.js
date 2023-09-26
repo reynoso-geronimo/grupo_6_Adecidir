@@ -4,6 +4,7 @@ const validateAvatar = require('../middlewares/avatarMiddleware.js')
 const { validarRegistro,validarLogin,validarEditUsuario,validarImagenSize } = require('../middlewares/validaciones.js');
 const {logged, userAcess,adminAcces, superAdminAcces} = require('../middlewares/authMiddleware.js');
 const {uploadImgAvatar} = require('../middlewares/fileUploadMiddleware.js')
+const {isTicketOwner} = require('../middlewares/ticketMiddleware.js')
 const userController = require('../controllers/userController.js');
 
 
@@ -35,8 +36,11 @@ router.get("/editarRol",superAdminAcces, userController.editarRol);
 router.post("/editarRol",superAdminAcces, userController.editarCategoria);
 router.get("/cart",userController.cart);
 
+
+
 //TODO ruta de ticket
 
 router.post("/api/ticket", userController.apiTikcketProcess)
+router.get("/ticket/:id",isTicketOwner, userController.ticketCheckout)
 
 module.exports = router

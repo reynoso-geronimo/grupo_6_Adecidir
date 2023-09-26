@@ -149,15 +149,15 @@ module.exports = {
                 attributes: ["id", "nombre"],paranoid:false
               },
             ],
-          });
-
+            paranoid: false,});
+          
           return {
             ticket: ticket,
             products: products,
           };
         })
       );
-
+        console.log(ticketDetails)
       return res.render("user/profile", {
         usuario: req.session.usuarioLogeado,
         ticketDetails: ticketDetails,
@@ -384,7 +384,7 @@ ${link}`,
       return res.status(201).json({
         status: "success",
         mensaje: "Ticket y productos asociados creados con éxito",
-        ticket: nuevoTicket,
+        ticket: id_ticket,
         productosAsociados: productos,
       });
     } catch (error) {
@@ -402,4 +402,25 @@ ${link}`,
       });
     }
   },
+  ticketCheckout: async (req,res)=>{
+  
+    const ticket = await db.Tickets.findByPk(req.params.id );
+    
+        const products = await db.Productos_tickets.findAll({
+          where: { id_ticket: req.params.id },
+          include: [
+            {
+              model: db.Productos,
+              as: "producto",
+              attributes: ["id", "nombre"],paranoid: false,
+            },
+          ],
+          paranoid: false,});
+        
+        
+      
+    
+     
+    res.render('user/ticket',{ticket:{...ticket.dataValues ,products}})
+  }
 };
