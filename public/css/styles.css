@@ -284,18 +284,24 @@ footer a i {
   background-color: #000000;
 }
 
-<<<<<<< HEAD
 /* sección medios de pago */
 .caracteristicas-compras {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  /*align-items: center;*/
   text-align: center;
   padding: 3%;
+  flex-basis: 100%;
 }
-
-
+.caracteristicas-compras div {
+  flex-basis: 100%; 
+  margin: 10px; 
+  background-color: #f2f2f2; 
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
 main section div {
   flex-basis: 100%; 
   margin: 10px; 
@@ -305,21 +311,20 @@ main section div {
 }
 
 .caracteristicas-compras h4 {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
-  margin-bottom: 2%;
+  margin-bottom: 0;
 }
 
 .caracteristicas-compras p {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: regular;
   margin-top: 0;
 }
 
 
 
-=======
->>>>>>> 70c9437d451969f2fa1f61361da663d248cc0856
+
 .cajaSuscribe {
   font-size: 100%;
   font: inherit;
@@ -1458,7 +1463,8 @@ input:checked + .slider:after {
   animation: lds-dual-ring 1.2s linear infinite;
 }
 .resumen-de-la-marca {
-width: 90%;
+width: 100%;
+padding: 20px;
 margin: auto;
 
 }
@@ -1520,16 +1526,15 @@ max-width: 100%;
   }
 }
 @media (min-width: 769px) {
-  /* home - video theme */
-
-
-
+/* home - video theme */
 main div video, .info-theme {
   flex: 1; 
   padding: 10px;
-  margin: 0;
+  margin: 0 5px 0 5px;
   width: 50px;
 }
+
+
 .resumen-de-la-marca {
   display: flex;
   flex-wrap: wrap;
@@ -1640,41 +1645,6 @@ main div video, .info-theme {
   .checkout {
     width: 90%;
 
-<<<<<<< HEAD
-}
-.checkout{
-  width: 90%;
-  
-  top:15%;
-  
-  margin-top: 20px;  
-  margin-bottom: 20px;  
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #E6E6E6;
-
-}
-.checkout p { 
-  padding: 20px;
-}
-.checkout button {
-  margin-bottom: 30px;
-}
-.carrito-container{
-
-  width: 70%;
-  max-width: 680px;
-}
-.carrito-otros{
- width: 50%;
-}
-.carrito-otros h2{
-  text-align: center;
-}
-/* información de pagos */
-  main section div {
-    flex-basis: 30%; 
-=======
     top: 15%;
 
     margin-top: 20px;
@@ -1698,9 +1668,13 @@ main div video, .info-theme {
   }
   .carrito-otros h2 {
     text-align: center;
->>>>>>> 70c9437d451969f2fa1f61361da663d248cc0856
+  }
+  /* sección medios de pago */
+.caracteristicas-compras div {
+  flex-basis: calc(33.33% - 20px);
   }
 }
+
 
 @media (min-width: 1279px) {
   /* listado de productos */
