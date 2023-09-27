@@ -117,8 +117,11 @@ const apiController = {
   },
   ticketList2: async function (req,res){
     let response={
-      count:0,
-      data:{}} 
+      data:{
+        count:0,
+        tickets:[]
+      }
+      } 
     
     try {
       const tickets = await db.Tickets.findAll();
