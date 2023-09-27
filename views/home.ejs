@@ -32,6 +32,22 @@
           <!-- <div class="swiper-scrollbar"></div> -->
         </div>
         
+        <div class="resumen-de-la-marca">
+          <video controls >
+            <source src="../videos/trim.mp4" type="video/mp4">
+          </video> 
+          <div class="info-theme">
+            <h1>Quienes somos</h1>
+            <P> <span style="font-weight: bold;">THEME</span> es una marca que se creó en el 2023, en la época de la convertibilidad, 
+              aceptación de nosotros mismos y del resto.
+              <br><br>Tiene como objetivo ayudar a las personas a encontrar prendar de ropa diferentes, originales y modernas. Sin tener que luchar 
+              con los talles o si una prenda se cataloga para hombre o mujer, ya que creemos que cada uno se tiene que poner lo que más le 
+              guste, por lo que <span style="font-weight: bold;">en THEME todo es para todos.</span> 
+              <br><br>THEME es un tienda web que brindará toda la información necesaria sobre talles, medidas, materia prima utilizada y otros 
+              aspectos informativos necesarios a la hora de comprar una prenda de ropa.</p>
+
+          </div>
+        </div>
 
         <section class="productos-home">
           <% for( let index = 0; index < 5; index++ ) { %>
@@ -53,9 +69,27 @@
                 </label>
               </a>
             </article>
-          
-
         </section>
+      
+        <section class="caracteristicas-compras">
+          <div>
+              <i class="fas fa-credit-card"></i>
+              <h4>ENVIAMOS TU COMPRA</h4>
+              <p>Entregas a todo el país</p>
+          </div>
+          <div>
+              <i class="fas fa-gift"></i>
+              <h4>PAGÁ COMO QUIERAS</h4>
+              <p>Tarjetas de crédito o débito</p>
+          </div>
+          <div>
+              <i class="fas fa-user-shield"></i>
+              <h4>COMPRÁ CON SEGURIDAD</h4>
+              <p>Tus datos siempre protegidos</p>
+          </div>
+      </section>
+          <section>
+
       </main>
       <%- include('./partials/footer.ejs') %>
       <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
