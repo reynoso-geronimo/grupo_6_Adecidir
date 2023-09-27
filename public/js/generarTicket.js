@@ -35,16 +35,8 @@ window.addEventListener("load", async () => {
           } else {
            
             localStorage.setItem("cart", JSON.stringify([]));
-
-          
-            await Swal.fire({
-              title: "Gracias por tu compra!",
-              icon: "success",
-              confirmButtonColor: "#000000",
-            });
-
            
-            window.location.href = "/";
+            window.location.href = `/user/ticket/${ticket.ticket}`;
           }
         } catch (error) {
           console.log(error)

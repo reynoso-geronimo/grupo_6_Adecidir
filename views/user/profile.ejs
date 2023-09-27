@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <%- include('../partials/head') %>
 
   <body>
@@ -50,16 +50,23 @@
 
         <% ticketDetails.forEach((ticket, index) => { %>
           <% let total = 0 %>
+          
           <div class="profile-info ticket-container" id="ticketContainer<%= index %>">
             <div class="ticket-info"><p>Nro : <%= ticket.ticket.id %></p> <p>Fecha: <%= new Date(ticket.ticket.createdAt).toLocaleDateString() %></p></div>
             <% ticket.products.forEach(producto => { %>
               <% total += producto.cantidad * producto.precioFechaCompra %>
-        
-              <div class="ticket-info"><p><%= producto.cantidad %> X <%= producto.producto.nombre %></p> <% if  (producto.talle) {%> <p> Talle: <%= producto.talle.toUpperCase() %> </p><% } %>
+              
+              <div class="ticket-info"><p><%= producto.cantidad %> X <%= producto.producto.nombre  %></p> <% if  (producto.talle) {%> <p> Talle: <%= producto.talle.toUpperCase() %> </p><% } %>
                 <p> U:$<%= producto.precioFechaCompra %></p>
               </div>
             <% }) %>
-            <p class="ticket-info-total">Total: $<%= total %></p>
+            <div class="ticket-info">
+              <p class="ticket-info-status"><%= ticket.ticket.estado %></p>
+              <p class="ticket-info-total">Total: $<%= total %></p>  
+            </div>
+            <% if (ticket.ticket.estado=="Abierto") { %>
+              <a class="ticket-info-status"href="/user/ticket/<%=ticket.ticket.id%>">Finalizar compra</a>
+            <% } %>
           </div>
         <% }) %>
         

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head') %>
+
+  <body>
+    <%- include('../partials/header') %>
+
+    <main class="user-profile">
+      <section>
+       
+          <% let total = 0 %>
+          <div class="profile-info ticket-checkout">
+            <h1 id="ticket-id"><%= ticket.id %></h1>
+            <div class="ticket-info"><h1>Resumen de compra</h1> <p>Fecha: <%= new Date(ticket.createdAt).toLocaleDateString() %></p></div>
+            
+            <% ticket.products.forEach(producto => { %>
+              <% total += producto.cantidad * producto.precioFechaCompra %>
+        
+              <div class="ticket-info"><p id="prod-detalle"><%= producto.cantidad %> X <%=producto.producto.nombre %></p> <% if  (producto.talle) {%> <p class="ticket-info-talle"> Talle: <%= producto.talle.toUpperCase() %> </p><% } %>
+                <p> U:$<%= producto.precioFechaCompra %></p>
+              </div>
+              
+            <% }) %>
+
+            
+     
+            <p class="ticket-info-total">Total: $<span id="total-ticket"><%= total %></span></p>
+          </div>
+       
+        
+       <% if (ticket.estado=="Abierto") { %>
+        
+        <div id="wallet_container"></div>
+          
+       <% } %>
+      
+        
+      </section>
+    </main>
+    <%- include('../partials/footer.ejs') %>
+    <script src="/js/mercadopago.js"></script>
+    
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+  </body>
+</html>
