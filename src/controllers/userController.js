@@ -199,7 +199,7 @@ module.exports = {
         { transaction: t }
       );
       await t.commit();
-      if (req.file)
+      if (req.file&&req.session.usuarioLogeado.avatar!=="defaultAvatar.png")
         fs.unlinkSync(
           path.resolve(
             __dirname,
