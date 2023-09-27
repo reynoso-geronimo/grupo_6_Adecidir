@@ -115,7 +115,37 @@ const apiController = {
      
     }
   },
+  ticketList2: async function (req,res){
+    
+    try {
+      const tickets = await db.Tickets.findAll();
 
+      const ticketDetails = await Promise.all(
+        tickets.map(async ticket => {
+          const products = await db.Productos_tickets.findAll({
+            where: { id_ticket: ticket.id },
+            include: [
+              {
+                model: db.Productos,
+                as: "producto",
+                attributes: ["id", "nombre"],paranoid:false
+              },
+            ],
+            paranoid: false,});
+          
+          return {
+            ticket: ticket,
+            products: products,
+          };
+        })
+      );
+      res.json(ticketDetails)
+    } catch (error) {
+      console.log(error)
+    }
+    
+  
+  }
 };
 
 module.exports = apiController;

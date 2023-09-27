@@ -12,6 +12,7 @@ router.get('/products/',apiController.searchAllproductsAndQuantities)
 router.get('/products/:id',apiController.searchProduct)
 
 router.get('/tickets/', apiController.ticketList)
+router.get('/tickets2/', apiController.ticketList2)
 
 
 
