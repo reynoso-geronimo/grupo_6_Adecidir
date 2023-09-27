@@ -116,10 +116,13 @@ const apiController = {
     }
   },
   ticketList2: async function (req,res){
+    let response={
+      count:0,
+      data:{}} 
     
     try {
       const tickets = await db.Tickets.findAll();
-
+      response.data.count = tickets.length;
       const ticketDetails = await Promise.all(
         tickets.map(async ticket => {
           const products = await db.Productos_tickets.findAll({
@@ -139,7 +142,8 @@ const apiController = {
           };
         })
       );
-      res.json(ticketDetails)
+      response.data.tickets = ticketDetails;
+      res.json(response)
     } catch (error) {
       console.log(error)
     }
