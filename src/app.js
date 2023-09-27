@@ -8,6 +8,7 @@ const api = require('./routes/apiRoutes.js')
 const mPago = require('./routes/mPago.js')
 const session = require("express-session");
 const cookie = require("cookie-parser");
+const cors = require('cors');
 const cookieUsuario = require("./middlewares/cookieMiddleware.js");
 const { isLogged } = require("./middlewares/authMiddleware.js")
 
@@ -21,7 +22,7 @@ const app = express();
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 app.use(methodOverride('_method'))
-
+app.use(cors())
 app.set("view engine", "ejs")
 app.set('views', path.resolve(__dirname, '../views'))
 app.use(express.static(path.resolve(__dirname, "./../public")));

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded',()=>{
  
   async function prefence() {
     
-    const crearPreferencia = await fetch("http://localhost:3006/create_preference", {
+    const crearPreferencia = await fetch("/create_preference", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
