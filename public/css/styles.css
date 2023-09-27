@@ -270,6 +270,7 @@ footer {
   background-color: #d9d9d9;
   text-align: center;
   width: 100vw;
+  padding-top: 10px;
 }
 footer i {
   margin-left: 5px;
