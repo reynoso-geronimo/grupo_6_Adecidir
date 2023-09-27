@@ -43,7 +43,7 @@ const apiController = {
   },searchAllproductsAndQuantities: async function (req, res) {
     let response={data:{}};
     try{
-      const [productos,categorias] = await Promise.all([Productos.findAll({include:[{association : "Categorias"}]}),Categorias.findAll({include:[{association : "Productos"}]}),])
+      const [productos,categorias] = await Promise.all([Productos.findAll({include:[{association : "Imagenes"}, {association : "Categorias"}]}),Categorias.findAll({include:[{association : "Productos"}]}),])
       response.data.count=productos.length;
       response.data.countByCategory = {};
       categorias.forEach((categoria) => {
@@ -54,8 +54,11 @@ const apiController = {
         name:producto.nombre,
         description:producto.descripcion,
         category:producto.Categorias,
+        image:producto.Imagenes[0].nombre,
         detail: '/api/products/'+producto.id
       }})
+
+      
       return res.json(response)
     }catch(e){
       response.msg="Hubo un error "+e
@@ -89,20 +92,28 @@ const apiController = {
   ticketList: async function (req, res) {
     let response={data:{}} 
     try {
-      const tickets = await db.Tickets.findAll({});
-
-       response.data = {
-        count: tickets.length,
-        tickets: tickets.map(ticket => {
-          return {
-            id: ticket.id,
-            
-          };
-        }),
-      };
-
+      let tickets = await db.Tickets.findAll({});
+     
+       response.data = {count: tickets.length,};
+       response.data.tickets= tickets.map( ticket => {
+        return {
+              id: ticket.id,
+              user:ticket.usuario_id,
+              state:ticket.estado,
+              createdAt:ticket.createdAt,
+              productos:[]
+        };
+        
+      })
+      for (const ticket of response.data.tickets) {
+          ticket.productos= await db.Productos_tickets.findAll({where:{id_ticket:ticket.id}})
+      }
       return res.json(response);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error)
+      return res.json(error)
+     
+    }
   },
 
 };
