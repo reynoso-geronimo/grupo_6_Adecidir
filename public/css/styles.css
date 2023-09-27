@@ -295,20 +295,13 @@ footer a i {
   padding: 3%;
   flex-basis: 100%;
 }
-.caracteristicas-compras div {
+.infoCaractCompras {
   flex-basis: 100%; 
   margin: 10px; 
   background-color: #f2f2f2; 
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
-}
-main section div {
-  flex-basis: 100%; 
-  margin: 10px; 
-  background-color: #f2f2f2;
-  padding: 10px; 
-  box-sizing: border-box; 
 }
 
 .caracteristicas-compras h4 {
@@ -1528,7 +1521,7 @@ max-width: 100%;
 }
 @media (min-width: 769px) {
 /* home - video theme */
-main div video, .info-theme {
+.video-theme, .info-theme {
   flex: 1; 
   padding: 10px;
   margin: 0 5px 0 5px;
@@ -1671,7 +1664,7 @@ main div video, .info-theme {
     text-align: center;
   }
   /* sección medios de pago */
-.caracteristicas-compras div {
+.infoCaractCompras {
   flex-basis: calc(33.33% - 20px);
   }
 }
