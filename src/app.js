@@ -14,7 +14,7 @@ const { isLogged } = require("./middlewares/authMiddleware.js")
 
 
 
-const port = 3006
+
 
 
 const app = express();
@@ -36,8 +36,8 @@ app.use(session({
 app.use(cookie());
 app.use(cookieUsuario);
 app.use(isLogged)
-app.listen(port, () => {
-	console.log(`Servidor corriendo en el puerto ${port}`);
+app.listen(process.env.PORT, () => {
+	console.log(`Servidor corriendo en el puerto ${process.env.PORT}`);
 });
 
 app.use(home)
