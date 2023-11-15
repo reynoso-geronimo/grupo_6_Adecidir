@@ -12,7 +12,7 @@ const cors = require('cors');
 const cookieUsuario = require("./middlewares/cookieMiddleware.js");
 const { isLogged } = require("./middlewares/authMiddleware.js")
 
-
+const port = process.env.PORT||3006
 
 
 
@@ -36,8 +36,8 @@ app.use(session({
 app.use(cookie());
 app.use(cookieUsuario);
 app.use(isLogged)
-app.listen(process.env.PORT, () => {
-	console.log(`Servidor corriendo en el puerto ${process.env.PORT}`);
+app.listen(port, () => {
+	console.log(`Servidor corriendo en el puerto ${port}`);
 });
 
 app.use(home)
