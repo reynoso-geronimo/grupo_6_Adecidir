@@ -22,9 +22,9 @@ const mpController = {
       ],
 
       back_urls: {
-        success: `http://localhost:${port}/`,
-        failure: `http://localhost:${port}/`,
-        pending: `http://localhost:${port}/`,
+        success: `/`,
+        failure: `/`,
+        pending: `/`,
       },
       auto_return: "approved",
     };
@@ -48,32 +48,31 @@ const mpController = {
     });
   },
   webhook: async (req, res) => {
-    const { type, data } = req.body;
 
-    if (type == "payment") {
-      const url = `https://api.mercadopago.com/v1/payments/${data.id}`;
+    try {
+      const { type, data } = req.body;
 
-      const response = await fetch(url, {
-        method: "get",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.PROD_ACCESS_TOKEN}`,
-        },
-      });
+      if (type == "payment") {
+        const url = `https://api.mercadopago.com/v1/payments/${data.id}`;
 
-      if (response.ok) {
-        const responseData = await response.json();
-        // Ahora responseData contiene los datos en formato JSON de la respuesta del servidor
-        console.log(responseData.metadata);
-        console.log(responseData.status);
+        const response = await fetch(url, {
+          method: "get",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${process.env.PROD_ACCESS_TOKEN}`,
+          },
+        });
 
-        try {
-            const ticket = await db.Tickets.findByPk(responseData.metadata.id_ticket);
-            ticket.estado = "Pago"
-            ticket.save()
-            console.log(ticket)
-        } catch (error) {
-            
+        if (response.ok) {
+          const responseData = await response.json();
+          // Ahora responseData contiene los datos en formato JSON de la respuesta del servidor
+          console.log(responseData.metadata);
+          console.log(responseData.status);
+
+          const ticket = await db.Tickets.findByPk(responseData.metadata.id_ticket);
+          ticket.estado = "Pago"
+          ticket.save()
+          console.log(ticket)
         }
 
 
@@ -84,10 +83,10 @@ const mpController = {
           response.status,
           response.statusText
         );
-      }
+      } res.sendStatus(200);
+    } catch (error) {
+      console.log(error);
     }
-
-    res.sendStatus(200);
   },
 };
 
