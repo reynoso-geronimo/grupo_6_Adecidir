@@ -299,7 +299,7 @@ ${link}`,
       });
       jwt.verify(token, `${process.env.JWT_SECRET}${userInDb.password}`);
 
-      return res.render("user/pwResetform");
+      return res.render("user/pwResetForm");
     } catch (error) {
       console.log(error);
       res.send("Token invalido o expirado");
