@@ -274,7 +274,7 @@ module.exports = {
           `${process.env.JWT_SECRET}${userInDb.password}`,
           { expiresIn: "15m" }
         );
-        const link = `http://localhost:3006/user/password-reset/${token}`;
+        const link = `${process.env.DOMAIN}/user/password-reset/${token}`;
         //console.log(link)
         const mailOptions = {
           from: "themebrandarg@gmail.com",
