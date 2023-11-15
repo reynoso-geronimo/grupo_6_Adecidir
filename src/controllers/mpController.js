@@ -22,9 +22,9 @@ const mpController = {
       ],
 
       back_urls: {
-        success: `/`,
-        failure: `/`,
-        pending: `/`,
+        success: `${process.env.DOMAIN}/`,
+        failure: `${process.env.DOMAIN}/`,
+        pending: `${process.env.DOMAIN}/`,
       },
       auto_return: "approved",
     };
